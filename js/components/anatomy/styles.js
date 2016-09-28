@@ -5,6 +5,6 @@ const { StyleSheet } = React;
 
 module.exports = StyleSheet.create({
   container: {
-    // backgroundColor: '#565051',
+    backgroundColor: '#FBFAFA',
   },
 });

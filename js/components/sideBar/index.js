@@ -1,11 +1,17 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Content, Text, List, ListItem } from 'native-base';
+import { Image, StatusBar } from 'react-native';
+import { Content, Text, List, ListItem, Icon, View } from 'native-base';
 
 import { closeDrawer } from '../../actions/drawer';
 import { replaceOrPushRoute } from '../../actions/route';
+import sidebarTheme from './sidebar-theme';
 import styles from './style';
+
+// StatusBar.setBarStyle('light-content');
+const drawerCover = require('../../../img/drawer-cover.jpg');
+const drawerImage = require('../../../img/drawer-image.png');
 
 class SideBar extends Component {
 
@@ -21,58 +27,150 @@ class SideBar extends Component {
 
   render() {
     return (
-      <Content style={styles.sidebar} >
+      <Content theme={sidebarTheme} style={styles.sidebar}>
+        <Image source={drawerCover} style={styles.drawerCover}>
+          <Image
+            square
+            style={styles.drawerImage}
+            source={drawerImage}
+          />
+        </Image>
         <List>
-          <ListItem button onPress={() => this.navigateTo('anatomy')} >
-            <Text>Anatomy</Text>
+          <ListItem button iconLeft onPress={() => this.navigateTo('anatomy')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#00AFC1', paddingLeft: 14 }]}>
+                <Icon name="ios-phone-portrait-outline" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Anatomy</Text>
+            </View>
           </ListItem>
-          <ListItem button onPress={() => this.navigateTo('badge')} >
-            <Text>Badge</Text>
+          <ListItem button iconLeft onPress={() => this.navigateTo('badge')}>
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
+                <Icon name="ios-notifications-outline" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Badge</Text>
+            </View>
           </ListItem>
-          <ListItem button onPress={() => this.navigateTo('button')} >
-            <Text>Button</Text>
+          <ListItem button iconLeft onPress={() => this.navigateTo('button')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#4DCAE0', paddingLeft: 10 }]}>
+                <Icon name="md-radio-button-off" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Button</Text>
+            </View>
           </ListItem>
-          <ListItem button onPress={() => this.navigateTo('card')} >
-            <Text>Card</Text>
+          <ListItem button iconLeft onPress={() => this.navigateTo('card')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#29783B' }]}>
+                <Icon name="ios-keypad" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Card</Text>
+            </View>
           </ListItem>
-          <ListItem button onPress={() => this.navigateTo('checkbox')} >
-            <Text>Check Box</Text>
+          <ListItem button iconLeft onPress={() => this.navigateTo('checkbox')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#EB6B23', paddingLeft: 10 }]}>
+                <Icon name="ios-checkmark-circle-outline" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Check Box</Text>
+            </View>
           </ListItem>
-          <ListItem button onPress={() => this.navigateTo('form')} >
-            <Text>Form</Text>
+          <ListItem button iconLeft onPress={() => this.navigateTo('form')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#156DD1' }]}>
+                <Icon name="ios-home" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Form</Text>
+            </View>
           </ListItem>
-          <ListItem button onPress={() => this.navigateTo('icon')} >
-            <Text>Icon</Text>
+          <ListItem button iconLeft onPress={() => this.navigateTo('icon')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#F5BF35', paddingLeft: 10 }]}>
+                <Icon name="ios-information-circle-outline" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Icon</Text>
+            </View>
           </ListItem>
-          <ListItem button onPress={() => this.navigateTo('inputgroup')} >
-            <Text>InputGroup</Text>
+          <ListItem button iconLeft onPress={() => this.navigateTo('inputgroup')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#B63A48', paddingLeft: 14 }]}>
+                <Icon name="ios-document-outline" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>InputGroup</Text>
+            </View>
           </ListItem>
-          <ListItem button onPress={() => this.navigateTo('layout')} >
-            <Text>Layout</Text>
+          <ListItem button iconLeft onPress={() => this.navigateTo('layout')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
+                <Icon name="ios-grid-outline" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Layout</Text>
+            </View>
           </ListItem>
-          <ListItem button onPress={() => this.navigateTo('list')} >
-            <Text>List</Text>
+          <ListItem button iconLeft onPress={() => this.navigateTo('list')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
+                <Icon name="ios-home" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>List</Text>
+            </View>
           </ListItem>
-          <ListItem button onPress={() => this.navigateTo('picker')} >
-            <Text>Picker</Text>
+          <ListItem button iconLeft onPress={() => this.navigateTo('picker')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
+                <Icon name="ios-home" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Picker</Text>
+            </View>
           </ListItem>
-          <ListItem button onPress={() => this.navigateTo('radio')} >
-            <Text>Radio</Text>
+          <ListItem button iconLeft onPress={() => this.navigateTo('radio')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED', paddingLeft: 10 }]}>
+                <Icon name="ios-radio-button-on" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Radio</Text>
+            </View>
           </ListItem>
-          <ListItem button onPress={() => this.navigateTo('searchbar')} >
-            <Text>Searchbar</Text>
+          <ListItem button iconLeft onPress={() => this.navigateTo('searchbar')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
+                <Icon name="ios-search-outline" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Searchbar</Text>
+            </View>
           </ListItem>
-          <ListItem button onPress={() => this.navigateTo('spinner')} >
-            <Text>Spinner</Text>
+          <ListItem button iconLeft onPress={() => this.navigateTo('spinner')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
+                <Icon name="ios-home" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Spinner</Text>
+            </View>
           </ListItem>
-          <ListItem button onPress={() => this.navigateTo('tabs')} >
-            <Text>Tabs</Text>
+          <ListItem button iconLeft onPress={() => this.navigateTo('tabs')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
+                <Icon name="ios-home" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Tabs</Text>
+            </View>
           </ListItem>
-          <ListItem button onPress={() => this.navigateTo('thumbnail')} >
-            <Text>Thumbnail</Text>
+          <ListItem button iconLeft onPress={() => this.navigateTo('thumbnail')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
+                <Icon name="ios-home" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Thumbnail</Text>
+            </View>
           </ListItem>
-          <ListItem button onPress={() => this.navigateTo('spinner')} >
-            <Text>Test</Text>
+          <ListItem button iconLeft onPress={() => this.navigateTo('spinner')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
+                <Icon name="ios-home" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Test</Text>
+            </View>
           </ListItem>
         </List>
       </Content>

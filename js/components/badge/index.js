@@ -20,7 +20,7 @@ class NHBadge extends Component {
 
   render() {
     return (
-      <Container>
+      <Container style={styles.container}>
         <Header>
           <Button transparent onPress={() => this.popRoute()}>
             <Icon name="ios-arrow-back" />

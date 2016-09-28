@@ -1,11 +1,19 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, View } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Tabs } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
+import myTheme from '../../themes/base-theme';
 import styles from './styles';
+
+import ButtonTheme from './button-theme';
+import ButtonBlock from './button-block';
+import ButtonRound from './button-round';
+import ButtonOutline from './button-outline';
+// import ButtonSize from './button-size';
+import ButtonIcon from './button-icon';
 
 class NHButton extends Component {
 
@@ -20,7 +28,7 @@ class NHButton extends Component {
 
   render() {
     return (
-      <Container>
+      <Container theme={myTheme} style={styles.container}>
         <Header>
           <Button transparent onPress={() => this.popRoute()}>
             <Icon name="ios-arrow-back" />
@@ -33,24 +41,17 @@ class NHButton extends Component {
           </Button>
         </Header>
 
-        <Content padder>
-          <Card>
-            <CardItem header>
-              <Text>Button Theme</Text>
-            </CardItem>
-            <CardItem>
-              <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                <Button primary style={styles.mb}>Primary</Button>
-                <Button success style={styles.mb}>Success</Button>
-                <Button info style={styles.mb}>Info</Button>
-                <Button warning style={styles.mb}>Warning</Button>
-                <Button danger style={styles.mb}>Danger</Button>
-                <Button disabled style={styles.mb}>Disabled</Button>
-              </View>
-            </CardItem>
-          </Card>
+        <Content>
+          <Tabs>
+            <ButtonTheme tabLabel="Theme" />
+            <ButtonBlock tabLabel="Block" />
+            <ButtonRound tabLabel="Round" />
+            <ButtonOutline tabLabel="Outline" />
+            <ButtonIcon tabLabel="Icon" />
+          </Tabs>
         </Content>
       </Container>
+      // Disable swipe for tabs
     );
   }
 }

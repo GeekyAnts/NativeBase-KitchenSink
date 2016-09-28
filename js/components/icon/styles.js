@@ -8,6 +8,7 @@ module.exports = StyleSheet.create({
     flex: 1,
     width: null,
     height: null,
+    backgroundColor: '#FBFAFA',
   },
   iconContainer: {
     flexDirection: 'row',

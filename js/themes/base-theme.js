@@ -46,7 +46,7 @@ export default {
   },
   get btnTextSize() {
     return (Platform.OS === 'ios') ? this.fontSizeBase * 1.1 :
-    this.fontSizeBase - 1;
+        this.fontSizeBase - 1;
   },
   get btnTextSizeLarge() {
     return this.fontSizeBase * 1.5;
@@ -68,7 +68,7 @@ export default {
   },
 
 
-  // Card
+    // Card
   cardDefaultBg: '#fff',
 
 
@@ -162,7 +162,7 @@ export default {
 
 
   // List
-  listBorderColor: '#ACAAAB',
+  listBorderColor: '#ddd',
   listDividerBg: '#ddd',
   listItemHeight: 45,
   listItemPadding: 9,
@@ -190,9 +190,12 @@ export default {
 
 
   // Tabs
-  tabBgColor: '#F8F8F8',
+  // tabBgColor: '#F8F8F8',
+  // tabFontSize: 15,
+  // tabTextColor: '#fff',
+  tabBgColor: (Platform.OS === 'ios') ? '#F8F8F8' : '#4179F7',
   tabFontSize: 15,
-  tabTextColor: '#fff',
+  tabTextColor: (Platform.OS === 'ios') ? '#007aff' : '#fff',
 
 
   // Text
