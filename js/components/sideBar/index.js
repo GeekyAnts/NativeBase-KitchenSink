@@ -10,7 +10,7 @@ import sidebarTheme from './sidebar-theme';
 import styles from './style';
 
 // StatusBar.setBarStyle('light-content');
-const drawerCover = require('../../../img/drawer-cover.jpg');
+const drawerCover = require('../../../img/drawer-cover.png');
 const drawerImage = require('../../../img/drawer-image.png');
 
 class SideBar extends Component {
@@ -154,22 +154,6 @@ class SideBar extends Component {
                 <Icon name="ios-home" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>Tabs</Text>
-            </View>
-          </ListItem>
-          <ListItem button iconLeft onPress={() => this.navigateTo('thumbnail')} >
-            <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
-                <Icon name="ios-home" style={styles.sidebarIcon} />
-              </View>
-              <Text style={styles.text}>Thumbnail</Text>
-            </View>
-          </ListItem>
-          <ListItem button iconLeft onPress={() => this.navigateTo('spinner')} >
-            <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
-                <Icon name="ios-home" style={styles.sidebarIcon} />
-              </View>
-              <Text style={styles.text}>Test</Text>
             </View>
           </ListItem>
         </List>

@@ -1,16 +1,35 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, List, ListItem, InputGroup, Input } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, List, ListItem, InputGroup, Input, Picker, Text, View, Thumbnail } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
+
+const Item = Picker.Item;
+const camera = require('../../../img/camera.png');
 
 class NHForm extends Component {
 
   static propTypes = {
     popRoute: React.PropTypes.func,
     openDrawer: React.PropTypes.func,
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedItem: undefined,
+      selected1: 'key0',
+      results: {
+        items: [],
+      },
+    };
+  }
+  onValueChange(value: string) {
+    this.setState({
+      selected1: value,
+    });
   }
 
   popRoute() {
@@ -33,7 +52,19 @@ class NHForm extends Component {
         </Header>
 
         <Content>
+          <Thumbnail size={80} source={camera} style={{ alignSelf: 'center', marginTop: 20, marginBottom: 10 }} />
           <List>
+            <ListItem>
+              <InputGroup>
+                <Input inlineLabel label="FNAME" placeholder="John" />
+              </InputGroup>
+            </ListItem>
+            <ListItem>
+              <InputGroup>
+                <Input inlineLabel label="LNAME" placeholder="Doe" />
+              </InputGroup>
+            </ListItem>
+
             <ListItem>
               <InputGroup>
                 <Icon name="ios-person" />
@@ -47,17 +78,35 @@ class NHForm extends Component {
               </InputGroup>
             </ListItem>
             <ListItem>
-              <InputGroup >
-                <Input inlineLabel label="NAME" placeholder="John Doe" />
+              <InputGroup>
+                <Icon name="ios-call" />
+                <Input placeholder="PHONE" />
               </InputGroup>
+            </ListItem>
+            <ListItem>
+              <View style={{ flex: 1, flexDirection: 'row' }}>
+                <Icon name="ios-transgender" />
+                <Text style={{ marginLeft: 10 }}>GENDER</Text>
+              </View>
+              <Picker
+                iosHeader="Select one"
+                mode="dropdown"
+                selectedValue={this.state.selected1}
+                onValueChange={this.onValueChange.bind(this)}
+              >
+                <Item label="Male" value="key0" />
+                <Item label="Female" value="key1" />
+                <Item label="Other" value="key2" />
+              </Picker>
             </ListItem>
 
             <ListItem>
               <InputGroup >
-                <Input stackedLabel label="Address Line 1" placeholder="Address" />
+                <Input stackedLabel label="Permanent Address" placeholder="Address" />
               </InputGroup>
             </ListItem>
           </List>
+          <Button style={{ alignSelf: 'center', marginTop: 20 }}>Sign Up</Button>
         </Content>
       </Container>
     );

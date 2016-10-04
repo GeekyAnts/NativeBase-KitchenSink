@@ -18,12 +18,16 @@ import NHIcon from './components/icon/';
 import NHInputGroup from './components/inputgroup/';
 import NHLayout from './components/layout/';
 import NHList from './components/list/';
+import NHBasicList from './components/list/basic-list';
+import NHListDivider from './components/list/list-divider';
+import NHListIcon from './components/list/list-icon';
+import NHListAvatar from './components/list/list-avatar';
+import NHListThumbnail from './components/list/list-thumbnail';
 import NHPicker from './components/picker/';
 import NHRadio from './components/radio/';
 import NHSearchbar from './components/searchbar/';
 import NHSpinner from './components/spinner/';
 import NHTabs from './components/tabs/';
-import NHThumbnail from './components/thumbnail/';
 import SplashPage from './components/splashscreen/';
 import SideBar from './components/sideBar';
 import { statusBarColor } from './themes/base-theme';
@@ -76,7 +80,6 @@ class AppNavigator extends Component {
   }
 
   componentDidUpdate() {
-    // console.log(this.props.routes, 'wdwdwd');
     if (this.props.drawerState === 'opened') {
       this.openDrawer();
     }
@@ -127,6 +130,16 @@ class AppNavigator extends Component {
         return <NHLayout navigator={navigator} />;
       case 'list':
         return <NHList navigator={navigator} />;
+      case 'basicList':
+        return <NHBasicList navigator={navigator} />;
+      case 'listDivider':
+        return <NHListDivider navigator={navigator} />;
+      case 'listIcon':
+        return <NHListIcon navigator={navigator} />;
+      case 'listAvatar':
+        return <NHListAvatar navigator={navigator} />;
+      case 'listThumbnail':
+        return <NHListThumbnail navigator={navigator} />;
       case 'picker':
         return <NHPicker navigator={navigator} />;
       case 'radio':
@@ -137,8 +150,6 @@ class AppNavigator extends Component {
         return <NHSpinner navigator={navigator} />;
       case 'tabs':
         return <NHTabs navigator={navigator} />;
-      case 'thumbnail':
-        return <NHThumbnail navigator={navigator} />;
       default :
         return <Login navigator={navigator} />;
     }

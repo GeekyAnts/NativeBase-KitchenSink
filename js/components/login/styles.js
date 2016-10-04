@@ -1,17 +1,30 @@
 
 const React = require('react-native');
 
-const { StyleSheet, Dimensions } = React;
+const { StyleSheet, Dimensions, Platform } = React;
 
 const deviceHeight = Dimensions.get('window').height;
 
 module.exports = StyleSheet.create({
-  container: {
+  imageContainer: {
+    flex: 1,
+    width: null,
+    height: null,
+  },
+  logoContainer: {
+    flex: 1,
+    marginTop: deviceHeight / 6,
+    marginBottom: 30,
+  },
+  logo: {
     position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: '#453F41',
+    left: (Platform.OS === 'android') ? 40 : 50,
+    top: (Platform.OS === 'android') ? 35 : 60,
+    width: 280,
+    height: 100,
+  },
+  text: {
+    color: '#D8D8D8',
+    bottom: 10,
   },
 });

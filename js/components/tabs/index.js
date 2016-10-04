@@ -5,8 +5,10 @@ import { Container, Header, Title, Content, Button, Icon, Tabs } from 'native-ba
 
 import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
-import NHCheckbox from '../checkbox/';
-import NHRadio from '../radio/';
+import myTheme from '../../themes/base-theme';
+
+import TabOne from './tabOne';
+import TabTwo from './tabTwo';
 
 class NHTabs extends Component {
 
@@ -21,7 +23,7 @@ class NHTabs extends Component {
 
   render() {
     return (
-      <Container>
+      <Container theme={myTheme}>
         <Header>
           <Button transparent onPress={() => this.popRoute()}>
             <Icon name="ios-arrow-back" />
@@ -35,9 +37,9 @@ class NHTabs extends Component {
         </Header>
 
         <Content>
-          <Tabs>
-            <NHCheckbox tabLabel="One" />
-            <NHRadio tabLabel="Two" />
+          <Tabs locked>
+            <TabOne tabLabel="Music" />
+            <TabTwo tabLabel="Video" />
           </Tabs>
         </Content>
       </Container>

@@ -17,8 +17,11 @@ module.exports = StyleSheet.create({
     marginLeft: 3,
     marginTop: 10,
   },
-  margin: {
+  mb15: {
     marginBottom: 15,
+  },
+  mb20: {
+    marginBottom: 20,
   },
   iconButton: {
     color: '#007aff',

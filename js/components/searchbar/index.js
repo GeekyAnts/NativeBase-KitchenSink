@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Button, Icon, InputGroup, Input } from 'native-base';
+import { Container, Header, Button, Icon, InputGroup, Input, Content, View } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
@@ -30,6 +30,18 @@ class NHSearchbar extends Component {
             Search
           </Button>
         </Header>
+
+        <Content>
+          <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
+            <Button transparent textStyle={{ color: '#5067FF' }} onPress={() => this.popRoute()}>
+              Back
+            </Button>
+
+            <Button transparent textStyle={{ color: '#5067FF' }} onPress={this.props.openDrawer}>
+              Menu
+            </Button>
+          </View>
+        </Content>
       </Container>
     );
   }

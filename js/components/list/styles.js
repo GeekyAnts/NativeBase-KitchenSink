@@ -12,6 +12,6 @@ module.exports = StyleSheet.create({
     marginBottom: 7,
   },
   mb: {
-    marginBottom: 25,
+    marginBottom: 15,
   },
 });

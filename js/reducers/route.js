@@ -13,9 +13,7 @@ const initialState = {
 };
 
 export default function (state:State = initialState, action:Action): State {
-  // console.log(state, "route state *()*(*&77");
   if (action.type === PUSH_NEW_ROUTE) {
-    // console.log(action.route, "route");
     globalNav.navigator.push({ id: action.route });
     return {
       routes: [...state.routes, action.route],
@@ -35,15 +33,14 @@ export default function (state:State = initialState, action:Action): State {
   if (action.type === REPLACE_OR_PUSH_ROUTE) {
     let routes = state.routes;
 
-    if (routes[routes.length - 1] === 'home') {
-      // If top route is home and user navigates to a route other than home, then push
-      if (action.route !== 'home') {
+    if (routes[routes.length - 1] === 'anatomy') {
+      if (action.route !== 'anatomy') {
         globalNav.navigator.push({ id: action.route });
-      } else { // If top route is home and user navigates to home, do nothing
+      } else { // If top route is anatomy and user navigates to anatomy, do nothing
         routes = [];
       }
-    } else if (action.route === 'home') {
-      globalNav.navigator.resetTo({ id: 'home' });
+    } else if (action.route === 'anatomy') {
+      globalNav.navigator.resetTo({ id: 'anatomy' });
       routes = [];
     } else {
       globalNav.navigator.replaceWithAnimation({ id: action.route });
