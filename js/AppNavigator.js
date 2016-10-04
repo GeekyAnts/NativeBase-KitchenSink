@@ -166,6 +166,7 @@ class AppNavigator extends Component {
         onClose={() => this.closeDrawer()}
         openDrawerOffset={0.2}
         panCloseMask={0.2}
+        styles={{ main: { shadowColor: '#000000', shadowOpacity: 0.4, shadowRadius: 3 } }}
         negotiatePan
       >
         <StatusBar

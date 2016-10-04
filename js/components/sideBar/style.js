@@ -9,6 +9,10 @@ module.exports = StyleSheet.create({
   sidebar: {
     flex: 1,
     backgroundColor: '#fff',
+    shadowColor: '#000',
+    // shadowOffset: { width: 1 },
+    // shadowRadius: 4,
+    shadowOpacity: 0.4,
   },
   drawerCover: {
     alignSelf: 'stretch',
@@ -24,10 +28,6 @@ module.exports = StyleSheet.create({
     top: (Platform.OS === 'android') ? 10 : 15,
     // borderWidth: 0,
     borderColor: '#fff',
-    // shadowColor: '#000',
-    // shadowOffset: { width: 2, height: 2 },
-    // shadowOpacity: 0.4,
-    // shadowRadius: 1,
     borderRadius: 26,
     width: 250,
     height: 150,
@@ -57,4 +57,21 @@ module.exports = StyleSheet.create({
     fontWeight: '500',
     fontSize: 16,
   },
+  // sidebar: {
+  //   flex: 1,
+  //   backgroundColor: '#fff',
+  //   shadowColor: '#000',
+  //   shadowOffset: { width: 30 },
+  //   shadowRadius: 40,
+  //   shadowOpacity: 0.4,
+  // },
+
+  // sidebar: {
+  //   flex: 1,
+  //   backgroundColor: '#fff',
+  //   shadowColor: '#000',
+  //   shadowOffset: { width: 1 },
+  //   shadowRadius: 4,
+  //   shadowOpacity: 0.4,
+  // },
 });

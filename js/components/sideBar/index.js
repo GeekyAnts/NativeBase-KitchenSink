@@ -18,7 +18,26 @@ class SideBar extends Component {
   static propTypes = {
     closeDrawer: React.PropTypes.func,
     replaceOrPushRoute: React.PropTypes.func,
+    drawerState: React.PropTypes.string,
   }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      shadowOffsetWidth: 1,
+      shadowRadius: 4,
+    };
+  }
+
+  // componentDidUpdate() {
+  //   if (this.props.drawerState === 'opened') {
+  //     this.setState({ shadowOffsetWidth: 30 });
+  //   }
+  //
+  //   if (this.props.drawerState === 'closed') {
+  //     this.setState({ shadowOffsetWidth: 1 });
+  //   }
+  // }
 
   navigateTo(route) {
     this.props.closeDrawer();
@@ -27,7 +46,10 @@ class SideBar extends Component {
 
   render() {
     return (
-      <Content theme={sidebarTheme} style={styles.sidebar}>
+      <Content
+        theme={sidebarTheme}
+        style={styles.sidebar}
+      >
         <Image source={drawerCover} style={styles.drawerCover}>
           <Image
             square
@@ -169,4 +191,8 @@ function bindAction(dispatch) {
   };
 }
 
-export default connect(null, bindAction)(SideBar);
+const mapStateToProps = state => ({
+  drawerState: state.drawer.drawerState,
+});
+
+export default connect(mapStateToProps, bindAction)(SideBar);

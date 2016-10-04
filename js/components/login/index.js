@@ -4,20 +4,16 @@ import { connect } from 'react-redux';
 import { Image } from 'react-native';
 import { Container, Button, View, H3 } from 'native-base';
 
-import { replaceRoute } from '../../actions/route';
+import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 const launchscreenBg = require('../../../img/launchscreen-bg.png');
 const launchscreenLogo = require('../../../img/launchscreen-logo.png');
 
-class Login extends Component {
+class Login extends Component { // eslint-disable-line
 
   static propTypes = {
-    replaceRoute: React.PropTypes.func,
-  }
-
-  replaceRoute(route) {
-    this.props.replaceRoute(route);
+    openDrawer: React.PropTypes.func,
   }
 
   render() {
@@ -35,7 +31,7 @@ class Login extends Component {
           <View>
             <Button
               style={{ backgroundColor: '#6FAF98', alignSelf: 'center' }}
-              onPress={() => this.replaceRoute('anatomy')}
+              onPress={this.props.openDrawer}
             >
                 Demo Please
             </Button>
@@ -48,7 +44,7 @@ class Login extends Component {
 
 function bindActions(dispatch) {
   return {
-    replaceRoute: route => dispatch(replaceRoute(route)),
+    openDrawer: () => dispatch(openDrawer()),
   };
 }
 
