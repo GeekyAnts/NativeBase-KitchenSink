@@ -191,14 +191,14 @@ class SideBar extends Component {
               <Text style={styles.text}>Tabs</Text>
             </View>
           </ListItem>
-          <ListItem button iconLeft onPress={() => this.navigateTo('thumbnail')} >
-            <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
-                <Icon name="ios-home" style={styles.sidebarIcon} />
-              </View>
-              <Text style={styles.text}>Thumbnail</Text>
-            </View>
-          </ListItem>
+//           <ListItem button iconLeft onPress={() => this.navigateTo('thumbnail')} >
+//             <View style={styles.listItemContainer}>
+//               <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
+//                 <Icon name="ios-home" style={styles.sidebarIcon} />
+//               </View>
+//               <Text style={styles.text}>Thumbnail</Text>
+//             </View>
+//           </ListItem>
         </List>
       </Content>
     );
