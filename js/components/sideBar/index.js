@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Image, StatusBar } from 'react-native';
+import { Image } from 'react-native';
 import { Content, Text, List, ListItem, Icon, View } from 'native-base';
 
 import { closeDrawer } from '../../actions/drawer';
@@ -9,7 +9,6 @@ import { replaceOrPushRoute } from '../../actions/route';
 import sidebarTheme from './sidebar-theme';
 import styles from './style';
 
-// StatusBar.setBarStyle('light-content');
 const drawerCover = require('../../../img/drawer-cover.png');
 const drawerImage = require('../../../img/drawer-image.png');
 
@@ -18,7 +17,7 @@ class SideBar extends Component {
   static propTypes = {
     closeDrawer: React.PropTypes.func,
     replaceOrPushRoute: React.PropTypes.func,
-    drawerState: React.PropTypes.string,
+    drawerState: React.PropTypes.string,  //eslint-disable-line
   }
 
   constructor(props) {
@@ -191,14 +190,6 @@ class SideBar extends Component {
               <Text style={styles.text}>Tabs</Text>
             </View>
           </ListItem>
-//           <ListItem button iconLeft onPress={() => this.navigateTo('thumbnail')} >
-//             <View style={styles.listItemContainer}>
-//               <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
-//                 <Icon name="ios-home" style={styles.sidebarIcon} />
-//               </View>
-//               <Text style={styles.text}>Thumbnail</Text>
-//             </View>
-//           </ListItem>
         </List>
       </Content>
     );
