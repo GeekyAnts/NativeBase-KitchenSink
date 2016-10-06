@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Tabs } from 'native-base';
+import { Container, Header, Title, View, Button, Icon, Tabs } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
@@ -25,10 +25,6 @@ class NHTabs extends Component {
     return (
       <Container theme={myTheme}>
         <Header>
-          <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back" />
-          </Button>
-
           <Title>Tabs</Title>
 
           <Button transparent onPress={this.props.openDrawer}>
@@ -36,12 +32,12 @@ class NHTabs extends Component {
           </Button>
         </Header>
 
-        <Content>
+        <View>
           <Tabs locked>
             <TabOne tabLabel="Music" />
             <TabTwo tabLabel="Video" />
           </Tabs>
-        </Content>
+        </View>
       </Container>
     );
   }

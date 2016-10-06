@@ -9,7 +9,7 @@ export type State = {
 }
 
 const initialState = {
-  routes: ['login'],
+  routes: ['home'],
 };
 
 export default function (state:State = initialState, action:Action): State {
@@ -33,14 +33,14 @@ export default function (state:State = initialState, action:Action): State {
   if (action.type === REPLACE_OR_PUSH_ROUTE) {
     let routes = state.routes;
 
-    if (routes[routes.length - 1] === 'anatomy') {
-      if (action.route !== 'anatomy') {
+    if (routes[routes.length - 1] === 'home') {
+      if (action.route !== 'home') {
         globalNav.navigator.push({ id: action.route });
-      } else { // If top route is anatomy and user navigates to anatomy, do nothing
+      } else { // If top route is home and user navigates to home, do nothing
         routes = [];
       }
-    } else if (action.route === 'anatomy') {
-      globalNav.navigator.resetTo({ id: 'anatomy' });
+    } else if (action.route === 'home') {
+      globalNav.navigator.resetTo({ id: 'home' });
       routes = [];
     } else {
       globalNav.navigator.replaceWithAnimation({ id: action.route });
@@ -72,12 +72,12 @@ export default function (state:State = initialState, action:Action): State {
     };
   }
 
-  if (action.type === REHYDRATE) {
-    const savedData = action.payload.route || state;
-    return {
-      ...savedData,
-    };
-  }
+  // if (action.type === REHYDRATE) {
+  //   const savedData = action.payload.route || state;
+  //   return {
+  //     ...savedData,
+  //   };
+  // }
 
   return state;
 }

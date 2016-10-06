@@ -5,6 +5,7 @@ import { Container, Header, Title, Content, Button, Icon, Picker } from 'native-
 
 import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
+import styles from './styles';
 
 const Item = Picker.Item;
 
@@ -38,12 +39,8 @@ class NHPicker extends Component {
 
   render() {
     return (
-      <Container>
+      <Container style={styles.container}>
         <Header>
-          <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back" />
-          </Button>
-
           <Title>Picker</Title>
 
           <Button transparent onPress={this.props.openDrawer}>

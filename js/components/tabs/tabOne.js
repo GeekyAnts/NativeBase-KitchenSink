@@ -3,11 +3,13 @@ import React, { Component } from 'react';
 
 import { Container, Content, Text } from 'native-base';
 
+import styles from './styles';
+
 export default class TabOne extends Component { // eslint-disable-line
 
   render() { // eslint-disable-line
     return (
-      <Container>
+      <Container style={styles.container}>
         <Content padder>
           <Text>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit.

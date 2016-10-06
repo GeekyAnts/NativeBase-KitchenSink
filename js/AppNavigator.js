@@ -7,12 +7,13 @@ import { Drawer } from 'native-base';
 import { closeDrawer } from './actions/drawer';
 import { popRoute } from './actions/route';
 
-import Login from './components/login/';
+import Home from './components/home/';
 import Anatomy from './components/anatomy/';
 import NHBadge from './components/badge/';
 import NHButton from './components/button/';
 import NHCard from './components/card/';
 import NHCheckbox from './components/checkbox/';
+import NHDeckSwiper from './components/deckswiper/';
 import NHForm from './components/form/';
 import NHIcon from './components/icon/';
 import NHInputGroup from './components/inputgroup/';
@@ -29,7 +30,7 @@ import NHSearchbar from './components/searchbar/';
 import NHSpinner from './components/spinner/';
 import NHTabs from './components/tabs/';
 import SplashPage from './components/splashscreen/';
-import SideBar from './components/sideBar';
+import SideBar from './components/sidebar';
 import { statusBarColor } from './themes/base-theme';
 
 Navigator.prototype.replaceWithAnimation = function replaceWithAnimation(route) {
@@ -70,7 +71,7 @@ class AppNavigator extends Component {
     BackAndroid.addEventListener('hardwareBackPress', () => {
       const routes = this._navigator.getCurrentRoutes();
 
-      if (routes[routes.length - 1].id === 'anatomy' || routes[routes.length - 1].id === 'login') {
+      if (routes[routes.length - 1].id === 'home') {
                 // CLose the app
         return false;
       }
@@ -108,8 +109,8 @@ class AppNavigator extends Component {
     switch (route.id) {
       case 'splashscreen':
         return <SplashPage navigator={navigator} />;
-      case 'login':
-        return <Login navigator={navigator} />;
+      case 'home':
+        return <Home navigator={navigator} />;
       case 'anatomy':
         return <Anatomy navigator={navigator} />;
       case 'badge':
@@ -120,6 +121,8 @@ class AppNavigator extends Component {
         return <NHCard navigator={navigator} />;
       case 'checkbox':
         return <NHCheckbox navigator={navigator} />;
+      case 'deckswiper':
+        return <NHDeckSwiper navigator={navigator} />;
       case 'form':
         return <NHForm navigator={navigator} />;
       case 'icon':
@@ -151,7 +154,7 @@ class AppNavigator extends Component {
       case 'tabs':
         return <NHTabs navigator={navigator} />;
       default :
-        return <Login navigator={navigator} />;
+        return <Home navigator={navigator} />;
     }
   }
 
@@ -178,7 +181,7 @@ class AppNavigator extends Component {
             this._navigator = ref;
           }}
           configureScene={() => Navigator.SceneConfigs.FloatFromRight}
-          initialRoute={{ id: (Platform.OS === 'android') ? 'splashscreen' : 'login', statusBarHidden: true }}
+          initialRoute={{ id: (Platform.OS === 'android') ? 'splashscreen' : 'home', statusBarHidden: true }}
           renderScene={this.renderScene}
         />
       </Drawer>

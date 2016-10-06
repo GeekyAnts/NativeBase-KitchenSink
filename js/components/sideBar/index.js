@@ -29,15 +29,17 @@ class SideBar extends Component {
     };
   }
 
-  // componentDidUpdate() {
-  //   if (this.props.drawerState === 'opened') {
-  //     this.setState({ shadowOffsetWidth: 30 });
-  //   }
-  //
-  //   if (this.props.drawerState === 'closed') {
-  //     this.setState({ shadowOffsetWidth: 1 });
-  //   }
-  // }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.drawerState === 'opened') {
+      this.setState({ shadowOffsetWidth: 30 });
+      this.setState({ shadowRadius: 60 });
+    }
+
+    if (nextProps.drawerState === 'closed') {
+      this.setState({ shadowOffsetWidth: 0 });
+      this.setState({ shadowRadius: 0 });
+    }
+  }
 
   navigateTo(route) {
     this.props.closeDrawer();
@@ -48,7 +50,10 @@ class SideBar extends Component {
     return (
       <Content
         theme={sidebarTheme}
-        style={styles.sidebar}
+        style={[styles.sidebar,
+          { shadowOffset: { width: this.state.shadowOffsetWidth },
+          shadowRadius: this.state.shadowRadius },
+        ]}
       >
         <Image source={drawerCover} style={styles.drawerCover}>
           <Image
@@ -96,6 +101,14 @@ class SideBar extends Component {
                 <Icon name="ios-checkmark-circle-outline" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>Check Box</Text>
+            </View>
+          </ListItem>
+          <ListItem button iconLeft onPress={() => this.navigateTo('deckswiper')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#EB6B23', paddingLeft: 10 }]}>
+                <Icon name="ios-home" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Deck Swiper</Text>
             </View>
           </ListItem>
           <ListItem button iconLeft onPress={() => this.navigateTo('form')} >
@@ -176,6 +189,14 @@ class SideBar extends Component {
                 <Icon name="ios-home" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>Tabs</Text>
+            </View>
+          </ListItem>
+          <ListItem button iconLeft onPress={() => this.navigateTo('thumbnail')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
+                <Icon name="ios-home" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Thumbnail</Text>
             </View>
           </ListItem>
         </List>

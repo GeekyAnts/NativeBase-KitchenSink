@@ -23,10 +23,6 @@ class NHButton extends Component {
     return (
       <Container theme={myTheme} style={styles.container}>
         <Header>
-          <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back" />
-          </Button>
-
           <Title>Button</Title>
 
           <Button transparent onPress={this.props.openDrawer}>

@@ -5,6 +5,7 @@ import { Container, Header, Button, Icon, InputGroup, Input, Content, View } fro
 
 import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
+import styles from './styles';
 
 class NHSearchbar extends Component {
 
@@ -19,7 +20,7 @@ class NHSearchbar extends Component {
 
   render() {
     return (
-      <Container>
+      <Container style={styles.container}>
         <Header searchBar rounded>
           <InputGroup>
             <Icon name="ios-search" />
@@ -32,13 +33,9 @@ class NHSearchbar extends Component {
         </Header>
 
         <Content>
-          <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
-            <Button transparent textStyle={{ color: '#5067FF' }} onPress={() => this.popRoute()}>
-              Back
-            </Button>
-
-            <Button transparent textStyle={{ color: '#5067FF' }} onPress={this.props.openDrawer}>
-              Menu
+          <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-end' }}>
+            <Button transparent onPress={this.props.openDrawer}>
+              <Icon name="ios-menu" style={{ color: '#5067FF' }} />
             </Button>
           </View>
         </Content>

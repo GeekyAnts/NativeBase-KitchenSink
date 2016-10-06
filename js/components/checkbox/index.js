@@ -5,6 +5,7 @@ import { Container, Header, Title, Content, Button, Icon, List, ListItem, CheckB
 
 import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
+import styles from './styles';
 
 class NHCheckbox extends Component {
 
@@ -19,12 +20,8 @@ class NHCheckbox extends Component {
 
   render() {
     return (
-      <Container>
+      <Container style={styles.container}>
         <Header>
-          <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back" />
-          </Button>
-
           <Title>Check Box</Title>
 
           <Button transparent onPress={this.props.openDrawer}>

@@ -10,9 +10,9 @@ module.exports = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     shadowColor: '#000',
-    // shadowOffset: { width: 1 },
-    // shadowRadius: 4,
-    shadowOpacity: 0.4,
+    // shadowOffset: { width: 30 },
+    // shadowRadius: 60,
+    shadowOpacity: 0.3,
   },
   drawerCover: {
     alignSelf: 'stretch',

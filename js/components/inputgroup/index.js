@@ -22,10 +22,6 @@ class NHInputGroup extends Component {
     return (
       <Container style={styles.container}>
         <Header>
-          <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back" />
-          </Button>
-
           <Title>InputGroup</Title>
 
           <Button transparent onPress={this.props.openDrawer}>

@@ -5,6 +5,7 @@ import { Container, Header, Title, Content, Button, Icon, Spinner } from 'native
 
 import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
+import styles from './styles';
 
 class NHSpinner extends Component {
 
@@ -19,12 +20,8 @@ class NHSpinner extends Component {
 
   render() {
     return (
-      <Container>
+      <Container style={styles.container}>
         <Header>
-          <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back" />
-          </Button>
-
           <Title>Spinner</Title>
 
           <Button transparent onPress={this.props.openDrawer}>

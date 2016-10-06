@@ -25,12 +25,8 @@ class NHList extends Component {
 
   render() {
     return (
-      <Container>
+      <Container style={styles.container}>
         <Header>
-          <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back" />
-          </Button>
-
           <Title>List</Title>
 
           <Button transparent onPress={this.props.openDrawer}>
@@ -54,8 +50,7 @@ function bindAction(dispatch) {
   return {
     popRoute: () => dispatch(popRoute()),
     openDrawer: () => dispatch(openDrawer()),
-    pushNewRoute:
-    route => dispatch(pushNewRoute(route)),
+    pushNewRoute: route => dispatch(pushNewRoute(route)),
   };
 }
 

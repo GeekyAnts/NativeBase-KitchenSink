@@ -31,9 +31,6 @@ class Anatomy extends Component {
       <Container theme={myTheme} style={styles.container}>
 
         <Header>
-          <Button transparent onPress={() => this.replaceRoute('login')}>
-            <Icon name="ios-power" />
-          </Button>
           <Title>Header</Title>
           <Button transparent onPress={this.props.openDrawer}>
             <Icon name="ios-menu" />

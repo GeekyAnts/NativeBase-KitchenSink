@@ -22,10 +22,6 @@ class NHBadge extends Component {
     return (
       <Container style={styles.container}>
         <Header>
-          <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back" />
-          </Button>
-
           <Title>Badge</Title>
 
           <Button transparent onPress={this.props.openDrawer}>

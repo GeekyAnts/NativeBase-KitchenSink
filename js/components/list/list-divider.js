@@ -4,25 +4,25 @@ import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
-import { replaceRoute } from '../../actions/route';
-// import styles from './styles';
+import { popRoute } from '../../actions/route';
+import styles from './styles';
 
 class NHListDivider extends Component {
 
   static propTypes = {
     openDrawer: React.PropTypes.func,
-    replaceRoute: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
   }
 
-  replaceRoute(route) {
-    this.props.replaceRoute(route);
+  popRoute() {
+    this.props.popRoute();
   }
 
   render() {
     return (
-      <Container>
+      <Container style={styles.container}>
         <Header>
-          <Button transparent onPress={() => this.replaceRoute('list')}>
+          <Button transparent onPress={() => this.popRoute()}>
             <Icon name="ios-arrow-back" />
           </Button>
 
@@ -89,7 +89,7 @@ class NHListDivider extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    replaceRoute: route => dispatch(replaceRoute(route)),
+    popRoute: () => dispatch(popRoute()),
   };
 }
 

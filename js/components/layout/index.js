@@ -22,10 +22,6 @@ class NHLayout extends Component {
     return (
       <Container>
         <Header>
-          <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back" />
-          </Button>
-
           <Title>Layout</Title>
 
           <Button transparent onPress={this.props.openDrawer}>

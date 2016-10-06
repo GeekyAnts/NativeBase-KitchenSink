@@ -5,6 +5,7 @@ import { Container, Header, Title, Content, Button, Icon, List, ListItem, InputG
 
 import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
+import styles from './styles';
 
 const Item = Picker.Item;
 const camera = require('../../../img/camera.png');
@@ -38,12 +39,8 @@ class NHForm extends Component {
 
   render() {
     return (
-      <Container>
+      <Container style={styles.container}>
         <Header>
-          <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back" />
-          </Button>
-
           <Title>Form</Title>
 
           <Button transparent onPress={this.props.openDrawer}>

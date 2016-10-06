@@ -5,6 +5,7 @@ import { Container, Header, Title, Content, Button, Icon, Thumbnail, Text } from
 
 import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
+import styles from './styles';
 
 const imgURI = 'http://www.onenov.in/users_content/users_images/images/f5f8d64aef421b809647a120ab133b7b.jpg';
 const imgPath = require('../../../img/purple-flower.jpg');
@@ -22,12 +23,8 @@ class NHThumbnail extends Component {
 
   render() {
     return (
-      <Container>
+      <Container style={styles.container}>
         <Header>
-          <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back" />
-          </Button>
-
           <Title>Thumbnail</Title>
 
           <Button transparent onPress={this.props.openDrawer}>

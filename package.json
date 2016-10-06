@@ -11,7 +11,7 @@
     "color": "~0.11.1",
     "lodash": "^4.13.1",
     "moment": "^2.13.0",
-    "native-base": "^0.5.8",
+    "native-base": "^0.5.9",
     "react": "15.3.2",
     "react-native": "0.33.0",
     "react-native-code-push": "1.14.6-beta",
