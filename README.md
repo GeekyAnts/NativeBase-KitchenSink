@@ -15,7 +15,7 @@ The applications stack of components is built using native UI components and bec
 
 ## Get Started
 
-###1. System Requirements
+####1. System Requirements
 
 * Globally installed [node](https://nodejs.org/en/) >= 4.0
 
@@ -29,7 +29,7 @@ The applications stack of components is built using native UI components and bec
 
 
 
-###2. Installation
+####2. Installation
 
 On the command prompt run the following commands
 
@@ -53,7 +53,7 @@ If React Native >= 0.29
 $ react-native link
 ```
 
-###3. Simulate for iOS
+####3. Simulate for iOS
 
 **Method One**
 
