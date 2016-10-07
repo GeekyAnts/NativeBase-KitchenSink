@@ -1,11 +1,14 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Dimensions } from 'react-native';
 import { Container, Header, Button, Icon, InputGroup, Input, Content, View } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
 import styles from './styles';
+
+const deviceHeight = Dimensions.get('window').height;
 
 class NHSearchbar extends Component {
 
@@ -32,12 +35,8 @@ class NHSearchbar extends Component {
           </Button>
         </Header>
 
-        <Content>
-          <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-end' }}>
-            <Button bordered style={{ borderColor: '#fff' }} onPress={this.props.openDrawer}>
-              Menu
-            </Button>
-          </View>
+        <Content padder>
+          <Button block rounded onPress={this.props.openDrawer}>Back</Button>
         </Content>
       </Container>
     );

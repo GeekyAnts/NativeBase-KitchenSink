@@ -88,7 +88,7 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.nativebasehackathon"
+        applicationId "com.nativebasekitchensink"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1

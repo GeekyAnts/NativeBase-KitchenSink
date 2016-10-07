@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { TouchableOpacity } from 'react-native';
 import { Container, Header, Title, Content, Button, Icon, List, ListItem, InputGroup, Input, Picker, Text, View, Thumbnail } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
@@ -49,7 +50,9 @@ class NHForm extends Component {
         </Header>
 
         <Content>
-          <Thumbnail size={80} source={camera} style={{ alignSelf: 'center', marginTop: 20, marginBottom: 10 }} />
+          <TouchableOpacity>
+            <Thumbnail size={80} source={camera} style={{ alignSelf: 'center', marginTop: 20, marginBottom: 10 }} />
+          </TouchableOpacity>
           <List>
             <ListItem>
               <InputGroup>
