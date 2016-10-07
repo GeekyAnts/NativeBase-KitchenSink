@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Thumbnail } from 'native-base';
 
-import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
 import styles from './styles';
 
@@ -17,7 +16,6 @@ const varun = require('../../../img/contacts/varun.png');
 class NHListAvatar extends Component {
 
   static propTypes = {
-    openDrawer: React.PropTypes.func,
     popRoute: React.PropTypes.func,
   }
 
@@ -34,10 +32,6 @@ class NHListAvatar extends Component {
           </Button>
 
           <Title>List Avatar</Title>
-
-          <Button transparent onPress={this.props.openDrawer}>
-            <Icon name="ios-menu" />
-          </Button>
         </Header>
 
         <Content>
@@ -81,7 +75,6 @@ class NHListAvatar extends Component {
 
 function bindAction(dispatch) {
   return {
-    openDrawer: () => dispatch(openDrawer()),
     popRoute: () => dispatch(popRoute()),
   };
 }

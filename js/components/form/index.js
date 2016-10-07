@@ -53,36 +53,39 @@ class NHForm extends Component {
           <List>
             <ListItem>
               <InputGroup>
-                <Input inlineLabel label="FNAME" placeholder="John" />
+                <Input inlineLabel label="First Name" placeholder="John" />
               </InputGroup>
             </ListItem>
             <ListItem>
               <InputGroup>
-                <Input inlineLabel label="LNAME" placeholder="Doe" />
+                <Input inlineLabel label="Last Name" placeholder="Doe" />
               </InputGroup>
             </ListItem>
 
             <ListItem>
               <InputGroup>
-                <Icon name="ios-person" />
+                <Icon name="ios-person" style={{ color: '#0A69FE' }} />
                 <Input placeholder="EMAIL" />
               </InputGroup>
             </ListItem>
             <ListItem>
               <InputGroup>
-                <Icon name="ios-unlock" />
+                <Icon name="ios-unlock" style={{ color: '#0A69FE' }} />
                 <Input placeholder="PASSWORD" secureTextEntry />
               </InputGroup>
             </ListItem>
             <ListItem>
               <InputGroup>
-                <Icon name="ios-call" />
-                <Input placeholder="PHONE" />
+                <Icon name="ios-call" style={{ color: '#0A69FE' }} />
+                <Input
+                  placeholder="PHONE"
+                  keyboardType="numeric"
+                />
               </InputGroup>
             </ListItem>
             <ListItem>
               <View style={{ flex: 1, flexDirection: 'row' }}>
-                <Icon name="ios-transgender" />
+                <Icon name="ios-transgender" style={{ color: '#0A69FE' }} />
                 <Text style={{ marginLeft: 10 }}>GENDER</Text>
               </View>
               <Picker

@@ -10,7 +10,7 @@ import sidebarTheme from './sidebar-theme';
 import styles from './style';
 
 const drawerCover = require('../../../img/drawer-cover.png');
-const drawerImage = require('../../../img/drawer-image.png');
+const drawerImage = require('../../../img/logo-kitchen-sink.png');
 
 class SideBar extends Component {
 
@@ -28,17 +28,21 @@ class SideBar extends Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.drawerState === 'opened') {
-      this.setState({ shadowOffsetWidth: 30 });
-      this.setState({ shadowRadius: 60 });
-    }
-
-    if (nextProps.drawerState === 'closed') {
-      this.setState({ shadowOffsetWidth: 0 });
-      this.setState({ shadowRadius: 0 });
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.drawerState === 'opened') {
+  //     this.setState({ shadowOffsetWidth: 30 });
+  //     this.setState({ shadowRadius: 60 });
+  //   }
+  //
+  //   if (nextProps.drawerState === 'closed') {
+  //     this.setState({ shadowOffsetWidth: 0 });
+  //     this.setState({ shadowRadius: 0 });
+  //   }
+  // }
+  // style={[styles.sidebar,
+  //   { shadowOffset: { width: this.state.shadowOffsetWidth },
+  //   shadowRadius: this.state.shadowRadius },
+  // ]}
 
   navigateTo(route) {
     this.props.closeDrawer();
@@ -49,10 +53,7 @@ class SideBar extends Component {
     return (
       <Content
         theme={sidebarTheme}
-        style={[styles.sidebar,
-          { shadowOffset: { width: this.state.shadowOffsetWidth },
-          shadowRadius: this.state.shadowRadius },
-        ]}
+        style={styles.sidebar}
       >
         <Image source={drawerCover} style={styles.drawerCover}>
           <Image
@@ -64,7 +65,7 @@ class SideBar extends Component {
         <List>
           <ListItem button iconLeft onPress={() => this.navigateTo('anatomy')} >
             <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#00AFC1', paddingLeft: 14 }]}>
+              <View style={[styles.iconContainer, { backgroundColor: '#0209D8', paddingLeft: 14 }]}>
                 <Icon name="ios-phone-portrait-outline" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>Anatomy</Text>
@@ -72,7 +73,7 @@ class SideBar extends Component {
           </ListItem>
           <ListItem button iconLeft onPress={() => this.navigateTo('badge')}>
             <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
+              <View style={[styles.iconContainer, { backgroundColor: '#4DCAE0' }]}>
                 <Icon name="ios-notifications-outline" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>Badge</Text>
@@ -80,7 +81,7 @@ class SideBar extends Component {
           </ListItem>
           <ListItem button iconLeft onPress={() => this.navigateTo('button')} >
             <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#4DCAE0', paddingLeft: 10 }]}>
+              <View style={[styles.iconContainer, { backgroundColor: '#5cb85c', paddingLeft: 10 }]}>
                 <Icon name="md-radio-button-off" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>Button</Text>
@@ -88,7 +89,7 @@ class SideBar extends Component {
           </ListItem>
           <ListItem button iconLeft onPress={() => this.navigateTo('card')} >
             <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#29783B' }]}>
+              <View style={[styles.iconContainer, { backgroundColor: '#877CA6' }]}>
                 <Icon name="ios-keypad" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>Card</Text>
@@ -104,23 +105,23 @@ class SideBar extends Component {
           </ListItem>
           <ListItem button iconLeft onPress={() => this.navigateTo('deckswiper')} >
             <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#EB6B23', paddingLeft: 10 }]}>
-                <Icon name="ios-home" style={styles.sidebarIcon} />
+              <View style={[styles.iconContainer, { backgroundColor: '#3591FA', paddingLeft: 10 }]}>
+                <Icon name="ios-swap" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>Deck Swiper</Text>
             </View>
           </ListItem>
           <ListItem button iconLeft onPress={() => this.navigateTo('form')} >
             <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#156DD1' }]}>
-                <Icon name="ios-home" style={styles.sidebarIcon} />
+              <View style={[styles.iconContainer, { backgroundColor: '#F5BF35' }]}>
+                <Icon name="ios-call" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>Form</Text>
             </View>
           </ListItem>
           <ListItem button iconLeft onPress={() => this.navigateTo('icon')} >
             <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#F5BF35', paddingLeft: 10 }]}>
+              <View style={[styles.iconContainer, { backgroundColor: '#B63A48', paddingLeft: 10 }]}>
                 <Icon name="ios-information-circle-outline" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>Icon</Text>
@@ -128,7 +129,7 @@ class SideBar extends Component {
           </ListItem>
           <ListItem button iconLeft onPress={() => this.navigateTo('inputgroup')} >
             <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#B63A48', paddingLeft: 14 }]}>
+              <View style={[styles.iconContainer, { backgroundColor: '#00C497', paddingLeft: 14 }]}>
                 <Icon name="ios-document-outline" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>InputGroup</Text>
@@ -136,7 +137,7 @@ class SideBar extends Component {
           </ListItem>
           <ListItem button iconLeft onPress={() => this.navigateTo('layout')} >
             <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
+              <View style={[styles.iconContainer, { backgroundColor: '#5C4196' }]}>
                 <Icon name="ios-grid-outline" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>Layout</Text>
@@ -144,23 +145,23 @@ class SideBar extends Component {
           </ListItem>
           <ListItem button iconLeft onPress={() => this.navigateTo('list')} >
             <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
-                <Icon name="ios-home" style={styles.sidebarIcon} />
+              <View style={[styles.iconContainer, { backgroundColor: '#00AFC1' }]}>
+                <Icon name="ios-lock" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>List</Text>
             </View>
           </ListItem>
           <ListItem button iconLeft onPress={() => this.navigateTo('picker')} >
             <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
-                <Icon name="ios-home" style={styles.sidebarIcon} />
+              <View style={[styles.iconContainer, { backgroundColor: '#D8027B', paddingLeft: 9 }]}>
+                <Icon name="ios-heart" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>Picker</Text>
             </View>
           </ListItem>
           <ListItem button iconLeft onPress={() => this.navigateTo('radio')} >
             <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED', paddingLeft: 10 }]}>
+              <View style={[styles.iconContainer, { backgroundColor: '#6FEA90', paddingLeft: 10 }]}>
                 <Icon name="ios-radio-button-on" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>Radio</Text>
@@ -168,16 +169,16 @@ class SideBar extends Component {
           </ListItem>
           <ListItem button iconLeft onPress={() => this.navigateTo('searchbar')} >
             <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
-                <Icon name="ios-search-outline" style={styles.sidebarIcon} />
+              <View style={[styles.iconContainer, { backgroundColor: '#29783B' }]}>
+                <Icon name="ios-search" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>Searchbar</Text>
             </View>
           </ListItem>
           <ListItem button iconLeft onPress={() => this.navigateTo('spinner')} >
             <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#AB6AED' }]}>
-                <Icon name="ios-home" style={styles.sidebarIcon} />
+              <View style={[styles.iconContainer, { backgroundColor: '#BE6F50', paddingLeft: 10 }]}>
+                <Icon name="ios-navigate-outline" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>Spinner</Text>
             </View>

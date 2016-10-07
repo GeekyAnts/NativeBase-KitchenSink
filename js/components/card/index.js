@@ -34,63 +34,6 @@ class NHCard extends Component {
         </Header>
 
         <Content padder>
-          <Text style={styles.text}>Card Header and Footer</Text>
-          <Card style={styles.mb}>
-            <CardItem header>
-              <Text>NativeBase</Text>
-            </CardItem>
-            <CardItem>
-              <Text>
-                NativeBase is a free and open source framework that enables developers to build
-                high-quality mobile apps using React Native iOS and Android apps
-                with a fusion of ES6.
-              </Text>
-            </CardItem>
-            <CardItem>
-              <Text>
-                NativeBase builds a layer on top of React Native that provides you with
-                basic set of components for mobile application development.
-              </Text>
-            </CardItem>
-            <CardItem>
-              <Text>
-                Get on the mobile fast track with NativeBase, the fastest-growing platform
-                and tool set for iOS and Android development.
-              </Text>
-            </CardItem>
-            <CardItem header>
-              <Text>GeekyAnts</Text>
-            </CardItem>
-          </Card>
-
-          <Text style={styles.text}>Card List</Text>
-          <Card style={[styles.mb, { flex: 0 }]}>
-            <CardItem>
-              <Icon name="logo-googleplus" style={{ color: '#DD5044' }} />
-              <Text>Google Plus</Text>
-            </CardItem>
-            <CardItem>
-              <Icon name="logo-facebook" style={{ color: '#3B579D' }} />
-              <Text>Facebook</Text>
-            </CardItem>
-            <CardItem>
-              <Icon name="logo-twitter" style={{ color: '#55ACEE' }} />
-              <Text>Twitter</Text>
-            </CardItem>
-            <CardItem>
-              <Icon name="logo-reddit" style={{ color: '#FF4500' }} />
-              <Text>Reddit</Text>
-            </CardItem>
-            <CardItem>
-              <Icon name="logo-linkedin" style={{ color: '#007BB6' }} />
-              <Text>LinkedIn</Text>
-            </CardItem>
-            <CardItem>
-              <Icon name="logo-youtube" style={{ color: '#D62727' }} />
-              <Text>YouTube</Text>
-            </CardItem>
-          </Card>
-
           <Text style={styles.text}>Card Image</Text>
           <Card style={[styles.mb, { flex: 0 }]}>
             <CardItem>
@@ -142,6 +85,63 @@ class NHCard extends Component {
                 <Icon name="logo-github" />
                 <Text>1,926 stars</Text>
               </Button>
+            </CardItem>
+          </Card>
+
+          <Text style={styles.text}>Card List</Text>
+          <Card style={[styles.mb, { flex: 0 }]}>
+            <CardItem>
+              <Icon name="logo-googleplus" style={{ color: '#DD5044' }} />
+              <Text>Google Plus</Text>
+            </CardItem>
+            <CardItem>
+              <Icon name="logo-facebook" style={{ color: '#3B579D' }} />
+              <Text>Facebook</Text>
+            </CardItem>
+            <CardItem>
+              <Icon name="logo-twitter" style={{ color: '#55ACEE' }} />
+              <Text>Twitter</Text>
+            </CardItem>
+            <CardItem>
+              <Icon name="logo-reddit" style={{ color: '#FF4500' }} />
+              <Text>Reddit</Text>
+            </CardItem>
+            <CardItem>
+              <Icon name="logo-linkedin" style={{ color: '#007BB6' }} />
+              <Text>LinkedIn</Text>
+            </CardItem>
+            <CardItem>
+              <Icon name="logo-youtube" style={{ color: '#D62727' }} />
+              <Text>YouTube</Text>
+            </CardItem>
+          </Card>
+
+          <Text style={styles.text}>Card Header and Footer</Text>
+          <Card style={styles.mb}>
+            <CardItem header>
+              <Text>NativeBase</Text>
+            </CardItem>
+            <CardItem>
+              <Text>
+                NativeBase is a free and open source framework that enables developers to build
+                high-quality mobile apps using React Native iOS and Android apps
+                with a fusion of ES6.
+              </Text>
+            </CardItem>
+            <CardItem>
+              <Text>
+                NativeBase builds a layer on top of React Native that provides you with
+                basic set of components for mobile application development.
+              </Text>
+            </CardItem>
+            <CardItem>
+              <Text>
+                Get on the mobile fast track with NativeBase, the fastest-growing platform
+                and tool set for iOS and Android development.
+              </Text>
+            </CardItem>
+            <CardItem header>
+              <Text>GeekyAnts</Text>
             </CardItem>
           </Card>
         </Content>

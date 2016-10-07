@@ -3,14 +3,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text } from 'native-base';
 
-import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
 import styles from './styles';
 
 class NHListDivider extends Component {
 
   static propTypes = {
-    openDrawer: React.PropTypes.func,
     popRoute: React.PropTypes.func,
   }
 
@@ -27,10 +25,6 @@ class NHListDivider extends Component {
           </Button>
 
           <Title>List Divider</Title>
-
-          <Button transparent onPress={this.props.openDrawer}>
-            <Icon name="ios-menu" />
-          </Button>
         </Header>
 
         <Content>
@@ -88,7 +82,6 @@ class NHListDivider extends Component {
 
 function bindAction(dispatch) {
   return {
-    openDrawer: () => dispatch(openDrawer()),
     popRoute: () => dispatch(popRoute()),
   };
 }

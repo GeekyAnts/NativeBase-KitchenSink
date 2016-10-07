@@ -4,15 +4,12 @@ const React = require('react-native');
 const { StyleSheet, Platform, Dimensions } = React;
 
 const deviceHeight = Dimensions.get('window').height;
+const deviceWidth = Dimensions.get('window').width;
 
 module.exports = StyleSheet.create({
   sidebar: {
     flex: 1,
     backgroundColor: '#fff',
-    shadowColor: '#000',
-    // shadowOffset: { width: 30 },
-    // shadowRadius: 60,
-    shadowOpacity: 0.3,
   },
   drawerCover: {
     alignSelf: 'stretch',
@@ -24,14 +21,12 @@ module.exports = StyleSheet.create({
   },
   drawerImage: {
     position: 'absolute',
-    left: (Platform.OS === 'android') ? 15 : 20,
-    top: (Platform.OS === 'android') ? 10 : 15,
-    // borderWidth: 0,
-    borderColor: '#fff',
-    borderRadius: 26,
-    width: 250,
-    height: 150,
-    alignSelf: 'stretch',
+    // left: (Platform.OS === 'android') ? 30 : 40,
+    left: (Platform.OS === 'android') ? deviceWidth / 10 : deviceWidth / 9,
+    // top: (Platform.OS === 'android') ? 45 : 55,
+    top: (Platform.OS === 'android') ? deviceHeight / 13 : deviceHeight / 12,
+    width: 210,
+    height: 75,
     resizeMode: 'cover',
   },
   listItemContainer: {
@@ -62,8 +57,8 @@ module.exports = StyleSheet.create({
   //   backgroundColor: '#fff',
   //   shadowColor: '#000',
   //   shadowOffset: { width: 30 },
-  //   shadowRadius: 40,
-  //   shadowOpacity: 0.4,
+  //   shadowRadius: 60,
+  //   shadowOpacity: 0.3,
   // },
 
   // sidebar: {

@@ -33,20 +33,6 @@ class NHButton extends Component {
         <Content padder>
           <Card style={styles.mb20}>
             <CardItem header>
-              <Text>Button Theme</Text>
-            </CardItem>
-            <CardItem>
-              <Button primary style={styles.mb15}>Primary</Button>
-              <Button success style={styles.mb15}>Success</Button>
-              <Button info style={styles.mb15}>Info</Button>
-              <Button warning style={styles.mb15}>Warning</Button>
-              <Button danger style={styles.mb15}>Danger</Button>
-              <Button disabled style={styles.mb15}>Disabled</Button>
-            </CardItem>
-          </Card>
-
-          <Card style={styles.mb20}>
-            <CardItem header>
               <Text>Block Button</Text>
             </CardItem>
             <CardItem>
@@ -56,6 +42,20 @@ class NHButton extends Component {
               <Button block warning style={styles.mb15}>Warning</Button>
               <Button block danger style={styles.mb15}>Danger</Button>
               <Button block disabled style={styles.mb15}>Disabled</Button>
+            </CardItem>
+          </Card>
+
+          <Card style={styles.mb20}>
+            <CardItem header>
+              <Text>Button Theme</Text>
+            </CardItem>
+            <CardItem>
+              <Button primary style={styles.mb15}>Primary</Button>
+              <Button success style={styles.mb15}>Success</Button>
+              <Button info style={styles.mb15}>Info</Button>
+              <Button warning style={styles.mb15}>Warning</Button>
+              <Button danger style={styles.mb15}>Danger</Button>
+              <Button disabled style={styles.mb15}>Disabled</Button>
             </CardItem>
           </Card>
 

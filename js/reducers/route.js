@@ -1,5 +1,5 @@
 
-import { REHYDRATE } from 'redux-persist/constants';
+// import { REHYDRATE } from 'redux-persist/constants';
 import type { Action } from '../actions/types';
 import { globalNav } from '../AppNavigator';
 import { PUSH_NEW_ROUTE, POP_ROUTE, POP_TO_ROUTE, REPLACE_ROUTE, REPLACE_OR_PUSH_ROUTE } from '../actions/route';

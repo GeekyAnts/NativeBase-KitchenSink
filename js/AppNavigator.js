@@ -163,13 +163,28 @@ class AppNavigator extends Component {
       <Drawer
         ref={(ref) => { this._drawer = ref; }}
         type="overlay"
+        tweenDuration={150}
         content={<SideBar navigator={this._navigator} />}
         tapToClose
         acceptPan={false}
         onClose={() => this.closeDrawer()}
         openDrawerOffset={0.2}
         panCloseMask={0.2}
-        styles={{ main: { shadowColor: '#000000', shadowOpacity: 0.4, shadowRadius: 3 } }}
+        styles={{
+          drawer: {
+            shadowColor: '#000000',
+            shadowOpacity: 0.8,
+            shadowRadius: 3,
+          },
+        }}
+        tweenHandler={(ratio) => {
+          return {
+            drawer: { shadowRadius: ratio < 0.2 ? ratio * 5 * 5 : 5 },
+            main: {
+              opacity: (2 - ratio) / 2,
+            },
+          };
+        }}
         negotiatePan
       >
         <StatusBar

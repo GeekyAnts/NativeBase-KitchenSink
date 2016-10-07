@@ -34,8 +34,8 @@ class NHSearchbar extends Component {
 
         <Content>
           <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-end' }}>
-            <Button transparent onPress={this.props.openDrawer}>
-              <Icon name="ios-menu" style={{ color: '#5067FF' }} />
+            <Button bordered style={{ borderColor: '#fff' }} onPress={this.props.openDrawer}>
+              Menu
             </Button>
           </View>
         </Content>

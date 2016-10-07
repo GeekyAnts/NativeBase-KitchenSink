@@ -3,14 +3,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Badge } from 'native-base';
 
-import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
 import styles from './styles';
 
 class NHListIcon extends Component {
 
   static propTypes = {
-    openDrawer: React.PropTypes.func,
     popRoute: React.PropTypes.func,
   }
 
@@ -27,10 +25,6 @@ class NHListIcon extends Component {
           </Button>
 
           <Title>List Icon</Title>
-
-          <Button transparent onPress={this.props.openDrawer}>
-            <Icon name="ios-menu" />
-          </Button>
         </Header>
 
         <Content>
@@ -69,7 +63,6 @@ class NHListIcon extends Component {
 
 function bindAction(dispatch) {
   return {
-    openDrawer: () => dispatch(openDrawer()),
     popRoute: () => dispatch(popRoute()),
   };
 }

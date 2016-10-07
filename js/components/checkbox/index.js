@@ -33,15 +33,15 @@ class NHCheckbox extends Component {
           <List>
             <ListItem>
               <CheckBox checked />
+              <Text>Lunch Break</Text>
+            </ListItem>
+            <ListItem>
+              <CheckBox checked />
               <Text>Daily Stand Up</Text>
             </ListItem>
             <ListItem>
               <CheckBox checked />
               <Text>Finish list Screen</Text>
-            </ListItem>
-            <ListItem>
-              <CheckBox checked />
-              <Text>Lunch Break</Text>
             </ListItem>
             <ListItem>
               <CheckBox checked={false} />

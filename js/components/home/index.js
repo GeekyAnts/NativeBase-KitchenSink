@@ -1,20 +1,15 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Image, StatusBar } from 'react-native';
+import { Image } from 'react-native';
 import { Container, Button, View, H3 } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 const launchscreenBg = require('../../../img/launchscreen-bg.png');
-const launchscreenLogo = require('../../../img/launchscreen-logo.png');
+const launchscreenLogo = require('../../../img/logo-kitchen-sink.png');
 
-// <View style={{ height: 20 }}>
-//   <StatusBar
-//     barStyle="light-content"
-//   />
-// </View>
 class Home extends Component { // eslint-disable-line
 
   static propTypes = {
@@ -38,7 +33,7 @@ class Home extends Component { // eslint-disable-line
               style={{ backgroundColor: '#6FAF98', alignSelf: 'center' }}
               onPress={this.props.openDrawer}
             >
-                Demo Please
+                Lets Go!
             </Button>
           </View>
         </Image>
