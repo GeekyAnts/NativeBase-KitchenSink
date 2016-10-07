@@ -80,4 +80,12 @@ $ react-native run-ios
 $ react-native run-android
 ```
 
+## Quick Links to NativeBase
+
+*	[NativeBase Website](http://nativebase.io)
+*	[NativeBase Documentation](http://nativebase.io/documentation)
+*	[NativeBase on Twitter](https://twitter.com/NativeBaseIO)
+*	[NativeBase Blog](https://medium.com/nativebase-io-blog)
+
+
 For apps with more advance designs with NativeBase, please visit **[StrapMobile](https://strapmobile.com/)**.
