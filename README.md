@@ -10,7 +10,9 @@ The applications stack of components is built using native UI components and bec
 
 ## Demo
 
-![ios-demo](/Screenshots/iOS/demo.gif)
+iOS | Android
+ :--:| :-----:
+ ![ios-demo](/Screenshots/iOS/demo.gif) | ![android-demo](/Screenshots/android/demo.gif)
 
 
 ## Get Started
