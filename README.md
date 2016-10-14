@@ -1,6 +1,8 @@
 # NativeBase-KitchenSink v1.0.0
 An example app with all the UI components of NativeBase
 
+![play-store](https://strapmobile.com/wp-content/uploads/2016/02/google-play-200.png)
+
 ## Demo
 
 iOS | Android
