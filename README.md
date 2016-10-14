@@ -1,18 +1,15 @@
 # NativeBase-KitchenSink v1.0.0
 An example app with all the UI components of NativeBase
 
-![logo](https://github.com/GeekyAnts/NativeBase/blob/master/img/logo.png)
-
-[NativeBase](http://nativebase.io/) is a free and open source framework that enables developers to build high-quality mobile apps using [React Native](https://facebook.github.io/react-native/) iOS and Android apps with a fusion of ES6. NativeBase builds a layer on top of React Native that provides you with basic set of components for mobile application development. This helps you to build world-class application experiences on native platforms.
-
-The applications stack of components is built using native UI components and because of that, there are no compromises with the User Experience of the applications. NativeBase without a doubt fits in well with mobile applications which cut downs one huge part of your app The Front end
-
-
 ## Demo
 
 iOS | Android
  :--:| :-----:
  ![ios-demo](/Screenshots/iOS/demo.gif) | ![android-demo](/Screenshots/android/demo.gif)
+
+[NativeBase](http://nativebase.io/) is a free and open source framework that enables developers to build high-quality mobile apps using [React Native](https://facebook.github.io/react-native/) iOS and Android apps with a fusion of ES6. NativeBase builds a layer on top of React Native that provides you with basic set of components for mobile application development. This helps you to build world-class application experiences on native platforms.
+
+The applications stack of components is built using native UI components and because of that, there are no compromises with the User Experience of the applications. NativeBase without a doubt fits in well with mobile applications which cut downs one huge part of your app The Front end
 
 
 ## Get Started
