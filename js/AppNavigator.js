@@ -73,7 +73,7 @@ class AppNavigator extends Component {
 
       if (routes[routes.length - 1].id === 'home') {
                 // CLose the app
-        BackAndroid.exitApp(0);
+        return true;
       }
       this.popRoute();
       return true;

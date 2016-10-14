@@ -50,11 +50,11 @@ class NHButton extends Component {
               <Text>Button Theme</Text>
             </CardItem>
             <CardItem>
-              <Button primary style={styles.mb15}>Primary</Button>
-              <Button success style={styles.mb15}>Success</Button>
               <Button info style={styles.mb15}>Info</Button>
-              <Button warning style={styles.mb15}>Warning</Button>
               <Button danger style={styles.mb15}>Danger</Button>
+              <Button primary style={styles.mb15}>Primary</Button>
+              <Button warning style={styles.mb15}>Warning</Button>
+              <Button success style={styles.mb15}>Success</Button>
               <Button disabled style={styles.mb15}>Disabled</Button>
             </CardItem>
           </Card>
@@ -64,11 +64,11 @@ class NHButton extends Component {
               <Text>Round Button</Text>
             </CardItem>
             <CardItem>
-              <Button rounded primary style={styles.mb15}>Primary</Button>
-              <Button rounded success style={styles.mb15}>Success</Button>
               <Button rounded info style={styles.mb15}>Info</Button>
-              <Button rounded warning style={styles.mb15}>Warning</Button>
               <Button rounded danger style={styles.mb15}>Danger</Button>
+              <Button rounded primary style={styles.mb15}>Primary</Button>
+              <Button rounded warning style={styles.mb15}>Warning</Button>
+              <Button rounded success style={styles.mb15}>Success</Button>
               <Button rounded disabled style={styles.mb15}>Disabled</Button>
             </CardItem>
           </Card>
@@ -78,11 +78,11 @@ class NHButton extends Component {
               <Text>Outline Button</Text>
             </CardItem>
             <CardItem>
-              <Button bordered style={styles.mb15}>Primary</Button>
-              <Button bordered success style={styles.mb15}>Success</Button>
               <Button bordered info style={styles.mb15}>Info</Button>
-              <Button bordered warning style={styles.mb15}>Warning</Button>
               <Button bordered danger style={styles.mb15}>Danger</Button>
+              <Button bordered style={styles.mb15}>Primary</Button>
+              <Button bordered warning style={styles.mb15}>Warning</Button>
+              <Button bordered success style={styles.mb15}>Success</Button>
             </CardItem>
           </Card>
 
