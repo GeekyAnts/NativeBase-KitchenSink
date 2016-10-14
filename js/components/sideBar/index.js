@@ -151,14 +151,6 @@ class SideBar extends Component {
               <Text style={styles.text}>List</Text>
             </View>
           </ListItem>
-          <ListItem button iconLeft onPress={() => this.navigateTo('picker')} >
-            <View style={styles.listItemContainer}>
-              <View style={[styles.iconContainer, { backgroundColor: '#D8027B', paddingLeft: 9 }]}>
-                <Icon name="ios-heart" style={styles.sidebarIcon} />
-              </View>
-              <Text style={styles.text}>Picker</Text>
-            </View>
-          </ListItem>
           <ListItem button iconLeft onPress={() => this.navigateTo('radio')} >
             <View style={styles.listItemContainer}>
               <View style={[styles.iconContainer, { backgroundColor: '#6FEA90', paddingLeft: 10 }]}>
