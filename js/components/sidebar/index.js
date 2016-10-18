@@ -28,22 +28,6 @@ class SideBar extends Component {
     };
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps.drawerState === 'opened') {
-  //     this.setState({ shadowOffsetWidth: 30 });
-  //     this.setState({ shadowRadius: 60 });
-  //   }
-  //
-  //   if (nextProps.drawerState === 'closed') {
-  //     this.setState({ shadowOffsetWidth: 0 });
-  //     this.setState({ shadowRadius: 0 });
-  //   }
-  // }
-  // style={[styles.sidebar,
-  //   { shadowOffset: { width: this.state.shadowOffsetWidth },
-  //   shadowRadius: this.state.shadowRadius },
-  // ]}
-
   navigateTo(route) {
     this.props.closeDrawer();
     this.props.replaceOrPushRoute(route);
@@ -181,6 +165,14 @@ class SideBar extends Component {
                 <Icon name="ios-home" style={styles.sidebarIcon} />
               </View>
               <Text style={styles.text}>Tabs</Text>
+            </View>
+          </ListItem>
+          <ListItem button iconLeft onPress={() => this.navigateTo('thumbnail')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#cc0000' }]}>
+                <Icon name="ios-image-outline" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Thumbnail</Text>
             </View>
           </ListItem>
         </List>

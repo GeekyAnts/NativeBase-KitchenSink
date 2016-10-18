@@ -1,14 +1,14 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Thumbnail, Text } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Thumbnail, Text, View } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import { popRoute } from '../../actions/route';
 import styles from './styles';
 
-const imgURI = 'http://www.onenov.in/users_content/users_images/images/f5f8d64aef421b809647a120ab133b7b.jpg';
-const imgPath = require('../../../img/purple-flower.jpg');
+const imgOne = require('../../../img/swiper-1.png');
+const imgTwo = require('../../../img/swiper-2.png');
 
 class NHThumbnail extends Component {
 
@@ -33,15 +33,15 @@ class NHThumbnail extends Component {
         </Header>
 
         <Content padder>
-          <Thumbnail source={{ uri: imgURI }} />
-          <Thumbnail size={80} source={{ uri: imgURI }} />
-          <Text>Using Url</Text>
-          <Thumbnail square source={{ imgPath }} />
-          <Thumbnail square size={80} source={{ imgPath }} />
-          <Text>Relative Path</Text>
-          <Thumbnail square source={require('../../../img/purple-flower.jpg')} />
-          <Thumbnail square size={80} source={require('../../../img/purple-flower.jpg')} />
-          <Text>Using require</Text>
+          <View style={{ flex: 1, alignItems: 'center' }}>
+            <Text style={styles.mb10}>Square Thumbnail</Text>
+            <Thumbnail square source={imgOne} style={styles.mb10} />
+            <Thumbnail square size={80} source={imgOne} style={styles.mb35} />
+
+            <Text style={styles.mb10}>Circular Thumbnail</Text>
+            <Thumbnail source={imgTwo} style={{ marginBottom: 8 }} />
+            <Thumbnail size={80} source={imgTwo} />
+          </View>
         </Content>
       </Container>
     );
