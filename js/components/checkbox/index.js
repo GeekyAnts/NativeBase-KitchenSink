@@ -14,8 +14,42 @@ class NHCheckbox extends Component {
     openDrawer: React.PropTypes.func,
   }
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      checkbox1: true,
+      checkbox2: true,
+      checkbox3: true,
+      checkbox4: false,
+    };
+  }
+
   popRoute() {
     this.props.popRoute();
+  }
+
+  toggleSwitch1() {
+    this.setState({
+      checkbox1: !this.state.checkbox1,
+    });
+  }
+
+  toggleSwitch2() {
+    this.setState({
+      checkbox2: !this.state.checkbox2,
+    });
+  }
+
+  toggleSwitch3() {
+    this.setState({
+      checkbox3: !this.state.checkbox3,
+    });
+  }
+
+  toggleSwitch4() {
+    this.setState({
+      checkbox4: !this.state.checkbox4,
+    });
   }
 
   render() {
@@ -31,20 +65,20 @@ class NHCheckbox extends Component {
 
         <Content>
           <List>
-            <ListItem>
-              <CheckBox checked />
+            <ListItem button onPress={() => this.toggleSwitch1()}>
+              <CheckBox checked={this.state.checkbox1} onPress={() => this.toggleSwitch1()} />
               <Text>Lunch Break</Text>
             </ListItem>
-            <ListItem>
-              <CheckBox checked />
+            <ListItem button onPress={() => this.toggleSwitch2()}>
+              <CheckBox checked={this.state.checkbox2} onPress={() => this.toggleSwitch2()} />
               <Text>Daily Stand Up</Text>
             </ListItem>
-            <ListItem>
-              <CheckBox checked />
+            <ListItem button onPress={() => this.toggleSwitch3()}>
+              <CheckBox checked={this.state.checkbox3} onPress={() => this.toggleSwitch3()} />
               <Text>Finish list Screen</Text>
             </ListItem>
-            <ListItem>
-              <CheckBox checked={false} />
+            <ListItem button onPress={() => this.toggleSwitch4()}>
+              <CheckBox checked={this.state.checkbox4} onPress={() => this.toggleSwitch4()} />
               <Text>Discussion with Client</Text>
             </ListItem>
           </List>

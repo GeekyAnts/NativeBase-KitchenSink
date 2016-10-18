@@ -86,11 +86,9 @@ class NHForm extends Component {
                 />
               </InputGroup>
             </ListItem>
-            <ListItem>
-              <View style={{ flex: 1, flexDirection: 'row' }}>
+            <ListItem iconLeft>
                 <Icon name="ios-transgender" style={{ color: '#0A69FE' }} />
-                <Text style={{ marginLeft: 10 }}>GENDER</Text>
-              </View>
+                <Text>GENDER</Text>
               <Picker
                 iosHeader="Select one"
                 mode="dropdown"
@@ -109,7 +107,7 @@ class NHForm extends Component {
               </InputGroup>
             </ListItem>
           </List>
-          <Button style={{ alignSelf: 'center', marginTop: 20 }}>Sign Up</Button>
+          <Button style={{ alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>Sign Up</Button>
         </Content>
       </Container>
     );

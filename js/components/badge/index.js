@@ -38,14 +38,13 @@ class NHBadge extends Component {
           <Badge danger style={styles.mb}>2</Badge>
           <Badge
             primary
-            textStyle={{ lineHeight: 16 }}
             style={styles.mb}
           >
-            <Icon name="ios-star" style={{ fontSize: 12, color: '#fff' }} />
+            <Icon name="ios-star" style={{ fontSize: 12, color: '#fff', lineHeight: 19 }} />
           </Badge>
           <Badge
-            style={{ width: 60, backgroundColor: 'black' }}
-            textStyle={{ color: 'white', fontSize: 14, lineHeight: 20 }}
+            style={{ backgroundColor: 'black' }}
+            textStyle={{ color: 'white' }}
           >
             1866
           </Badge>

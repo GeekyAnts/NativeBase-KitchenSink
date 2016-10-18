@@ -13,9 +13,54 @@ class NHRadio extends Component {
     popRoute: React.PropTypes.func,
     openDrawer: React.PropTypes.func,
   }
+  constructor(props) {
+    super(props);
+    this.state = {
+      radio1: false,
+      radio2: false,
+      radio3: false,
+      radio4: true,
+    };
+  }
 
   popRoute() {
     this.props.popRoute();
+  }
+
+  toggleRadio1() {
+    this.setState({
+      radio1: true,
+      radio2: false,
+      radio3: false,
+      radio4: false,
+    });
+  }
+
+  toggleRadio2() {
+    this.setState({
+      radio1: false,
+      radio2: true,
+      radio3: false,
+      radio4: false,
+    });
+  }
+
+  toggleRadio3() {
+    this.setState({
+      radio1: false,
+      radio2: false,
+      radio3: true,
+      radio4: false,
+    });
+  }
+
+  toggleRadio4() {
+    this.setState({
+      radio1: false,
+      radio2: false,
+      radio3: false,
+      radio4: true,
+    });
   }
 
   render() {
@@ -23,7 +68,6 @@ class NHRadio extends Component {
       <Container style={styles.container}>
         <Header>
           <Title>Radio</Title>
-
           <Button transparent onPress={this.props.openDrawer}>
             <Icon name="ios-menu" />
           </Button>
@@ -31,20 +75,20 @@ class NHRadio extends Component {
 
         <Content>
           <List>
-            <ListItem >
-              <Radio selected={false} />
+            <ListItem button onPress={() => this.toggleRadio1()} >
+              <Radio selected={this.state.radio1} onPress={() => this.toggleRadio1()} />
               <Text >Daily Stand Up</Text>
             </ListItem>
-            <ListItem >
-              <Radio selected={false} />
+            <ListItem button onPress={() => this.toggleRadio2()} >
+              <Radio selected={this.state.radio2} onPress={() => this.toggleRadio2()} />
               <Text>Finish list Screen</Text>
             </ListItem>
-            <ListItem >
-              <Radio selected={false} />
+            <ListItem button onPress={() => this.toggleRadio3()} >
+              <Radio selected={this.state.radio3} onPress={() => this.toggleRadio3()} />
               <Text>Lunch Break</Text>
             </ListItem>
-            <ListItem >
-              <Radio selected />
+            <ListItem button onPress={() => this.toggleRadio4()} >
+              <Radio selected={this.state.radio4} onPress={() => this.toggleRadio4()} />
               <Text>Discussion with Client</Text>
             </ListItem>
           </List>

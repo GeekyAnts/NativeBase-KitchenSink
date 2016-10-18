@@ -30,7 +30,7 @@ import NHSearchbar from './components/searchbar/';
 import NHSpinner from './components/spinner/';
 import NHTabs from './components/tabs/';
 import SplashPage from './components/splashscreen/';
-import SideBar from './components/sidebar';
+import SideBar from './components/sideBar';
 import { statusBarColor } from './themes/base-theme';
 
 Navigator.prototype.replaceWithAnimation = function replaceWithAnimation(route) {
@@ -196,7 +196,7 @@ class AppNavigator extends Component {
             this._navigator = ref;
           }}
           configureScene={() => Navigator.SceneConfigs.FloatFromRight}
-          initialRoute={{ id: (Platform.OS === 'android') ? 'splashscreen' : 'home', statusBarHidden: true }}
+          initialRoute={{ id: (Platform.OS === 'android') ? 'anatomy' : 'anatomy', statusBarHidden: true }}
           renderScene={this.renderScene}
         />
       </Drawer>
