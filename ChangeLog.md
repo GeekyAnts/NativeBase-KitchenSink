@@ -4,5 +4,5 @@
 ### New Features
 
 - Initial Commit
-- Configured with basic libraries: React Native, NativeBase, Redux, COdePush, Easy Grid
+- Configured with basic libraries: React Native, NativeBase, Redux, CodePush, Easy Grid
 - Added Components: Anatomy, Badge, Button, Card, Checkbox, Deck Swiper, Form, Icon, InputGroup, Layout, List, Radio, SearchBar, Spinner, Tabs
