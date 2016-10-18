@@ -32,7 +32,7 @@ import NHTabs from './components/tabs/';
 import NHThumbnail from './components/thumbnail/';
 import SplashPage from './components/splashscreen/';
 import SideBar from './components/sideBar';
-import { statusBarColor } from './themes/base-theme';
+import statusBarColor from './themes/base-theme';
 
 Navigator.prototype.replaceWithAnimation = function replaceWithAnimation(route) {
   const activeLength = this.state.presentedIndex + 1;
@@ -191,7 +191,7 @@ class AppNavigator extends Component {
         negotiatePan
       >
         <StatusBar
-          backgroundColor={statusBarColor}
+          backgroundColor={statusBarColor.statusBarColor}
           barStyle="default"
         />
         <Navigator
@@ -199,7 +199,7 @@ class AppNavigator extends Component {
             this._navigator = ref;
           }}
           configureScene={() => Navigator.SceneConfigs.FloatFromRight}
-          initialRoute={{ id: (Platform.OS === 'android') ? 'anatomy' : 'anatomy', statusBarHidden: true }}
+          initialRoute={{ id: (Platform.OS === 'android') ? 'splashscreen' : 'home', statusBarHidden: true }}
           renderScene={this.renderScene}
         />
       </Drawer>

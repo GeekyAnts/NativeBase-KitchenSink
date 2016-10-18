@@ -83,7 +83,7 @@ class Anatomy extends Component {
 
         <Content padder>
           <H3>This is content section</H3>
-          <Text>Selected tab is: {this.state.tab1 ? 1 : this.state.tab2 ? 2 : this.state.tab3 ? 3 : 4}</Text>
+          <Text style={{marginTop: 10}}>Selected tab is: {this.state.tab1 ? 1 : this.state.tab2 ? 2 : this.state.tab3 ? 3 : 4}</Text>
         </Content>
 
         <Footer >
