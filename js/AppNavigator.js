@@ -31,7 +31,7 @@ import NHSpinner from './components/spinner/';
 import NHTabs from './components/tabs/';
 import NHThumbnail from './components/thumbnail/';
 import SplashPage from './components/splashscreen/';
-import SideBar from './components/sideBar';
+import SideBar from './components/sidebar';
 import statusBarColor from './themes/base-theme';
 
 Navigator.prototype.replaceWithAnimation = function replaceWithAnimation(route) {
