@@ -29,6 +29,7 @@ import NHRadio from './components/radio/';
 import NHSearchbar from './components/searchbar/';
 import NHSpinner from './components/spinner/';
 import NHTabs from './components/tabs/';
+import NHThumbnail from './components/thumbnail/';
 import SplashPage from './components/splashscreen/';
 import SideBar from './components/sidebar';
 import { statusBarColor } from './themes/base-theme';
@@ -153,6 +154,8 @@ class AppNavigator extends Component {
         return <NHSpinner navigator={navigator} />;
       case 'tabs':
         return <NHTabs navigator={navigator} />;
+      case 'thumbnail':
+        return <NHThumbnail navigator={navigator} />;
       default :
         return <Home navigator={navigator} />;
     }
