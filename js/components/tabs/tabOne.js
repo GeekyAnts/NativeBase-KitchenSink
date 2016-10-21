@@ -11,7 +11,7 @@ export default class TabOne extends Component { // eslint-disable-line
     return (
       <Container style={styles.container}>
         <Content padder>
-          <Card style={{ flex: 0 }}>
+          <Card>
             <CardItem>
               <Text>
                 NativeBase is open source and free.
