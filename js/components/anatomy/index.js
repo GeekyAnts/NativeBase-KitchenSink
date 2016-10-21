@@ -24,7 +24,7 @@ class Anatomy extends Component {
       tab2: false,
       tab3: true,
       tab4: false,
-    }
+    };
   }
   replaceRoute(route) {
     this.props.replaceRoute(route);
