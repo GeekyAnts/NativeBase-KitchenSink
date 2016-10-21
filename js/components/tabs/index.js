@@ -34,8 +34,8 @@ class NHTabs extends Component {
 
         <View>
           <Tabs locked>
-            <TabOne tabLabel="Music" />
-            <TabTwo tabLabel="Video" />
+            <TabOne tabLabel="Features" />
+            <TabTwo tabLabel="About" />
           </Tabs>
         </View>
       </Container>

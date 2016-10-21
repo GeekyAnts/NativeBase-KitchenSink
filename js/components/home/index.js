@@ -24,7 +24,7 @@ class Home extends Component { // eslint-disable-line
             <Image source={launchscreenLogo} style={styles.logo} />
           </View>
           <View style={{ alignItems: 'center', marginBottom: 50 }}>
-            <H3 style={styles.text}> Demo app to showcase</H3>
+            <H3 style={styles.text}>App to showcase</H3>
             <View style={{ marginTop: 8 }} />
             <H3 style={styles.text}>NativeBase components</H3>
           </View>

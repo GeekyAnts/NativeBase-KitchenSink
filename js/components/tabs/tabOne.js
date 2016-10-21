@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 
-import { Container, Content, Card, CardItem, Text } from 'native-base';
+import { Container, Content, Card, CardItem, Text, View } from 'native-base';
 
 import styles from './styles';
 
@@ -11,20 +11,30 @@ export default class TabOne extends Component { // eslint-disable-line
     return (
       <Container style={styles.container}>
         <Content padder>
-          <Card>
+          <Card style={{ flex: 0 }}>
             <CardItem>
               <Text>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-                Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-                aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-                Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
-                Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
-                consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
-                viverra quis, feugiat a, tellus.
+                NativeBase is open source and free.
+              </Text>
+            </CardItem>
+            <CardItem>
+              <Text>
+                Platform specific codebase for components
+              </Text>
+            </CardItem>
+            <CardItem>
+              <Text>
+                Any native third-party libraries can be included along with NativeBase.
+              </Text>
+            </CardItem>
+            <CardItem>
+              <Text>
+                Single file to theme your app and NativeBase components.
+              </Text>
+            </CardItem>
+            <CardItem>
+              <Text>
+                Gives an ease to include different font types in your app.
               </Text>
             </CardItem>
           </Card>
