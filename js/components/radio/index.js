@@ -4,15 +4,14 @@ import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Button, Icon, List, ListItem, Radio, Text } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
-import { popRoute } from '../../actions/route';
 import styles from './styles';
 
 class NHRadio extends Component {
 
   static propTypes = {
-    popRoute: React.PropTypes.func,
     openDrawer: React.PropTypes.func,
   }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -21,10 +20,6 @@ class NHRadio extends Component {
       radio3: false,
       radio4: true,
     };
-  }
-
-  popRoute() {
-    this.props.popRoute();
   }
 
   toggleRadio1() {
@@ -74,18 +69,18 @@ class NHRadio extends Component {
         </Header>
 
         <Content>
+          <ListItem button onPress={() => this.toggleRadio1()} >
+            <Radio selected={this.state.radio1} onPress={() => this.toggleRadio1()} />
+            <Text>Lunch Break</Text>
+          </ListItem>
           <List>
-            <ListItem button onPress={() => this.toggleRadio1()} >
-              <Radio selected={this.state.radio1} onPress={() => this.toggleRadio1()} />
-              <Text >Daily Stand Up</Text>
-            </ListItem>
             <ListItem button onPress={() => this.toggleRadio2()} >
               <Radio selected={this.state.radio2} onPress={() => this.toggleRadio2()} />
-              <Text>Finish list Screen</Text>
+              <Text >Daily Stand Up</Text>
             </ListItem>
             <ListItem button onPress={() => this.toggleRadio3()} >
               <Radio selected={this.state.radio3} onPress={() => this.toggleRadio3()} />
-              <Text>Lunch Break</Text>
+              <Text>Finish list Screen</Text>
             </ListItem>
             <ListItem button onPress={() => this.toggleRadio4()} >
               <Radio selected={this.state.radio4} onPress={() => this.toggleRadio4()} />
@@ -101,8 +96,11 @@ class NHRadio extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    popRoute: () => dispatch(popRoute()),
   };
 }
 
-export default connect(null, bindAction)(NHRadio);
+const mapStateToProps = state => ({
+  navigation: state.cardNavigation,
+});
+
+export default connect(mapStateToProps, bindAction)(NHRadio);

@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Thumbnail } from 'native-base';
 
-import { popRoute } from '../../actions/route';
 import styles from './styles';
 
 const pratik = require('../../../img/contacts/pratik.png');
@@ -13,21 +13,28 @@ const atul = require('../../../img/contacts/atul.png');
 const saurabh = require('../../../img/contacts/saurabh.png');
 const varun = require('../../../img/contacts/varun.png');
 
+const {
+  replaceAt,
+} = actions;
+
 class NHListAvatar extends Component {
 
   static propTypes = {
-    popRoute: React.PropTypes.func,
+    replaceAt: React.PropTypes.func,
+    navigation: React.PropTypes.shape({
+      key: React.PropTypes.string,
+    }),
   }
 
-  popRoute() {
-    this.props.popRoute();
+  replaceAt(route) {
+    this.props.replaceAt('listAvatar', { key: route }, this.props.navigation.key);
   }
 
   render() {
     return (
       <Container style={styles.container}>
         <Header>
-          <Button transparent onPress={() => this.popRoute()}>
+          <Button transparent onPress={() => this.replaceAt('list')}>
             <Icon name="ios-arrow-back" />
           </Button>
 
@@ -75,8 +82,12 @@ class NHListAvatar extends Component {
 
 function bindAction(dispatch) {
   return {
-    popRoute: () => dispatch(popRoute()),
+    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
   };
 }
 
-export default connect(null, bindAction)(NHListAvatar);
+const mapStateToProps = state => ({
+  navigation: state.cardNavigation,
+});
+
+export default connect(mapStateToProps, bindAction)(NHListAvatar);

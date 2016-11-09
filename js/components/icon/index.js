@@ -4,18 +4,12 @@ import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Button, Icon, View } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
-import { popRoute } from '../../actions/route';
 import styles from './styles';
 
-class NHForm extends Component {
+class NHForm extends Component {  // eslint-disable-line
 
   static propTypes = {
-    popRoute: React.PropTypes.func,
     openDrawer: React.PropTypes.func,
-  }
-
-  popRoute() {
-    this.props.popRoute();
   }
 
   render() {
@@ -125,8 +119,11 @@ class NHForm extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    popRoute: () => dispatch(popRoute()),
   };
 }
 
-export default connect(null, bindAction)(NHForm);
+const mapStateToProps = state => ({
+  navigation: state.cardNavigation,
+});
+
+export default connect(mapStateToProps, bindAction)(NHForm);

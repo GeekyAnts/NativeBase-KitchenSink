@@ -25,6 +25,6 @@ module.exports = StyleSheet.create({
   },
   text: {
     color: '#D8D8D8',
-    bottom: 10,
+    bottom: 6,
   },
 });

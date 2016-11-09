@@ -7,9 +7,6 @@ module.exports = StyleSheet.create({
   container: {
     backgroundColor: '#FBFAFA',
   },
-  // cardContainer: {
-  //   marginBottom: 10,
-  // },
   buttonContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',

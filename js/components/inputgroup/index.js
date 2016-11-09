@@ -1,21 +1,15 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, InputGroup, Input } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, InputGroup, Input, Textarea } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
-import { popRoute } from '../../actions/route';
 import styles from './styles';
 
-class NHInputGroup extends Component {
+class NHInputGroup extends Component {  // eslint-disable-line
 
   static propTypes = {
-    popRoute: React.PropTypes.func,
     openDrawer: React.PropTypes.func,
-  }
-
-  popRoute() {
-    this.props.popRoute();
   }
 
   render() {
@@ -59,6 +53,7 @@ class NHInputGroup extends Component {
             <Icon name="ios-information-circle" style={{ color: '#384850' }} />
             <Input placeholder="Disabled Textbox" />
           </InputGroup>
+          <Textarea placeholder="Textarea" style={{ height: 60 }} />
         </Content>
       </Container>
     );
@@ -68,8 +63,11 @@ class NHInputGroup extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    popRoute: () => dispatch(popRoute()),
   };
 }
 
-export default connect(null, bindAction)(NHInputGroup);
+const mapStateToProps = state => ({
+  navigation: state.cardNavigation,
+});
+
+export default connect(mapStateToProps, bindAction)(NHInputGroup);

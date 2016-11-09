@@ -4,18 +4,12 @@ import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Button, Icon, Badge } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
-import { popRoute } from '../../actions/route';
 import styles from './styles';
 
-class NHBadge extends Component {
+class NHBadge extends Component { //eslint-disable-line
 
   static propTypes = {
-    popRoute: React.PropTypes.func,
     openDrawer: React.PropTypes.func,
-  }
-
-  popRoute() {
-    this.props.popRoute();
   }
 
   render() {
@@ -40,7 +34,7 @@ class NHBadge extends Component {
             primary
             style={styles.mb}
           >
-            <Icon name="ios-star" style={{ fontSize: 12, color: '#fff', lineHeight: 19 }} />
+            <Icon name="ios-star" style={{ fontSize: 12, color: '#fff', lineHeight: 14 }} />
           </Badge>
           <Badge
             style={{ backgroundColor: 'black' }}
@@ -57,8 +51,11 @@ class NHBadge extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    popRoute: () => dispatch(popRoute()),
   };
 }
 
-export default connect(null, bindAction)(NHBadge);
+const mapStateToProps = state => ({
+  navigation: state.cardNavigation,
+});
+
+export default connect(mapStateToProps, bindAction)(NHBadge);

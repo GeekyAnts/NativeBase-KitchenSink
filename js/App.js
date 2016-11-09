@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
   },
   modal1: {
     height: 300,
-
   },
 });
 
@@ -90,8 +89,7 @@ class App extends Component {
             </Modal>
           </Content>
         </Container>
-
-            );
+      );
     }
 
     return <AppNavigator />;

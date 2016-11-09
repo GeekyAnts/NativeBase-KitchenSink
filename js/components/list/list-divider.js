@@ -1,26 +1,33 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text } from 'native-base';
 
-import { popRoute } from '../../actions/route';
 import styles from './styles';
+
+const {
+  replaceAt,
+} = actions;
 
 class NHListDivider extends Component {
 
   static propTypes = {
-    popRoute: React.PropTypes.func,
+    replaceAt: React.PropTypes.func,
+    navigation: React.PropTypes.shape({
+      key: React.PropTypes.string,
+    }),
   }
 
-  popRoute() {
-    this.props.popRoute();
+  replaceAt(route) {
+    this.props.replaceAt('listDivider', { key: route }, this.props.navigation.key);
   }
 
   render() {
     return (
       <Container style={styles.container}>
         <Header>
-          <Button transparent onPress={() => this.popRoute()}>
+          <Button transparent onPress={() => this.replaceAt('list')}>
             <Icon name="ios-arrow-back" />
           </Button>
 
@@ -82,8 +89,12 @@ class NHListDivider extends Component {
 
 function bindAction(dispatch) {
   return {
-    popRoute: () => dispatch(popRoute()),
+    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
   };
 }
 
-export default connect(null, bindAction)(NHListDivider);
+const mapStateToProps = state => ({
+  navigation: state.cardNavigation,
+});
+
+export default connect(mapStateToProps, bindAction)(NHListDivider);

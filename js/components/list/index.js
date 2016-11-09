@@ -1,26 +1,28 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
-import { popRoute, pushNewRoute } from '../../actions/route';
 import styles from './styles';
+
+const {
+  replaceAt,
+} = actions;
 
 class NHList extends Component {
 
   static propTypes = {
     openDrawer: React.PropTypes.func,
-    popRoute: React.PropTypes.func,
-    pushNewRoute: React.PropTypes.func,
+    replaceAt: React.PropTypes.func,
+    navigation: React.PropTypes.shape({
+      key: React.PropTypes.string,
+    }),
   }
 
-  popRoute() {
-    this.props.popRoute();
-  }
-
-  pushNewRoute(route) {
-    this.props.pushNewRoute(route);
+  replaceAt(route) {
+    this.props.replaceAt('list', { key: route }, this.props.navigation.key);
   }
 
   render() {
@@ -35,11 +37,11 @@ class NHList extends Component {
         </Header>
 
         <Content padder>
-          <Button block style={styles.mb} onPress={() => this.pushNewRoute('basicList')}>Basic List</Button>
-          <Button block style={styles.mb} onPress={() => this.pushNewRoute('listDivider')}>List Divider</Button>
-          <Button block style={styles.mb} onPress={() => this.pushNewRoute('listIcon')}>List Icon</Button>
-          <Button block style={styles.mb} onPress={() => this.pushNewRoute('listAvatar')}>List Avatar</Button>
-          <Button block style={styles.mb} onPress={() => this.pushNewRoute('listThumbnail')}>List Thumbnail</Button>
+          <Button block style={styles.mb} onPress={() => this.replaceAt('basicList')}>Basic List</Button>
+          <Button block style={styles.mb} onPress={() => this.replaceAt('listDivider')}>List Divider</Button>
+          <Button block style={styles.mb} onPress={() => this.replaceAt('listIcon')}>List Icon</Button>
+          <Button block style={styles.mb} onPress={() => this.replaceAt('listAvatar')}>List Avatar</Button>
+          <Button block style={styles.mb} onPress={() => this.replaceAt('listThumbnail')}>List Thumbnail</Button>
         </Content>
       </Container>
     );
@@ -48,10 +50,13 @@ class NHList extends Component {
 
 function bindAction(dispatch) {
   return {
-    popRoute: () => dispatch(popRoute()),
     openDrawer: () => dispatch(openDrawer()),
-    pushNewRoute: route => dispatch(pushNewRoute(route)),
+    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
   };
 }
 
-export default connect(null, bindAction)(NHList);
+const mapStateToProps = state => ({
+  navigation: state.cardNavigation,
+});
+
+export default connect(mapStateToProps, bindAction)(NHList);

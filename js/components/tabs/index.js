@@ -4,21 +4,15 @@ import { connect } from 'react-redux';
 import { Container, Header, Title, View, Button, Icon, Tabs } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
-import { popRoute } from '../../actions/route';
 import myTheme from '../../themes/base-theme';
 
 import TabOne from './tabOne';
 import TabTwo from './tabTwo';
 
-class NHTabs extends Component {
+class NHTabs extends Component {  // eslint-disable-line
 
   static propTypes = {
-    popRoute: React.PropTypes.func,
     openDrawer: React.PropTypes.func,
-  }
-
-  popRoute() {
-    this.props.popRoute();
   }
 
   render() {
@@ -46,8 +40,11 @@ class NHTabs extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    popRoute: () => dispatch(popRoute()),
   };
 }
 
-export default connect(null, bindAction)(NHTabs);
+const mapStateToProps = state => ({
+  navigation: state.cardNavigation,
+});
+
+export default connect(mapStateToProps, bindAction)(NHTabs);

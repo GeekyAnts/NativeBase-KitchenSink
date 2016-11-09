@@ -1,22 +1,20 @@
 
 import React, { Component } from 'react';
+import { Platform } from 'react-native';
 import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, View } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
-import { popRoute } from '../../actions/route';
 import myTheme from '../../themes/base-theme';
 import styles from './styles';
 
-class NHButton extends Component {
+const androidText = 'Capitalize Primary';
+const iosText = 'Primary';
+
+class NHButton extends Component {  //eslint-disable-line
 
   static propTypes = {
-    popRoute: React.PropTypes.func,
     openDrawer: React.PropTypes.func,
-  }
-
-  popRoute() {
-    this.props.popRoute();
   }
 
   render() {
@@ -36,7 +34,9 @@ class NHButton extends Component {
               <Text>Block Button</Text>
             </CardItem>
             <CardItem>
-              <Button block capitalize primary style={styles.mb15}>Capitalize Primary</Button>
+              <Button block capitalize primary style={styles.mb15}>
+                {(Platform.OS === 'android') ? androidText : iosText}
+              </Button>
               <Button block success style={styles.mb15}>Success</Button>
               <Button block info style={styles.mb15}>Info</Button>
               <Button block warning style={styles.mb15}>Warning</Button>
@@ -194,8 +194,11 @@ class NHButton extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    popRoute: () => dispatch(popRoute()),
   };
 }
 
-export default connect(null, bindAction)(NHButton);
+const mapStateToProps = state => ({
+  navigation: state.cardNavigation,
+});
+
+export default connect(mapStateToProps, bindAction)(NHButton);

@@ -1,17 +1,21 @@
 
 import React, { Component } from 'react';
-import { BackAndroid, Platform, StatusBar, Navigator } from 'react-native';
+import { BackAndroid, StatusBar, NavigationExperimental } from 'react-native';
 import { connect } from 'react-redux';
 import { Drawer } from 'native-base';
+import { actions } from 'react-native-navigation-redux-helpers';
 
 import { closeDrawer } from './actions/drawer';
-import { popRoute } from './actions/route';
 
 import Home from './components/home/';
 import Anatomy from './components/anatomy/';
 import NHBadge from './components/badge/';
 import NHButton from './components/button/';
 import NHCard from './components/card/';
+import NHCardImage from './components/card/card-image';
+import NHCardShowcase from './components/card/card-showcase';
+import NHCardList from './components/card/card-list';
+import NHCardHeaderAndFooter from './components/card/card-header-and-footer';
 import NHCheckbox from './components/checkbox/';
 import NHDeckSwiper from './components/deckswiper/';
 import NHForm from './components/form/';
@@ -30,33 +34,18 @@ import NHSearchbar from './components/searchbar/';
 import NHSpinner from './components/spinner/';
 import NHTabs from './components/tabs/';
 import NHThumbnail from './components/thumbnail/';
+import NHTypography from './components/typography/';
 import SplashPage from './components/splashscreen/';
 import SideBar from './components/sidebar';
 import statusBarColor from './themes/base-theme';
 
-Navigator.prototype.replaceWithAnimation = function replaceWithAnimation(route) {
-  const activeLength = this.state.presentedIndex + 1;
-  const activeStack = this.state.routeStack.slice(0, activeLength);
-  const activeAnimationConfigStack = this.state.sceneConfigStack.slice(0, activeLength);
-  const nextStack = activeStack.concat([route]);
-  const destIndex = nextStack.length - 1;
-  const nextSceneConfig = this.props.configureScene(route, nextStack);
-  const nextAnimationConfigStack = activeAnimationConfigStack.concat([nextSceneConfig]);
+const {
+  popRoute,
+} = actions;
 
-  const replacedStack = activeStack.slice(0, activeLength - 1).concat([route]);
-  this._emitWillFocus(nextStack[destIndex]);
-  this.setState({
-    routeStack: nextStack,
-    sceneConfigStack: nextAnimationConfigStack,
-  }, () => {
-    this._enableScene(destIndex);
-    this._transitionTo(destIndex, nextSceneConfig.defaultTransitionVelocity, null, () => {
-      this.immediatelyResetRouteStack(replacedStack);
-    });
-  });
-};
-
-export const globalNav = {};
+const {
+  CardStack: NavigationCardStack,
+} = NavigationExperimental;
 
 class AppNavigator extends Component {
 
@@ -64,19 +53,21 @@ class AppNavigator extends Component {
     drawerState: React.PropTypes.string,
     popRoute: React.PropTypes.func,
     closeDrawer: React.PropTypes.func,
+    navigation: React.PropTypes.shape({
+      key: React.PropTypes.string,
+      routes: React.PropTypes.array,
+    }),
   }
 
   componentDidMount() {
-    globalNav.navigator = this._navigator;
-
     BackAndroid.addEventListener('hardwareBackPress', () => {
-      const routes = this._navigator.getCurrentRoutes();
+      const routes = this.props.navigation.routes;
 
-      if (routes[routes.length - 1].id === 'home') {
-                // CLose the app
-        return true;
+      if (routes[routes.length - 1].key === 'home') {
+        return false;
       }
-      this.popRoute();
+
+      this.props.popRoute(this.props.navigation.key);
       return true;
     });
   }
@@ -101,63 +92,72 @@ class AppNavigator extends Component {
 
   closeDrawer() {
     if (this.props.drawerState === 'opened') {
-      this._drawer.close();
       this.props.closeDrawer();
     }
   }
 
-  renderScene(route, navigator) { // eslint-disable-line class-methods-use-this
-    switch (route.id) {
+  _renderScene(props) { // eslint-disable-line class-methods-use-this
+    switch (props.scene.route.key) {
       case 'splashscreen':
-        return <SplashPage navigator={navigator} />;
+        return <SplashPage />;
       case 'home':
-        return <Home navigator={navigator} />;
+        return <Home />;
       case 'anatomy':
-        return <Anatomy navigator={navigator} />;
+        return <Anatomy />;
       case 'badge':
-        return <NHBadge navigator={navigator} />;
+        return <NHBadge />;
       case 'button':
-        return <NHButton navigator={navigator} />;
+        return <NHButton />;
       case 'card':
-        return <NHCard navigator={navigator} />;
+        return <NHCard />;
+      case 'cardImage':
+        return <NHCardImage />;
+      case 'cardShowcase':
+        return <NHCardShowcase />;
+      case 'cardList':
+        return <NHCardList />;
+      case 'cardHeaderAndFooter':
+        return <NHCardHeaderAndFooter />;
       case 'checkbox':
-        return <NHCheckbox navigator={navigator} />;
+        return <NHCheckbox />;
       case 'deckswiper':
-        return <NHDeckSwiper navigator={navigator} />;
+        return <NHDeckSwiper />;
       case 'form':
-        return <NHForm navigator={navigator} />;
+        return <NHForm />;
       case 'icon':
-        return <NHIcon navigator={navigator} />;
+        return <NHIcon />;
       case 'inputgroup':
-        return <NHInputGroup navigator={navigator} />;
+        return <NHInputGroup />;
       case 'layout':
-        return <NHLayout navigator={navigator} />;
+        return <NHLayout />;
       case 'list':
-        return <NHList navigator={navigator} />;
+        return <NHList />;
       case 'basicList':
-        return <NHBasicList navigator={navigator} />;
+        return <NHBasicList />;
       case 'listDivider':
-        return <NHListDivider navigator={navigator} />;
+        return <NHListDivider />;
       case 'listIcon':
-        return <NHListIcon navigator={navigator} />;
+        return <NHListIcon />;
       case 'listAvatar':
-        return <NHListAvatar navigator={navigator} />;
+        return <NHListAvatar />;
       case 'listThumbnail':
-        return <NHListThumbnail navigator={navigator} />;
+        return <NHListThumbnail />;
       case 'picker':
-        return <NHPicker navigator={navigator} />;
+        return <NHPicker />;
       case 'radio':
-        return <NHRadio navigator={navigator} />;
+        return <NHRadio />;
       case 'searchbar':
-        return <NHSearchbar navigator={navigator} />;
+        return <NHSearchbar />;
       case 'spinner':
-        return <NHSpinner navigator={navigator} />;
+        return <NHSpinner />;
       case 'tabs':
-        return <NHTabs navigator={navigator} />;
+        return <NHTabs />;
       case 'thumbnail':
-        return <NHThumbnail navigator={navigator} />;
+        return <NHThumbnail />;
+      case 'typography':
+        return <NHTypography />;
       default :
-        return <Home navigator={navigator} />;
+        return <Home />;
     }
   }
 
@@ -180,7 +180,7 @@ class AppNavigator extends Component {
             shadowRadius: 3,
           },
         }}
-        tweenHandler={(ratio) => {
+        tweenHandler={(ratio) => {  // eslint-disable-line
           return {
             drawer: { shadowRadius: ratio < 0.2 ? ratio * 5 * 5 : 5 },
             main: {
@@ -194,13 +194,10 @@ class AppNavigator extends Component {
           backgroundColor={statusBarColor.statusBarColor}
           barStyle="default"
         />
-        <Navigator
-          ref={(ref) => {
-            this._navigator = ref;
-          }}
-          configureScene={() => Navigator.SceneConfigs.FloatFromRight}
-          initialRoute={{ id: (Platform.OS === 'android') ? 'splashscreen' : 'home', statusBarHidden: true }}
-          renderScene={this.renderScene}
+        <NavigationCardStack
+          navigationState={this.props.navigation}
+          renderOverlay={this._renderOverlay}
+          renderScene={this._renderScene}
         />
       </Drawer>
     );
@@ -209,11 +206,12 @@ class AppNavigator extends Component {
 
 const bindAction = dispatch => ({
   closeDrawer: () => dispatch(closeDrawer()),
-  popRoute: () => dispatch(popRoute()),
+  popRoute: key => dispatch(popRoute(key)),
 });
 
 const mapStateToProps = state => ({
   drawerState: state.drawer.drawerState,
+  navigation: state.cardNavigation,
 });
 
 export default connect(mapStateToProps, bindAction)(AppNavigator);

@@ -4,13 +4,11 @@ import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Button, Icon, List, ListItem, CheckBox, Text } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
-import { popRoute } from '../../actions/route';
 import styles from './styles';
 
 class NHCheckbox extends Component {
 
   static propTypes = {
-    popRoute: React.PropTypes.func,
     openDrawer: React.PropTypes.func,
   }
 
@@ -22,10 +20,6 @@ class NHCheckbox extends Component {
       checkbox3: true,
       checkbox4: false,
     };
-  }
-
-  popRoute() {
-    this.props.popRoute();
   }
 
   toggleSwitch1() {
@@ -91,8 +85,11 @@ class NHCheckbox extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    popRoute: () => dispatch(popRoute()),
   };
 }
 
-export default connect(null, bindAction)(NHCheckbox);
+const mapStateToProps = state => ({
+  navigation: state.cardNavigation,
+});
+
+export default connect(mapStateToProps, bindAction)(NHCheckbox);

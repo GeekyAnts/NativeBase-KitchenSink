@@ -5,7 +5,6 @@ import { Image } from 'react-native';
 import { Container, Header, Title, Button, Icon, View, DeckSwiper, Card, CardItem, Thumbnail, Text } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
-import { popRoute } from '../../actions/route';
 import styles from './styles';
 
 const cardOne = require('../../../img/swiper-1.png');
@@ -15,32 +14,31 @@ const cardFour = require('../../../img/swiper-4.png');
 
 const cards = [
   {
+    text: 'Card One',
     name: 'One',
     image: cardOne,
   },
   {
+    text: 'Card Two',
     name: 'Two',
     image: cardTwo,
   },
   {
+    text: 'Card Three',
     name: 'Three',
     image: cardThree,
   },
   {
+    text: 'Card Four',
     name: 'Four',
     image: cardFour,
   },
 ];
 
-class NHDeckSwiper extends Component {
+class NHDeckSwiper extends Component {  // eslint-disable-line
 
   static propTypes = {
-    popRoute: React.PropTypes.func,
     openDrawer: React.PropTypes.func,
-  }
-
-  popRoute() {
-    this.props.popRoute();
   }
 
   render() {
@@ -61,8 +59,8 @@ class NHDeckSwiper extends Component {
               <Card style={{ elevation: 3 }}>
                 <CardItem>
                   <Thumbnail source={item.image} />
-                  <Text>Instrumental Songs</Text>
-                  <Text note>Guitar</Text>
+                  <Text>{item.text}</Text>
+                  <Text note>NativeBase</Text>
                 </CardItem>
                 <CardItem>
                   <Image style={{ resizeMode: 'cover', width: null }} source={item.image} />
@@ -83,8 +81,11 @@ class NHDeckSwiper extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    popRoute: () => dispatch(popRoute()),
   };
 }
 
-export default connect(null, bindAction)(NHDeckSwiper);
+const mapStateToProps = state => ({
+  navigation: state.cardNavigation,
+});
+
+export default connect(mapStateToProps, bindAction)(NHDeckSwiper);

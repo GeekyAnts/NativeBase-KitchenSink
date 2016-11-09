@@ -1,10 +1,11 @@
 
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Image } from 'react-native';
+import { connect } from 'react-redux';
 import { Container, Button, View, H3 } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
+import myTheme from '../../themes/base-theme';
 import styles from './styles';
 
 const launchscreenBg = require('../../../img/launchscreen-bg.png');
@@ -18,12 +19,12 @@ class Home extends Component { // eslint-disable-line
 
   render() {
     return (
-      <Container>
+      <Container theme={myTheme}>
         <Image source={launchscreenBg} style={styles.imageContainer}>
           <View style={styles.logoContainer}>
             <Image source={launchscreenLogo} style={styles.logo} />
           </View>
-          <View style={{ alignItems: 'center', marginBottom: 50 }}>
+          <View style={{ alignItems: 'center', marginBottom: 50, backgroundColor: 'transparent' }}>
             <H3 style={styles.text}>App to showcase</H3>
             <View style={{ marginTop: 8 }} />
             <H3 style={styles.text}>NativeBase components</H3>
@@ -48,4 +49,8 @@ function bindActions(dispatch) {
   };
 }
 
-export default connect(null, bindActions)(Home);
+const mapStateToProps = state => ({
+  navigation: state.cardNavigation,
+});
+
+export default connect(mapStateToProps, bindActions)(Home);

@@ -45,28 +45,11 @@ module.exports = StyleSheet.create({
   sidebarIcon: {
     fontSize: 21,
     color: '#fff',
-    lineHeight: 25,
+    lineHeight: (Platform.OS === 'android') ? 21 : 25,
     backgroundColor: 'transparent',
   },
   text: {
     fontWeight: '500',
     fontSize: 16,
   },
-  // sidebar: {
-  //   flex: 1,
-  //   backgroundColor: '#fff',
-  //   shadowColor: '#000',
-  //   shadowOffset: { width: 30 },
-  //   shadowRadius: 60,
-  //   shadowOpacity: 0.3,
-  // },
-
-  // sidebar: {
-  //   flex: 1,
-  //   backgroundColor: '#fff',
-  //   shadowColor: '#000',
-  //   shadowOffset: { width: 1 },
-  //   shadowRadius: 4,
-  //   shadowOpacity: 0.4,
-  // },
 });

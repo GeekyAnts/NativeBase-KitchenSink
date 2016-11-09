@@ -22,7 +22,8 @@ function setup():React.Component {
         </Provider>
       );
     }
-    }
+  }
+
   return Root;
 }
 

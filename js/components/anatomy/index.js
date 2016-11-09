@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Text, H3, Button, Icon, Footer, FooterTab } from 'native-base';
 
-import { openDrawer, closeDrawer } from '../../actions/drawer';
-import { replaceRoute, replaceOrPushRoute } from '../../actions/route';
+import { openDrawer } from '../../actions/drawer';
 import myTheme from '../../themes/base-theme';
 import styles from './styles';
 
@@ -12,9 +11,6 @@ class Anatomy extends Component {
 
   static propTypes = {
     openDrawer: React.PropTypes.func,
-    closeDrawer: React.PropTypes.func,
-    replaceRoute: React.PropTypes.func,
-    replaceOrPushRoute: React.PropTypes.func,
   }
 
   constructor(props) {
@@ -25,9 +21,6 @@ class Anatomy extends Component {
       tab3: true,
       tab4: false,
     };
-  }
-  replaceRoute(route) {
-    this.props.replaceRoute(route);
   }
 
   toggleTab1() {
@@ -65,10 +58,6 @@ class Anatomy extends Component {
       tab4: true,
     });
   }
-  navigateTo(route) {
-    this.props.closeDrawer();
-    this.props.replaceOrPushRoute(route);
-  }
 
   render() {
     return (
@@ -83,7 +72,9 @@ class Anatomy extends Component {
 
         <Content padder>
           <H3>This is content section</H3>
-          <Text style={{marginTop: 10}}>Selected tab is: {this.state.tab1 ? 1 : this.state.tab2 ? 2 : this.state.tab3 ? 3 : 4}</Text>
+          <Text style={{ marginTop: 10 }}>
+            Selected tab is: {this.state.tab1 ? 1 : this.state.tab2 ? 2 : this.state.tab3 ? 3 : 4}
+          </Text>
         </Content>
 
         <Footer >
@@ -114,10 +105,11 @@ class Anatomy extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    closeDrawer: () => dispatch(closeDrawer()),
-    replaceRoute: route => dispatch(replaceRoute(route)),
-    replaceOrPushRoute: route => dispatch(replaceOrPushRoute(route)),
   };
 }
 
-export default connect(null, bindAction)(Anatomy);
+const mapStateToProps = state => ({
+  navigation: state.cardNavigation,
+});
+
+export default connect(mapStateToProps, bindAction)(Anatomy);

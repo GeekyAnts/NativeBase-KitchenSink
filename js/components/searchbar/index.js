@@ -1,24 +1,15 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Dimensions } from 'react-native';
-import { Container, Header, Button, Icon, InputGroup, Input, Content, View } from 'native-base';
+import { Container, Header, Button, Icon, InputGroup, Input, Content } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
-import { popRoute } from '../../actions/route';
 import styles from './styles';
 
-const deviceHeight = Dimensions.get('window').height;
-
-class NHSearchbar extends Component {
+class NHSearchbar extends Component { // eslint-disable-line
 
   static propTypes = {
-    popRoute: React.PropTypes.func,
     openDrawer: React.PropTypes.func,
-  }
-
-  popRoute() {
-    this.props.popRoute();
   }
 
   render() {
@@ -46,8 +37,11 @@ class NHSearchbar extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    popRoute: () => dispatch(popRoute()),
   };
 }
 
-export default connect(null, bindAction)(NHSearchbar);
+const mapStateToProps = state => ({
+  navigation: state.cardNavigation,
+});
+
+export default connect(mapStateToProps, bindAction)(NHSearchbar);

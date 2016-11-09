@@ -1,11 +1,10 @@
 
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Image } from 'react-native';
+import { connect } from 'react-redux';
 import { Content, Text, List, ListItem, Icon, View } from 'native-base';
 
-import { closeDrawer } from '../../actions/drawer';
-import { replaceOrPushRoute } from '../../actions/route';
+import navigateTo from '../../actions/sideBarNav';
 import sidebarTheme from './sidebar-theme';
 import styles from './style';
 
@@ -15,9 +14,7 @@ const drawerImage = require('../../../img/logo-kitchen-sink.png');
 class SideBar extends Component {
 
   static propTypes = {
-    closeDrawer: React.PropTypes.func,
-    replaceOrPushRoute: React.PropTypes.func,
-    drawerState: React.PropTypes.string,  //eslint-disable-line
+    navigateTo: React.PropTypes.func,
   }
 
   constructor(props) {
@@ -29,8 +26,7 @@ class SideBar extends Component {
   }
 
   navigateTo(route) {
-    this.props.closeDrawer();
-    this.props.replaceOrPushRoute(route);
+    this.props.navigateTo(route, 'home');
   }
 
   render() {
@@ -135,6 +131,14 @@ class SideBar extends Component {
               <Text style={styles.text}>List</Text>
             </View>
           </ListItem>
+          <ListItem button iconLeft onPress={() => this.navigateTo('picker')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#F50C75', paddingLeft: 10 }]}>
+                <Icon name="ios-arrow-dropdown" style={styles.sidebarIcon} />
+              </View>
+              <Text style={styles.text}>Picker</Text>
+            </View>
+          </ListItem>
           <ListItem button iconLeft onPress={() => this.navigateTo('radio')} >
             <View style={styles.listItemContainer}>
               <View style={[styles.iconContainer, { backgroundColor: '#6FEA90', paddingLeft: 10 }]}>
@@ -175,6 +179,14 @@ class SideBar extends Component {
               <Text style={styles.text}>Thumbnail</Text>
             </View>
           </ListItem>
+          <ListItem button iconLeft onPress={() => this.navigateTo('typography')} >
+            <View style={styles.listItemContainer}>
+              <View style={[styles.iconContainer, { backgroundColor: '#48525D', paddingLeft: 7 }]}>
+                <Text style={styles.sidebarIcon}>Aa</Text>
+              </View>
+              <Text style={styles.text}>Typography</Text>
+            </View>
+          </ListItem>
         </List>
       </Content>
     );
@@ -183,13 +195,12 @@ class SideBar extends Component {
 
 function bindAction(dispatch) {
   return {
-    closeDrawer: () => dispatch(closeDrawer()),
-    replaceOrPushRoute: route => dispatch(replaceOrPushRoute(route)),
+    navigateTo: (route, homeRoute) => dispatch(navigateTo(route, homeRoute)),
   };
 }
 
 const mapStateToProps = state => ({
-  drawerState: state.drawer.drawerState,
+  navigation: state.cardNavigation,
 });
 
 export default connect(mapStateToProps, bindAction)(SideBar);

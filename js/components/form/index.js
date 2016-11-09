@@ -1,11 +1,10 @@
 
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { TouchableOpacity } from 'react-native';
-import { Container, Header, Title, Content, Button, Icon, List, ListItem, InputGroup, Input, Picker, Text, View, Thumbnail } from 'native-base';
+import { connect } from 'react-redux';
+import { Container, Header, Title, Content, Button, Icon, List, ListItem, InputGroup, Input, Picker, Text, Thumbnail } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
-import { popRoute } from '../../actions/route';
 import styles from './styles';
 
 const Item = Picker.Item;
@@ -14,7 +13,6 @@ const camera = require('../../../img/camera.png');
 class NHForm extends Component {
 
   static propTypes = {
-    popRoute: React.PropTypes.func,
     openDrawer: React.PropTypes.func,
   }
 
@@ -32,10 +30,6 @@ class NHForm extends Component {
     this.setState({
       selected1: value,
     });
-  }
-
-  popRoute() {
-    this.props.popRoute();
   }
 
   render() {
@@ -87,13 +81,13 @@ class NHForm extends Component {
               </InputGroup>
             </ListItem>
             <ListItem iconLeft>
-                <Icon name="ios-transgender" style={{ color: '#0A69FE' }} />
-                <Text>GENDER</Text>
+              <Icon name="ios-transgender" style={{ color: '#0A69FE' }} />
+              <Text>GENDER</Text>
               <Picker
                 iosHeader="Select one"
                 mode="dropdown"
                 selectedValue={this.state.selected1}
-                onValueChange={this.onValueChange.bind(this)}
+                onValueChange={this.onValueChange.bind(this)} // eslint-disable-line
               >
                 <Item label="Male" value="key0" />
                 <Item label="Female" value="key1" />
@@ -117,8 +111,11 @@ class NHForm extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    popRoute: () => dispatch(popRoute()),
   };
 }
 
-export default connect(null, bindAction)(NHForm);
+const mapStateToProps = state => ({
+  navigation: state.cardNavigation,
+});
+
+export default connect(mapStateToProps, bindAction)(NHForm);
