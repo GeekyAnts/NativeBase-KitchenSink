@@ -91,3 +91,4 @@ $ react-native run-android
 
 
 For apps with more advance designs with NativeBase, please visit **[StrapMobile](https://strapmobile.com/)**.
+
