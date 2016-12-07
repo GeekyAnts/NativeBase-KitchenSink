@@ -63,7 +63,8 @@
     "react-native with redux",
     "react-native with redux boilerplate",
     "native-base boilerplate",
-    "react-native with native-base"
+    "react-native with native-base",
+    "native-base-starter-kit"
   ],
   "jest": {
     "preset": "jest-react-native"
