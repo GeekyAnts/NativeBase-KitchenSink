@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text,Left,Right,Body } from 'native-base';
 
 import styles from './styles';
 
@@ -27,15 +27,18 @@ class NHListDivider extends Component {
     return (
       <Container style={styles.container}>
         <Header>
+          <Left>
           <Button transparent onPress={() => this.replaceAt('list')}>
             <Icon name="ios-arrow-back" />
           </Button>
-
+          </Left>
+          <Body>
           <Title>List Divider</Title>
+          </Body>
+          <Right />
         </Header>
 
         <Content>
-          <List>
             <ListItem itemDivider>
               <Text>A</Text>
             </ListItem>
@@ -80,7 +83,6 @@ class NHListDivider extends Component {
             <ListItem>
               <Text>Claire Barclay</Text>
             </ListItem>
-          </List>
         </Content>
       </Container>
     );

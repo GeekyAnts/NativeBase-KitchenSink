@@ -5,7 +5,7 @@ const { StyleSheet, Dimensions, Platform } = React;
 
 const deviceHeight = Dimensions.get('window').height;
 
-module.exports = StyleSheet.create({
+export default {
   imageContainer: {
     flex: 1,
     width: null,
@@ -27,4 +27,4 @@ module.exports = StyleSheet.create({
     color: '#D8D8D8',
     bottom: 6,
   },
-});
+};

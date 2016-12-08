@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Image } from 'react-native';
-import { Container, Header, Title, Button, Icon, View, DeckSwiper, Card, CardItem, Thumbnail, Text } from 'native-base';
+import { Image, View } from 'react-native';
+import { Container, Header, Title, Button, Icon, DeckSwiper, Card, CardItem, Thumbnail, Text,Left,Right,Body,Content } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -45,25 +45,33 @@ class NHDeckSwiper extends Component {  // eslint-disable-line
     return (
       <Container style={styles.container}>
         <Header>
-          <Title>Deck Swiper</Title>
-
-          <Button transparent onPress={this.props.openDrawer}>
+          <Left>
+            <Button transparent onPress={this.props.openDrawer}>
             <Icon name="ios-menu" />
-          </Button>
+            </Button>
+          </Left>
+          <Body>
+            <Title>Deck Swiper</Title>
+          </Body>
+          <Right />
         </Header>
 
-        <View padder >
+        <View style={{flex: 1,padding: 12}}>
           <DeckSwiper
             dataSource={cards}
             renderItem={item =>
               <Card style={{ elevation: 3 }}>
                 <CardItem>
-                  <Thumbnail source={item.image} />
-                  <Text>{item.text}</Text>
-                  <Text note>NativeBase</Text>
+                  <Left>
+                    <Thumbnail source={item.image} />
+                  </Left>
+                  <Body>
+                    <Text>{item.text}</Text>
+                    <Text note>NativeBase</Text>
+                  </Body>
                 </CardItem>
-                <CardItem>
-                  <Image style={{ resizeMode: 'cover', width: null }} source={item.image} />
+                <CardItem cardBody>
+                  <Image style={{ resizeMode: 'cover', width: null,flex: 1,height: 300 }} source={item.image} />
                 </CardItem>
                 <CardItem>
                   <Icon name={'ios-heart'} style={{ color: '#ED4A6A' }} />

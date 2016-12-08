@@ -3,15 +3,15 @@ const React = require('react-native');
 
 const { StyleSheet } = React;
 
-module.exports = StyleSheet.create({
+export default {
   container: {
     backgroundColor: '#FBFAFA',
   },
   buttonContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    marginLeft: 3,
+    flex: 1,
+    justifyContent: 'center',
     marginTop: 10,
   },
   mb15: {
@@ -23,4 +23,15 @@ module.exports = StyleSheet.create({
   iconButton: {
     color: '#007aff',
   },
-});
+  margin: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor: '#FFF',
+  },
+  mf: {
+    flexGrow: 1,
+    alignSelf: 'center',
+    alignItems: 'center',
+  },
+};

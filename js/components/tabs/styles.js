@@ -3,7 +3,7 @@ const React = require('react-native');
 
 const { StyleSheet } = React;
 
-module.exports = StyleSheet.create({
+export default {
   container: {
     backgroundColor: '#FBFAFA',
   },
@@ -11,4 +11,4 @@ module.exports = StyleSheet.create({
     flex: 1,
     marginBottom: 10,
   },
-});
+};

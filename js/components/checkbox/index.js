@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, List, ListItem, CheckBox, Text } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, List, ListItem, CheckBox, Text,Left,Right,Body } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -50,15 +50,19 @@ class NHCheckbox extends Component {
     return (
       <Container style={styles.container}>
         <Header>
-          <Title>Check Box</Title>
-
-          <Button transparent onPress={this.props.openDrawer}>
+          <Left>
+            <Button transparent onPress={this.props.openDrawer}>
             <Icon name="ios-menu" />
-          </Button>
+            </Button>
+          </Left>
+          <Body>
+            <Title>Check Box</Title>
+          </Body>
+          <Right>
+          </Right>
         </Header>
 
         <Content>
-          <List>
             <ListItem button onPress={() => this.toggleSwitch1()}>
               <CheckBox checked={this.state.checkbox1} onPress={() => this.toggleSwitch1()} />
               <Text>Lunch Break</Text>
@@ -75,7 +79,6 @@ class NHCheckbox extends Component {
               <CheckBox checked={this.state.checkbox4} onPress={() => this.toggleSwitch4()} />
               <Text>Discussion with Client</Text>
             </ListItem>
-          </List>
         </Content>
       </Container>
     );

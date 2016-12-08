@@ -6,7 +6,7 @@ const { StyleSheet, Platform, Dimensions } = React;
 const deviceHeight = Dimensions.get('window').height;
 const deviceWidth = Dimensions.get('window').width;
 
-module.exports = StyleSheet.create({
+export default {
   sidebar: {
     flex: 1,
     backgroundColor: '#fff',
@@ -39,7 +39,6 @@ module.exports = StyleSheet.create({
     height: 37,
     borderRadius: 18,
     marginRight: 12,
-    paddingLeft: 11,
     paddingTop: (Platform.OS === 'android') ? 7 : 5,
   },
   sidebarIcon: {
@@ -47,9 +46,10 @@ module.exports = StyleSheet.create({
     color: '#fff',
     lineHeight: (Platform.OS === 'android') ? 21 : 25,
     backgroundColor: 'transparent',
+    alignSelf: 'center',
   },
   text: {
     fontWeight: '500',
     fontSize: 16,
   },
-});
+};

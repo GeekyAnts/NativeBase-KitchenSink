@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Thumbnail } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Thumbnail,Left,Body,Right } from 'native-base';
 
 import styles from './styles';
 
@@ -12,12 +12,47 @@ const himanshu = require('../../../img/contacts/himanshu.png');
 const shweta = require('../../../img/contacts/shweta.png');
 const shruti = require('../../../img/contacts/shruti.png');
 
+let data = [
+  {
+    img: sankhadeep,
+    text: 'Sankhadeep',
+    note: 'Its time to build a difference . .',
+  },
+  {
+    img: supriya,
+    text: 'Supriya',
+    note: 'One needs courage to be happy and smiling all time . . ',
+  },
+  {
+    img: himanshu,
+    text: 'Himanshu',
+    note: 'Live a life style that matchs your vision',
+  },
+  {
+    img: shweta,
+    text: 'Shweta',
+    note: 'Failure is temporary, giving up makes it permanent',
+  },
+  {
+    img: shruti,
+    text: 'Shruti',
+    note: 'The biggest risk is a missed opportunity !!',
+  }
+]
+
 const {
   replaceAt,
 } = actions;
 
 class NHListThumbnail extends Component {
 
+  constructor(props) {
+    super(props);
+    const ds = new List.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    this.state = {
+      dataSource: ds.cloneWithRows(data),
+    };
+  }
   static propTypes = {
     replaceAt: React.PropTypes.func,
     navigation: React.PropTypes.shape({
@@ -33,41 +68,28 @@ class NHListThumbnail extends Component {
     return (
       <Container style={styles.container}>
         <Header>
+          <Left>
           <Button transparent onPress={() => this.replaceAt('list')}>
             <Icon name="ios-arrow-back" />
           </Button>
+          </Left>
 
+          <Body>
           <Title>List Thumbnail</Title>
+          </Body>
+          <Right />
         </Header>
 
         <Content>
-          <List>
+          <List  dataSource={this.state.dataSource} renderRow={(data) =>
             <ListItem>
-              <Thumbnail square size={80} source={sankhadeep} />
-              <Text>Sankhadeep</Text>
-              <Text note>Its time to build a difference . .</Text>
+              <Thumbnail square size={80} source={data.img} />
+              <Body>
+              <Text>{data.text}</Text>
+              <Text note>{data.note}</Text>
+              </Body>
             </ListItem>
-            <ListItem>
-              <Thumbnail square size={80} source={supriya} />
-              <Text>Supriya</Text>
-              <Text note>One needs courage to be happy and smiling all time . . </Text>
-            </ListItem>
-            <ListItem>
-              <Thumbnail square size={80} source={himanshu} />
-              <Text>Himanshu</Text>
-              <Text note>Live a life style that matchs your vision</Text>
-            </ListItem>
-            <ListItem>
-              <Thumbnail square size={80} source={shweta} />
-              <Text>Shweta</Text>
-              <Text note>Failure is temporary, giving up makes it permanent</Text>
-            </ListItem>
-            <ListItem>
-              <Thumbnail square size={80} source={shruti} />
-              <Text>Shruti</Text>
-              <Text note>The biggest risk is a missed opportunity !!</Text>
-            </ListItem>
-          </List>
+          } />
         </Content>
       </Container>
     );

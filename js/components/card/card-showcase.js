@@ -1,10 +1,12 @@
 
 import React, { Component } from 'react';
-import { Image } from 'react-native';
+import { Image,Dimensions } from 'react-native';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Thumbnail } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Thumbnail,Left,Right,Body } from 'native-base';
 
+var deviceHeight = Dimensions.get('window').height;
+var deviceWidth = Dimensions.get('window').width;
 import styles from './styles';
 
 const logo = require('../../../img/logo.png');
@@ -31,23 +33,33 @@ class NHCardShowcase extends Component {
     return (
       <Container style={styles.container}>
         <Header>
+          <Left>
           <Button transparent onPress={() => this.replaceAt('card')}>
             <Icon name="ios-arrow-back" />
           </Button>
-
+          </Left>
+          <Body>
           <Title>Card Showcase</Title>
+          </Body>
+          <Right>
+          </Right>
         </Header>
 
         <Content padder>
-          <Card style={[styles.mb, { flex: 0 }]}>
+          <Card style={styles.mb}>
             <CardItem>
+              <Left>
               <Thumbnail source={logo} />
+              </Left>
+              <Body>
               <Text>NativeBase</Text>
               <Text note>April 15, 2016</Text>
+              </Body>
             </CardItem>
 
-            <CardItem cardBody>
-              <Image style={{ resizeMode: 'cover', width: null }} source={cardImage} />
+            <CardItem>
+              <Body>
+              <Image style={{ alignSelf: 'center',height: 150,resizeMode: 'cover',width: deviceWidth / 1.18,marginVertical: 5 }} source={cardImage} />
               <Text>
                 NativeBase is a free and open source framework that enables developers
                 to build high-quality mobile apps using React Native iOS and Android apps
@@ -59,6 +71,7 @@ class NHCardShowcase extends Component {
                 <Icon name="logo-github" />
                 <Text>1,926 stars</Text>
               </Button>
+              </Body>
             </CardItem>
           </Card>
         </Content>

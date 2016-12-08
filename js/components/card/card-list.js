@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text,Left,Right,Body } from 'native-base';
 
 import styles from './styles';
 
@@ -27,15 +27,20 @@ class NHCardList extends Component {
     return (
       <Container style={styles.container}>
         <Header>
-          <Button transparent onPress={() => this.replaceAt('card')}>
-            <Icon name="ios-arrow-back" />
-          </Button>
-
-          <Title>Card List</Title>
+          <Left>
+            <Button transparent onPress={() => this.replaceAt('card')}>
+              <Icon name="ios-arrow-back" />
+            </Button>
+          </Left>
+          <Body>
+            <Title>Card List</Title>
+          </Body>
+          <Right>
+          </Right>
         </Header>
 
         <Content padder>
-          <Card style={[styles.mb, { flex: 0 }]}>
+          <Card style={styles.mb}>
             <CardItem>
               <Icon name="logo-googleplus" style={{ color: '#DD5044' }} />
               <Text>Google Plus</Text>

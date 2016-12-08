@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Platform } from 'react-native';
-import { Container, Header, Title, Content, Button, Icon, Picker, Text } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Text,Right,Body,Left,Picker } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -36,11 +36,15 @@ class NHPicker extends Component {
     return (
       <Container style={styles.container}>
         <Header>
-          <Title>Picker</Title>
-
+          <Left>
           <Button transparent onPress={this.props.openDrawer}>
-            <Icon name="ios-menu" />
+          <Icon name="ios-menu" />
           </Button>
+          </Left>
+          <Body>
+          <Title>Picker</Title>
+          </Body>
+          <Right />
         </Header>
 
         <Content padder>
@@ -49,9 +53,7 @@ class NHPicker extends Component {
             iosHeader="Select one"
             mode="dropdown"
             selectedValue={this.state.selected1}
-            onValueChange={this.onValueChange.bind(this)} // eslint-disable-line
-            style={{ marginLeft: (Platform.OS === 'android') ? 0 : -25 }}
-          >
+            onValueChange={this.onValueChange.bind(this)}>
             <Item label="Wallet" value="key0" />
             <Item label="ATM Card" value="key1" />
             <Item label="Debit Card" value="key2" />

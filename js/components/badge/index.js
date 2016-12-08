@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Badge } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Badge,Text,Left,Right,Body } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -16,31 +16,36 @@ class NHBadge extends Component { //eslint-disable-line
     return (
       <Container style={styles.container}>
         <Header>
-          <Title>Badge</Title>
-
-          <Button transparent onPress={this.props.openDrawer}>
+          <Left>
+            <Button transparent onPress={this.props.openDrawer}>
             <Icon name="ios-menu" />
-          </Button>
+            </Button>
+          </Left>
+          <Body>
+            <Title>Badge</Title>
+          </Body>
+          <Right>
+          </Right>
         </Header>
 
         <Content padder>
-          <Badge style={styles.mb}>2</Badge>
-          <Badge primary style={styles.mb}>2</Badge>
-          <Badge success style={styles.mb}>2</Badge>
-          <Badge info style={styles.mb}>2</Badge>
-          <Badge warning style={styles.mb}>2</Badge>
-          <Badge danger style={styles.mb}>2</Badge>
+          <Badge style={styles.mb}><Text>2</Text></Badge>
+          <Badge primary style={styles.mb}><Text>2</Text></Badge>
+          <Badge success style={styles.mb}><Text>2</Text></Badge>
+          <Badge info style={styles.mb}><Text>2</Text></Badge>
+          <Badge warning style={styles.mb}><Text>2</Text></Badge>
+          <Badge danger style={styles.mb}><Text>2</Text></Badge>
           <Badge
             primary
             style={styles.mb}
           >
-            <Icon name="ios-star" style={{ fontSize: 12, color: '#fff', lineHeight: 14 }} />
+            <Icon name="ios-star" style={{ fontSize: 15, color: '#fff', lineHeight: 20}} />
           </Badge>
           <Badge
             style={{ backgroundColor: 'black' }}
             textStyle={{ color: 'white' }}
           >
-            1866
+            <Text>1866</Text>
           </Badge>
         </Content>
       </Container>

@@ -1,7 +1,9 @@
 
 import React, { Component } from 'react';
+
+import { View } from 'react-native';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, View } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Left,Right,Body } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -16,11 +18,15 @@ class NHForm extends Component {  // eslint-disable-line
     return (
       <Container style={styles.container}>
         <Header>
-          <Title>Icons</Title>
-
-          <Button transparent onPress={this.props.openDrawer}>
-            <Icon name="ios-menu" />
-          </Button>
+          <Left>
+            <Button transparent onPress={this.props.openDrawer}>
+              <Icon name="ios-menu" />
+            </Button>
+          </Left>
+          <Body>
+            <Title>Icons</Title>
+          </Body>
+          <Right />
         </Header>
 
         <Content padder>

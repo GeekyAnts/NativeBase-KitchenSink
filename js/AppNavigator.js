@@ -18,6 +18,7 @@ import NHCardList from './components/card/card-list';
 import NHCardHeaderAndFooter from './components/card/card-header-and-footer';
 import NHCheckbox from './components/checkbox/';
 import NHDeckSwiper from './components/deckswiper/';
+import NHFab from './components/fab/';
 import NHForm from './components/form/';
 import NHIcon from './components/icon/';
 import NHInputGroup from './components/inputgroup/';
@@ -28,11 +29,12 @@ import NHListDivider from './components/list/list-divider';
 import NHListIcon from './components/list/list-icon';
 import NHListAvatar from './components/list/list-avatar';
 import NHListThumbnail from './components/list/list-thumbnail';
-import NHPicker from './components/picker/';
 import NHRadio from './components/radio/';
 import NHSearchbar from './components/searchbar/';
 import NHSpinner from './components/spinner/';
+import NHPicker from './components/picker/';
 import NHTabs from './components/tabs/';
+import NHTab from './components/tab/';
 import NHThumbnail from './components/thumbnail/';
 import NHTypography from './components/typography/';
 import SplashPage from './components/splashscreen/';
@@ -122,6 +124,8 @@ class AppNavigator extends Component {
         return <NHCheckbox />;
       case 'deckswiper':
         return <NHDeckSwiper />;
+      case 'fab':
+        return <NHFab />;
       case 'form':
         return <NHForm />;
       case 'icon':
@@ -150,6 +154,8 @@ class AppNavigator extends Component {
         return <NHSearchbar />;
       case 'spinner':
         return <NHSpinner />;
+      case 'tab':
+        return <NHTab />;
       case 'tabs':
         return <NHTabs />;
       case 'thumbnail':
@@ -169,7 +175,6 @@ class AppNavigator extends Component {
         tweenDuration={150}
         content={<SideBar navigator={this._navigator} />}
         tapToClose
-        acceptPan={false}
         onClose={() => this.closeDrawer()}
         openDrawerOffset={0.2}
         panCloseMask={0.2}
@@ -188,7 +193,6 @@ class AppNavigator extends Component {
             },
           };
         }}
-        negotiatePan
       >
         <StatusBar
           backgroundColor={statusBarColor.statusBarColor}

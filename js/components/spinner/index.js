@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Spinner } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Spinner,Left,Right,Body } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -16,11 +16,16 @@ class NHSpinner extends Component { // eslint-disable-line
     return (
       <Container style={styles.container}>
         <Header>
-          <Title>Spinner</Title>
-
-          <Button transparent onPress={this.props.openDrawer}>
+          <Left>
+            <Button transparent onPress={this.props.openDrawer}>
             <Icon name="ios-menu" />
-          </Button>
+            </Button>
+          </Left>
+          <Body>
+            <Title>Spinner</Title>
+          </Body>
+          <Right />
+
         </Header>
 
         <Content>

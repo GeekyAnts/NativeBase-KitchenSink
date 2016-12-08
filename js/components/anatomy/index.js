@@ -1,7 +1,8 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Text, H3, Button, Icon, Footer, FooterTab } from 'native-base';
+import { View } from 'react-native';
+import { Container, Header, Title, Content, Text, H3, Button, Icon, Footer, FooterTab, Left, Right, Body, Badge,IconNB } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import myTheme from '../../themes/base-theme';
@@ -64,36 +65,48 @@ class Anatomy extends Component {
       <Container theme={myTheme} style={styles.container}>
 
         <Header>
-          <Title>Header</Title>
-          <Button transparent onPress={this.props.openDrawer}>
-            <Icon name="ios-menu" />
-          </Button>
+          <Left>
+            <Button transparent onPress={this.props.openDrawer}>
+              <Icon name="ios-menu" />
+            </Button>
+          </Left>
+          <Body>
+            <Title>Header</Title>
+          </Body>
+          <Right />
+
         </Header>
+
 
         <Content padder>
           <H3>This is content section</H3>
           <Text style={{ marginTop: 10 }}>
             Selected tab is: {this.state.tab1 ? 1 : this.state.tab2 ? 2 : this.state.tab3 ? 3 : 4}
           </Text>
+
         </Content>
 
-        <Footer >
+
+        <Footer>
           <FooterTab>
             <Button active={this.state.tab1} onPress={() => this.toggleTab1()} >
-                Apps
-              <Icon name="ios-apps-outline" />
+              <View>
+                <Badge><Text>2</Text></Badge>
+                <IconNB name="apps"  ios="ios-apps-outline" />
+              </View>
+              <Text>Apps</Text>
             </Button>
             <Button active={this.state.tab2} onPress={() => this.toggleTab2()} >
-                Camera
-              <Icon name="ios-camera-outline" />
+              <IconNB name="camera" />
+              <Text>Camera</Text>
             </Button>
             <Button active={this.state.tab3} onPress={() => this.toggleTab3()} >
-                Navigate
-              <Icon name="ios-compass" />
+              <IconNB ios="ios-compass" android="md-compass" />
+              <Text>Navigate</Text>
             </Button>
             <Button active={this.state.tab4} onPress={() => this.toggleTab4()} >
-                Contact
-              <Icon name="ios-contact-outline" />
+              <IconNB name="contact" android="md-contact" />
+              <Text>Contact</Text>
             </Button>
           </FooterTab>
         </Footer>

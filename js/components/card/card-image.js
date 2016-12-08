@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
-import { Image } from 'react-native';
+import { Image, View } from 'react-native';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Thumbnail, View } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Thumbnail,Left,Body,Right } from 'native-base';
 
 import styles from './styles';
 
@@ -31,38 +31,47 @@ class NHCardImage extends Component {
     return (
       <Container style={styles.container}>
         <Header>
-          <Button transparent onPress={() => this.replaceAt('card')}>
-            <Icon name="ios-arrow-back" />
-          </Button>
-
-          <Title>Card Image</Title>
+          <Left>
+            <Button transparent onPress={() => this.replaceAt('card')}>
+              <Icon name="ios-arrow-back" />
+            </Button>
+          </Left>
+          <Body>
+            <Title>Card Image</Title>
+          </Body>
+          <Right>
+          </Right>
         </Header>
 
         <Content padder>
-          <Card style={[styles.mb, { flex: 0 }]}>
+          <Card style={styles.mb}>
             <CardItem>
+              <Left>
               <Thumbnail source={logo} />
+              </Left>
+              <Body>
               <Text>NativeBase</Text>
               <Text note>GeekyAnts</Text>
+              </Body>
             </CardItem>
 
-            <CardItem>
-              <Image style={{ resizeMode: 'cover', width: null }} source={cardImage} />
+            <CardItem cardBody>
+              <Image style={{ resizeMode: 'cover', width: null,height: 200,flex: 1 }} source={cardImage} />
             </CardItem>
 
             <CardItem>
               <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
                 <Button transparent>
                   <Icon name="logo-github" />
-                  1,926
+                  <Text>1,926</Text>
                 </Button>
                 <Button transparent>
                   <Icon name="ios-git-network" />
-                  132
+                  <Text>132</Text>
                 </Button>
                 <Button transparent>
                   <Icon name="logo-twitter" />
-                  197
+                  <Text>197</Text>
                 </Button>
               </View>
             </CardItem>

@@ -1,11 +1,10 @@
 
 import React, { Component } from 'react';
-import { Platform } from 'react-native';
+import { Platform, View } from 'react-native';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, View } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text,Left,Body,Right } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
-import myTheme from '../../themes/base-theme';
 import styles from './styles';
 
 const androidText = 'Capitalize Primary';
@@ -19,13 +18,18 @@ class NHButton extends Component {  //eslint-disable-line
 
   render() {
     return (
-      <Container theme={myTheme} style={styles.container}>
+      <Container style={styles.container}>
         <Header>
-          <Title>Button</Title>
-
-          <Button transparent onPress={this.props.openDrawer}>
-            <Icon name="ios-menu" />
-          </Button>
+        <Left>
+        <Button transparent onPress={this.props.openDrawer}>
+        <Icon name="ios-menu" />
+        </Button>
+        </Left>
+          <Body>
+            <Title>Button</Title>
+          </Body>
+          <Right>
+          </Right>
         </Header>
 
         <Content padder>
@@ -33,15 +37,15 @@ class NHButton extends Component {  //eslint-disable-line
             <CardItem header>
               <Text>Block Button</Text>
             </CardItem>
-            <CardItem>
+            <CardItem style={{flexDirection: 'column'}}>
               <Button block capitalize primary style={styles.mb15}>
-                {(Platform.OS === 'android') ? androidText : iosText}
+                <Text>{(Platform.OS === 'android') ? androidText : iosText}</Text>
               </Button>
-              <Button block success style={styles.mb15}>Success</Button>
-              <Button block info style={styles.mb15}>Info</Button>
-              <Button block warning style={styles.mb15}>Warning</Button>
-              <Button block danger style={styles.mb15}>Danger</Button>
-              <Button block disabled style={styles.mb15}>Disabled</Button>
+              <Button block success style={styles.mb15}><Text>Success</Text></Button>
+              <Button block info style={styles.mb15}><Text>Info</Text></Button>
+              <Button block warning style={styles.mb15}><Text>Warning</Text></Button>
+              <Button block danger style={styles.mb15}><Text>Danger</Text></Button>
+              <Button block disabled style={styles.mb15}><Text>Disabled</Text></Button>
             </CardItem>
           </Card>
 
@@ -49,13 +53,13 @@ class NHButton extends Component {  //eslint-disable-line
             <CardItem header>
               <Text>Button Theme</Text>
             </CardItem>
-            <CardItem>
-              <Button info style={styles.mb15}>Info</Button>
-              <Button danger style={styles.mb15}>Danger</Button>
-              <Button primary style={styles.mb15}>Primary</Button>
-              <Button warning style={styles.mb15}>Warning</Button>
-              <Button success style={styles.mb15}>Success</Button>
-              <Button disabled style={styles.mb15}>Disabled</Button>
+            <CardItem style={{flexDirection: 'column'}}>
+              <Button info style={styles.mb15}><Text>Info</Text></Button>
+              <Button danger style={styles.mb15}><Text>Danger</Text></Button>
+              <Button primary style={styles.mb15}><Text>Primary</Text></Button>
+              <Button warning style={styles.mb15}><Text>Warning</Text></Button>
+              <Button success style={styles.mb15}><Text>Success</Text></Button>
+              <Button disabled style={styles.mb15}><Text>Disabled</Text></Button>
             </CardItem>
           </Card>
 
@@ -63,56 +67,56 @@ class NHButton extends Component {  //eslint-disable-line
             <CardItem header>
               <Text>Round Button</Text>
             </CardItem>
-            <CardItem>
-              <Button rounded info style={styles.mb15}>Info</Button>
-              <Button rounded danger style={styles.mb15}>Danger</Button>
-              <Button rounded primary style={styles.mb15}>Primary</Button>
-              <Button rounded warning style={styles.mb15}>Warning</Button>
-              <Button rounded success style={styles.mb15}>Success</Button>
-              <Button rounded disabled style={styles.mb15}>Disabled</Button>
+            <CardItem style={{flexDirection: 'column'}}>
+              <Button rounded info style={styles.mb15}><Text>Info</Text></Button>
+              <Button rounded danger style={styles.mb15}><Text>Danger</Text></Button>
+              <Button rounded primary style={styles.mb15}><Text>Primary</Text></Button>
+              <Button rounded warning style={styles.mb15}><Text>Warning</Text></Button>
+              <Button rounded success style={styles.mb15}><Text>Success</Text></Button>
+              <Button rounded disabled style={styles.mb15}><Text>Disabled</Text></Button>
             </CardItem>
           </Card>
 
-          <Card style={[styles.mb20, { flex: 0 }]}>
+          <Card style={styles.mb20, { flex: 0 }}>
             <CardItem header>
               <Text>Outline Button</Text>
             </CardItem>
-            <CardItem>
-              <Button bordered info style={styles.mb15}>Info</Button>
-              <Button bordered danger style={styles.mb15}>Danger</Button>
-              <Button bordered style={styles.mb15}>Primary</Button>
-              <Button bordered warning style={styles.mb15}>Warning</Button>
-              <Button bordered success style={styles.mb15}>Success</Button>
+            <CardItem style={{flexDirection: 'column'}}>
+              <Button bordered info style={styles.mb15}><Text>Info</Text></Button>
+              <Button bordered danger style={styles.mb15}><Text>Danger</Text></Button>
+              <Button bordered style={styles.mb15}><Text>Primary</Text></Button>
+              <Button bordered warning style={styles.mb15}><Text>Warning</Text></Button>
+              <Button bordered success style={styles.mb15}><Text>Success</Text></Button>
             </CardItem>
           </Card>
 
-          <Card style={[styles.mb20, { flex: 0 }]}>
+          <Card style={styles.mb20, { flex: 0 }}>
             <CardItem header>
               <Text>Button Size</Text>
             </CardItem>
-            <CardItem>
-              <Button small style={styles.mb15}>Small</Button>
-              <Button success style={styles.mb15}>Regular</Button>
-              <Button warning large style={styles.mb15}>Large</Button>
+            <CardItem style={{flexDirection: 'column'}}>
+              <Button small style={styles.mb15}><Text>Small</Text></Button>
+              <Button success style={styles.mb15}><Text>Regular</Text></Button>
+              <Button warning large style={styles.mb15}><Text>Large</Text></Button>
             </CardItem>
           </Card>
 
-          <Card style={[styles.mb20, { flex: 0 }]}>
+          <Card style={styles.mb20, { flex: 0 }}>
             <CardItem header>
               <Text>Icon Button</Text>
             </CardItem>
-            <CardItem>
+            <CardItem style={{flexDirection: 'column'}}>
               <View style={styles.buttonContainer}>
-                <Button transparent>
+                <Button transparent style={styles.margin}>
                   <Icon name="ios-arrow-back" style={styles.iconButton} />
                 </Button>
-                <Button transparent>
+                <Button transparent style={styles.margin}>
                   <Icon name="ios-arrow-down" style={styles.iconButton} />
                 </Button>
-                <Button transparent>
+                <Button transparent style={styles.margin}>
                   <Icon name="ios-arrow-up" style={styles.iconButton} />
                 </Button>
-                <Button transparent>
+                <Button transparent style={styles.margin}>
                   <Icon name="ios-arrow-forward" style={styles.iconButton} />
                 </Button>
               </View>
@@ -145,42 +149,48 @@ class NHButton extends Component {  //eslint-disable-line
                 </Button>
               </View>
               <View style={styles.buttonContainer}>
-                <Button style={styles.margin}>
-                  <Icon name="ios-bluetooth" />
-                </Button>
-                <Button style={styles.margin}>
-                  <Icon name="ios-wifi" />
-                </Button>
-                <Button style={styles.margin}>
-                  <Icon name="md-plane" />
-                </Button>
+                <View style={styles.mf}>
+                  <Button style={{alignSelf: 'center'}}>
+                    <Icon name="ios-bluetooth" />
+                  </Button>
+                </View>
+                <View style={styles.mf}>
+                  <Button style={{alignSelf: 'center'}}>
+                    <Icon name="ios-wifi" />
+                  </Button>
+                </View>
+                <View style={styles.mf}>
+                  <Button style={{alignSelf: 'center'}}>
+                    <Icon name="md-plane" />
+                  </Button>
+                </View>
               </View>
-              <View style={[styles.buttonContainer, { marginTop: 20 }]}>
-                <Button bordered style={[styles.margin, { borderColor: '#fff' }]}>
+              <View style={styles.buttonContainer}>
+                <Button bordered style={styles.margin}>
                   <Icon name="ios-thumbs-up" />
-                  Like
+                  <Text>Like</Text>
                 </Button>
-                <Button bordered style={[styles.margin, { borderColor: '#fff' }]}>
+                <Button bordered style={styles.margin}>
                   <Icon name="ios-chatboxes" />
-                  Comment
+                  <Text>Comment</Text>
                 </Button>
-                <Button bordered style={[styles.margin, { borderColor: '#fff' }]}>
+                <Button bordered style={styles.margin}>
                   <Icon name="ios-share-alt" />
-                  Share
+                  <Text>Share</Text>
                 </Button>
               </View>
               <View style={styles.buttonContainer}>
-                <Button bordered style={[styles.margin, { borderColor: '#fff' }]}>
+                <Button bordered style={styles.margin}>
                   <Icon name="ios-create-outline" />
-                  Status
+                  <Text>Status</Text>
                 </Button>
-                <Button bordered style={[styles.margin, { borderColor: '#fff' }]}>
+                <Button bordered style={styles.margin}>
                   <Icon name="ios-camera" />
-                  Photo
+                  <Text>Photo</Text>
                 </Button>
-                <Button bordered style={[styles.margin, { borderColor: '#fff' }]}>
+                <Button bordered style={styles.margin}>
                   <Icon name="ios-pin" />
-                  Check In
+                  <Text>Check In</Text>
                 </Button>
               </View>
             </CardItem>
