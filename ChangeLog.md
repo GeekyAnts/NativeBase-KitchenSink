@@ -3,7 +3,7 @@
 
 ### Bug Fixes
 
-- **ReactNativePropRegistry:** Fixed with commit.
+- **ReactNativePropRegistry:** Fixed with commit [f3f0d8e](https://github.com/GeekyAnts/NativeBase-KitchenSink/commit/f3f0d8e98108e3288dd702d103f65e994de78151).
 
 ### Enhancement Features
 
