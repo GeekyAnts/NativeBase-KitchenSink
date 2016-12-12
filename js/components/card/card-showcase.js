@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Image,Dimensions } from 'react-native';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Thumbnail,Left,Right,Body } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Thumbnail,Left,Right,Body } from 'native-base/Advanced';
 
 var deviceHeight = Dimensions.get('window').height;
 var deviceWidth = Dimensions.get('window').width;

@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Image, View } from 'react-native';
 import { connect } from 'react-redux';
-import { Content, Text, List, ListItem, Icon } from 'native-base';
+import { Content, Text, List, ListItem, Icon } from 'native-base/Advanced';
 
 import navigateTo from '../../actions/sideBarNav';
 import styles from './style';
@@ -103,6 +103,12 @@ const data = [
     bg: '#29783B',
   },
   {
+    name: 'SmartComponents',
+    route: 'smart',
+    icon: 'ios-ribbon',
+    bg: '#A9B839',
+  },
+  {
     name: 'Spinner',
     route: 'spinner',
     icon: 'ios-navigate-outline',
@@ -117,8 +123,8 @@ const data = [
   {
     name: 'Tabs',
     route: 'tabs',
-    icon: 'ios-home',
-    bg: '#AB6AED',
+    icon: 'ios-albums',
+    bg: '#726AEA',
   },
   {
     name: 'Thumbnail',

@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Button, Icon, Tabs,Content,Right,Left,Body } from 'native-base';
+import { Container, Header, Title, Button, Icon, Tabs, Right, Left, Body } from 'native-base/Advanced';
 
 import { View } from 'react-native';
 import { openDrawer } from '../../actions/drawer';
@@ -21,18 +21,18 @@ class NHTabs extends Component {  // eslint-disable-line
       <Container theme={myTheme}>
         <Header>
           <Left>
-          <Button transparent onPress={this.props.openDrawer}>
-          <Icon name="ios-menu" />
-          </Button>
+            <Button transparent onPress={this.props.openDrawer}>
+              <Icon name="ios-menu" />
+            </Button>
           </Left>
           <Body>
-          <Title>Tabs</Title>
+            <Title>Tabs</Title>
           </Body>
           <Right />
         </Header>
 
-        <View style={{backgroundColor: '#FBFAFA',flex: 1}}>
-          <Tabs locked>
+        <View style={{ backgroundColor: '#FBFAFA', flex: 1 }}>
+          <Tabs>
             <TabOne tabLabel="Features" />
             <TabTwo tabLabel="About" />
           </Tabs>

@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Button, Icon, InputGroup, Input, Content,Text } from 'native-base';
+import { Container, Header, Button, Icon, InputGroup, Input, Content,Text } from 'native-base/Advanced';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';

@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Badge,Left,Right,Body } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Badge,Left,Right,Body } from 'native-base/Advanced';
 
 import styles from './styles';
 

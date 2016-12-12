@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View } from 'react-native';
-import { Container, Header, Title, Content, Text, H3, Button, Icon, Footer, FooterTab, Left, Right, Body, Badge,IconNB } from 'native-base';
+import { Container, Header, Title, Content, Text, H3, Button, Icon, Footer, FooterTab, Left, Right, Body, Badge, IconNB } from 'native-base/Advanced';
 
 import { openDrawer } from '../../actions/drawer';
 import myTheme from '../../themes/base-theme';
@@ -62,7 +62,7 @@ class Anatomy extends Component {
 
   render() {
     return (
-      <Container theme={myTheme} style={styles.container}>
+      <Container style={styles.container}>
 
         <Header>
           <Left>
@@ -92,7 +92,7 @@ class Anatomy extends Component {
             <Button active={this.state.tab1} onPress={() => this.toggleTab1()} >
               <View>
                 <Badge><Text>2</Text></Badge>
-                <IconNB name="apps"  ios="ios-apps-outline" />
+                <IconNB name="apps" ios="ios-apps-outline" />
               </View>
               <Text>Apps</Text>
             </Button>
