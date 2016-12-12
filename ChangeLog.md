@@ -1,20 +1,10 @@
 
-# [0.5.13](https://github.com/GeekyAnts/NativeBase-KitchenSink/releases/tag/v0.5.13)
+# [0.5.18](https://github.com/GeekyAnts/NativeBase-KitchenSink/releases/tag/v0.5.18)
 
 ### Bug Fixes
 
-- **Picker:** Picker delay has been expelled.
-- **Memory Leak:** This has been fixed by implementation of NavigatorExperimental.
+- **ReactNativePropRegistry:** Fixed with commit.
 
 ### Enhancement Features
 
-- **Upgrade:** Upgraded versions of React, [React Native](https://facebook.github.io/react-native/), [NativeBase](http://nativebase.io/), [CodePush](https://github.com/Microsoft/react-native-code-push).
-- **Updated Components:** Button, Card.
-- **TextArea:** New type of InputGroup; TextArea. Supports multiline text.
-- **Typography:** Header tags (similar to HTML).
-
-
-### New Features
-
-- **NavigatorExperimental:** Integrated NavigatorExperimental.
-- **Picker**
+- **Upgrade:** Upgraded versions of React, [React Native](https://facebook.github.io/react-native/), [NativeBase](http://nativebase.io/), [CodePush](https://github.com/Microsoft/react-native-code-push), [Easy-Grid](https://github.com/GeekyAnts/react-native-easy-grid).
