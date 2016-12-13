@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon,Left,Right,Body } from 'native-base/Advanced';
+import { Container, Header, Title, Content, Button, Icon,Left,Right,Body } from 'native-base';
 import { Grid, Col } from 'react-native-easy-grid';
 
 import { openDrawer } from '../../actions/drawer';

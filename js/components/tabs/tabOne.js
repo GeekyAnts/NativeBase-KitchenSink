@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 
-import { Container, Content, Card, CardItem, Text, View, Body } from 'native-base/Advanced';
+import { Container, Content, Card, CardItem, Text, View, Body } from 'native-base';
 
 import styles from './styles';
 

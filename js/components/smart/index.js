@@ -2,8 +2,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View } from 'react-native';
-import { Container, Icon, IconNB, Text } from 'native-base/Advanced';
-import { Header, Button, Tabs, TabContent } from 'native-base';
+import { Container, Icon, IconNB, Text } from 'native-base';
+import { Header, Button, Tabs, TabContent } from 'native-base/ui';
 import { openDrawer } from '../../actions/drawer';
 import myTheme from '../../themes/base-theme';
 import styles from './styles';

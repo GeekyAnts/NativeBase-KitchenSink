@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Image, View } from 'react-native';
-import { Container, Header, Title, Button, Icon, DeckSwiper, Card, CardItem, Thumbnail, Text,Left,Right,Body,Content } from 'native-base/Advanced';
+import { Container, Header, Title, Button, Icon, DeckSwiper, Card, CardItem, Thumbnail, Text, Left, Right, Body, Content } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -47,7 +47,7 @@ class NHDeckSwiper extends Component {  // eslint-disable-line
         <Header>
           <Left>
             <Button transparent onPress={this.props.openDrawer}>
-            <Icon name="ios-menu" />
+              <Icon name="ios-menu" />
             </Button>
           </Left>
           <Body>
@@ -56,7 +56,7 @@ class NHDeckSwiper extends Component {  // eslint-disable-line
           <Right />
         </Header>
 
-        <View style={{flex: 1,padding: 12}}>
+        <View style={{ flex: 1, padding: 12 }}>
           <DeckSwiper
             dataSource={cards}
             renderItem={item =>
@@ -64,14 +64,14 @@ class NHDeckSwiper extends Component {  // eslint-disable-line
                 <CardItem>
                   <Left>
                     <Thumbnail source={item.image} />
+                    <Body>
+                      <Text>{item.text}</Text>
+                      <Text note>NativeBase</Text>
+                    </Body>
                   </Left>
-                  <Body>
-                    <Text>{item.text}</Text>
-                    <Text note>NativeBase</Text>
-                  </Body>
                 </CardItem>
                 <CardItem cardBody>
-                  <Image style={{ resizeMode: 'cover', width: null,flex: 1,height: 300 }} source={item.image} />
+                  <Image style={{ resizeMode: 'cover', width: null, flex: 1, height: 300 }} source={item.image} />
                 </CardItem>
                 <CardItem>
                   <Icon name={'ios-heart'} style={{ color: '#ED4A6A' }} />

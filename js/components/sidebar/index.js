@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Image, View } from 'react-native';
 import { connect } from 'react-redux';
-import { Content, Text, List, ListItem, Icon } from 'native-base/Advanced';
+import { Content, Text, List, ListItem, Icon } from 'native-base';
 
 import navigateTo from '../../actions/sideBarNav';
 import styles from './style';

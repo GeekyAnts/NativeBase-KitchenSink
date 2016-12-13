@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View } from 'react-native';
-import { Container, Header, Title, Content, Button, Icon, Thumbnail, Text,Body,Left,Right } from 'native-base/Advanced';
+import { Container, Header, Title, Content, Button, Icon, Thumbnail, Text,Body,Left,Right } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';

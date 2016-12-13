@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button,Picker,Item, Icon, List, ListItem,Label, InputGroup, Input, Text, Thumbnail,Left,Right,Body } from 'native-base/Advanced';
+import { Container, Header, Title, Content, Button,Picker,Item, Icon, List, ListItem,Label, InputGroup, Input, Text, Thumbnail,Left,Right,Body } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
