@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Image, View } from 'react-native';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Thumbnail,Left,Body,Right } from 'native-base/Advanced';
+import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Thumbnail, Left, Body, Right } from 'native-base/Advanced';
 
 import styles from './styles';
 
@@ -39,24 +39,23 @@ class NHCardImage extends Component {
           <Body>
             <Title>Card Image</Title>
           </Body>
-          <Right>
-          </Right>
+          <Right />
         </Header>
 
         <Content padder>
           <Card style={styles.mb}>
             <CardItem>
               <Left>
-              <Thumbnail source={logo} />
+                <Thumbnail source={logo} />
+                <Body>
+                  <Text>NativeBase</Text>
+                  <Text note>GeekyAnts</Text>
+                </Body>
               </Left>
-              <Body>
-              <Text>NativeBase</Text>
-              <Text note>GeekyAnts</Text>
-              </Body>
             </CardItem>
 
             <CardItem cardBody>
-              <Image style={{ resizeMode: 'cover', width: null,height: 200,flex: 1 }} source={cardImage} />
+              <Image style={{ resizeMode: 'cover', width: null, height: 200, flex: 1 }} source={cardImage} />
             </CardItem>
 
             <CardItem>

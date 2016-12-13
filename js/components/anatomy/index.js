@@ -1,11 +1,9 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { View } from 'react-native';
-import { Container, Header, Title, Content, Text, H3, Button, Icon, Footer, FooterTab, Left, Right, Body, Badge, IconNB } from 'native-base/Advanced';
+import { Container, Header, Title, Content, Text, H3, Button, Icon, Footer, FooterTab, Left, Right, Body, IconNB } from 'native-base/Advanced';
 
 import { openDrawer } from '../../actions/drawer';
-import myTheme from '../../themes/base-theme';
 import styles from './styles';
 
 class Anatomy extends Component {
@@ -89,18 +87,15 @@ class Anatomy extends Component {
 
         <Footer>
           <FooterTab>
-            <Button active={this.state.tab1} onPress={() => this.toggleTab1()} >
-              <View>
-                <Badge><Text>2</Text></Badge>
-                <IconNB name="apps" ios="ios-apps-outline" />
-              </View>
+            <Button active={this.state.tab1} onPress={() => this.toggleTab1()} badgeValue={2} badgeColor="green" badgeValueStyle={{ color: '#111' }} >
+              <IconNB name="apps" ios="ios-apps-outline" />
               <Text>Apps</Text>
             </Button>
             <Button active={this.state.tab2} onPress={() => this.toggleTab2()} >
               <IconNB name="camera" />
               <Text>Camera</Text>
             </Button>
-            <Button active={this.state.tab3} onPress={() => this.toggleTab3()} >
+            <Button active={this.state.tab3} onPress={() => this.toggleTab3()} badgeValue={51} badgeColor="blue">
               <IconNB ios="ios-compass" android="md-compass" />
               <Text>Navigate</Text>
             </Button>
