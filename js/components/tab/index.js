@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View } from 'react-native';
-import { Container, Header, Title, Content, Text, H3, Button, Icon,Tab, Footer, FooterTab, Left, Right, Body, Badge, IconNB } from 'native-base';
+import { Container, Header, Title, Content, Text, H3, Button, Icon, Tab, Footer, FooterTab, Left, Right, Body, Badge, IconNB } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import myTheme from '../../themes/base-theme';
@@ -55,7 +55,7 @@ class NHTab extends Component {
         <Header noShadow>
           <Left>
             <Button transparent onPress={this.props.openDrawer}>
-              <IconNB name="menu" />
+              <Icon name="menu" />
             </Button>
           </Left>
           <Body>
@@ -79,7 +79,7 @@ class NHTab extends Component {
         <Content padder>
           <H3>This is content section</H3>
           <Text style={{ marginTop: 10 }}>
-            Selected tab is: <Text style={{color: '#007aff',fontWeight: '700'}}>{this.state.tab1 ? "TabOne" : this.state.tab2 ? "TabTwo" : "TabThree"}</Text>
+            Selected tab is: <Text style={{ color: '#007aff', fontWeight: '700' }}>{this.state.tab1 ? 'TabOne' : this.state.tab2 ? 'TabTwo' : 'TabThree'}</Text>
           </Text>
 
         </Content>

@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Body, Left, Right } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Body, Left, Right, IconNB } from 'native-base';
 
 import styles from './styles';
 
@@ -29,7 +29,7 @@ class NHCardHeaderAndFooter extends Component {
         <Header>
           <Left>
             <Button transparent onPress={() => this.replaceAt('card')}>
-              <Icon name="ios-arrow-back" />
+              <IconNB name="ios-arrow-back" />
             </Button>
           </Left>
           <Body>

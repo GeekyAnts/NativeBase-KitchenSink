@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Platform, View } from 'react-native';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Left, Body, Right } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Left, Body, Right, IconNB } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -22,7 +22,7 @@ class NHButton extends Component {  //eslint-disable-line
         <Header>
           <Left>
             <Button transparent onPress={this.props.openDrawer}>
-              <Icon name="ios-menu" />
+              <Icon name="menu" />
             </Button>
           </Left>
           <Body>
@@ -36,15 +36,17 @@ class NHButton extends Component {  //eslint-disable-line
             <CardItem header>
               <Text>Block Button</Text>
             </CardItem>
-            <CardItem style={{ flexDirection: 'column' }}>
-              <Button block capitalize primary style={styles.mb15}>
-                <Text>{(Platform.OS === 'android') ? androidText : iosText}</Text>
-              </Button>
-              <Button block success style={styles.mb15}><Text>Success</Text></Button>
-              <Button block info style={styles.mb15}><Text>Info</Text></Button>
-              <Button block warning style={styles.mb15}><Text>Warning</Text></Button>
-              <Button block danger style={styles.mb15}><Text>Danger</Text></Button>
-              <Button block disabled style={styles.mb15}><Text>Disabled</Text></Button>
+            <CardItem>
+              <Body>
+                <Button block capitalize primary style={styles.mb15}>
+                  <Text>{(Platform.OS === 'android') ? androidText : iosText}</Text>
+                </Button>
+                <Button block success style={styles.mb15}><Text>Success</Text></Button>
+                <Button block info style={styles.mb15}><Text>Info</Text></Button>
+                <Button block warning style={styles.mb15}><Text>Warning</Text></Button>
+                <Button block danger style={styles.mb15}><Text>Danger</Text></Button>
+                <Button block disabled style={styles.mb15}><Text>Disabled</Text></Button>
+              </Body>
             </CardItem>
           </Card>
 
@@ -107,88 +109,88 @@ class NHButton extends Component {  //eslint-disable-line
             <CardItem style={{ flexDirection: 'column' }}>
               <View style={styles.buttonContainer}>
                 <Button transparent style={styles.margin}>
-                  <Icon name="ios-arrow-back" style={styles.iconButton} />
+                  <IconNB name="ios-arrow-back" style={styles.iconButton} />
                 </Button>
                 <Button transparent style={styles.margin}>
-                  <Icon name="ios-arrow-down" style={styles.iconButton} />
+                  <IconNB name="ios-arrow-down" style={styles.iconButton} />
                 </Button>
                 <Button transparent style={styles.margin}>
-                  <Icon name="ios-arrow-up" style={styles.iconButton} />
+                  <IconNB name="ios-arrow-up" style={styles.iconButton} />
                 </Button>
                 <Button transparent style={styles.margin}>
-                  <Icon name="ios-arrow-forward" style={styles.iconButton} />
-                </Button>
-              </View>
-              <View style={styles.buttonContainer}>
-                <Button transparent style={styles.margin}>
-                  <Icon name="ios-undo-outline" style={styles.iconButton} />
-                </Button>
-                <Button transparent style={styles.margin}>
-                  <Icon name="ios-refresh-circle-outline" style={styles.iconButton} />
-                </Button>
-                <Button transparent style={styles.margin}>
-                  <Icon name="ios-share-outline" style={styles.iconButton} />
-                </Button>
-                <Button transparent style={styles.margin}>
-                  <Icon name="ios-close-circle-outline" style={styles.iconButton} />
+                  <IconNB name="ios-arrow-forward" style={styles.iconButton} />
                 </Button>
               </View>
               <View style={styles.buttonContainer}>
                 <Button transparent style={styles.margin}>
-                  <Icon name="ios-fastforward-outline" style={styles.iconButton} />
+                  <IconNB name="ios-undo-outline" style={styles.iconButton} />
                 </Button>
                 <Button transparent style={styles.margin}>
-                  <Icon name="ios-play" style={styles.iconButton} />
+                  <IconNB name="ios-refresh-circle-outline" style={styles.iconButton} />
                 </Button>
                 <Button transparent style={styles.margin}>
-                  <Icon name="ios-pause" style={styles.iconButton} />
+                  <IconNB name="ios-share-outline" style={styles.iconButton} />
                 </Button>
                 <Button transparent style={styles.margin}>
-                  <Icon name="ios-rewind-outline" style={styles.iconButton} />
+                  <IconNB name="ios-close-circle-outline" style={styles.iconButton} />
+                </Button>
+              </View>
+              <View style={styles.buttonContainer}>
+                <Button transparent style={styles.margin}>
+                  <IconNB name="ios-fastforward-outline" style={styles.iconButton} />
+                </Button>
+                <Button transparent style={styles.margin}>
+                  <IconNB name="ios-play" style={styles.iconButton} />
+                </Button>
+                <Button transparent style={styles.margin}>
+                  <IconNB name="ios-pause" style={styles.iconButton} />
+                </Button>
+                <Button transparent style={styles.margin}>
+                  <IconNB name="ios-rewind-outline" style={styles.iconButton} />
                 </Button>
               </View>
               <View style={styles.buttonContainer}>
                 <View style={styles.mf}>
                   <Button style={{ alignSelf: 'center' }}>
-                    <Icon name="ios-bluetooth" />
+                    <IconNB name="ios-bluetooth" />
                   </Button>
                 </View>
                 <View style={styles.mf}>
                   <Button style={{ alignSelf: 'center' }}>
-                    <Icon name="ios-wifi" />
+                    <IconNB name="ios-wifi" />
                   </Button>
                 </View>
                 <View style={styles.mf}>
                   <Button style={{ alignSelf: 'center' }}>
-                    <Icon name="md-plane" />
+                    <IconNB name="md-plane" />
                   </Button>
                 </View>
               </View>
               <View style={styles.buttonContainer}>
                 <Button bordered style={styles.margin}>
-                  <Icon name="ios-thumbs-up" />
+                  <IconNB name="ios-thumbs-up" />
                   <Text>Like</Text>
                 </Button>
                 <Button bordered style={styles.margin}>
-                  <Icon name="ios-chatboxes" />
+                  <IconNB name="ios-chatboxes" />
                   <Text>Comment</Text>
                 </Button>
                 <Button bordered style={styles.margin}>
-                  <Icon name="ios-share-alt" />
+                  <IconNB name="ios-share-alt" />
                   <Text>Share</Text>
                 </Button>
               </View>
               <View style={styles.buttonContainer}>
                 <Button bordered style={styles.margin}>
-                  <Icon name="ios-create-outline" />
+                  <IconNB name="ios-create-outline" />
                   <Text>Status</Text>
                 </Button>
                 <Button bordered style={styles.margin}>
-                  <Icon name="ios-camera" />
+                  <IconNB name="ios-camera" />
                   <Text>Photo</Text>
                 </Button>
                 <Button bordered style={styles.margin}>
-                  <Icon name="ios-pin" />
+                  <IconNB name="ios-pin" />
                   <Text>Check In</Text>
                 </Button>
               </View>

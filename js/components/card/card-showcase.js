@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Image, Dimensions } from 'react-native';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Thumbnail, Left, Right, Body } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Thumbnail, Left, Right, Body, IconNB } from 'native-base';
 import styles from './styles';
 
 const deviceWidth = Dimensions.get('window').width;
@@ -34,7 +34,7 @@ class NHCardShowcase extends Component {
         <Header>
           <Left>
             <Button transparent onPress={() => this.replaceAt('card')}>
-              <Icon name="ios-arrow-back" />
+              <IconNB name="ios-arrow-back" />
             </Button>
           </Left>
           <Body>
@@ -66,7 +66,7 @@ class NHCardShowcase extends Component {
                 basic set of components for mobile application development.
               </Text>
                 <Button transparent style={{ marginLeft: -7 }} textStyle={{ color: '#87838B' }}>
-                  <Icon name="logo-github" />
+                  <IconNB name="logo-github" />
                   <Text>1,926 stars</Text>
                 </Button>
               </Body>

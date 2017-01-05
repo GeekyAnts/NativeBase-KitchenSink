@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, InputGroup, Input,Left,Right,Body,Textarea } from 'native-base';
+import { Container, Header, Title, Content, Button, IconNB, InputGroup, Input,Left,Right,Body,Textarea } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -18,7 +18,7 @@ class NHInputGroup extends Component {  // eslint-disable-line
         <Header>
           <Left>
           <Button transparent onPress={this.props.openDrawer}>
-          <Icon name="ios-menu" />
+          <IconNB name="ios-menu" />
           </Button>
           </Left>
           <Body>
@@ -38,24 +38,24 @@ class NHInputGroup extends Component {  // eslint-disable-line
             <Input placeholder="Rounded Textbox" />
           </InputGroup>
           <InputGroup style={styles.mb}>
-          <Icon name="ios-home" style={{ color: '#00C497' }} />
+          <IconNB name="ios-home" style={{ color: '#00C497' }} />
             <Input placeholder="Icon Textbox" />
           </InputGroup>
           <InputGroup style={styles.mb}>
             <Input placeholder="Icon Alignment in Textbox" />
-            <Icon name="ios-swap" style={{ color: '#00C497' }} />
+            <IconNB name="ios-swap" style={{ color: '#00C497' }} />
           </InputGroup>
           <InputGroup success style={styles.mb}>
             <Input placeholder="Textbox with Success Input" />
-            <Icon name="ios-checkmark-circle" style={{ color: '#00C497' }} />
+            <IconNB name="ios-checkmark-circle" style={{ color: '#00C497' }} />
           </InputGroup>
           <InputGroup error style={styles.mb}>
             <Input placeholder="Textbox with Error Input" />
-            <Icon name="ios-close-circle" style={{ color: 'red' }} />
+            <IconNB name="ios-close-circle" style={{ color: 'red' }} />
           </InputGroup>
           <InputGroup disabled style={styles.mb}>
             <Input placeholder="Disabled Textbox" />
-            <Icon name="ios-information-circle" style={{ color: '#384850' }} />
+            <IconNB name="ios-information-circle" style={{ color: '#384850' }} />
           </InputGroup>
            <Textarea rowSpan={5} bordered placeholder="Textarea" />
         </Content>

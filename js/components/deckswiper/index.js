@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Image, View } from 'react-native';
-import { Container, Header, Title, Button, Icon, DeckSwiper, Card, CardItem, Thumbnail, Text, Left, Right, Body, Content } from 'native-base';
+import { Container, Header, Title, Button, IconNB, DeckSwiper, Card, CardItem, Thumbnail, Text, Left, Right, Body, Content } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -47,7 +47,7 @@ class NHDeckSwiper extends Component {  // eslint-disable-line
         <Header>
           <Left>
             <Button transparent onPress={this.props.openDrawer}>
-              <Icon name="ios-menu" />
+              <IconNB name="ios-menu" />
             </Button>
           </Left>
           <Body>
@@ -74,7 +74,7 @@ class NHDeckSwiper extends Component {  // eslint-disable-line
                   <Image style={{ resizeMode: 'cover', width: null, flex: 1, height: 300 }} source={item.image} />
                 </CardItem>
                 <CardItem>
-                  <Icon name={'ios-heart'} style={{ color: '#ED4A6A' }} />
+                  <IconNB name={'ios-heart'} style={{ color: '#ED4A6A' }} />
                   <Text>{item.name}</Text>
                 </CardItem>
               </Card>

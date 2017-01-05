@@ -65,7 +65,7 @@ class Anatomy extends Component {
         <Header>
           <Left>
             <Button transparent onPress={this.props.openDrawer}>
-              <Icon name="ios-menu" />
+              <Icon name="menu" />
             </Button>
           </Left>
           <Body>
@@ -88,19 +88,19 @@ class Anatomy extends Component {
         <Footer>
           <FooterTab>
             <Button active={this.state.tab1} onPress={() => this.toggleTab1()} badgeValue={2} badgeColor="green" badgeValueStyle={{ color: '#111' }} >
-              <IconNB name="apps" ios="ios-apps-outline" />
+              <Icon name="apps" ios="ios-apps-outline" />
               <Text>Apps</Text>
             </Button>
             <Button active={this.state.tab2} onPress={() => this.toggleTab2()} >
-              <IconNB name="camera" />
+              <Icon name="camera" />
               <Text>Camera</Text>
             </Button>
             <Button active={this.state.tab3} onPress={() => this.toggleTab3()} badgeValue={51} badgeColor="blue">
-              <IconNB ios="ios-compass" android="md-compass" />
+              <Icon ios="ios-compass" android="md-compass" />
               <Text>Navigate</Text>
             </Button>
             <Button active={this.state.tab4} onPress={() => this.toggleTab4()} >
-              <IconNB name="contact" android="md-contact" />
+              <Icon name="contact" android="md-contact" />
               <Text>Contact</Text>
             </Button>
           </FooterTab>

@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button,Picker,Item, Icon, List, ListItem,Label, InputGroup, Input, Text, Thumbnail,Left,Right,Body } from 'native-base';
+import { Container, Header, Title, Content, Button,Picker,Item, IconNB, List, ListItem,Label, InputGroup, Input, Text, Thumbnail,Left,Right,Body } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -38,7 +38,7 @@ class NHForm extends Component {
         <Header>
           <Left>
           <Button transparent onPress={this.props.openDrawer}>
-          <Icon name="ios-menu" />
+          <IconNB name="ios-menu" />
           </Button>
           </Left>
           <Body>
@@ -69,15 +69,15 @@ class NHForm extends Component {
               <Input />
             </Item>
               <InputGroup>
-                <Icon name="ios-person" style={{ color: '#0A69FE' }} />
+                <IconNB name="ios-person" style={{ color: '#0A69FE' }} />
                 <Input placeholder="EMAIL" />
               </InputGroup>
               <InputGroup>
-                <Icon name="ios-unlock" style={{ color: '#0A69FE' }} />
+                <IconNB name="ios-unlock" style={{ color: '#0A69FE' }} />
                 <Input placeholder="PASSWORD" secureTextEntry />
               </InputGroup>
               <InputGroup>
-                <Icon name="ios-call" style={{ color: '#0A69FE' }} />
+                <IconNB name="ios-call" style={{ color: '#0A69FE' }} />
                 <Input
                   placeholder="PHONE"
                   keyboardType="numeric"

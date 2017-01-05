@@ -70,7 +70,7 @@ class NHListThumbnail extends Component {
         <Header>
           <Left>
           <Button transparent onPress={() => this.replaceAt('list')}>
-            <Icon name="ios-arrow-back" />
+            <Icon name="arrow-back" />
           </Button>
           </Left>
 

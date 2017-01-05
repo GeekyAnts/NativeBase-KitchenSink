@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, H1, H2, H3, Text,Left,Right,Body } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, H1, H2, H3, Text, Left, Right, Body } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -17,12 +17,12 @@ class NHTypography extends Component {  // eslint-disable-line
       <Container style={styles.container}>
         <Header>
           <Left>
-          <Button transparent onPress={this.props.openDrawer}>
-          <Icon name="ios-menu" />
-          </Button>
+            <Button transparent onPress={this.props.openDrawer}>
+              <Icon name="menu" />
+            </Button>
           </Left>
           <Body>
-          <Title>Typography</Title>
+            <Title>Typography</Title>
           </Body>
           <Right />
 

@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text,Left,Right,Body } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Left, Right, Body } from 'native-base';
 
 import styles from './styles';
 
@@ -10,12 +10,12 @@ const {
   replaceAt,
 } = actions;
 
-let data = ['Simon Mignolet','Nathaniel Clyne','Dejan Lovren','Mama Sakho','Alberto Moreno','Emre Can','Joe Allen','Phil Coutinho'];
+const data = ['Simon Mignolet', 'Nathaniel Clyne', 'Dejan Lovren', 'Mama Sakho', 'Alberto Moreno', 'Emre Can', 'Joe Allen', 'Phil Coutinho'];
 
 class NHBasicList extends Component {
   constructor(props) {
     super(props);
-    const ds = new List.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    const ds = new List.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     this.state = {
       dataSource: ds.cloneWithRows(data),
     };
@@ -36,22 +36,24 @@ class NHBasicList extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-          <Button transparent onPress={() => this.replaceAt('list')}>
-            <Icon name="ios-arrow-back" />
-          </Button>
+            <Button transparent onPress={() => this.replaceAt('list')}>
+              <Icon name="arrow-back" />
+            </Button>
           </Left>
           <Body>
-          <Title>Basic List</Title>
+            <Title>Basic List</Title>
           </Body>
           <Right />
         </Header>
 
         <Content>
-          <List dataSource={this.state.dataSource} renderRow={(data) =>
-            <ListItem>
-              <Text>{data}</Text>
-            </ListItem>
-          } />
+          <List
+            dataSource={this.state.dataSource} renderRow={data =>
+              <ListItem>
+                <Text>{data}</Text>
+              </ListItem>
+          }
+          />
         </Content>
       </Container>
     );

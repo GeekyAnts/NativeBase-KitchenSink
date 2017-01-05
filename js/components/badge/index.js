@@ -18,7 +18,7 @@ class NHBadge extends Component { //eslint-disable-line
         <Header>
           <Left>
             <Button transparent onPress={this.props.openDrawer}>
-            <Icon name="ios-menu" />
+            <Icon name="menu" />
             </Button>
           </Left>
           <Body>
@@ -39,7 +39,7 @@ class NHBadge extends Component { //eslint-disable-line
             primary
             style={styles.mb}
           >
-            <Icon name="ios-star" style={{ fontSize: 15, color: '#fff', lineHeight: 20}} />
+            <Icon name="star" style={{ fontSize: 15, color: '#fff', lineHeight: 20}} />
           </Badge>
           <Badge
             style={{ backgroundColor: 'black' }}

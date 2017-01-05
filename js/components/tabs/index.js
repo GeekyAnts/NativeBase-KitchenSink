@@ -22,7 +22,7 @@ class NHTabs extends Component {  // eslint-disable-line
         <Header>
           <Left>
             <Button transparent onPress={this.props.openDrawer}>
-              <Icon name="ios-menu" />
+              <Icon name="menu" />
             </Button>
           </Left>
           <Body>

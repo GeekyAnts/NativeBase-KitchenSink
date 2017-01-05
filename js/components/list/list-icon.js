@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Badge, Left, Right, Body } from 'native-base';
+import { Container, Header, Title, Content, Button, IconNB, List, ListItem, Text, Badge, Left, Right, Body } from 'native-base';
 
 import styles from './styles';
 
@@ -29,7 +29,7 @@ class NHListIcon extends Component {
         <Header>
           <Left>
             <Button transparent onPress={() => this.replaceAt('list')}>
-              <Icon name="ios-arrow-back" />
+              <IconNB name="ios-arrow-back" />
             </Button>
           </Left>
           <Body>
@@ -41,7 +41,7 @@ class NHListIcon extends Component {
         <Content>
           <ListItem>
             <Left>
-              <Icon name="ios-plane" style={{ color: '#0A69FE' }} />
+              <IconNB name="ios-plane" style={{ color: '#0A69FE' }} />
               <Text>Airplane Mode</Text>
             </Left>
             <Body />
@@ -51,7 +51,7 @@ class NHListIcon extends Component {
           </ListItem>
           <ListItem>
             <Left>
-              <Icon name="ios-wifi" style={{ color: '#0A69FE' }} />
+              <IconNB name="ios-wifi" style={{ color: '#0A69FE' }} />
               <Text>Wi-Fi</Text>
             </Left>
             <Body />
@@ -61,7 +61,7 @@ class NHListIcon extends Component {
           </ListItem>
           <ListItem>
             <Left>
-              <Icon name="ios-bluetooth" style={{ color: '#0A69FE' }} />
+              <IconNB name="ios-bluetooth" style={{ color: '#0A69FE' }} />
               <Text>Bluetooth</Text>
             </Left>
             <Body />
@@ -70,18 +70,15 @@ class NHListIcon extends Component {
             </Right>
           </ListItem>
           <ListItem>
-            <Left>
-              <Icon name="ios-settings-outline" style={{ color: '#0A69FE' }} />
-              <Text>Software Update</Text>
-            </Left>
-            <Body />
+            <IconNB name="ios-settings-outline" style={{ color: '#0A69FE' }} />
+            <Text>Software Update</Text>
             <Right>
               <Badge style={{ backgroundColor: '#8C97B5' }}><Text>2</Text></Badge>
             </Right>
           </ListItem>
           <ListItem>
             <Left>
-              <Icon name="ios-mail-outline" style={{ color: '#0A69FE' }} />
+              <IconNB name="ios-mail-outline" style={{ color: '#0A69FE' }} />
               <Text>Mail</Text>
             </Left>
             <Body />

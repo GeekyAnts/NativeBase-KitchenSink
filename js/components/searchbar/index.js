@@ -17,9 +17,9 @@ class NHSearchbar extends Component { // eslint-disable-line
       <Container style={styles.container}>
         <Header searchBar rounded>
           <InputGroup>
-            <Icon name="ios-search" />
+            <Icon name="search" />
             <Input placeholder="Search" />
-            <Icon name="ios-people" />
+            <Icon name="people" />
           </InputGroup>
           <Button transparent>
             <Text>Search</Text>

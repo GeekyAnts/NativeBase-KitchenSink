@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Image, View } from 'react-native';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Thumbnail, Left, Body, Right } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Thumbnail, Left, Body, Right, IconNB } from 'native-base';
 
 import styles from './styles';
 
@@ -33,7 +33,7 @@ class NHCardImage extends Component {
         <Header>
           <Left>
             <Button transparent onPress={() => this.replaceAt('card')}>
-              <Icon name="ios-arrow-back" />
+              <IconNB name="ios-arrow-back" />
             </Button>
           </Left>
           <Body>
@@ -61,15 +61,15 @@ class NHCardImage extends Component {
             <CardItem>
               <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
                 <Button transparent>
-                  <Icon name="logo-github" />
+                  <IconNB name="logo-github" />
                   <Text>1,926</Text>
                 </Button>
                 <Button transparent>
-                  <Icon name="ios-git-network" />
+                  <IconNB name="ios-git-network" />
                   <Text>132</Text>
                 </Button>
                 <Button transparent>
-                  <Icon name="logo-twitter" />
+                  <IconNB name="logo-twitter" />
                   <Text>197</Text>
                 </Button>
               </View>

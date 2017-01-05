@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Image, View } from 'react-native';
 import { connect } from 'react-redux';
-import { Content, Text, List, ListItem, Icon } from 'native-base';
+import { Content, Text, List, ListItem, IconNB } from 'native-base';
 
 import navigateTo from '../../actions/sideBarNav';
 import styles from './style';
@@ -177,7 +177,7 @@ class SideBar extends Component {
             <ListItem button iconLeft onPress={() => this.navigateTo(data.route)} >
               <View style={styles.listItemContainer}>
                 <View style={[styles.iconContainer, { backgroundColor: data.bg, alignItems: 'center', alignSelf: 'center' }]}>
-                  <Icon name={data.icon} style={styles.sidebarIcon} />
+                  <IconNB name={data.icon} style={styles.sidebarIcon} />
                 </View>
                 <Text style={styles.text}>{data.name}</Text>
               </View>
