@@ -65,7 +65,7 @@ class Anatomy extends Component {
         <Header>
           <Left>
             <Button transparent onPress={this.props.openDrawer}>
-              <Icon name="menu" />
+              <Icon name="ios-menu" />
             </Button>
           </Left>
           <Body>
