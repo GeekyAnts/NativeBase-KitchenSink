@@ -103,12 +103,6 @@ const data = [
     bg: '#29783B',
   },
   {
-    name: 'SmartComponents',
-    route: 'smart',
-    icon: 'ios-ribbon',
-    bg: '#A9B839',
-  },
-  {
     name: 'Spinner',
     route: 'spinner',
     icon: 'ios-navigate-outline',

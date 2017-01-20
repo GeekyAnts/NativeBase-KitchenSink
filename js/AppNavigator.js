@@ -7,7 +7,6 @@ import { actions } from 'react-native-navigation-redux-helpers';
 
 import { closeDrawer } from './actions/drawer';
 
-import Smart from './components/smart/';
 import Home from './components/home/';
 import Anatomy from './components/anatomy/';
 import NHBadge from './components/badge/';
@@ -103,8 +102,6 @@ class AppNavigator extends Component {
     switch (props.scene.route.key) {
       case 'splashscreen':
         return <SplashPage />;
-      case 'smart':
-        return <Smart />;
       case 'home':
         return <Home />;
       case 'anatomy':
