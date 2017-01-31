@@ -1,19 +1,79 @@
 
 import React, { Component } from 'react';
-import { Platform, View } from 'react-native';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Left, Body, Right, IconNB } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Left, Right, Body, Text, List, ListItem } from 'native-base';
 
+import { actions } from 'react-native-navigation-redux-helpers';
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
-const androidText = 'Capitalize Primary';
-const iosText = 'Primary';
 
-class NHButton extends Component {  //eslint-disable-line
+const {
+    replaceAt,
+    pushRoute,
+  } = actions;
+const data = [
+  {
+    route: 'default',
+    text: 'Default Button',
+  },
+  {
+    route: 'outline',
+    text: 'Outline Button',
+  },
+  {
+    route: 'rounded',
+    text: 'Rounded Button',
+  },
+  {
+    route: 'block',
+    text: 'Block Button',
+  },
+  {
+    route: 'full',
+    text: 'Full Button',
+  },
+  {
+    route: 'custom',
+    text: 'Custom Size Button',
+  },
+  {
+    route: 'transparent',
+    text: 'Transparent Button',
+  },
+  {
+    route: 'iconBtn',
+    text: 'Icon Button',
+  },
+  {
+    route: 'disabled',
+    text: 'Disabled Button',
+  },
+];
+class NHButton extends Component {  // eslint-disable-line
+
 
   static propTypes = {
     openDrawer: React.PropTypes.func,
+    replaceAt: React.PropTypes.func,
+    pushRoute: React.PropTypes.func,
+    navigation: React.PropTypes.shape({
+      key: React.PropTypes.string,
+    }),
+  }
+  constructor(props) {
+    super(props);
+    const ds = new List.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+    this.state = {
+      dataSource: ds.cloneWithRows(data),
+    };
+  }
+
+  replaceAt(route) {
+    this.props.replaceAt('button', { key: route }, this.props.navigation.key);
+  }
+  pushRoute(route) {
+    this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
   }
 
   render() {
@@ -26,176 +86,24 @@ class NHButton extends Component {  //eslint-disable-line
             </Button>
           </Left>
           <Body>
-            <Title>Button</Title>
+            <Title>Buttons</Title>
           </Body>
           <Right />
+
         </Header>
 
-        <Content padder>
-          <Card style={styles.mb20}>
-            <CardItem header>
-              <Text>Block Button</Text>
-            </CardItem>
-            <CardItem>
-              <Body>
-                <Button block capitalize primary style={styles.mb15}>
-                  <Text>{(Platform.OS === 'android') ? androidText : iosText}</Text>
-                </Button>
-                <Button block success style={styles.mb15}><Text>Success</Text></Button>
-                <Button block info style={styles.mb15}><Text>Info</Text></Button>
-                <Button block warning style={styles.mb15}><Text>Warning</Text></Button>
-                <Button block danger style={styles.mb15}><Text>Danger</Text></Button>
-                <Button block disabled style={styles.mb15}><Text>Disabled</Text></Button>
-              </Body>
-            </CardItem>
-          </Card>
+        <Content>
+          <List
+            dataSource={this.state.dataSource} renderRow={data =>
+              <ListItem button onPress={() => this.pushRoute(data.route)}>
+                <Text>{data.text}</Text>
+                <Right>
+                  <Icon name="arrow-forward" style={{ color: '#999' }} />
+                </Right>
+              </ListItem>
+      }
+          />
 
-          <Card style={styles.mb20}>
-            <CardItem header>
-              <Text>Button Theme</Text>
-            </CardItem>
-            <CardItem style={{ flexDirection: 'column' }}>
-              <Button info style={styles.mb15}><Text>Info</Text></Button>
-              <Button danger style={styles.mb15}><Text>Danger</Text></Button>
-              <Button primary style={styles.mb15}><Text>Primary</Text></Button>
-              <Button warning style={styles.mb15}><Text>Warning</Text></Button>
-              <Button success style={styles.mb15}><Text>Success</Text></Button>
-              <Button disabled style={styles.mb15}><Text>Disabled</Text></Button>
-            </CardItem>
-          </Card>
-
-          <Card style={styles.mb20}>
-            <CardItem header>
-              <Text>Round Button</Text>
-            </CardItem>
-            <CardItem style={{ flexDirection: 'column' }}>
-              <Button rounded info style={styles.mb15}><Text>Info</Text></Button>
-              <Button rounded danger style={styles.mb15}><Text>Danger</Text></Button>
-              <Button rounded primary style={styles.mb15}><Text>Primary</Text></Button>
-              <Button rounded warning style={styles.mb15}><Text>Warning</Text></Button>
-              <Button rounded success style={styles.mb15}><Text>Success</Text></Button>
-              <Button rounded disabled style={styles.mb15}><Text>Disabled</Text></Button>
-            </CardItem>
-          </Card>
-
-          <Card style={styles.mb20, { flex: 0 }}>
-            <CardItem header>
-              <Text>Outline Button</Text>
-            </CardItem>
-            <CardItem style={{ flexDirection: 'column' }}>
-              <Button bordered info style={styles.mb15}><Text>Info</Text></Button>
-              <Button bordered danger style={styles.mb15}><Text>Danger</Text></Button>
-              <Button bordered style={styles.mb15}><Text>Primary</Text></Button>
-              <Button bordered warning style={styles.mb15}><Text>Warning</Text></Button>
-              <Button bordered success style={styles.mb15}><Text>Success</Text></Button>
-            </CardItem>
-          </Card>
-
-          <Card style={styles.mb20, { flex: 0 }}>
-            <CardItem header>
-              <Text>Button Size</Text>
-            </CardItem>
-            <CardItem style={{ flexDirection: 'column' }}>
-              <Button small style={styles.mb15}><Text>Small</Text></Button>
-              <Button success style={styles.mb15}><Text>Regular</Text></Button>
-              <Button warning large style={styles.mb15}><Text>Large</Text></Button>
-            </CardItem>
-          </Card>
-
-          <Card style={styles.mb20, { flex: 0 }}>
-            <CardItem header>
-              <Text>Icon Button</Text>
-            </CardItem>
-            <CardItem style={{ flexDirection: 'column' }}>
-              <View style={styles.buttonContainer}>
-                <Button transparent style={styles.margin}>
-                  <IconNB name="ios-arrow-back" style={styles.iconButton} />
-                </Button>
-                <Button transparent style={styles.margin}>
-                  <IconNB name="ios-arrow-down" style={styles.iconButton} />
-                </Button>
-                <Button transparent style={styles.margin}>
-                  <IconNB name="ios-arrow-up" style={styles.iconButton} />
-                </Button>
-                <Button transparent style={styles.margin}>
-                  <IconNB name="ios-arrow-forward" style={styles.iconButton} />
-                </Button>
-              </View>
-              <View style={styles.buttonContainer}>
-                <Button transparent style={styles.margin}>
-                  <IconNB name="ios-undo-outline" style={styles.iconButton} />
-                </Button>
-                <Button transparent style={styles.margin}>
-                  <IconNB name="ios-refresh-circle-outline" style={styles.iconButton} />
-                </Button>
-                <Button transparent style={styles.margin}>
-                  <IconNB name="ios-share-outline" style={styles.iconButton} />
-                </Button>
-                <Button transparent style={styles.margin}>
-                  <IconNB name="ios-close-circle-outline" style={styles.iconButton} />
-                </Button>
-              </View>
-              <View style={styles.buttonContainer}>
-                <Button transparent style={styles.margin}>
-                  <IconNB name="ios-fastforward-outline" style={styles.iconButton} />
-                </Button>
-                <Button transparent style={styles.margin}>
-                  <IconNB name="ios-play" style={styles.iconButton} />
-                </Button>
-                <Button transparent style={styles.margin}>
-                  <IconNB name="ios-pause" style={styles.iconButton} />
-                </Button>
-                <Button transparent style={styles.margin}>
-                  <IconNB name="ios-rewind-outline" style={styles.iconButton} />
-                </Button>
-              </View>
-              <View style={styles.buttonContainer}>
-                <View style={styles.mf}>
-                  <Button style={{ alignSelf: 'center' }}>
-                    <IconNB name="ios-bluetooth" />
-                  </Button>
-                </View>
-                <View style={styles.mf}>
-                  <Button style={{ alignSelf: 'center' }}>
-                    <IconNB name="ios-wifi" />
-                  </Button>
-                </View>
-                <View style={styles.mf}>
-                  <Button style={{ alignSelf: 'center' }}>
-                    <IconNB name="md-plane" />
-                  </Button>
-                </View>
-              </View>
-              <View style={styles.buttonContainer}>
-                <Button bordered style={styles.margin}>
-                  <IconNB name="ios-thumbs-up" />
-                  <Text>Like</Text>
-                </Button>
-                <Button bordered style={styles.margin}>
-                  <IconNB name="ios-chatboxes" />
-                  <Text>Comment</Text>
-                </Button>
-                <Button bordered style={styles.margin}>
-                  <IconNB name="ios-share-alt" />
-                  <Text>Share</Text>
-                </Button>
-              </View>
-              <View style={styles.buttonContainer}>
-                <Button bordered style={styles.margin}>
-                  <IconNB name="ios-create-outline" />
-                  <Text>Status</Text>
-                </Button>
-                <Button bordered style={styles.margin}>
-                  <IconNB name="ios-camera" />
-                  <Text>Photo</Text>
-                </Button>
-                <Button bordered style={styles.margin}>
-                  <IconNB name="ios-pin" />
-                  <Text>Check In</Text>
-                </Button>
-              </View>
-            </CardItem>
-          </Card>
         </Content>
       </Container>
     );
@@ -205,6 +113,8 @@ class NHButton extends Component {  //eslint-disable-line
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
+    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    pushRoute: (route, key) => dispatch(pushRoute(route, key)),
   };
 }
 

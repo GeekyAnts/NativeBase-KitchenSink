@@ -2,27 +2,55 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, Text, Left, Body, Right } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Text, Left, Body, Right, List, ListItem } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 const {
-  replaceAt,
+  pushRoute,
 } = actions;
-
+const data = [
+  {
+    route: 'basic',
+    text: 'Basic Card',
+  },
+  {
+    route: 'cardList',
+    text: 'Card List',
+  },
+  {
+    route: 'cardImage',
+    text: 'Card Image',
+  },
+  {
+    route: 'cardShowcase',
+    text: 'Card Showcase',
+  },
+  {
+    route: 'cardHeaderAndFooter',
+    text: 'Card Header & Footer',
+  },
+];
 class NHCard extends Component {
 
   static propTypes = {
     openDrawer: React.PropTypes.func,
-    replaceAt: React.PropTypes.func,
+    pushRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
   }
+  constructor(props) {
+    super(props);
+    const ds = new List.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+    this.state = {
+      dataSource: ds.cloneWithRows(data),
+    };
+  }
 
-  replaceAt(route) {
-    this.props.replaceAt('card', { key: route }, this.props.navigation.key);
+  pushRoute(route) {
+    this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
   }
 
   render() {
@@ -41,11 +69,17 @@ class NHCard extends Component {
 
         </Header>
 
-        <Content padder>
-          <Button block style={styles.mb} onPress={() => this.replaceAt('cardList')}><Text>Card List</Text></Button>
-          <Button block style={styles.mb} onPress={() => this.replaceAt('cardImage')}><Text>Card Image</Text></Button>
-          <Button block style={styles.mb} onPress={() => this.replaceAt('cardShowcase')}><Text>Card Showcase</Text></Button>
-          <Button block style={styles.mb} onPress={() => this.replaceAt('cardHeaderAndFooter')}><Text>Card Header & Footer</Text></Button>
+        <Content>
+          <List
+            dataSource={this.state.dataSource} renderRow={data =>
+              <ListItem button onPress={() => this.pushRoute(data.route)}>
+                <Text>{data.text}</Text>
+                <Right>
+                  <Icon name="arrow-forward" style={{ color: '#999' }} />
+                </Right>
+              </ListItem>
+            }
+          />
         </Content>
       </Container>
     );
@@ -55,7 +89,7 @@ class NHCard extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    pushRoute: (route, key) => dispatch(pushRoute(route, key)),
   };
 }
 

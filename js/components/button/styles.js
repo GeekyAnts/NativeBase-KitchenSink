@@ -17,6 +17,9 @@ export default {
   mb15: {
     marginBottom: 15,
   },
+  mt15: {
+    marginTop: 15,
+  },
   mb20: {
     marginBottom: 20,
   },

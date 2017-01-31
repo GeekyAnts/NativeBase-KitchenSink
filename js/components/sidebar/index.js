@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react';
-import { Image, View } from 'react-native';
+import { Image } from 'react-native';
 import { connect } from 'react-redux';
-import { Content, Text, List, ListItem, IconNB } from 'native-base';
+import { Content, Text, List, ListItem, Icon, Container, Body, Left, CardItem } from 'native-base';
 
 import navigateTo from '../../actions/sideBarNav';
 import styles from './style';
@@ -17,6 +17,18 @@ const data = [
     route: 'anatomy',
     icon: 'ios-phone-portrait-outline',
     bg: '#0209D8',
+  },
+  {
+    name: 'Header',
+    route: 'header',
+    icon: 'ios-phone-portrait-outline',
+    bg: '#C5F442',
+  },
+  {
+    name: 'Footer',
+    route: 'footer',
+    icon: 'ios-phone-portrait-outline',
+    bg: '#F44242',
   },
   {
     name: 'Badge',
@@ -156,29 +168,29 @@ class SideBar extends Component {
 
   render() {
     return (
-      <Content
-        style={{ flex: 1, backgroundColor: '#fff' }}
-      >
-        <Image source={drawerCover} style={styles.drawerCover}>
-          <Image
-            square
-            style={styles.drawerImage}
-            source={drawerImage}
+      <Container>
+        <Content
+          style={{ flex: 1, backgroundColor: '#fff' }}
+        >
+          <Image source={drawerCover} style={styles.drawerCover}>
+            <Image
+              square
+              style={styles.drawerImage}
+              source={drawerImage}
+            />
+          </Image>
+          <List
+            dataSource={this.state.dataSource} renderRow={data =>
+              <ListItem button noBorder onPress={() => this.navigateTo(data.route)} >
+                <Left>
+                  <Icon name={data.icon} style={{ color: '#555', fontSize: 26, width: 30 }} />
+                  <Text style={styles.text}>{data.name}</Text>
+                </Left>
+              </ListItem>}
           />
-        </Image>
-        <List
-          dataSource={this.state.dataSource} renderRow={data =>
-            <ListItem button iconLeft onPress={() => this.navigateTo(data.route)} >
-              <View style={styles.listItemContainer}>
-                <View style={[styles.iconContainer, { backgroundColor: data.bg, alignItems: 'center', alignSelf: 'center' }]}>
-                  <IconNB name={data.icon} style={styles.sidebarIcon} />
-                </View>
-                <Text style={styles.text}>{data.name}</Text>
-              </View>
-            </ListItem>}
-        />
 
-      </Content>
+        </Content>
+      </Container>
     );
   }
 }

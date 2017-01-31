@@ -7,20 +7,20 @@ import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, 
 import styles from './styles';
 
 const {
-  replaceAt,
+  popRoute,
 } = actions;
 
 class NHCardHeaderAndFooter extends Component {
 
   static propTypes = {
-    replaceAt: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('cardHeaderAndFooter', { key: route }, this.props.navigation.key);
+  popRoute() {
+    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -28,12 +28,12 @@ class NHCardHeaderAndFooter extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.replaceAt('card')}>
+            <Button transparent onPress={() => this.popRoute()}>
               <IconNB name="ios-arrow-back" />
             </Button>
           </Left>
           <Body>
-            <Title>Card Header & Footer</Title>
+            <Title>Header/Footer</Title>
           </Body>
           <Right />
         </Header>
@@ -68,7 +68,7 @@ class NHCardHeaderAndFooter extends Component {
               </Text>
               </Body>
             </CardItem>
-            <CardItem header>
+            <CardItem footer>
               <Text>GeekyAnts</Text>
             </CardItem>
           </Card>
@@ -80,7 +80,7 @@ class NHCardHeaderAndFooter extends Component {
 
 function bindAction(dispatch) {
   return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    popRoute: key => dispatch(popRoute(key)),
   };
 }
 

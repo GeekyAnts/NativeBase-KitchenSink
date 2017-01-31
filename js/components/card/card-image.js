@@ -11,20 +11,20 @@ const logo = require('../../../img/logo.png');
 const cardImage = require('../../../img/drawer-cover.png');
 
 const {
-  replaceAt,
+  popRoute,
 } = actions;
 
 class NHCardImage extends Component {
 
   static propTypes = {
-    replaceAt: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('cardImage', { key: route }, this.props.navigation.key);
+  popRoute() {
+    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -32,7 +32,7 @@ class NHCardImage extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.replaceAt('card')}>
+            <Button transparent onPress={() => this.popRoute()}>
               <IconNB name="ios-arrow-back" />
             </Button>
           </Left>
@@ -58,21 +58,27 @@ class NHCardImage extends Component {
               <Image style={{ resizeMode: 'cover', width: null, height: 200, flex: 1 }} source={cardImage} />
             </CardItem>
 
-            <CardItem>
-              <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
+            <CardItem content>
+              <Text>Wait a minute. Wait a minute, Doc. Uhhh...
+              Are you telling me that you built a time machine... out of a DeLorean?!
+              Whoa. This is heavy.</Text>
+            </CardItem>
+            <CardItem style={{paddingVertical: 0}}>
+              <Left>
                 <Button transparent>
-                  <IconNB name="logo-github" />
-                  <Text>1,926</Text>
+                  <Icon active name="thumbs-up" />
+                  <Text>12 Likes</Text>
                 </Button>
+              </Left>
+              <Body>
                 <Button transparent>
-                  <IconNB name="ios-git-network" />
-                  <Text>132</Text>
+                  <Icon active name="chatbubbles" />
+                  <Text>4 Comments</Text>
                 </Button>
-                <Button transparent>
-                  <IconNB name="logo-twitter" />
-                  <Text>197</Text>
-                </Button>
-              </View>
+              </Body>
+              <Right>
+                <Text>11h ago</Text>
+              </Right>
             </CardItem>
           </Card>
         </Content>
@@ -83,7 +89,7 @@ class NHCardImage extends Component {
 
 function bindAction(dispatch) {
   return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    popRoute: key => dispatch(popRoute(key)),
   };
 }
 

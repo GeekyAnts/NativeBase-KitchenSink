@@ -7,20 +7,20 @@ import { Container, Header, Title, Content, Button, Icon, IconNB, Card, CardItem
 import styles from './styles';
 
 const {
-  replaceAt,
+  popRoute,
 } = actions;
 
 class NHCardList extends Component {
 
   static propTypes = {
-    replaceAt: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('cardList', { key: route }, this.props.navigation.key);
+  popRoute() {
+    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -28,7 +28,7 @@ class NHCardList extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.replaceAt('card')}>
+            <Button transparent onPress={() => this.popRoute()}>
               <IconNB name="ios-arrow-back" />
             </Button>
           </Left>
@@ -40,29 +40,52 @@ class NHCardList extends Component {
 
         <Content padder>
           <Card style={styles.mb}>
-            <CardItem>
-              <IconNB name="logo-googleplus" style={{ color: '#DD5044' }} />
-              <Text>Google Plus</Text>
+            <CardItem header bordered>
+              <Text>
+                Explore Nearby
+              </Text>
             </CardItem>
             <CardItem>
-              <IconNB name="logo-facebook" style={{ color: '#3B579D' }} />
-              <Text>Facebook</Text>
+              <Icon active name="cart" />
+              <Text>Shopping</Text>
+              <Right>
+                <Icon name="arrow-forward" />
+              </Right>
             </CardItem>
             <CardItem>
-              <IconNB name="logo-twitter" style={{ color: '#55ACEE' }} />
-              <Text>Twitter</Text>
+              <Icon active name="medical" />
+              <Text>Hospital</Text>
+              <Right>
+                <Icon name="arrow-forward" />
+              </Right>
             </CardItem>
             <CardItem>
-              <IconNB name="logo-reddit" style={{ color: '#FF4500' }} />
-              <Text>Reddit</Text>
+              <Icon active name="cafe" />
+              <Text>Cafe</Text>
+              <Right>
+                <Icon name="arrow-forward" />
+              </Right>
             </CardItem>
             <CardItem>
-              <IconNB name="logo-linkedin" style={{ color: '#007BB6' }} />
-              <Text>LinkedIn</Text>
+              <Icon active name="paw" />
+              <Text>Dog Park</Text>
+              <Right>
+                <Icon name="arrow-forward" />
+              </Right>
             </CardItem>
             <CardItem>
-              <IconNB name="logo-youtube" style={{ color: '#D62727' }} />
-              <Text>YouTube</Text>
+              <Icon active name="beer" />
+              <Text>Pub</Text>
+              <Right>
+                <Icon name="arrow-forward" />
+              </Right>
+            </CardItem>
+            <CardItem>
+              <Icon active name="planet" />
+              <Text>Space</Text>
+              <Right>
+                <Icon name="arrow-forward" />
+              </Right>
             </CardItem>
           </Card>
         </Content>
@@ -73,7 +96,7 @@ class NHCardList extends Component {
 
 function bindAction(dispatch) {
   return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    popRoute: key => dispatch(popRoute(key)),
   };
 }
 

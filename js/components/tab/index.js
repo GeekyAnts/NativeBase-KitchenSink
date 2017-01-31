@@ -1,8 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { View } from 'react-native';
-import { Container, Header, Title, Content, Text, H3, Button, Icon, Tab, Footer, FooterTab, Left, Right, Body, Badge, IconNB } from 'native-base';
+import { Container, Header, Title, Content, Text, H3, Button, Icon, Tab, Left, Right, Body } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import myTheme from '../../themes/base-theme';

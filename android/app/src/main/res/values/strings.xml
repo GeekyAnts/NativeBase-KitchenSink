@@ -1,4 +1,4 @@
 <resources>
-    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">dsfsf</string>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">sadasda</string>
     <string name="app_name">NativebaseKitchenSink</string>
 </resources>

@@ -1,35 +1,60 @@
 
 import React, { Component } from 'react';
-import { TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button,Picker,Item, IconNB, List, ListItem,Label, InputGroup, Input, Text, Thumbnail,Left,Right,Body } from 'native-base';
+import { actions } from 'react-native-navigation-redux-helpers';
+import { Container, Header, Title, Content, Button, Icon, Text, Left, Body, Right, List, ListItem } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
-const PItem = Picker.Item;
-const camera = require('../../../img/camera.png');
-
+const {
+  replaceAt,
+} = actions;
+const data = [
+  {
+    route: 'fixedLabel',
+    text: 'Fixed Label',
+  },
+  {
+    route: 'inlineLabel',
+    text: 'Inline Label',
+  },
+  {
+    route: 'floatingLabel',
+    text: 'Floating Label',
+  },
+  {
+    route: 'placeholderLabel',
+    text: 'Placeholder Label',
+  },
+  {
+    route: 'stackedLabel',
+    text: 'Stacked Label',
+  },
+  {
+    route: 'textArea',
+    text: 'TextArea',
+  },
+];
 class NHForm extends Component {
 
   static propTypes = {
     openDrawer: React.PropTypes.func,
+    replaceAt: React.PropTypes.func,
+    navigation: React.PropTypes.shape({
+      key: React.PropTypes.string,
+    }),
   }
-
   constructor(props) {
     super(props);
+    const ds = new List.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     this.state = {
-      selectedItem: undefined,
-      selected1: 'key0',
-      results: {
-        items: [],
-      },
+      dataSource: ds.cloneWithRows(data),
     };
   }
-  onValueChange(value: string) {
-    this.setState({
-      selected1: value,
-    });
+
+  replaceAt(route) {
+    this.props.replaceAt('form', { key: route }, this.props.navigation.key);
   }
 
   render() {
@@ -37,57 +62,28 @@ class NHForm extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-          <Button transparent onPress={this.props.openDrawer}>
-          <IconNB name="ios-menu" />
-          </Button>
+            <Button transparent onPress={this.props.openDrawer}>
+              <Icon name="menu" />
+            </Button>
           </Left>
           <Body>
-          <Title>Form</Title>
+            <Title>Form</Title>
           </Body>
-          <Right>
-          </Right>
+          <Right />
+
         </Header>
 
-        <Content padder>
-          <TouchableOpacity style={{alignItems: 'center'}}>
-            <Thumbnail size={80} source={camera} style={{ alignSelf: 'center', marginTop: 20, marginBottom: 10 }} />
-          </TouchableOpacity>
-            <Item>
-              <Label>Placeholder Input</Label>
-              <Input />
-            </Item>
-            <Item inlineLabel>
-              <Label>First Name</Label>
-              <Input placeholder="John" />
-            </Item>
-            <Item inlineLabel>
-              <Label>Last Name</Label>
-              <Input placeholder="Doe" />
-            </Item>
-            <Item floatingLabel>
-              <Label>Floating Input</Label>
-              <Input />
-            </Item>
-              <InputGroup>
-                <IconNB name="ios-person" style={{ color: '#0A69FE' }} />
-                <Input placeholder="EMAIL" />
-              </InputGroup>
-              <InputGroup>
-                <IconNB name="ios-unlock" style={{ color: '#0A69FE' }} />
-                <Input placeholder="PASSWORD" secureTextEntry />
-              </InputGroup>
-              <InputGroup>
-                <IconNB name="ios-call" style={{ color: '#0A69FE' }} />
-                <Input
-                  placeholder="PHONE"
-                  keyboardType="numeric"
-                />
-              </InputGroup>
-              <Item stackedLabel>
-                <Label>Permanent Address</Label>
-                <Input placeholder="Address" />
-              </Item>
-          <Button style={{ alignSelf: 'center', marginTop: 20, marginBottom: 20 }}><Text>Sign Up</Text></Button>
+        <Content>
+          <List
+            dataSource={this.state.dataSource} renderRow={data =>
+              <ListItem button onPress={() => this.replaceAt(data.route)}>
+                <Text>{data.text}</Text>
+                <Right>
+                  <Icon name="arrow-forward" style={{ color: '#999' }} />
+                </Right>
+              </ListItem>
+            }
+          />
         </Content>
       </Container>
     );
@@ -97,6 +93,7 @@ class NHForm extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
+    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
   };
 }
 

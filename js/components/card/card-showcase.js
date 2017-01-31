@@ -12,20 +12,20 @@ const logo = require('../../../img/logo.png');
 const cardImage = require('../../../img/drawer-cover.png');
 
 const {
-  replaceAt,
+  popRoute,
 } = actions;
 
 class NHCardShowcase extends Component {
 
   static propTypes = {
-    replaceAt: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('cardShowcase', { key: route }, this.props.navigation.key);
+  popRoute() {
+    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -33,19 +33,19 @@ class NHCardShowcase extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.replaceAt('card')}>
+            <Button transparent onPress={() => this.popRoute()}>
               <IconNB name="ios-arrow-back" />
             </Button>
           </Left>
           <Body>
-            <Title>Card Showcase</Title>
+            <Title>Showcase</Title>
           </Body>
           <Right />
         </Header>
 
         <Content padder>
           <Card style={styles.mb}>
-            <CardItem>
+            <CardItem bordered>
               <Left>
                 <Thumbnail source={logo} />
                 <Body>
@@ -59,17 +59,22 @@ class NHCardShowcase extends Component {
               <Body>
                 <Image style={{ alignSelf: 'center', height: 150, resizeMode: 'cover', width: deviceWidth / 1.18, marginVertical: 5 }} source={cardImage} />
                 <Text>
-                NativeBase is a free and open source framework that enables developers
+                NativeBase is a free and, source framework that enables developers
                 to build high-quality mobile apps using React Native iOS and Android apps
                 with a fusion of ES6.
                 NativeBase builds a layer on top of React Native that provides you with
                 basic set of components for mobile application development.
               </Text>
-                <Button transparent style={{ marginLeft: -7 }} textStyle={{ color: '#87838B' }}>
-                  <IconNB name="logo-github" />
+
+              </Body>
+            </CardItem>
+            <CardItem style={{paddingVertical: 0}}>
+              <Left>
+                <Button transparent>
+                  <Icon name="logo-github" />
                   <Text>1,926 stars</Text>
                 </Button>
-              </Body>
+              </Left>
             </CardItem>
           </Card>
         </Content>
@@ -80,7 +85,7 @@ class NHCardShowcase extends Component {
 
 function bindAction(dispatch) {
   return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    popRoute: key => dispatch(popRoute(key)),
   };
 }
 

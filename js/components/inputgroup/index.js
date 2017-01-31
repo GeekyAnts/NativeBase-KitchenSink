@@ -1,15 +1,64 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, IconNB, InputGroup, Input,Left,Right,Body,Textarea } from 'native-base';
+import { actions } from 'react-native-navigation-redux-helpers';
+import { Container, Header, Title, Content, Button, IconNB, Text, List, Left, Right, Body, ListItem, Icon } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
+const {
+  replaceAt,
+} = actions;
+const data = [
+  {
+    route: 'regularInput',
+    text: 'Regular Textbox',
+  },
+  {
+    route: 'underlineInput',
+    text: 'Underlined Textbox',
+  },
+  {
+    route: 'roundedInput',
+    text: 'Rounded Textbox',
+  },
+  {
+    route: 'iconInput',
+    text: 'Icon Textbox',
+  },
+  {
+    route: 'successInput',
+    text: 'Success Input Textbox',
+  },
+  {
+    route: 'errorInput',
+    text: 'Error Input Textbox',
+  },
+  {
+    route: 'disabledInput',
+    text: 'Disabled Textbox',
+  },
+];
 class NHInputGroup extends Component {  // eslint-disable-line
 
   static propTypes = {
     openDrawer: React.PropTypes.func,
+    replaceAt: React.PropTypes.func,
+    navigation: React.PropTypes.shape({
+      key: React.PropTypes.string,
+    }),
+  }
+  constructor(props) {
+    super(props);
+    const ds = new List.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+    this.state = {
+      dataSource: ds.cloneWithRows(data),
+    };
+  }
+
+  replaceAt(route) {
+    this.props.replaceAt('inputgroup', { key: route }, this.props.navigation.key);
   }
 
   render() {
@@ -17,47 +66,27 @@ class NHInputGroup extends Component {  // eslint-disable-line
       <Container style={styles.container}>
         <Header>
           <Left>
-          <Button transparent onPress={this.props.openDrawer}>
-          <IconNB name="ios-menu" />
-          </Button>
+            <Button transparent onPress={this.props.openDrawer}>
+              <IconNB name="ios-menu" />
+            </Button>
           </Left>
           <Body>
-          <Title>InputGroup</Title>
+            <Title>InputGroup</Title>
           </Body>
           <Right />
         </Header>
 
         <Content padder>
-          <InputGroup regular style={styles.mb}>
-            <Input placeholder="Regular Textbox" />
-          </InputGroup>
-          <InputGroup underline style={styles.mb}>
-            <Input placeholder="Underlined Textbox" />
-          </InputGroup>
-          <InputGroup rounded style={styles.mb}>
-            <Input placeholder="Rounded Textbox" />
-          </InputGroup>
-          <InputGroup style={styles.mb}>
-          <IconNB name="ios-home" style={{ color: '#00C497' }} />
-            <Input placeholder="Icon Textbox" />
-          </InputGroup>
-          <InputGroup style={styles.mb}>
-            <Input placeholder="Icon Alignment in Textbox" />
-            <IconNB name="ios-swap" style={{ color: '#00C497' }} />
-          </InputGroup>
-          <InputGroup success style={styles.mb}>
-            <Input placeholder="Textbox with Success Input" />
-            <IconNB name="ios-checkmark-circle" style={{ color: '#00C497' }} />
-          </InputGroup>
-          <InputGroup error style={styles.mb}>
-            <Input placeholder="Textbox with Error Input" />
-            <IconNB name="ios-close-circle" style={{ color: 'red' }} />
-          </InputGroup>
-          <InputGroup disabled style={styles.mb}>
-            <Input placeholder="Disabled Textbox" />
-            <IconNB name="ios-information-circle" style={{ color: '#384850' }} />
-          </InputGroup>
-           <Textarea rowSpan={5} bordered placeholder="Textarea" />
+        <List
+          dataSource={this.state.dataSource} renderRow={data =>
+            <ListItem button onPress={() => this.replaceAt(data.route)}>
+              <Text>{data.text}</Text>
+              <Right>
+                <Icon name="arrow-forward" style={{ color: '#999' }} />
+              </Right>
+            </ListItem>
+          }
+        />
         </Content>
       </Container>
     );
@@ -67,6 +96,7 @@ class NHInputGroup extends Component {  // eslint-disable-line
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
+    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
   };
 }
 

@@ -51,6 +51,9 @@ class NHBasicList extends Component {
             dataSource={this.state.dataSource} renderRow={data =>
               <ListItem>
                 <Text>{data}</Text>
+                <Right>
+                  <Icon name="arrow-forward" />
+                </Right>
               </ListItem>
           }
           />

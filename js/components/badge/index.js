@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Badge,Text,Left,Right,Body } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Badge, Text, Left, Right, Body } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -18,14 +18,13 @@ class NHBadge extends Component { //eslint-disable-line
         <Header>
           <Left>
             <Button transparent onPress={this.props.openDrawer}>
-            <Icon name="menu" />
+              <Icon name="menu" />
             </Button>
           </Left>
           <Body>
             <Title>Badge</Title>
           </Body>
-          <Right>
-          </Right>
+          <Right />
         </Header>
 
         <Content padder>
@@ -39,7 +38,7 @@ class NHBadge extends Component { //eslint-disable-line
             primary
             style={styles.mb}
           >
-            <Icon name="star" style={{ fontSize: 15, color: '#fff', lineHeight: 20}} />
+            <Icon name="star" style={{ fontSize: 15, color: '#fff', lineHeight: 20 }} />
           </Badge>
           <Badge
             style={{ backgroundColor: 'black' }}

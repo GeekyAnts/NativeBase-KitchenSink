@@ -54,7 +54,7 @@ class NHListDivider extends Component {
           <ListItem>
             <Text>Andy Hertzfeld</Text>
           </ListItem>
-          <ListItem>
+          <ListItem last>
             <Text>Angana Ghosh</Text>
           </ListItem>
 
@@ -67,7 +67,7 @@ class NHListDivider extends Component {
           <ListItem>
             <Text>Brian Swetland</Text>
           </ListItem>
-          <ListItem>
+          <ListItem last>
             <Text>Brittany Kelso</Text>
           </ListItem>
 
@@ -80,7 +80,7 @@ class NHListDivider extends Component {
           <ListItem>
             <Text>Cendre Urbino</Text>
           </ListItem>
-          <ListItem>
+          <ListItem last>
             <Text>Claire Barclay</Text>
           </ListItem>
         </Content>

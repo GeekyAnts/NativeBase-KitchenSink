@@ -6,14 +6,15 @@
     "postinstall": "remotedev-debugger",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "eslint": "eslint",
-    "test": "jest"
+    "test": "jest",
+    "eject-native-base": "node node_modules/native-base/ejectTheme.js"
   },
   "dependencies": {
     "color": "~0.11.1",
     "lodash": "^4.13.1",
     "moment": "^2.13.0",
     "native-base": "https://github.com/GeekyAnts/NativeBase#v2.0-test-cases",
-    "react": "15.4.1",
+    "react": "15.4.2",
     "react-native": "^0.38.0",
     "react-native-code-push": "1.15.0-beta",
     "react-native-easy-grid": "^0.1.7",
@@ -42,7 +43,7 @@
     "jest": "16.0.2",
     "jest-react-native": "16.1.0",
     "mocha": "^2.5.3",
-    "react-test-renderer": "15.4.1",
+    "react-test-renderer": "15.4.2",
     "remote-redux-devtools-on-debugger": "^0.4.6",
     "remotedev-server": "^0.1.2"
   },

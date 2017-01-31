@@ -19,7 +19,6 @@ class NHSearchbar extends Component { // eslint-disable-line
           <InputGroup>
             <Icon name="search" />
             <Input placeholder="Search" />
-            <Icon name="people" />
           </InputGroup>
           <Button transparent>
             <Text>Search</Text>
