@@ -17,8 +17,9 @@ class NHSearchbar extends Component { // eslint-disable-line
       <Container style={styles.container}>
         <Header searchBar rounded>
           <InputGroup>
-            <Icon name="search" />
+            <Icon active name="search" />
             <Input placeholder="Search" />
+            <Icon active name="people" />
           </InputGroup>
           <Button transparent>
             <Text>Search</Text>
@@ -26,7 +27,7 @@ class NHSearchbar extends Component { // eslint-disable-line
         </Header>
 
         <Content padder>
-          <Button block rounded onPress={this.props.openDrawer}><Text>Back</Text></Button>
+          <Button block onPress={this.props.openDrawer}><Text>Back</Text></Button>
         </Content>
       </Container>
     );

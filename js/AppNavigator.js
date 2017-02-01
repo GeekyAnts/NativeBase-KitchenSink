@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { BackAndroid, StatusBar, NavigationExperimental } from 'react-native';
+import { BackAndroid, StatusBar, NavigationExperimental, Platform } from 'react-native';
 import { connect } from 'react-redux';
 import { Drawer } from 'native-base';
 import { actions } from 'react-native-navigation-redux-helpers';
@@ -319,6 +319,7 @@ class AppNavigator extends Component {
         onClose={() => this.closeDrawer()}
       >
         <StatusBar
+          hidden={(this.props.drawerState === 'opened' && Platform.OS === 'ios') ? true : false}
           backgroundColor={statusBarColor.statusBarColor}
           barStyle="default"
         />

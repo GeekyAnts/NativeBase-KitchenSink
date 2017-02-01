@@ -2,25 +2,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, Text, Body, Left, Right, IconNB, InputGroup, Input } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Text, Body, Left, Right, IconNB, Item, Input } from 'native-base';
 
 import styles from './styles';
 
 const {
-  replaceAt,
+  popRoute,
 } = actions;
 
 class Error extends Component {
 
   static propTypes = {
-    replaceAt: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('errorInput', { key: route }, this.props.navigation.key);
+  popRoute() {
+    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -28,8 +28,8 @@ class Error extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.replaceAt('inputgroup')}>
-              <IconNB name="ios-arrow-back" />
+            <Button transparent onPress={() => this.popRoute()}>
+              <Icon name="arrow-back" />
             </Button>
           </Left>
           <Body>
@@ -39,10 +39,10 @@ class Error extends Component {
         </Header>
 
         <Content padder>
-          <InputGroup error>
+          <Item error>
             <Input placeholder="Textbox with Error Input" />
             <IconNB name="ios-close-circle" />
-          </InputGroup>
+          </Item>
         </Content>
       </Container>
     );
@@ -51,7 +51,7 @@ class Error extends Component {
 
 function bindAction(dispatch) {
   return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    popRoute: key => dispatch(popRoute(key)),
   };
 }
 

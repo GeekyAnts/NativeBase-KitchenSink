@@ -2,25 +2,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Item, Label, Input, Body, Left, Right, IconNB, Form, Text } from 'native-base';
+import { Container, Header, Title, Content, Button, Item, Label, Input, Body, Left, Right, Icon, Form, Text } from 'native-base';
 
 import styles from './styles';
 
 const {
-  replaceAt,
+  popRoute,
 } = actions;
 
 class Stacked extends Component {
 
   static propTypes = {
-    replaceAt: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('stackedLabel', { key: route }, this.props.navigation.key);
+  popRoute() {
+    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -28,8 +28,8 @@ class Stacked extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.replaceAt('form')}>
-              <IconNB name="ios-arrow-back" />
+            <Button transparent onPress={() => this.popRoute()}>
+              <Icon name="arrow-back" />
             </Button>
           </Left>
           <Body>
@@ -60,7 +60,7 @@ class Stacked extends Component {
 
 function bindAction(dispatch) {
   return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    popRoute: key => dispatch(popRoute(key)),
   };
 }
 

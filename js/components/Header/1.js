@@ -9,7 +9,7 @@ import styles from './styles';
 
 
 const {
-    replaceAt,
+    popRoute,
   } = actions;
 
 class Header1 extends Component {  // eslint-disable-line
@@ -17,14 +17,14 @@ class Header1 extends Component {  // eslint-disable-line
 
   static propTypes = {
     openDrawer: React.PropTypes.func,
-    replaceAt: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('header1', { key: route }, this.props.navigation.key);
+  popRoute() {
+    this.props.popRoute(this.props.navigation.key);
   }
   render() {
     return (
@@ -39,7 +39,7 @@ class Header1 extends Component {  // eslint-disable-line
         </Header>
 
         <Content padder>
-          <Button onPress={() => this.replaceAt('header')}>
+          <Button onPress={() => this.popRoute()}>
             <Text>Back</Text>
           </Button>
         </Content>
@@ -51,7 +51,7 @@ class Header1 extends Component {  // eslint-disable-line
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    popRoute: key => dispatch(popRoute(key)),
   };
 }
 

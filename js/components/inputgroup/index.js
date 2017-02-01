@@ -8,7 +8,7 @@ import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 const {
-  replaceAt,
+  pushRoute,
 } = actions;
 const data = [
   {
@@ -44,7 +44,7 @@ class NHInputGroup extends Component {  // eslint-disable-line
 
   static propTypes = {
     openDrawer: React.PropTypes.func,
-    replaceAt: React.PropTypes.func,
+    pushRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
@@ -57,8 +57,8 @@ class NHInputGroup extends Component {  // eslint-disable-line
     };
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('inputgroup', { key: route }, this.props.navigation.key);
+  pushRoute(route) {
+    this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
   }
 
   render() {
@@ -71,15 +71,15 @@ class NHInputGroup extends Component {  // eslint-disable-line
             </Button>
           </Left>
           <Body>
-            <Title>InputGroup</Title>
+            <Title>Inputs</Title>
           </Body>
           <Right />
         </Header>
 
-        <Content padder>
+        <Content>
         <List
           dataSource={this.state.dataSource} renderRow={data =>
-            <ListItem button onPress={() => this.replaceAt(data.route)}>
+            <ListItem button onPress={() => this.pushRoute(data.route)}>
               <Text>{data.text}</Text>
               <Right>
                 <Icon name="arrow-forward" style={{ color: '#999' }} />
@@ -96,7 +96,7 @@ class NHInputGroup extends Component {  // eslint-disable-line
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    pushRoute: (route, key) => dispatch(pushRoute(route, key)),
   };
 }
 

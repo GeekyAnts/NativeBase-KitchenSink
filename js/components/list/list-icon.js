@@ -2,25 +2,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, IconNB, List, ListItem, Text, Badge, Left, Right, Body, Switch, Seperator, Radio } from 'native-base';
+import { Container, Header, Title, Content, Button, IconNB, Icon, List, ListItem, Text, Badge, Left, Right, Body, Switch, Seperator, Radio } from 'native-base';
 
 import styles from './styles';
 
 const {
-  replaceAt,
+  popRoute,
 } = actions;
 
 class NHListIcon extends Component {
 
   static propTypes = {
-    replaceAt: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('listIcon', { key: route }, this.props.navigation.key);
+  popRoute() {
+    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -28,8 +28,8 @@ class NHListIcon extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.replaceAt('list')}>
-              <IconNB name="ios-arrow-back" />
+            <Button transparent onPress={() => this.popRoute()}>
+              <Icon name="arrow-back" />
             </Button>
           </Left>
           <Body>
@@ -44,7 +44,7 @@ class NHListIcon extends Component {
           </ListItem>
           <ListItem icon>
             <Left>
-              <IconNB name="ios-planet" />
+              <Icon active name="planet" />
             </Left>
             <Body>
               <Text>Astronomy</Text>
@@ -55,7 +55,7 @@ class NHListIcon extends Component {
           </ListItem>
           <ListItem icon>
             <Left>
-              <IconNB name="ios-body" />
+              <Icon active name="body" />
             </Left>
             <Body>
               <Text>Muggle Studies</Text>
@@ -66,18 +66,18 @@ class NHListIcon extends Component {
           </ListItem>
           <ListItem icon>
             <Left>
-              <IconNB name="ios-leaf" />
+              <Icon active name="leaf" />
             </Left>
             <Body>
               <Text>Herbology</Text>
             </Body>
             <Right>
-              <IconNB name="ios-rose" style={{color: '#50B948'}} />
+              <Icon active name="rose" style={{color: '#50B948'}} />
             </Right>
           </ListItem>
           <ListItem icon last>
             <Left>
-              <IconNB name="ios-flask" />
+              <Icon active name="flask" />
             </Left>
             <Body>
               <Text>Potions</Text>
@@ -91,7 +91,7 @@ class NHListIcon extends Component {
           </ListItem>
           <ListItem icon>
             <Left>
-              <IconNB name="ios-color-wand" />
+              <Icon active name="color-wand" />
             </Left>
             <Body>
               <Text>Incantation</Text>
@@ -102,7 +102,7 @@ class NHListIcon extends Component {
           </ListItem>
           <ListItem icon>
             <Left>
-              <IconNB name="ios-brush" />
+              <Icon active name="brush" />
             </Left>
             <Body>
               <Text>Quidditch Practice</Text>
@@ -113,7 +113,7 @@ class NHListIcon extends Component {
           </ListItem>
           <ListItem icon last>
             <Left>
-              <IconNB name="ios-wine" />
+              <Icon active name="wine" />
             </Left>
             <Body>
               <Text>Mead Drinking</Text>
@@ -128,7 +128,7 @@ class NHListIcon extends Component {
           <ListItem icon>
             <Left>
               <Button style={{backgroundColor: '#007aff'}}>
-                <IconNB name="ios-wifi" />
+                <Icon active name="wifi" />
               </Button>
             </Left>
             <Body>
@@ -136,13 +136,13 @@ class NHListIcon extends Component {
             </Body>
             <Right>
               <Text>GeekyAnts</Text>
-              <IconNB name="ios-arrow-forward" />
+              <Icon active name="arrow-forward" />
             </Right>
           </ListItem>
           <ListItem last icon>
             <Left>
               <Button style={{backgroundColor: '#777'}}>
-                <IconNB name="md-cog" />
+                <Icon active name="cog" />
               </Button>
             </Left>
             <Body>
@@ -161,7 +161,7 @@ class NHListIcon extends Component {
 
 function bindAction(dispatch) {
   return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    popRoute: key => dispatch(popRoute(key)),
   };
 }
 

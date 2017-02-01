@@ -8,21 +8,21 @@ import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 const {
-    replaceAt,
+    popRoute,
 } = actions;
 
 class Header8 extends Component {  // eslint-disable-line
 
   static propTypes = {
     openDrawer: React.PropTypes.func,
-    replaceAt: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('header8', { key: route }, this.props.navigation.key);
+  popRoute() {
+    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -30,7 +30,7 @@ class Header8 extends Component {  // eslint-disable-line
       <Container style={styles.container}>
         <Header style={{ backgroundColor: 'red' }}>
           <Left>
-            <Button transparent onPress={() => this.replaceAt('header')}>
+            <Button transparent onPress={() => this.popRoute('header')}>
               <Icon name="arrow-back" style={{ color: '#FFF' }} />
             </Button>
           </Left>
@@ -54,7 +54,7 @@ class Header8 extends Component {  // eslint-disable-line
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    popRoute: key => dispatch(popRoute(key)),
   };
 }
 

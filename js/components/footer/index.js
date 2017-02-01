@@ -8,7 +8,7 @@ import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 const {
-  replaceAt,
+  pushRoute,
 } = actions;
 const data = [
   {
@@ -32,7 +32,7 @@ class NHFooter extends Component {
 
   static propTypes = {
     openDrawer: React.PropTypes.func,
-    replaceAt: React.PropTypes.func,
+    pushRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
@@ -45,8 +45,8 @@ class NHFooter extends Component {
     };
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('footer', { key: route }, this.props.navigation.key);
+  pushRoute(route) {
+    this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
   }
 
   render() {
@@ -68,7 +68,7 @@ class NHFooter extends Component {
         <Content>
           <List
             dataSource={this.state.dataSource} renderRow={data =>
-              <ListItem button onPress={() => this.replaceAt(data.route)}>
+              <ListItem button onPress={() => this.pushRoute(data.route)}>
                 <Text>{data.text}</Text>
                 <Right>
                   <Icon name="arrow-forward" style={{ color: '#999' }} />
@@ -85,7 +85,7 @@ class NHFooter extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    pushRoute: (route, key) => dispatch(pushRoute(route, key)),
   };
 }
 

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View } from 'react-native';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Body, Left, Right, IconNB } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Body, Left, Right, Grid, Col, Row, Text } from 'native-base';
 
 import styles from './styles';
 
@@ -30,7 +30,7 @@ class Specific extends Component {
         <Header>
           <Left>
             <Button transparent onPress={() => this.replaceAt('icon')}>
-              <IconNB name="ios-arrow-back" />
+              <Icon name="arrow-back" />
             </Button>
           </Left>
           <Body>
@@ -40,13 +40,30 @@ class Specific extends Component {
         </Header>
 
         <Content padder>
-          <View style={styles.iconContainer} >
-            <Icon ios="ios-person" android="md-person"/>
-            <Icon ios="ios-apps-outline" android="md-apps" />
-            <Icon ios="ios-menu" android="md-menu" />
-            <Icon ios="ios-paper" android="md-paper" />
-            <Icon ios="ios-cart-outline" android="md-cart" />
-          </View>
+          <Grid>
+            <Row>
+              <Col style={styles.col}>
+                <Icon ios="ios-person" android="md-person"/>
+                <Text>person</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon ios="ios-apps-outline" android="md-apps" />
+                <Text>person</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon ios="ios-menu" android="md-menu" />
+                <Text>person</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon ios="ios-paper" android="md-paper" />
+                <Text>person</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon ios="ios-cart-outline" android="md-cart" />
+                <Text>person</Text>
+              </Col>
+            </Row>
+          </Grid>
         </Content>
       </Container>
     );

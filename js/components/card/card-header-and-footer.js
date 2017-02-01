@@ -29,7 +29,7 @@ class NHCardHeaderAndFooter extends Component {
         <Header>
           <Left>
             <Button transparent onPress={() => this.popRoute()}>
-              <IconNB name="ios-arrow-back" />
+              <Icon name="arrow-back" />
             </Button>
           </Left>
           <Body>

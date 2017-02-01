@@ -8,7 +8,7 @@ import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 const {
-  replaceAt,
+  pushRoute,
 } = actions;
 const data = [
   {
@@ -40,7 +40,7 @@ class NHList extends Component {
 
   static propTypes = {
     openDrawer: React.PropTypes.func,
-    replaceAt: React.PropTypes.func,
+    pushRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
@@ -54,8 +54,8 @@ class NHList extends Component {
     };
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('list', { key: route }, this.props.navigation.key);
+  pushRoute(route) {
+    this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
   }
 
   render() {
@@ -76,7 +76,7 @@ class NHList extends Component {
         <Content>
           <List
             dataSource={this.state.dataSource} renderRow={data =>
-              <ListItem button onPress={() => this.replaceAt(data.route)}>
+              <ListItem button onPress={() => this.pushRoute(data.route)}>
                 <Text>{data.text}</Text>
                 <Right>
                   <Icon name="arrow-forward" />
@@ -93,7 +93,7 @@ class NHList extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    pushRoute: (route, key) => dispatch(pushRoute(route, key)),
   };
 }
 

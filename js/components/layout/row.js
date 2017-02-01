@@ -8,20 +8,20 @@ import { Grid, Row } from 'react-native-easy-grid';
 import { openDrawer } from '../../actions/drawer';
 
 const {
-  replaceAt,
+  popRoute,
 } = actions;
 
 class RowNB extends Component {  // eslint-disable-line
 
   static propTypes = {
-    replaceAt: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('row', { key: route }, this.props.navigation.key);
+  popRoute() {
+    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -29,7 +29,7 @@ class RowNB extends Component {  // eslint-disable-line
       <Container>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.replaceAt('layout')}>
+            <Button transparent onPress={() => this.popRoute()}>
               <Icon name="arrow-back" />
             </Button>
           </Left>
@@ -50,7 +50,7 @@ class RowNB extends Component {  // eslint-disable-line
 
 function bindAction(dispatch) {
   return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    popRoute: key => dispatch(popRoute(key)),
   };
 }
 

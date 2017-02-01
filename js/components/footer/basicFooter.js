@@ -2,18 +2,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Footer, FooterTab, Text, Body, Left, Right, IconNB } from 'native-base';
+import { Container, Header, Title, Content, Button, Footer, FooterTab, Text, Body, Left, Right, Icon } from 'native-base';
 
 import styles from './styles';
 
 const {
-  replaceAt,
+  popRoute,
 } = actions;
 
 class Basic extends Component {
 
   static propTypes = {
-    replaceAt: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
@@ -64,8 +64,8 @@ class Basic extends Component {
     });
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('basicFooter', { key: route }, this.props.navigation.key);
+  popRoute() {
+    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -73,8 +73,8 @@ class Basic extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.replaceAt('footer')}>
-              <IconNB name="ios-arrow-back" />
+            <Button transparent onPress={() => this.popRoute()}>
+              <Icon name="arrow-back" />
             </Button>
           </Left>
           <Body>
@@ -107,7 +107,7 @@ class Basic extends Component {
 
 function bindAction(dispatch) {
   return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    popRoute: key => dispatch(popRoute(key)),
   };
 }
 

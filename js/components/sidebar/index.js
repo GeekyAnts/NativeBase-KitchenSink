@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { connect } from 'react-redux';
-import { Content, Text, List, ListItem, Icon, Container, Body, Left, CardItem } from 'native-base';
+import { Content, Text, List, ListItem, Icon, Container, Left, Right, Badge } from 'native-base';
 
 import navigateTo from '../../actions/sideBarNav';
 import styles from './style';
@@ -15,133 +15,142 @@ const data = [
   {
     name: 'Anatomy',
     route: 'anatomy',
-    icon: 'ios-phone-portrait-outline',
-    bg: '#0209D8',
+    icon: 'phone-portrait',
+    bg: '#C5F442',
   },
   {
     name: 'Header',
     route: 'header',
-    icon: 'ios-phone-portrait-outline',
-    bg: '#C5F442',
+    icon: 'phone-portrait',
+    bg: '#477EEA',
+    types: '8',
   },
   {
     name: 'Footer',
     route: 'footer',
-    icon: 'ios-phone-portrait-outline',
-    bg: '#F44242',
+    icon: 'phone-portrait',
+    bg: '#DA4437',
+    types: '4',
   },
   {
     name: 'Badge',
     route: 'badge',
-    icon: 'ios-notifications-outline',
+    icon: 'notifications',
     bg: '#4DCAE0',
   },
   {
     name: 'Button',
     route: 'button',
-    icon: 'md-radio-button-off',
-    bg: '#5cb85c',
+    icon: 'radio-button-off',
+    bg: '#1EBC7C',
+    types: '9',
   },
   {
     name: 'Card',
     route: 'card',
-    icon: 'ios-keypad',
-    bg: '#877CA6',
+    icon: 'keypad',
+    bg: '#B89EF5',
+    types: '5',
   },
   {
     name: 'Check Box',
     route: 'checkbox',
-    icon: 'ios-checkmark-circle-outline',
+    icon: 'checkmark-circle',
     bg: '#EB6B23',
   },
   {
     name: 'Deck Swiper',
     route: 'deckswiper',
-    icon: 'ios-swap',
+    icon: 'swap',
     bg: '#3591FA',
   },
   {
     name: 'Fab',
     route: 'fab',
-    icon: 'ios-help-buoy',
-    bg: '#5067FF',
+    icon: 'help-buoy',
+    bg: '#477EEA',
+    types: '2',
   },
   {
     name: 'Form',
     route: 'form',
-    icon: 'ios-call',
-    bg: '#F5BF35',
+    icon: 'call',
+    bg: '#EFB406',
+    types: '6',
   },
   {
     name: 'Icon',
     route: 'icon',
-    icon: 'ios-information-circle-outline',
-    bg: '#B63A48',
+    icon: 'information-circle',
+    bg: '#EF6092',
   },
   {
-    name: 'InputGroup',
+    name: 'Inputs',
     route: 'inputgroup',
-    icon: 'ios-document-outline',
-    bg: '#00C497',
+    icon: 'document',
+    bg: '#EF6092',
+    types: '7',
   },
   {
     name: 'Layout',
     route: 'layout',
-    icon: 'ios-grid-outline',
-    bg: '#5C4196',
+    icon: 'grid',
+    bg: '#9F897C',
+    types: '5',
   },
   {
     name: 'List',
     route: 'list',
-    icon: 'ios-lock',
-    bg: '#00AFC1',
+    icon: 'lock',
+    bg: '#5DCEE2',
+    types: '6',
   },
   {
     name: 'Picker',
     route: 'picker',
-    icon: 'ios-arrow-dropdown',
+    icon: 'arrow-dropdown',
     bg: '#F50C75',
   },
   {
     name: 'Radio',
     route: 'radio',
-    icon: 'ios-radio-button-on',
+    icon: 'radio-button-on',
     bg: '#6FEA90',
   },
   {
     name: 'SearchBar',
     route: 'searchbar',
-    icon: 'ios-search',
+    icon: 'search',
     bg: '#29783B',
   },
   {
     name: 'Spinner',
     route: 'spinner',
-    icon: 'ios-navigate-outline',
+    icon: 'navigate',
     bg: '#BE6F50',
   },
   {
     name: 'Tab',
     route: 'tab',
-    icon: 'ios-home',
+    icon: 'home',
     bg: '#AB6AED',
   },
   {
     name: 'Tabs',
     route: 'tabs',
-    icon: 'ios-albums',
+    icon: 'albums',
     bg: '#726AEA',
   },
   {
     name: 'Thumbnail',
     route: 'thumbnail',
-    icon: 'ios-image-outline',
+    icon: 'image',
     bg: '#cc0000',
   },
   {
     name: 'Typography',
     route: 'typography',
-    icon: 'md-paper',
+    icon: 'paper',
     bg: '#48525D',
   },
 
@@ -183,9 +192,18 @@ class SideBar extends Component {
             dataSource={this.state.dataSource} renderRow={data =>
               <ListItem button noBorder onPress={() => this.navigateTo(data.route)} >
                 <Left>
-                  <Icon name={data.icon} style={{ color: '#555', fontSize: 26, width: 30 }} />
+                  <Icon active name={data.icon} style={{ color: '#777', fontSize: 26, width: 30 }} />
                   <Text style={styles.text}>{data.name}</Text>
                 </Left>
+                {(data.types) &&
+                <Right>
+                  <Badge
+                    style={{ borderRadius: 3, height: 25, paddingHorizontal: 2, backgroundColor: data.bg }}
+                  >
+                    <Text style={styles.badgeText}>{data.types + ` Types`}</Text>
+                  </Badge>
+                </Right>
+                }
               </ListItem>}
           />
 

@@ -41,7 +41,7 @@ const data = [
 ];
 
 const {
-  replaceAt,
+  popRoute,
 } = actions;
 
 class NHListThumbnail extends Component {
@@ -54,14 +54,14 @@ class NHListThumbnail extends Component {
     };
   }
   static propTypes = {
-    replaceAt: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('listThumbnail', { key: route }, this.props.navigation.key);
+  popRoute() {
+    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -69,7 +69,7 @@ class NHListThumbnail extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.replaceAt('list')}>
+            <Button transparent onPress={() => this.popRoute()}>
               <Icon name="arrow-back" />
             </Button>
           </Left>
@@ -89,7 +89,7 @@ class NHListThumbnail extends Component {
                 </Left>
                 <Body>
                   <Text>{data.text}</Text>
-                  <Text note>{data.note}</Text>
+                  <Text numberOfLines={1} note>{data.note}</Text>
                 </Body>
                 <Right>
                   <Button transparent>
@@ -107,7 +107,7 @@ class NHListThumbnail extends Component {
 
 function bindAction(dispatch) {
   return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    popRoute: key => dispatch(popRoute(key)),
   };
 }
 

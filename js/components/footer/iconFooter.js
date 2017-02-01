@@ -7,13 +7,13 @@ import { Container, Header, Title, Content, Button, Footer, FooterTab, Text, Bod
 import styles from './styles';
 
 const {
-  replaceAt,
+  popRoute,
 } = actions;
 
 class IconFooter extends Component {
 
   static propTypes = {
-    replaceAt: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
@@ -64,8 +64,8 @@ class IconFooter extends Component {
     });
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('iconFooter', { key: route }, this.props.navigation.key);
+  popRoute() {
+    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -73,8 +73,8 @@ class IconFooter extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.replaceAt('footer')}>
-              <Icon name="ios-arrow-back" />
+            <Button transparent onPress={() => this.popRoute()}>
+              <Icon name="arrow-back" />
             </Button>
           </Left>
           <Body>
@@ -107,7 +107,7 @@ class IconFooter extends Component {
 
 function bindAction(dispatch) {
   return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    popRoute: key => dispatch(popRoute(key)),
   };
 }
 
