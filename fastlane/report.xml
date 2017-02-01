@@ -5,42 +5,32 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: git config --global user.name" time="0.006232">
+      <testcase classname="fastlane.lanes" name="0: git config --global user.name" time="0.008516">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: /usr/libexec/PlistBuddy -c 'Print:CFBundleShortVersionString' ../ios/NativebaseKitchenSink/Info.plist" time="0.011152">
+      <testcase classname="fastlane.lanes" name="1: /usr/libexec/PlistBuddy -c 'Print:CFBundleShortVersionString' ../ios/NativebaseKitchenSink/Info.plist" time="0.015346">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: latest_testflight_build_number" time="9.617128">
+      <testcase classname="fastlane.lanes" name="2: gym" time="146.763564">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: increment_build_number" time="2.558158">
+      <testcase classname="fastlane.lanes" name="3: pilot" time="384.107613">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: gym" time="156.145057">
+      <testcase classname="fastlane.lanes" name="4: latest_testflight_build_number" time="12.493346">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: pilot" time="250.513581">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="6: latest_testflight_build_number" time="9.5678">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="7: slack" time="1.154451">
+      <testcase classname="fastlane.lanes" name="5: slack" time="14.992985">
         
       </testcase>
     

@@ -15,7 +15,6 @@
 		00E356F31AD99517003FC87E /* NativebaseKitchenSinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* NativebaseKitchenSinkTests.m */; };
 		07E313D35EFF4FCCBAD02109 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 493D6AFA1C874B9A9940BAEF /* rubicon-icon-font.ttf */; };
 		086820ECD87C4059B46C59AE /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98C6D57B10C8495CAEFA8809 /* Ionicons.ttf */; };
-		0BDA1E051E42004300D0AAA2 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BDA1E041E42004200D0AAA2 /* Images-2.xcassets */; };
 		1172E2DD371D4F128477B5D0 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4E238E3646F4714B1A887B8 /* Entypo.ttf */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
@@ -228,7 +227,6 @@
 		018B5C984EF14F0C99F5957F /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		07481BE3E57945D1810B8EC5 /* Skia.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Skia.ttf; path = "../node_modules/native-base/Fonts/Skia.ttf"; sourceTree = "<group>"; };
 		099126BA012C433F995AB518 /* Andale Mono.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Andale Mono.ttf"; path = "../node_modules/native-base/Fonts/Andale Mono.ttf"; sourceTree = "<group>"; };
-		0BDA1E041E42004200D0AAA2 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Images-2.xcassets"; path = "NativebaseKitchenSink/Images-2.xcassets"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* NativebaseKitchenSink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativebaseKitchenSink.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -423,7 +421,6 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				0BDA1E041E42004200D0AAA2 /* Images-2.xcassets */,
 			);
 			name = NativebaseKitchenSink;
 			sourceTree = "<group>";
@@ -860,7 +857,6 @@
 				C890A7782DC34E82AC31BCA3 /* Rubik-MediumItalic.ttf in Resources */,
 				529D373B12CC4017833BAC71 /* Rubik-Regular.ttf in Resources */,
 				25E6B4E28BAC481190D9000C /* SanFrancisco.ttf in Resources */,
-				0BDA1E051E42004300D0AAA2 /* Images-2.xcassets in Resources */,
 				5141501473504EA1A9E5B9B0 /* SanFranciscoBold.ttf in Resources */,
 				1CA86FB5CA0A435DA5EEF767 /* SanFranciscoThin.ttf in Resources */,
 				82C9278A05954236B1014080 /* SF-UI-Text-Regular.otf in Resources */,
@@ -985,7 +981,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 3F25347H8E;
 				HEADER_SEARCH_PATHS = (
@@ -1014,7 +1010,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 3F25347H8E;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
