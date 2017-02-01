@@ -1,0 +1,4 @@
+
+git_url "gitlab@gitlab.sahusoft.com:products/iosdev-keys.git"
+
+type "appstore" # The default type, can be: appstore, adhoc or development
