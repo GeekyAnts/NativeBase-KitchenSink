@@ -39,3 +39,9 @@ buck-out/
 \.buckd/
 android/app/libs
 *.keystore
+
+# FASTLANE
+*.cer
+*.mobileprovision
+*.zip
+key.json
