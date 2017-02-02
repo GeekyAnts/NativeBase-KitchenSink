@@ -19,7 +19,7 @@ class NHTabs extends Component {  // eslint-disable-line
   render() {
     return (
       <Container theme={myTheme}>
-        <Header>
+        <Header noShadow>
           <Left>
             <Button transparent onPress={this.props.openDrawer}>
               <Icon name="menu" />
@@ -32,7 +32,7 @@ class NHTabs extends Component {  // eslint-disable-line
         </Header>
 
         <View style={{ backgroundColor: '#FBFAFA', flex: 1 }}>
-          <Tabs>
+          <Tabs style={{ elevation: 3 }}>
             <TabOne tabLabel="Features" />
             <TabTwo tabLabel="About" />
           </Tabs>

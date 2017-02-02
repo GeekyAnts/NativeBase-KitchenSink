@@ -42,12 +42,14 @@ class Full extends Component {  // eslint-disable-line
 
         </Header>
 
-        <Content>
+        <Content style={{ backgroundColor: '#fff' }}>
+          <Button full light style={styles.mt15}><Text>Light</Text></Button>
           <Button full info style={styles.mt15}><Text>Info</Text></Button>
           <Button full danger style={styles.mt15}><Text>Danger</Text></Button>
           <Button full primary style={styles.mt15}><Text>Primary</Text></Button>
           <Button full warning style={styles.mt15}><Text>Warning</Text></Button>
           <Button full success style={styles.mt15}><Text>Success</Text></Button>
+          <Button full dark style={styles.mt15}><Text>Dark</Text></Button>
         </Content>
       </Container>
     );

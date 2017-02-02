@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { View } from 'react-native';
 import { Container, Header, Title, Content, Button, Icon, Left, Right, Body, Text, H3 } from 'native-base';
 
 import { actions } from 'react-native-navigation-redux-helpers';
@@ -31,9 +32,9 @@ class Disabled extends Component {  // eslint-disable-line
       <Container style={styles.container}>
         <Header>
           <Left>
-          <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="arrow-back" />
-          </Button>
+            <Button transparent onPress={() => this.popRoute()}>
+              <Icon name="arrow-back" />
+            </Button>
           </Left>
           <Body>
             <Title>Disabled</Title>
@@ -42,16 +43,19 @@ class Disabled extends Component {  // eslint-disable-line
 
         </Header>
 
-        <Content padder>
-          <Button disabled style={styles.mb15}><Text>Solid</Text></Button>
-          <Button bordered disabled style={styles.mb15}><Text>Bordered</Text></Button>
-          <Button rounded disabled style={styles.mb15}><Text>rounded</Text></Button>
-          <Button large disabled style={styles.mb15}><Text>Custom</Text></Button>
-          <Button disabled style={styles.mb15}>
-            <Icon name="home" />
-            <Text>Icon Button</Text>
-          </Button>
-          <Button block disabled style={styles.mb15}><Text>Block</Text></Button>
+        <Content>
+          <View style={{ paddingHorizontal: 10, paddingTop: 10 }}>
+            <Button disabled style={styles.mb15}><Text>Solid</Text></Button>
+            <Button bordered disabled style={styles.mb15}><Text>Bordered</Text></Button>
+            <Button rounded disabled style={styles.mb15}><Text>rounded</Text></Button>
+            <Button large disabled style={styles.mb15}><Text>Custom</Text></Button>
+            <Button disabled style={styles.mb15}>
+              <Icon name="home" />
+              <Text>Icon Button</Text>
+            </Button>
+            <Button block disabled style={styles.mb15}><Text>Block</Text></Button>
+          </View>
+          <Button full disabled style={styles.mb15}><Text>Block</Text></Button>
         </Content>
       </Container>
     );
