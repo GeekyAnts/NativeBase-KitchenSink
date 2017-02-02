@@ -1,11 +1,6 @@
 {
   "images" : [
     {
-<<<<<<< HEAD
-      "orientation" : "portrait",
-      "idiom" : "iphone",
-      "minimum-system-version" : "7.0",
-=======
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "736h",
@@ -30,16 +25,11 @@
       "filename" : "Default-667h@2x.png",
       "minimum-system-version" : "8.0",
       "orientation" : "portrait",
->>>>>>> d7030252a640e58f71bb6d0bb67497fe64670ada
       "scale" : "2x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
-<<<<<<< HEAD
-      "minimum-system-version" : "7.0",
-      "subtype" : "retina4",
-=======
       "filename" : "Default@2x.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
@@ -55,11 +45,26 @@
       "scale" : "2x"
     },
     {
+      "orientation" : "landscape",
+      "idiom" : "ipad",
+      "filename" : "Default-Landscape.png",
+      "extent" : "full-screen",
+      "minimum-system-version" : "7.0",
+      "scale" : "1x"
+    },
+    {
+      "orientation" : "landscape",
+      "idiom" : "ipad",
+      "filename" : "Default-Landscape@2x.png",
+      "extent" : "full-screen",
+      "minimum-system-version" : "7.0",
+      "scale" : "2x"
+    },
+    {
       "orientation" : "portrait",
       "idiom" : "ipad",
       "filename" : "Default-Portrait.png",
       "extent" : "full-screen",
-      "unassigned" : true,
       "scale" : "1x"
     },
     {
@@ -67,26 +72,6 @@
       "idiom" : "ipad",
       "filename" : "Default-Portrait@2x.png",
       "extent" : "full-screen",
-      "unassigned" : true,
-      "scale" : "2x"
-    },
-    {
-      "extent" : "full-screen",
-      "idiom" : "ipad",
-      "filename" : "Default-Landscape.png",
-      "minimum-system-version" : "7.0",
-      "orientation" : "landscape",
-      "unassigned" : true,
-      "scale" : "1x"
-    },
-    {
-      "extent" : "full-screen",
-      "idiom" : "ipad",
-      "filename" : "Default-Landscape@2x.png",
-      "minimum-system-version" : "7.0",
-      "orientation" : "landscape",
-      "unassigned" : true,
->>>>>>> d7030252a640e58f71bb6d0bb67497fe64670ada
       "scale" : "2x"
     }
   ],
