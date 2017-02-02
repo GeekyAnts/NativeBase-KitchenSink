@@ -52,19 +52,19 @@ class IconBtn extends Component {  // eslint-disable-line
           <Button style={styles.mb15}>
             <Icon active name="home"/>
           </Button>
-          <Button info style={styles.mb15}>
+          <Button info iconLeft style={styles.mb15}>
             <Icon active name="arrow-back" />
             <Text>Back</Text>
           </Button>
-          <Button success style={styles.mb15}>
+          <Button success iconRight style={styles.mb15}>
             <Text>Next</Text>
             <Icon name="arrow-forward" />
           </Button>
-          <Button bordered style={styles.mb15}>
+          <Button bordered iconLeft style={styles.mb15}>
             <Icon active name="briefcase" />
             <Text>Work</Text>
           </Button>
-          <Button transparent style={styles.mb15}>
+          <Button transparent iconLeft style={styles.mb15}>
             <Icon active name="home" />
             <Text>Home</Text>
           </Button>

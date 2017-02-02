@@ -31,10 +31,6 @@ const data = [
     route: 'stackedLabel',
     text: 'Stacked Label',
   },
-  {
-    route: 'textArea',
-    text: 'TextArea',
-  },
 ];
 class NHForm extends Component {
 

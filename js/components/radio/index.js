@@ -74,25 +74,25 @@ class NHRadio extends Component {
         </Header>
 
         <Content>
-          <ListItem button onPress={() => this.toggleRadio1()} >
+          <ListItem selected={this.state.radio1} button onPress={() => this.toggleRadio1()} >
             <Text>Lunch Break</Text>
             <Right>
             <Radio selected={this.state.radio1} onPress={() => this.toggleRadio1()} />
             </Right>
           </ListItem>
-            <ListItem button onPress={() => this.toggleRadio2()} >
+            <ListItem selected={this.state.radio2} button onPress={() => this.toggleRadio2()} >
               <Text >Daily Stand Up</Text>
               <Right>
                 <Radio selected={this.state.radio2} onPress={() => this.toggleRadio2()} />
               </Right>
             </ListItem>
-            <ListItem button onPress={() => this.toggleRadio3()} >
+            <ListItem selected={this.state.radio3} button onPress={() => this.toggleRadio3()} >
               <Text>Finish list Screen</Text>
               <Right>
                 <Radio selected={this.state.radio3} onPress={() => this.toggleRadio3()} />
               </Right>
             </ListItem>
-            <ListItem button onPress={() => this.toggleRadio4()} >
+            <ListItem selected={this.state.radio4} button onPress={() => this.toggleRadio4()} >
               <Text>Discussion with Client</Text>
               <Right>
                 <Radio selected={this.state.radio4} onPress={() => this.toggleRadio4()} />

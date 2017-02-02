@@ -47,7 +47,7 @@ class Placeholder extends Component {
               <Input placeholder="Password" />
             </Item>
           </Form>
-          <Button block style={{ margin: 15, marginTop: 30 }}>
+          <Button block style={{ margin: 15, marginTop: 50 }}>
             <Text>Sign In</Text>
           </Button>
         </Content>

@@ -44,9 +44,9 @@ class Custom extends Component {  // eslint-disable-line
         </Header>
 
         <Content padder>
-          <Button small style={styles.mb15}><Text>Small</Text></Button>
-          <Button success style={styles.mb15}><Text>Default</Text></Button>
-          <Button large info style={styles.mb15}><Text>Large</Text></Button>
+          <Button small style={styles.mb15}><Text>Light Small</Text></Button>
+          <Button success style={styles.mb15}><Text>Secondary Medium</Text></Button>
+          <Button large info style={styles.mb15}><Text>Dark Large</Text></Button>
         </Content>
       </Container>
     );
