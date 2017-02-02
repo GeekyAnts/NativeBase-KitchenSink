@@ -47,13 +47,6 @@ class NHBasicList extends Component {
         </Header>
 
         <Content>
-          <ListItem searchBar>
-            <Item>
-              <Icon active name="search" />
-              <Input placeholder="Search" />
-              <Icon active name="people" />
-            </Item>
-          </ListItem>
           <List
             dataSource={this.state.dataSource} renderRow={data =>
               <ListItem>
