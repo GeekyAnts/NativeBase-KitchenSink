@@ -90,7 +90,7 @@ class HeaderNB extends Component {  // eslint-disable-line
               <ListItem button onPress={() => this.pushRoute(data.route)}>
                 <Text>{data.text}</Text>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: '#999' }} />
+                  <Icon name="arrow-forward" />
                 </Right>
               </ListItem>
         }

@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { PixelRatio } from 'react-native';
 import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Footer, FooterTab, Text, Body, Left, Right, Icon } from 'native-base';
 
@@ -29,6 +30,7 @@ class Basic extends Component {
   }
 
   toggleTab1() {
+    console.log(PixelRatio.getPixelSizeForLayoutSize(1));
     this.setState({
       tab1: true,
       tab2: false,

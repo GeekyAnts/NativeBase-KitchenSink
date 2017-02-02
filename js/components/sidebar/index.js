@@ -178,7 +178,7 @@ class SideBar extends Component {
   render() {
     return (
       <Container>
-        <Content
+        <Content bounces={false}
           style={{ flex: 1, backgroundColor: '#fff' }}
         >
           <Image source={drawerCover} style={styles.drawerCover}>

@@ -28,7 +28,7 @@ class Header8 extends Component {  // eslint-disable-line
   render() {
     return (
       <Container style={styles.container}>
-        <Header style={{ backgroundColor: 'red' }}>
+        <Header style={{ backgroundColor: '#dc4239' }} iosBarStyle="light-content">
           <Left>
             <Button transparent onPress={() => this.popRoute('header')}>
               <Icon name="arrow-back" style={{ color: '#FFF' }} />

@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { StatusBar } from 'react-native';
 import { Container, Header, Title, Content, Button, Icon, Left, Right, Body, Text, H3 } from 'native-base';
 
 import { actions } from 'react-native-navigation-redux-helpers';

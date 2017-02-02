@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Left, Right, Body } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Left, Right, Body, Item, Input } from 'native-base';
 
 import styles from './styles';
 
@@ -47,6 +47,13 @@ class NHBasicList extends Component {
         </Header>
 
         <Content>
+          <ListItem searchBar>
+            <Item>
+              <Icon active name="search" />
+              <Input placeholder="Search" />
+              <Icon active name="people" />
+            </Item>
+          </ListItem>
           <List
             dataSource={this.state.dataSource} renderRow={data =>
               <ListItem>
