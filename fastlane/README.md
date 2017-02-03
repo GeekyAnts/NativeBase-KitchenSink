@@ -11,9 +11,9 @@ sudo gem install fastlane
 fastlane ios certificate
 ```
 Download and Import required Certificates to the App
-### ios beta
+### ios testflight
 ```
-fastlane ios beta
+fastlane ios testflight
 ```
 Submit a new Beta Build to Apple TestFlight
 ### ios release
