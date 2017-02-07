@@ -78,7 +78,7 @@ class BadgeFooter extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>With Badge</Title>
+            <Title>Footer</Title>
           </Body>
           <Right />
         </Header>

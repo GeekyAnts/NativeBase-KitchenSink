@@ -33,7 +33,7 @@ class Placeholder extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Placeholder</Title>
+            <Title>Placeholder Label</Title>
           </Body>
           <Right />
         </Header>

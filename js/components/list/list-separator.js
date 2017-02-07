@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Body, Left, Right } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Left, Right, Body, Separator } from 'native-base';
 
 import styles from './styles';
 
@@ -10,7 +10,7 @@ const {
   popRoute,
 } = actions;
 
-class Basic extends Component {
+class NHListSeparator extends Component {
 
   static propTypes = {
     popRoute: React.PropTypes.func,
@@ -33,21 +33,38 @@ class Basic extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Basic Card</Title>
+            <Title>List Seperator</Title>
           </Body>
           <Right />
         </Header>
 
-        <Content padder>
-          <Card style={styles.mb}>
-            <CardItem>
-              <Body>
-                <Text>
-                This is just a basic card with some text to boot. Like it? Keep Scrolling...
-              </Text>
-              </Body>
-            </CardItem>
-          </Card>
+        <Content>
+          <Separator bordered>
+            <Text>FORWARD</Text>
+          </Separator>
+          <ListItem>
+            <Text>Aaron Bennet</Text>
+          </ListItem>
+          <ListItem>
+            <Text>Claire Barclay</Text>
+          </ListItem>
+          <ListItem last>
+            <Text>Kelso Brittany</Text>
+          </ListItem>
+
+
+          <Separator bordered>
+            <Text>MIDFIELD</Text>
+          </Separator>
+          <ListItem>
+            <Text>Caroline Aaron</Text>
+          </ListItem>
+          <ListItem>
+            <Text>Urbino Cendre</Text>
+          </ListItem>
+          <ListItem last>
+            <Text>Lee Allen</Text>
+          </ListItem>
         </Content>
       </Container>
     );
@@ -64,4 +81,4 @@ const mapStateToProps = state => ({
   navigation: state.cardNavigation,
 });
 
-export default connect(mapStateToProps, bindAction)(Basic);
+export default connect(mapStateToProps, bindAction)(NHListSeparator);

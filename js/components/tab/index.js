@@ -58,7 +58,7 @@ class NHTab extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Tab</Title>
+            <Title>Tabs</Title>
           </Body>
           <Right />
 

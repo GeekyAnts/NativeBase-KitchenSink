@@ -42,7 +42,7 @@ class Transparent extends Component {  // eslint-disable-line
 
         </Header>
 
-        <Content padder style={{ backgroundColor: '#fff' }}>
+        <Content padder style={{ backgroundColor: '#fff', padding: 20 }}>
           <Button transparent light style={styles.mb15}><Text>Light</Text></Button>
           <Button transparent style={styles.mb15}><Text>Primary</Text></Button>
           <Button transparent danger style={styles.mb15}><Text>Danger</Text></Button>

@@ -30,11 +30,11 @@ class ColumnNB extends Component {  // eslint-disable-line
         <Header>
           <Left>
             <Button transparent onPress={() => this.popRoute()}>
-              <Icon name="arrow-back" />
+              <Icon name="menu" />
             </Button>
           </Left>
           <Body>
-            <Title>Column Grid</Title>
+            <Title>Layout</Title>
           </Body>
           <Right />
         </Header>

@@ -32,7 +32,7 @@ class Header1 extends Component {  // eslint-disable-line
         <Header>
           <Left />
           <Body>
-            <Title>Only Title</Title>
+            <Title>Title</Title>
           </Body>
           <Right />
 

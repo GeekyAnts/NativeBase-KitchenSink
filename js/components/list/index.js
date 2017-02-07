@@ -34,6 +34,10 @@ const data = [
   {
     route: 'listThumbnail',
     text: 'List Thumbnail',
+  },,
+  {
+    route: 'listSeparator',
+    text: 'List Separator',
   },
 ];
 class NHList extends Component {

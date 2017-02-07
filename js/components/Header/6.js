@@ -35,7 +35,7 @@ class Header6 extends Component {  // eslint-disable-line
             </Button>
           </Left>
           <Body>
-            <Title>Multiple Icons</Title>
+            <Title>Header</Title>
           </Body>
           <Right>
             <Button transparent><Icon name="search" /></Button>

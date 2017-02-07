@@ -42,7 +42,7 @@ class Rounded extends Component {  // eslint-disable-line
 
         </Header>
 
-        <Content padder style={{ backgroundColor: '#FFF' }}>
+        <Content padder style={{ backgroundColor: '#FFF', padding: 20 }}>
           <Button rounded light style={styles.mb15}><Text>Light</Text></Button>
           <Button rounded info style={styles.mb15}><Text>Info</Text></Button>
           <Button rounded danger style={styles.mb15}><Text>Danger</Text></Button>

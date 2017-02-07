@@ -78,7 +78,7 @@ class IconFooter extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Icon Footer</Title>
+            <Title>Footer</Title>
           </Body>
           <Right />
         </Header>

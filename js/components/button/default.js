@@ -47,7 +47,7 @@ class Default extends Component {  // eslint-disable-line
 
         </Header>
 
-        <Content padder style={{ backgroundColor: '#fff' }}>
+        <Content padder style={{ backgroundColor: '#fff', padding: 20 }}>
           <Button light style={styles.mb15}><Text>Light</Text></Button>
           <Button info style={styles.mb15}><Text>Info</Text></Button>
           <Button danger style={styles.mb15}><Text>Danger</Text></Button>

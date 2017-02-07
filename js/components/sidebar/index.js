@@ -103,7 +103,7 @@ const data = [
     route: 'list',
     icon: 'lock',
     bg: '#5DCEE2',
-    types: '6',
+    types: '7',
   },
   {
     name: 'Picker',

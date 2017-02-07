@@ -35,7 +35,7 @@ class Header8 extends Component {  // eslint-disable-line
             </Button>
           </Left>
           <Body>
-            <Title style={{ color: '#FFF' }}>Custom</Title>
+            <Title style={{ color: '#FFF' }}>Custom Header</Title>
           </Body>
           <Right />
 

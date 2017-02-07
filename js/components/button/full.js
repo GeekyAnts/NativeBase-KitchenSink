@@ -36,7 +36,7 @@ class Full extends Component {  // eslint-disable-line
           </Button>
           </Left>
           <Body>
-            <Title>Full Buttons</Title>
+            <Title>Full</Title>
           </Body>
           <Right />
 

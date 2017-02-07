@@ -1,14 +1,15 @@
 
 const React = require('react-native');
 
-const { StyleSheet } = React;
+const { StyleSheet, Platform } = React;
 
 export default {
   container: {
     flex: 1,
     width: null,
     height: null,
-    backgroundColor: '#FBFAFA',
+    marginBottom: (Platform.OS === 'ios') ? undefined :  -20,
+    backgroundColor: '#FFF',
   },
   iconContainer: {
     flexDirection: 'row',

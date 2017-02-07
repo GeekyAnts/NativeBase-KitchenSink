@@ -42,7 +42,7 @@ class Block extends Component {  // eslint-disable-line
 
         </Header>
 
-        <Content padder style={{ backgroundColor: '#FFF' }}>
+        <Content padder style={{ backgroundColor: '#FFF', padding: 20 }}>
           <Button block light style={styles.mb15}><Text>Light</Text></Button>
           <Button block info style={styles.mb15}><Text>Info</Text></Button>
           <Button block danger style={styles.mb15}><Text>Danger</Text></Button>

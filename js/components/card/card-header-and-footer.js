@@ -33,7 +33,7 @@ class NHCardHeaderAndFooter extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Header/Footer</Title>
+            <Title>Header & Footer Card</Title>
           </Body>
           <Right />
         </Header>

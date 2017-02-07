@@ -80,7 +80,7 @@ class Basic extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Basic</Title>
+            <Title>Footer</Title>
           </Body>
           <Right />
         </Header>

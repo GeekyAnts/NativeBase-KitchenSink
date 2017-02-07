@@ -44,7 +44,7 @@ class Disabled extends Component {  // eslint-disable-line
         </Header>
 
         <Content>
-          <View style={{ paddingHorizontal: 10, paddingTop: 10 }}>
+          <View style={{ paddingHorizontal: 20, paddingTop: 20 }}>
             <Button disabled style={styles.mb15}><Text>Solid</Text></Button>
             <Button bordered disabled style={styles.mb15}><Text>Bordered</Text></Button>
             <Button rounded disabled style={styles.mb15}><Text>rounded</Text></Button>

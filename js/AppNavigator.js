@@ -73,6 +73,7 @@ import CustomCol from './components/layout/customCol';
 import NHList from './components/list/';
 import NHBasicList from './components/list/basic-list';
 import NHListDivider from './components/list/list-divider';
+import NHListSeparator from './components/list/list-separator';
 import NHListHeader from './components/list/list-headers';
 import NHListIcon from './components/list/list-icon';
 import NHListAvatar from './components/list/list-avatar';
@@ -282,6 +283,8 @@ class AppNavigator extends Component {
         return <NHBasicList />;
       case 'listDivider':
         return <NHListDivider />;
+      case 'listSeparator':
+        return <NHListSeparator />;
       case 'listHeader':
         return <NHListHeader />;
       case 'listIcon':

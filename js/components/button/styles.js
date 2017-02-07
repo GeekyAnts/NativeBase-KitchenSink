@@ -5,7 +5,7 @@ const { StyleSheet } = React;
 
 export default {
   container: {
-    backgroundColor: '#FBFAFA',
+    backgroundColor: '#FFF',
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -15,7 +15,7 @@ export default {
     marginTop: 10,
   },
   mb15: {
-    marginBottom: 15,
+    marginBottom: 20,
   },
   mt15: {
     marginTop: 15,

@@ -26,7 +26,7 @@ class NHTabs extends Component {  // eslint-disable-line
             </Button>
           </Left>
           <Body>
-            <Title>Tabs</Title>
+            <Title> Swipable Tabs</Title>
           </Body>
           <Right />
         </Header>

@@ -42,7 +42,7 @@ class Outline extends Component {  // eslint-disable-line
 
         </Header>
 
-        <Content padder style={{ backgroundColor: '#fff' }}>
+        <Content padder style={{ backgroundColor: '#fff', padding: 20 }}>
           <Button bordered light style={styles.mb15}><Text>Light</Text></Button>
           <Button bordered info style={styles.mb15}><Text>Info</Text></Button>
           <Button bordered danger style={styles.mb15}><Text>Danger</Text></Button>

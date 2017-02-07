@@ -78,7 +78,7 @@ class IconText extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Icon & Text</Title>
+            <Title>Footer</Title>
           </Body>
           <Right />
         </Header>

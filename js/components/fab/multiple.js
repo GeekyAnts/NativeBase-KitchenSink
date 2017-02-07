@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { View, Platform } from 'react-native';
+import { Platform, View } from 'react-native';
 import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Fab, Button, IconNB, Left, Right, Body, Icon } from 'native-base';
 
@@ -44,7 +44,7 @@ class MultipleFab extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Multiple FAB</Title>
+            <Title>Multiple FABs</Title>
           </Body>
           <Right />
         </Header>

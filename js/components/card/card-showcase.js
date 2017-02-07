@@ -38,7 +38,7 @@ class NHCardShowcase extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Showcase</Title>
+            <Title>Card Showcase</Title>
           </Body>
           <Right />
         </Header>

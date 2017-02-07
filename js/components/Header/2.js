@@ -35,7 +35,7 @@ class Header2 extends Component {  // eslint-disable-line
             </Button>
           </Left>
           <Body>
-            <Title>Icon Buttons</Title>
+            <Title>Header</Title>
           </Body>
           <Right>
             <Button transparent onPress={() => this.popRoute()}>
