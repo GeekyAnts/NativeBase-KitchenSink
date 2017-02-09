@@ -10,7 +10,7 @@ import styles from './styles';
 const {
   pushRoute,
 } = actions;
-const data = [
+const datas = [
   {
     route: 'fixedLabel',
     text: 'Fixed Label',
@@ -31,6 +31,34 @@ const data = [
     route: 'stackedLabel',
     text: 'Stacked Label',
   },
+  {
+    route: 'regularInput',
+    text: 'Regular Textbox',
+  },
+  {
+    route: 'underlineInput',
+    text: 'Underlined Textbox',
+  },
+  {
+    route: 'roundedInput',
+    text: 'Rounded Textbox',
+  },
+  {
+    route: 'iconInput',
+    text: 'Icon Textbox',
+  },
+  {
+    route: 'successInput',
+    text: 'Success Input Textbox',
+  },
+  {
+    route: 'errorInput',
+    text: 'Error Input Textbox',
+  },
+  {
+    route: 'disabledInput',
+    text: 'Disabled Textbox',
+  },
 ];
 class NHForm extends Component {
 
@@ -40,13 +68,6 @@ class NHForm extends Component {
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
-  }
-  constructor(props) {
-    super(props);
-    const ds = new List.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-    this.state = {
-      dataSource: ds.cloneWithRows(data),
-    };
   }
 
   pushRoute(route) {
@@ -63,7 +84,7 @@ class NHForm extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Form</Title>
+            <Title>Form & Inputs</Title>
           </Body>
           <Right />
 
@@ -71,7 +92,7 @@ class NHForm extends Component {
 
         <Content>
           <List
-            dataSource={this.state.dataSource} renderRow={data =>
+            dataArray={datas} renderRow={data =>
               <ListItem button onPress={() => this.pushRoute(data.route)}>
                 <Text>{data.text}</Text>
                 <Right>

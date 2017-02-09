@@ -12,7 +12,7 @@ const himanshu = require('../../../img/contacts/himanshu.png');
 const shweta = require('../../../img/contacts/shweta.png');
 const shruti = require('../../../img/contacts/shruti.png');
 
-const data = [
+const datas = [
   {
     img: sankhadeep,
     text: 'Sankhadeep',
@@ -46,13 +46,6 @@ const {
 
 class NHListThumbnail extends Component {
 
-  constructor(props) {
-    super(props);
-    const ds = new List.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-    this.state = {
-      dataSource: ds.cloneWithRows(data),
-    };
-  }
   static propTypes = {
     popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
@@ -82,7 +75,7 @@ class NHListThumbnail extends Component {
 
         <Content>
           <List
-            dataSource={this.state.dataSource} renderRow={data =>
+            dataArray={datas} renderRow={data =>
               <ListItem thumbnail>
                 <Left>
                   <Thumbnail square size={55} source={data.img} />

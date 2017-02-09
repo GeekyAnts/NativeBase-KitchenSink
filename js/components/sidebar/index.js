@@ -11,7 +11,7 @@ const drawerCover = require('../../../img/drawer-cover.png');
 
 const drawerImage = require('../../../img/logo-kitchen-sink.png');
 
-const data = [
+const datas = [
   {
     name: 'Anatomy',
     route: 'anatomy',
@@ -68,28 +68,21 @@ const data = [
     name: 'Fab',
     route: 'fab',
     icon: 'help-buoy',
-    bg: '#477EEA',
+    bg: '#EF6092',
     types: '2',
   },
   {
-    name: 'Form',
+    name: 'Form & Inputs',
     route: 'form',
     icon: 'call',
     bg: '#EFB406',
-    types: '6',
+    types: '13',
   },
   {
     name: 'Icon',
     route: 'icon',
     icon: 'information-circle',
     bg: '#EF6092',
-  },
-  {
-    name: 'Inputs',
-    route: 'inputgroup',
-    icon: 'document',
-    bg: '#EF6092',
-    types: '7',
   },
   {
     name: 'Layout',
@@ -163,11 +156,9 @@ class SideBar extends Component {
 
   constructor(props) {
     super(props);
-    const ds = new List.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     this.state = {
       shadowOffsetWidth: 1,
       shadowRadius: 4,
-      dataSource: ds.cloneWithRows(data),
     };
   }
 
@@ -189,16 +180,16 @@ class SideBar extends Component {
             />
           </Image>
           <List
-            dataSource={this.state.dataSource} renderRow={data =>
+            dataArray={datas} renderRow={data =>
               <ListItem button noBorder onPress={() => this.navigateTo(data.route)} >
                 <Left>
                   <Icon active name={data.icon} style={{ color: '#777', fontSize: 26, width: 30 }} />
                   <Text style={styles.text}>{data.name}</Text>
                 </Left>
                 {(data.types) &&
-                <Right>
+                <Right style={{ flex: 1 }}>
                   <Badge
-                    style={{ borderRadius: 3, height: 25, paddingHorizontal: 2, backgroundColor: data.bg }}
+                    style={{ borderRadius: 3, height: 25, width: 72, backgroundColor: data.bg }}
                   >
                     <Text style={styles.badgeText}>{data.types + ` Types`}</Text>
                   </Badge>

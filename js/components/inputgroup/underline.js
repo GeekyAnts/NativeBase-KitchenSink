@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, Text, Body, Left, Right, IconNB, Item, Input } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Text, Body, Left, Right, IconNB, Item, Input, Form } from 'native-base';
 
 import styles from './styles';
 
@@ -38,10 +38,12 @@ class Underline extends Component {
           <Right />
         </Header>
 
-        <Content padder>
+        <Content>
+        <Form>
           <Item>
             <Input placeholder="Underline Textbox" />
           </Item>
+          </Form>
         </Content>
       </Container>
     );

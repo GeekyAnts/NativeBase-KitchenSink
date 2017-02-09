@@ -10,16 +10,10 @@ const {
   popRoute,
 } = actions;
 
-const data = ['Simon Mignolet', 'Nathaniel Clyne', 'Dejan Lovren', 'Mama Sakho', 'Alberto Moreno', 'Emre Can', 'Joe Allen', 'Phil Coutinho'];
+const datas = ['Simon Mignolet', 'Nathaniel Clyne', 'Dejan Lovren', 'Mama Sakho', 'Alberto Moreno', 'Emre Can', 'Joe Allen', 'Phil Coutinho'];
 
 class NHBasicList extends Component {
-  constructor(props) {
-    super(props);
-    const ds = new List.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-    this.state = {
-      dataSource: ds.cloneWithRows(data),
-    };
-  }
+
   static propTypes = {
     popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
@@ -48,7 +42,7 @@ class NHBasicList extends Component {
 
         <Content>
           <List
-            dataSource={this.state.dataSource} renderRow={data =>
+            dataArray={datas} renderRow={data =>
               <ListItem>
                 <Text>{data}</Text>
                 <Right>

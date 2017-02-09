@@ -9,7 +9,7 @@ import { openDrawer } from '../../actions/drawer';
 const {
   pushRoute,
 } = actions;
-const data = [
+const datas = [
   {
     route: 'row',
     text: 'Row Grid',
@@ -40,13 +40,6 @@ class NHLayout extends Component {  // eslint-disable-line
       key: React.PropTypes.string,
     }),
   }
-  constructor(props) {
-    super(props);
-    const ds = new List.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-    this.state = {
-      dataSource: ds.cloneWithRows(data),
-    };
-  }
 
   pushRoute(route) {
     this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
@@ -70,7 +63,7 @@ class NHLayout extends Component {  // eslint-disable-line
 
         <Content>
           <List
-            dataSource={this.state.dataSource} renderRow={data =>
+            dataArray={datas} renderRow={data =>
               <ListItem button onPress={() => this.pushRoute(data.route)}>
                 <Text>{data.text}</Text>
                 <Right>

@@ -12,7 +12,7 @@ const {
     replaceAt,
     pushRoute,
   } = actions;
-const data = [
+const datas = [
   {
     route: 'default',
     text: 'Default Button',
@@ -61,13 +61,6 @@ class NHButton extends Component {  // eslint-disable-line
       key: React.PropTypes.string,
     }),
   }
-  constructor(props) {
-    super(props);
-    const ds = new List.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-    this.state = {
-      dataSource: ds.cloneWithRows(data),
-    };
-  }
 
   replaceAt(route) {
     this.props.replaceAt('button', { key: route }, this.props.navigation.key);
@@ -94,7 +87,7 @@ class NHButton extends Component {  // eslint-disable-line
 
         <Content>
           <List
-            dataSource={this.state.dataSource} renderRow={data =>
+            dataArray={datas} renderRow={data =>
               <ListItem button onPress={() => this.pushRoute(data.route)}>
                 <Text>{data.text}</Text>
                 <Right>

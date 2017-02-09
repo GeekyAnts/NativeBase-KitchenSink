@@ -8,7 +8,6 @@ export default {
     flex: 1,
     width: null,
     height: null,
-    marginBottom: (Platform.OS === 'ios') ? undefined :  -20,
     backgroundColor: '#FFF',
   },
   iconContainer: {

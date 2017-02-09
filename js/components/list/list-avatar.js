@@ -14,7 +14,7 @@ const saurabh = require('../../../img/contacts/saurabh.png');
 const varun = require('../../../img/contacts/varun.png');
 
 
-const data = [
+const datas = [
   {
     img: pratik,
     text: 'Kumar Pratik',
@@ -60,14 +60,6 @@ const {
 class NHListAvatar extends Component {
 
 
-  constructor(props) {
-    super(props);
-    const ds = new List.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-    this.state = {
-      dataSource: ds.cloneWithRows(data),
-    };
-  }
-
   static propTypes = {
     popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
@@ -96,7 +88,7 @@ class NHListAvatar extends Component {
 
         <Content>
           <List
-            dataSource={this.state.dataSource} renderRow={data =>
+            dataArray={datas} renderRow={data =>
               <ListItem avatar>
                 <Left>
                   <Thumbnail source={data.img} />
