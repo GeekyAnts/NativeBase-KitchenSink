@@ -2,9 +2,10 @@
 import React, { Component } from 'react';
 import { BackAndroid, StatusBar, NavigationExperimental, Platform } from 'react-native';
 import { connect } from 'react-redux';
-import { Drawer } from 'native-base';
+import { StyleProvider, getTheme, variables, Drawer } from 'native-base';
 import { actions } from 'react-native-navigation-redux-helpers';
 
+import material from '../native-base-theme/variables/material';
 import { closeDrawer } from './actions/drawer';
 
 import Home from './components/home/';
@@ -88,7 +89,7 @@ import NHThumbnail from './components/thumbnail/';
 import NHTypography from './components/typography/';
 import SplashPage from './components/splashscreen/';
 import SideBar from './components/sidebar';
-import statusBarColor from './themes/base-theme';
+import statusBarColor from './themes/variables';
 
 const {
   popRoute,
@@ -104,6 +105,7 @@ class AppNavigator extends Component {
     drawerState: React.PropTypes.string,
     popRoute: React.PropTypes.func,
     closeDrawer: React.PropTypes.func,
+    themeState: React.PropTypes.string,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
       routes: React.PropTypes.array,
@@ -316,22 +318,24 @@ class AppNavigator extends Component {
 
   render() {
     return (
-      <Drawer
-        ref={(ref) => { this._drawer = ref; }}
-        content={<SideBar navigator={this._navigator} />}
-        onClose={() => this.closeDrawer()}
-      >
-        <StatusBar
-          hidden={(this.props.drawerState === 'opened' && Platform.OS === 'ios') ? true : false}
-          backgroundColor={statusBarColor.statusBarColor}
-          barStyle="default"
-        />
-        <NavigationCardStack
-          navigationState={this.props.navigation}
-          renderOverlay={this._renderOverlay}
-          renderScene={this._renderScene}
-        />
-      </Drawer>
+      <StyleProvider style={getTheme((this.props.themeState === 'material') ? material : variables)}>
+        <Drawer
+          ref={(ref) => { this._drawer = ref; }}
+          content={<SideBar navigator={this._navigator} />}
+          onClose={() => this.closeDrawer()}
+        >
+          <StatusBar
+            hidden={(this.props.drawerState === 'opened' && Platform.OS === 'ios') ? true : false}
+            backgroundColor={statusBarColor.statusBarColor}
+            barStyle="default"
+          />
+          <NavigationCardStack
+            navigationState={this.props.navigation}
+            renderOverlay={this._renderOverlay}
+            renderScene={this._renderScene}
+          />
+        </Drawer>
+      </StyleProvider>
     );
   }
 }
@@ -343,6 +347,7 @@ const bindAction = dispatch => ({
 
 const mapStateToProps = state => ({
   drawerState: state.drawer.drawerState,
+  themeState: state.drawer.themeState,
   navigation: state.cardNavigation,
 });
 

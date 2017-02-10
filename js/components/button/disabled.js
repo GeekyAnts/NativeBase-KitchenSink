@@ -49,9 +49,9 @@ class Disabled extends Component {  // eslint-disable-line
             <Button bordered disabled style={styles.mb15}><Text>Bordered</Text></Button>
             <Button rounded disabled style={styles.mb15}><Text>rounded</Text></Button>
             <Button large disabled style={styles.mb15}><Text>Custom</Text></Button>
-            <Button disabled style={styles.mb15}>
-              <Icon name="home" />
+            <Button disabled iconRight style={styles.mb15}>
               <Text>Icon Button</Text>
+              <Icon name="home" />
             </Button>
             <Button block disabled style={styles.mb15}><Text>Block</Text></Button>
           </View>
@@ -71,6 +71,7 @@ function bindAction(dispatch) {
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
 export default connect(mapStateToProps, bindAction)(Disabled);

@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Image, View } from 'react-native';
 import { connect } from 'react-redux';
-import { Container, Button, H3,Text } from 'native-base';
+import { Container, Button, H3, Text } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -28,12 +28,12 @@ class Home extends Component { // eslint-disable-line
             <View style={{ marginTop: 8 }} />
             <H3 style={styles.text}>NativeBase components</H3>
           </View>
-          <View style={{marginBottom: 80}}>
+          <View style={{ marginBottom: 80 }}>
             <Button
               style={{ backgroundColor: '#6FAF98', alignSelf: 'center' }}
               onPress={this.props.openDrawer}
             >
-                <Text>Lets Go!</Text>
+              <Text>Lets Go!</Text>
             </Button>
           </View>
         </Image>
@@ -50,6 +50,7 @@ function bindActions(dispatch) {
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
 export default connect(mapStateToProps, bindActions)(Home);

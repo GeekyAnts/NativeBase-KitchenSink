@@ -65,13 +65,13 @@ class NHCardImage extends Component {
             </CardItem>
             <CardItem style={{paddingVertical: 0}}>
               <Left>
-                <Button transparent>
+                <Button transparent iconLeft>
                   <Icon active name="thumbs-up" />
                   <Text>12 Likes</Text>
                 </Button>
               </Left>
               <Body>
-                <Button transparent>
+                <Button transparent iconLeft>
                   <Icon active name="chatbubbles" />
                   <Text>4 Comments</Text>
                 </Button>
@@ -95,6 +95,7 @@ function bindAction(dispatch) {
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
 export default connect(mapStateToProps, bindAction)(NHCardImage);

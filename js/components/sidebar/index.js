@@ -2,8 +2,10 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { connect } from 'react-redux';
-import { Content, Text, List, ListItem, Icon, Container, Left, Right, Badge } from 'native-base';
+import { Content, Text, List, ListItem, Icon, Container, Left, Right, Badge, Button, View, StyleProvider, getTheme, variables } from 'native-base';
 
+import material from '../../../native-base-theme/variables/material';
+import { changePlatform, changeMaterial } from '../../actions/drawer';
 import navigateTo from '../../actions/sideBarNav';
 import styles from './style';
 
@@ -123,13 +125,13 @@ const datas = [
     bg: '#BE6F50',
   },
   {
-    name: 'Tab',
+    name: 'Tabs',
     route: 'tab',
     icon: 'home',
     bg: '#AB6AED',
   },
   {
-    name: 'Tabs',
+    name: 'Swipable Tabs',
     route: 'tabs',
     icon: 'albums',
     bg: '#726AEA',
@@ -152,6 +154,9 @@ class SideBar extends Component {
 
   static propTypes = {
     navigateTo: React.PropTypes.func,
+    themeState: React.PropTypes.string,
+    changePlatform: React.PropTypes.func,
+    changeMaterial: React.PropTypes.func,
   }
 
   constructor(props) {
@@ -169,7 +174,8 @@ class SideBar extends Component {
   render() {
     return (
       <Container>
-        <Content bounces={false}
+        <Content
+          bounces={false}
           style={{ flex: 1, backgroundColor: '#fff', top: -1 }}
         >
           <Image source={drawerCover} style={styles.drawerCover}>
@@ -179,6 +185,18 @@ class SideBar extends Component {
               source={drawerImage}
             />
           </Image>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+            <StyleProvider style={getTheme(variables)}>
+              <Button block rounded light onPress={this.props.changePlatform}>
+                <Text>Platform</Text>
+              </Button>
+            </StyleProvider>
+            <StyleProvider style={getTheme(material)}>
+              <Button block rounded onPress={this.props.changeMaterial}>
+                <Text>Material</Text>
+              </Button>
+            </StyleProvider>
+          </View>
           <List
             dataArray={datas} renderRow={data =>
               <ListItem button noBorder onPress={() => this.navigateTo(data.route)} >
@@ -191,7 +209,7 @@ class SideBar extends Component {
                   <Badge
                     style={{ borderRadius: 3, height: 25, width: 72, backgroundColor: data.bg }}
                   >
-                    <Text style={styles.badgeText}>{data.types + ` Types`}</Text>
+                    <Text style={styles.badgeText}>{`${data.types} Types`}</Text>
                   </Badge>
                 </Right>
                 }
@@ -207,11 +225,14 @@ class SideBar extends Component {
 function bindAction(dispatch) {
   return {
     navigateTo: (route, homeRoute) => dispatch(navigateTo(route, homeRoute)),
+    changePlatform: () => dispatch(changePlatform()),
+    changeMaterial: () => dispatch(changeMaterial()),
   };
 }
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
 export default connect(mapStateToProps, bindAction)(SideBar);

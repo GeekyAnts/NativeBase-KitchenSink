@@ -78,7 +78,7 @@ class NHTab extends Component {
         <Content padder>
           <H3>This is content section</H3>
           <Text style={{ marginTop: 10 }}>
-            Selected tab is: <Text style={{ color: '#3F51B5', fontWeight: '700' }}>{this.state.tab1 ? 'TabOne' : this.state.tab2 ? 'TabTwo' : 'TabThree'}</Text>
+            Selected tab is: <Text style={{ color: '#007aff', fontWeight: '700' }}>{this.state.tab1 ? 'TabOne' : this.state.tab2 ? 'TabTwo' : 'TabThree'}</Text>
           </Text>
 
         </Content>
@@ -97,6 +97,7 @@ function bindAction(dispatch) {
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
 export default connect(mapStateToProps, bindAction)(NHTab);

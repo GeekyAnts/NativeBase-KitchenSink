@@ -2,9 +2,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, IconNB, Icon, List, ListItem, Text, Badge, Left, Right, Body, Switch, Seperator, Radio } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, ListItem, Text, Badge, Left, Right, Body, Switch, Radio, Picker, Separator } from 'native-base';
 
 import styles from './styles';
+
+const Item = Picker.Item;
 
 const {
   popRoute,
@@ -17,6 +19,21 @@ class NHListIcon extends Component {
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
+  }
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedItem: undefined,
+      selected1: 'key1',
+      results: {
+        items: [],
+      },
+    };
+  }
+  onValueChange(value: string) {
+    this.setState({
+      selected1: value,
+    });
   }
 
   popRoute() {
@@ -39,95 +56,25 @@ class NHListIcon extends Component {
         </Header>
 
         <Content>
-          <ListItem first itemHeader>
-            <Text>CLASSES</Text>
-          </ListItem>
+          <Separator bordered noTopBorder>
+            <Text>WIRELESS & NETWORK</Text>
+          </Separator>
           <ListItem icon>
             <Left>
-              <Icon active name="planet" />
+              <Button style={{ backgroundColor: '#EFB406' }}>
+                <Icon active name="plane" />
+              </Button>
             </Left>
             <Body>
-              <Text>Astronomy</Text>
+              <Text>Airplane Mode</Text>
             </Body>
             <Right>
-              <Text>To The Moon</Text>
-            </Right>
-          </ListItem>
-          <ListItem icon>
-            <Left>
-              <Icon active name="body" />
-            </Left>
-            <Body>
-              <Text>Muggle Studies</Text>
-            </Body>
-            <Right>
-              <Radio selected={true} />
+              <Switch value onTintColor="#50B948" />
             </Right>
           </ListItem>
           <ListItem icon>
             <Left>
-              <Icon active name="leaf" />
-            </Left>
-            <Body>
-              <Text>Herbology</Text>
-            </Body>
-            <Right>
-              <Icon active name="rose" style={{color: '#50B948'}} />
-            </Right>
-          </ListItem>
-          <ListItem icon last>
-            <Left>
-              <Icon active name="flask" />
-            </Left>
-            <Body>
-              <Text>Potions</Text>
-            </Body>
-            <Right>
-              <Text>Poisonous</Text>
-            </Right>
-          </ListItem>
-          <ListItem itemHeader>
-            <Text>ACTIVITIES</Text>
-          </ListItem>
-          <ListItem icon>
-            <Left>
-              <Icon active name="color-wand" />
-            </Left>
-            <Body>
-              <Text>Incantation</Text>
-            </Body>
-            <Right>
-              <Text>Crucio!</Text>
-            </Right>
-          </ListItem>
-          <ListItem icon>
-            <Left>
-              <Icon active name="brush" />
-            </Left>
-            <Body>
-              <Text>Quidditch Practice</Text>
-            </Body>
-            <Right>
-              <Switch value={true} onTintColor="#007aff" />
-            </Right>
-          </ListItem>
-          <ListItem icon last>
-            <Left>
-              <Icon active name="wine" />
-            </Left>
-            <Body>
-              <Text>Mead Drinking</Text>
-            </Body>
-            <Right>
-              <Text>Yes Please</Text>
-            </Right>
-          </ListItem>
-          <ListItem itemHeader>
-            <Text>OTHERS</Text>
-          </ListItem>
-          <ListItem icon>
-            <Left>
-              <Button style={{backgroundColor: '#007aff'}}>
+              <Button style={{ backgroundColor: '#007aff' }}>
                 <Icon active name="wifi" />
               </Button>
             </Left>
@@ -139,9 +86,119 @@ class NHListIcon extends Component {
               <Icon active name="arrow-forward" />
             </Right>
           </ListItem>
-          <ListItem last icon>
+          <ListItem icon>
             <Left>
-              <Button style={{backgroundColor: '#777'}}>
+              <Button style={{ backgroundColor: '#007aff' }}>
+                <Icon active name="bluetooth" />
+              </Button>
+            </Left>
+            <Body>
+              <Text>Bluetooth</Text>
+            </Body>
+            <Right>
+              <Text>Off</Text>
+              <Icon active name="arrow-forward" />
+            </Right>
+          </ListItem>
+          <ListItem icon>
+            <Left>
+              <Button style={{ backgroundColor: '#50B948' }}>
+                <Icon active name="phone-portrait" />
+              </Button>
+            </Left>
+            <Body>
+              <Text>Mobile Data</Text>
+            </Body>
+            <Right>
+              <Radio selected />
+            </Right>
+          </ListItem>
+          <ListItem icon last>
+            <Left>
+              <Button style={{ backgroundColor: '#EF6092' }}>
+                <Icon active name="link" />
+              </Button>
+            </Left>
+            <Body>
+              <Text>Personal Hotspot</Text>
+            </Body>
+            <Right>
+              <Text>Off</Text>
+              <Icon active name="arrow-forward" />
+            </Right>
+          </ListItem>
+
+          <Separator bordered>
+            <Text>PHONE</Text>
+          </Separator>
+
+          <ListItem icon>
+            <Left>
+              <Button style={{ backgroundColor: '#DA4437' }}>
+                <Icon active name="notifications" />
+              </Button>
+            </Left>
+            <Body>
+              <Text>Notifications</Text>
+            </Body>
+            <Right>
+              <Icon active name="arrow-forward" />
+            </Right>
+          </ListItem>
+          <ListItem icon>
+            <Left>
+              <Button style={{ backgroundColor: '#777' }}>
+                <Icon active name="switch" />
+              </Button>
+            </Left>
+            <Body>
+              <Text>Control Center</Text>
+            </Body>
+            <Right>
+              <Icon active name="arrow-forward" />
+            </Right>
+          </ListItem>
+          <ListItem icon last>
+            <Left>
+              <Button style={{ backgroundColor: '#3F51B5' }}>
+                <Icon active name="moon" />
+              </Button>
+            </Left>
+            <Body>
+              <Text>Do Not Disturb</Text>
+            </Body>
+            <Right>
+              <Text>Yes</Text>
+            </Right>
+          </ListItem>
+          <Separator bordered>
+            <Text>OTHERS</Text>
+          </Separator>
+          <ListItem icon>
+            <Left>
+              <Button style={{ backgroundColor: '#50B948' }}>
+                <Icon name="arrow-dropdown" />
+              </Button>
+            </Left>
+            <Body>
+              <Text>Pick SIM</Text>
+            </Body>
+            <Right>
+              <Picker
+                note
+                iosHeader="Select one"
+                mode="dropdown"
+                selectedValue={this.state.selected1}
+                onValueChange={this.onValueChange.bind(this)}
+              >
+                <Item label="TATA" value="key0" />
+                <Item label="AIRTEL" value="key1" />
+              </Picker>
+            </Right>
+          </ListItem>
+          <ListItem icon>
+            <Left>
+              <Button style={{ backgroundColor: '#777' }}>
                 <Icon active name="cog" />
               </Button>
             </Left>
@@ -149,7 +206,20 @@ class NHListIcon extends Component {
               <Text>Software Update</Text>
             </Body>
             <Right>
-              <Badge style={{ backgroundColor: '#8C97B5' }}><Text>2</Text></Badge>
+              <Badge style={{ backgroundColor: '#DA4437' }}><Text>2</Text></Badge>
+            </Right>
+          </ListItem>
+          <ListItem last icon>
+            <Left>
+              <Button style={{ backgroundColor: '#8C97B5' }}>
+                <Icon active name="hand" />
+              </Button>
+            </Left>
+            <Body>
+              <Text>Privacy</Text>
+            </Body>
+            <Right>
+              <Icon active name="arrow-forward" />
             </Right>
           </ListItem>
 
@@ -167,6 +237,7 @@ function bindAction(dispatch) {
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
 export default connect(mapStateToProps, bindAction)(NHListIcon);

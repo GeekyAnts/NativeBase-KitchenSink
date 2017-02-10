@@ -31,7 +31,7 @@ class Anatomy extends Component {
 
 
         <Content padder>
-          <Text style={{ marginTop: 10 }}>
+          <Text>
             Content Goes Here
           </Text>
 
@@ -58,6 +58,7 @@ function bindAction(dispatch) {
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
 export default connect(mapStateToProps, bindAction)(Anatomy);
