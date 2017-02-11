@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Platform } from 'react-native';
 import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon, ListItem, Text, Badge, Left, Right, Body, Switch, Radio, Picker, Separator } from 'native-base';
 
@@ -56,12 +57,10 @@ class NHListIcon extends Component {
         </Header>
 
         <Content>
-          <Separator bordered noTopBorder>
-            <Text>WIRELESS & NETWORK</Text>
-          </Separator>
+          <Separator bordered noTopBorder />
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: '#EFB406' }}>
+              <Button style={{ backgroundColor: '#FF9501' }}>
                 <Icon active name="plane" />
               </Button>
             </Left>
@@ -69,12 +68,12 @@ class NHListIcon extends Component {
               <Text>Airplane Mode</Text>
             </Body>
             <Right>
-              <Switch value onTintColor="#50B948" />
+              <Switch value={false} onTintColor="#50B948" />
             </Right>
           </ListItem>
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: '#007aff' }}>
+              <Button style={{ backgroundColor: '#007AFF' }}>
                 <Icon active name="wifi" />
               </Button>
             </Left>
@@ -83,12 +82,12 @@ class NHListIcon extends Component {
             </Body>
             <Right>
               <Text>GeekyAnts</Text>
-              <Icon active name="arrow-forward" />
+              {(Platform.OS === 'ios') && <Icon active name="arrow-forward" />}
             </Right>
           </ListItem>
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: '#007aff' }}>
+              <Button style={{ backgroundColor: '#007AFF' }}>
                 <Icon active name="bluetooth" />
               </Button>
             </Left>
@@ -96,13 +95,13 @@ class NHListIcon extends Component {
               <Text>Bluetooth</Text>
             </Body>
             <Right>
-              <Text>Off</Text>
-              <Icon active name="arrow-forward" />
+              <Text>On</Text>
+              {(Platform.OS === 'ios') && <Icon active name="arrow-forward" />}
             </Right>
           </ListItem>
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: '#50B948' }}>
+              <Button style={{ backgroundColor: '#4CDA64' }}>
                 <Icon active name="phone-portrait" />
               </Button>
             </Left>
@@ -115,7 +114,7 @@ class NHListIcon extends Component {
           </ListItem>
           <ListItem icon last>
             <Left>
-              <Button style={{ backgroundColor: '#EF6092' }}>
+              <Button style={{ backgroundColor: '#4CDA64' }}>
                 <Icon active name="link" />
               </Button>
             </Left>
@@ -124,17 +123,15 @@ class NHListIcon extends Component {
             </Body>
             <Right>
               <Text>Off</Text>
-              <Icon active name="arrow-forward" />
+              {(Platform.OS === 'ios') && <Icon active name="arrow-forward" />}
             </Right>
           </ListItem>
 
-          <Separator bordered>
-            <Text>PHONE</Text>
-          </Separator>
+          <Separator bordered />
 
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: '#DA4437' }}>
+              <Button style={{ backgroundColor: '#FD3C2D' }}>
                 <Icon active name="notifications" />
               </Button>
             </Left>
@@ -142,12 +139,12 @@ class NHListIcon extends Component {
               <Text>Notifications</Text>
             </Body>
             <Right>
-              <Icon active name="arrow-forward" />
+              {(Platform.OS === 'ios') && <Icon active name="arrow-forward" />}
             </Right>
           </ListItem>
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: '#777' }}>
+              <Button style={{ backgroundColor: '#8F8E93' }}>
                 <Icon active name="switch" />
               </Button>
             </Left>
@@ -155,12 +152,12 @@ class NHListIcon extends Component {
               <Text>Control Center</Text>
             </Body>
             <Right>
-              <Icon active name="arrow-forward" />
+              {(Platform.OS === 'ios') && <Icon active name="arrow-forward" />}
             </Right>
           </ListItem>
           <ListItem icon last>
             <Left>
-              <Button style={{ backgroundColor: '#3F51B5' }}>
+              <Button style={{ backgroundColor: '#5855D6' }}>
                 <Icon active name="moon" />
               </Button>
             </Left>
@@ -171,12 +168,10 @@ class NHListIcon extends Component {
               <Text>Yes</Text>
             </Right>
           </ListItem>
-          <Separator bordered>
-            <Text>OTHERS</Text>
-          </Separator>
+          <Separator bordered />
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: '#50B948' }}>
+              <Button style={{ backgroundColor: '#4CDA64' }}>
                 <Icon name="arrow-dropdown" />
               </Button>
             </Left>
@@ -198,7 +193,7 @@ class NHListIcon extends Component {
           </ListItem>
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: '#777' }}>
+              <Button style={{ backgroundColor: '#8F8E93' }}>
                 <Icon active name="cog" />
               </Button>
             </Left>
@@ -206,12 +201,12 @@ class NHListIcon extends Component {
               <Text>Software Update</Text>
             </Body>
             <Right>
-              <Badge style={{ backgroundColor: '#DA4437' }}><Text>2</Text></Badge>
+              <Badge style={{ backgroundColor: '#FD3C2D' }}><Text>2</Text></Badge>
             </Right>
           </ListItem>
           <ListItem last icon>
             <Left>
-              <Button style={{ backgroundColor: '#8C97B5' }}>
+              <Button style={{ backgroundColor: '#007AFF' }}>
                 <Icon active name="hand" />
               </Button>
             </Left>
@@ -219,7 +214,7 @@ class NHListIcon extends Component {
               <Text>Privacy</Text>
             </Body>
             <Right>
-              <Icon active name="arrow-forward" />
+              {(Platform.OS === 'ios') && <Icon active name="arrow-forward" />}
             </Right>
           </ListItem>
 
