@@ -7,9 +7,11 @@ iOS | Android
  :--:| :-----:
  ![ios-demo](./screenshots/iOS.gif) | ![android-demo](./screenshots/Android.gif)
 
-[NativeBase](http://nativebase.io/) is a free and open source framework that enables developers to build high-quality mobile apps using [React Native](https://facebook.github.io/react-native/) iOS and Android apps with a fusion of ES6. NativeBase builds a layer on top of React Native that provides you with basic set of components for mobile application development. This helps you to build world-class application experiences on native platforms.
 
-The applications stack of components is built using native UI components and because of that, there are no compromises with the User Experience of the applications. NativeBase without a doubt fits in well with mobile applications which cut downs one huge part of your app The Front end
+[NativeBase](http://nativebase.io/) is a free and open source framework that enables developers to build high-quality apps using [React Native](https://facebook.github.io/react-native/) for iOS and Android with a fusion of ES6. NativeBase builds a layer on top of React Native that provides you with basic set of components for mobile application development. This helps you to build world-class application experiences on native platforms.
+
+NativeBase without a doubt fits in well with mobile applications which cut downs one huge part of your app - The Front end.
+The applications stack of components is built using native UI components, so there are no compromises with the user experience.
 
 
 ## Get Started
@@ -35,14 +37,14 @@ $ react-native link
 
 **Method One**
 
-*	Open the project in XCode from **ios/NativebaseKitchenSink.xcodeproj**
+*	Open the project in Xcode from **ios/NativebaseKitchenSink.xcodeproj**.
 
 *	Hit the play button.
 
 
 **Method Two**
 
-*	Run the following command in your terminal
+*	Run the following command in your terminal.
 
 ```sh
 $ react-native run-ios
@@ -52,7 +54,7 @@ $ react-native run-ios
 
 *	Make sure you have an **Android emulator** installed and running.
 
-*	Run the following command in your terminal
+*	Run the following command in your terminal.
 
 ```sh
 $ react-native run-android
@@ -66,4 +68,4 @@ $ react-native run-android
 *	[NativeBase Blog](https://medium.com/nativebase-io-blog)
 
 
-For apps with more advance designs with NativeBase, please visit **[StrapMobile](https://strapmobile.com/)**.
+For apps with more advanced designs using NativeBase, please visit **[StrapMobile](https://strapmobile.com/)**.
