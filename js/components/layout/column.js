@@ -40,8 +40,8 @@ class ColumnNB extends Component {  // eslint-disable-line
         </Header>
 
         <Grid>
-          <Col style={{ backgroundColor: '#D954D7' }} />
-          <Col style={{ backgroundColor: '#D93735' }} />
+          <Col style={{ backgroundColor: '#635DB7' }} />
+          <Col style={{ backgroundColor: '#00CE9F' }} />
         </Grid>
       </Container>
     );

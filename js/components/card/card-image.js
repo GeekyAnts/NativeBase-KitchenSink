@@ -60,13 +60,13 @@ class NHCardImage extends Component {
 
             <CardItem style={{ paddingVertical: 0 }}>
               <Left>
-                <Button transparent>
+                <Button iconLeft transparent>
                   <Icon active name="thumbs-up" />
                   <Text>12 Likes</Text>
                 </Button>
               </Left>
               <Body>
-                <Button transparent>
+                <Button iconLeft transparent>
                   <Icon active name="chatbubbles" />
                   <Text>4 Comments</Text>
                 </Button>
