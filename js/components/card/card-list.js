@@ -42,47 +42,47 @@ class NHCardList extends Component {
           <Card style={styles.mb}>
             <CardItem header bordered>
               <Text>
-                Explore Nearby
+                Social Applications
               </Text>
             </CardItem>
             <CardItem>
-              <Icon active name="cart" />
-              <Text>Shopping</Text>
+              <Icon active name="logo-googleplus" style={{ color: '#DD5044' }} />
+              <Text>Google Plus</Text>
               <Right>
                 <Icon name="arrow-forward" />
               </Right>
             </CardItem>
             <CardItem>
-              <Icon active name="medical" />
-              <Text>Hospital</Text>
+              <Icon active name="logo-facebook" style={{ color: '#3B579D' }} />
+              <Text>facebook</Text>
               <Right>
                 <Icon name="arrow-forward" />
               </Right>
             </CardItem>
             <CardItem>
-              <Icon active name="cafe" />
-              <Text>Cafe</Text>
+              <Icon active name="logo-twitter" style={{ color: '#55ACEE' }} />
+              <Text>Twitter</Text>
               <Right>
                 <Icon name="arrow-forward" />
               </Right>
             </CardItem>
             <CardItem>
-              <Icon active name="paw" />
-              <Text>Dog Park</Text>
+              <Icon active name="logo-reddit" style={{ color: '#FF4500' }} />
+              <Text>Reddit</Text>
               <Right>
                 <Icon name="arrow-forward" />
               </Right>
             </CardItem>
             <CardItem>
-              <Icon active name="beer" />
-              <Text>Pub</Text>
+              <Icon active name="logo-linkedin" style={{ color: '#007BB6' }} />
+              <Text>LinkedIn</Text>
               <Right>
                 <Icon name="arrow-forward" />
               </Right>
             </CardItem>
             <CardItem>
-              <Icon active name="planet" />
-              <Text>Space</Text>
+              <Icon active name="logo-youtube" style={{ color: '#D62727' }} />
+              <Text>YouTube</Text>
               <Right>
                 <Icon name="arrow-forward" />
               </Right>
