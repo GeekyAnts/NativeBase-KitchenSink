@@ -27,9 +27,7 @@ $ git clone git@github.com:GeekyAnts/NativeBase-KitchenSink.git
 $ cd NativeBase-KitchenSink/
 
 $ npm install
-```
 
-```sh
 $ react-native link
 ```
 
