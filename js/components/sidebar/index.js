@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { Image } from 'react-native';
+import { Image, Platform } from 'react-native';
 import { connect } from 'react-redux';
 import { Content, Text, List, ListItem, Icon, Container, Left, Right, Badge, Button, View, StyleProvider, getTheme, variables } from 'native-base';
 
@@ -185,18 +185,20 @@ class SideBar extends Component {
               source={drawerImage}
             />
           </Image>
-          <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-            <StyleProvider style={getTheme(variables)}>
-              <Button block rounded light onPress={this.props.changePlatform}>
-                <Text>Platform</Text>
-              </Button>
-            </StyleProvider>
-            <StyleProvider style={getTheme(material)}>
-              <Button block rounded onPress={this.props.changeMaterial}>
-                <Text>Material</Text>
-              </Button>
-            </StyleProvider>
-          </View>
+          {(Platform.OS === 'ios') &&
+            <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+              <StyleProvider style={getTheme(variables)}>
+                <Button block rounded light onPress={this.props.changePlatform}>
+                  <Text>Platform</Text>
+                </Button>
+              </StyleProvider>
+              <StyleProvider style={getTheme(material)}>
+                <Button block rounded onPress={this.props.changeMaterial}>
+                  <Text>Material</Text>
+                </Button>
+              </StyleProvider>
+            </View>
+         }
           <List
             dataArray={datas} renderRow={data =>
               <ListItem button noBorder onPress={() => this.navigateTo(data.route)} >
