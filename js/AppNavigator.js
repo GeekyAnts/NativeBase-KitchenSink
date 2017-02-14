@@ -85,6 +85,8 @@ import NHSpinner from './components/spinner/';
 import NHPicker from './components/picker/';
 import NHTabs from './components/tabs/';
 import NHTab from './components/tab/';
+import BasicTab from './components/tab/basicTab';
+import ConfigTab from './components/tab/configTab';
 import NHThumbnail from './components/thumbnail/';
 import NHTypography from './components/typography/';
 import SplashPage from './components/splashscreen/';
@@ -305,8 +307,10 @@ class AppNavigator extends Component {
         return <NHSpinner />;
       case 'tab':
         return <NHTab />;
-      case 'tabs':
-        return <NHTabs />;
+      case 'basicTab':
+        return <BasicTab />;
+      case 'configTab':
+        return <ConfigTab />;
       case 'thumbnail':
         return <NHThumbnail />;
       case 'typography':

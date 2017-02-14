@@ -7,8 +7,6 @@ import { View } from 'react-native';
 import { openDrawer } from '../../actions/drawer';
 import myTheme from '../../themes/base-theme';
 
-import TabOne from './tabOne';
-import TabTwo from './tabTwo';
 
 class NHTabs extends Component {  // eslint-disable-line
 
@@ -31,12 +29,7 @@ class NHTabs extends Component {  // eslint-disable-line
           <Right />
         </Header>
 
-        <View style={{ backgroundColor: '#FBFAFA', flex: 1 }}>
-          <Tabs style={{ elevation: 3 }}>
-            <TabOne tabLabel="Features" />
-            <TabTwo tabLabel="About" />
-          </Tabs>
-        </View>
+        <View style={{ backgroundColor: '#FBFAFA', flex: 1 }} />
       </Container>
     );
   }

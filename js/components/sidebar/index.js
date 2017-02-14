@@ -129,12 +129,7 @@ const datas = [
     route: 'tab',
     icon: 'home',
     bg: '#AB6AED',
-  },
-  {
-    name: 'Swipable Tabs',
-    route: 'tabs',
-    icon: 'albums',
-    bg: '#726AEA',
+    types: '2',
   },
   {
     name: 'Thumbnail',
