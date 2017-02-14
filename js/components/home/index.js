@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { Image, View } from 'react-native';
+import { Image, View, StatusBar } from 'react-native';
 import { connect } from 'react-redux';
 import { Container, Button, H3, Text } from 'native-base';
 
@@ -19,6 +19,7 @@ class Home extends Component { // eslint-disable-line
   render() {
     return (
       <Container>
+        <StatusBar barStyle={(this.props.navigation.index === 0) ? 'light-content' : 'default'} />
         <Image source={launchscreenBg} style={styles.imageContainer}>
           <View style={styles.logoContainer}>
             <Image source={launchscreenLogo} style={styles.logo} />
