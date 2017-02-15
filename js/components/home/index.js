@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { Image, View, StatusBar } from 'react-native';
 import { connect } from 'react-redux';
@@ -19,7 +18,7 @@ class Home extends Component { // eslint-disable-line
   render() {
     return (
       <Container>
-        <StatusBar barStyle={(this.props.navigation.index === 0) ? 'light-content' : 'default'} />
+        <StatusBar barStyle='light-content'/>
         <Image source={launchscreenBg} style={styles.imageContainer}>
           <View style={styles.logoContainer}>
             <Image source={launchscreenLogo} style={styles.logo} />
@@ -52,6 +51,7 @@ function bindActions(dispatch) {
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
+  routes: state.drawer.routes,
 });
 
 export default connect(mapStateToProps, bindActions)(Home);

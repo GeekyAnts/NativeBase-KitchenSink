@@ -2,9 +2,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Button, Icon, Left, Right, Body, Text, List, ListItem } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 import { actions } from 'react-native-navigation-redux-helpers';
-import { openDrawer } from '../../actions/drawer';
+import { openDrawer, closeDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 
@@ -88,7 +89,7 @@ class NHButton extends Component {  // eslint-disable-line
         <Content>
           <List
             dataArray={datas} renderRow={data =>
-              <ListItem button onPress={() => this.pushRoute(data.route)}>
+              <ListItem button onPress={() => { Actions[data.route](); this.props.closeDrawer() }} >
                 <Text>{data.text}</Text>
                 <Right>
                   <Icon name="arrow-forward" style={{ color: '#999' }} />
@@ -106,6 +107,7 @@ class NHButton extends Component {  // eslint-disable-line
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
+    closeDrawer: () => dispatch(closeDrawer()),
     replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
     pushRoute: (route, key) => dispatch(pushRoute(route, key)),
   };

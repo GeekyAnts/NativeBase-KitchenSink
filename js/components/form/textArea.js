@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Textarea, Body, Left, Right, IconNB } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 import styles from './styles';
 
@@ -28,7 +29,7 @@ class TextArea extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.popRoute()}>
+            <Button transparent onPress={() => Actions.pop()}>
               <IconNB name="ios-arrow-back" />
             </Button>
           </Left>

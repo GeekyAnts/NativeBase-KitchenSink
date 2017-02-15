@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Thumbnail, Left, Right, Body, IconNB } from 'native-base';
 import styles from './styles';
+import { Actions } from 'react-native-router-flux';
 
 const deviceWidth = Dimensions.get('window').width;
 
@@ -33,7 +34,7 @@ class NHCardShowcase extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.popRoute()}>
+            <Button transparent onPress={() => Actions.pop()}>
               <Icon name="arrow-back" />
             </Button>
           </Left>

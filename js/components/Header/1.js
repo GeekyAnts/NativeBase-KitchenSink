@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Button, Icon, Left, Right, Body, Text } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 import { actions } from 'react-native-navigation-redux-helpers';
 import { openDrawer } from '../../actions/drawer';
@@ -39,7 +40,7 @@ class Header1 extends Component {  // eslint-disable-line
         </Header>
 
         <Content padder>
-          <Button onPress={() => this.popRoute()}>
+          <Button onPress={() => Actions.pop()}>
             <Text>Back</Text>
           </Button>
         </Content>

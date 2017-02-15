@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Platform } from 'react-native';
 import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon, ListItem, Text, Badge, Left, Right, Body, Switch, Radio, Picker, Separator } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 import styles from './styles';
 
@@ -46,7 +47,7 @@ class NHListIcon extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.popRoute()}>
+            <Button transparent onPress={() => Actions.pop()}>
               <Icon name="arrow-back" />
             </Button>
           </Left>

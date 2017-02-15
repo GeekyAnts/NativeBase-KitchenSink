@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Platform, View } from 'react-native';
 import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Fab, Button, IconNB, Left, Right, Body, Icon } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -39,7 +40,7 @@ class MultipleFab extends Component {
 
         <Header>
           <Left>
-            <Button transparent onPress={() => this.popRoute()}>
+            <Button transparent onPress={() => Actions.pop()}>
               <Icon name="arrow-back" />
             </Button>
           </Left>

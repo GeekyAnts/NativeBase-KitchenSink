@@ -5,6 +5,8 @@ import { PixelRatio } from 'react-native';
 import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Footer, FooterTab, Text, Body, Left, Right, Icon } from 'native-base';
 
+import { Actions } from 'react-native-router-flux';
+
 import styles from './styles';
 
 const {
@@ -30,7 +32,6 @@ class Basic extends Component {
   }
 
   toggleTab1() {
-    console.log(PixelRatio.getPixelSizeForLayoutSize(1));
     this.setState({
       tab1: true,
       tab2: false,
@@ -75,7 +76,7 @@ class Basic extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.popRoute()}>
+            <Button transparent onPress={() => Actions.pop()}>
               <Icon name="arrow-back" />
             </Button>
           </Left>

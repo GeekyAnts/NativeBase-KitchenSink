@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import { StatusBar } from 'react-native';
 import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Text, H3, Button, Icon, Footer, FooterTab, Left, Right, Body } from 'native-base';
 
@@ -15,7 +16,6 @@ class Anatomy extends Component {
   render() {
     return (
       <Container style={styles.container}>
-
         <Header>
           <Left>
             <Button transparent onPress={this.props.openDrawer}>

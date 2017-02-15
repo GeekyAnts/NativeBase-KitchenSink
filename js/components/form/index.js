@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon, Text, Left, Body, Right, List, ListItem } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
-import { openDrawer } from '../../actions/drawer';
+import { openDrawer, closeDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 const {
@@ -93,7 +94,7 @@ class NHForm extends Component {
         <Content>
           <List
             dataArray={datas} renderRow={data =>
-              <ListItem button onPress={() => this.pushRoute(data.route)}>
+              <ListItem button onPress={() => { Actions[data.route](); this.props.closeDrawer() }} >
                 <Text>{data.text}</Text>
                 <Right>
                   <Icon name="arrow-forward" style={{ color: '#999' }} />
@@ -110,6 +111,7 @@ class NHForm extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
+    closeDrawer: () => dispatch(closeDrawer()),
     pushRoute: (route, key) => dispatch(pushRoute(route, key)),
   };
 }

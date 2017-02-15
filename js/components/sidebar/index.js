@@ -89,7 +89,7 @@ const datas = [
   },
   {
     name: 'Layout',
-    route: 'column',
+    route: 'layout',
     icon: 'grid',
     bg: '#9F897C',
     types: '5',

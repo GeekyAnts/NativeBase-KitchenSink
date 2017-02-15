@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Button, Icon, Left, Right, Body } from 'native-base';
 import { Grid, Row, Col } from 'react-native-easy-grid';
+import { Actions } from 'react-native-router-flux';
 
 import { openDrawer } from '../../actions/drawer';
 
@@ -29,7 +30,7 @@ class NestedGrid extends Component {  // eslint-disable-line
       <Container>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.popRoute()}>
+            <Button transparent onPress={() => Actions.pop()}>
               <Icon name="arrow-back" />
             </Button>
           </Left>

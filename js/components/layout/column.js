@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Button, Icon, Left, Right, Body } from 'native-base';
 import { Grid, Col } from 'react-native-easy-grid';
+import { Actions } from 'react-native-router-flux';
 
 import { openDrawer } from '../../actions/drawer';
 
@@ -30,12 +31,12 @@ class ColumnNB extends Component {  // eslint-disable-line
       <Container>
         <Header>
           <Left>
-            <Button transparent onPress={this.props.openDrawer}>
-              <Icon name="menu" />
+            <Button transparent onPress={() => Actions.pop()}>
+              <Icon name="arrow-back" />
             </Button>
           </Left>
           <Body>
-            <Title>Layout</Title>
+            <Title>Cloumn</Title>
           </Body>
           <Right />
         </Header>

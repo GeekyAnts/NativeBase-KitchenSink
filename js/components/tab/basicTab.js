@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Header, Title, Button, Icon, Tabs, Tab, Right, Left, Body } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 import { actions } from 'react-native-navigation-redux-helpers';
 import myTheme from '../../themes/base-theme';
@@ -31,7 +32,7 @@ class BasicTab extends Component {  // eslint-disable-line
       <Container>
         <Header hasTabs>
           <Left>
-            <Button transparent onPress={() => this.popRoute()}>
+            <Button transparent onPress={() => Actions.pop()}>
               <Icon name="arrow-back" />
             </Button>
           </Left>
