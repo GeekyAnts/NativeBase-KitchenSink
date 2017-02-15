@@ -41,8 +41,8 @@ class CustomCol extends Component {  // eslint-disable-line
         </Header>
 
         <Grid>
-          <Col size={1} style={{ backgroundColor: '#D954D7' }} />
-          <Col size={2} style={{ backgroundColor: '#D93735' }} />
+          <Col size={1} style={{ backgroundColor: '#00CE9F' }} />
+          <Col size={2} style={{ backgroundColor: '#635DB7' }} />
           <Col size={4} style={{ backgroundColor: '#DD9E2C' }} />
         </Grid>
       </Container>

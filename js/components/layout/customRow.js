@@ -41,8 +41,8 @@ class CustomRow extends Component {  // eslint-disable-line
         </Header>
 
         <Grid>
-          <Row size={1} style={{ backgroundColor: '#D954D7' }} />
-          <Row size={2} style={{ backgroundColor: '#D93735' }} />
+          <Row size={1} style={{ backgroundColor: '#635DB7' }} />
+          <Row size={2} style={{ backgroundColor: '#00CE9F' }} />
           <Row size={4} style={{ backgroundColor: '#DD9E2C' }} />
         </Grid>
       </Container>

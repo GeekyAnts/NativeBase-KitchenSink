@@ -41,8 +41,8 @@ class RowNB extends Component {  // eslint-disable-line
         </Header>
 
         <Grid>
-          <Row style={{ backgroundColor: '#D954D7' }} />
-          <Row style={{ backgroundColor: '#D93735' }} />
+          <Row style={{ backgroundColor: '#635DB7' }} />
+          <Row style={{ backgroundColor: '#00CE9F' }} />
         </Grid>
       </Container>
     );

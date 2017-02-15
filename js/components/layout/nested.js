@@ -43,8 +43,8 @@ class NestedGrid extends Component {  // eslint-disable-line
         <Grid>
           <Col style={{ backgroundColor: '#DD9E2C' }} />
           <Col>
-            <Row style={{ backgroundColor: '#D954D7' }} />
-            <Row style={{ backgroundColor: '#D93735' }} />
+            <Row style={{ backgroundColor: '#00CE9F' }} />
+            <Row style={{ backgroundColor: '#635DB7' }} />
           </Col>
         </Grid>
       </Container>

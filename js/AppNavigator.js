@@ -84,7 +84,6 @@ import NHRadio from './components/radio/';
 import NHSearchbar from './components/searchbar/';
 import NHSpinner from './components/spinner/';
 import NHPicker from './components/picker/';
-import NHTabs from './components/tabs/';
 import NHTab from './components/tab/';
 import BasicTab from './components/tab/basicTab';
 import ConfigTab from './components/tab/configTab';
