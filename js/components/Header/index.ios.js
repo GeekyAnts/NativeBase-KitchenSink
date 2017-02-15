@@ -81,7 +81,10 @@ class HeaderNB extends Component {  // eslint-disable-line
         <Content>
           <List
             dataArray={datas} renderRow={data =>
-              <ListItem button onPress={() => { Actions[data.route](); this.props.closeDrawer() }} >
+              <ListItem
+                button
+                onPress={() => { Actions[data.route](); this.props.closeDrawer(); }}
+              >
                 <Text>{data.text}</Text>
                 <Right>
                   <Icon name="arrow-forward" />
