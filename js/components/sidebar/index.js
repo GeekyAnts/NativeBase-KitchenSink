@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 import { Image, Platform } from 'react-native';
 import { connect } from 'react-redux';
 import { Content, Text, List, ListItem, Icon, Container, Left, Right, Badge, Button, View, StyleProvider, getTheme, variables } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 import material from '../../../native-base-theme/variables/material';
-import { changePlatform, changeMaterial } from '../../actions/drawer';
+import { changePlatform, changeMaterial, closeDrawer } from '../../actions/drawer';
 import navigateTo from '../../actions/sideBarNav';
 import styles from './style';
 
@@ -196,7 +197,7 @@ class SideBar extends Component {
          }
           <List
             dataArray={datas} renderRow={data =>
-              <ListItem button noBorder onPress={() => this.navigateTo(data.route)} >
+              <ListItem button noBorder onPress={() => { Actions[data.route](); this.props.closeDrawer() }} >
                 <Left>
                   <Icon active name={data.icon} style={{ color: '#777', fontSize: 26, width: 30 }} />
                   <Text style={styles.text}>{data.name}</Text>
@@ -222,6 +223,7 @@ class SideBar extends Component {
 function bindAction(dispatch) {
   return {
     navigateTo: (route, homeRoute) => dispatch(navigateTo(route, homeRoute)),
+    closeDrawer: () => dispatch(closeDrawer()),
     changePlatform: () => dispatch(changePlatform()),
     changeMaterial: () => dispatch(changeMaterial()),
   };

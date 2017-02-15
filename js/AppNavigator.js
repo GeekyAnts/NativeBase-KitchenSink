@@ -4,6 +4,7 @@ import { BackAndroid, StatusBar, NavigationExperimental, Platform } from 'react-
 import { connect } from 'react-redux';
 import { StyleProvider, getTheme, variables, Drawer } from 'native-base';
 import { actions } from 'react-native-navigation-redux-helpers';
+import { Router, Scene } from 'react-native-router-flux';
 
 import material from '../native-base-theme/variables/material';
 import { closeDrawer } from './actions/drawer';
@@ -97,6 +98,8 @@ const {
   popRoute,
 } = actions;
 
+const RouterWithRedux = connect()(Router);
+
 const {
   CardStack: NavigationCardStack,
 } = NavigationExperimental;
@@ -151,174 +154,174 @@ class AppNavigator extends Component {
     }
   }
 
-  _renderScene(props) { // eslint-disable-line class-methods-use-this
-    switch (props.scene.route.key) {
-      case 'splashscreen':
-        return <SplashPage />;
-      case 'home':
-        return <Home />;
-      case 'header':
-        return <Header />;
-      case 'header1':
-        return <Header1 />;
-      case 'header2':
-        return <Header2 />;
-      case 'header3':
-        return <Header3 />;
-      case 'header4':
-        return <Header4 />;
-      case 'header5':
-        return <Header5 />;
-      case 'header6':
-        return <Header6 />;
-      case 'header7':
-        return <Header7 />;
-      case 'header8':
-        return <Header8 />;
-      case 'anatomy':
-        return <Anatomy />;
-      case 'footer':
-        return <Footer />;
-      case 'basicFooter':
-        return <BasicFooter />;
-      case 'iconFooter':
-        return <IconFooter />;
-      case 'iconText':
-        return <IconText />;
-      case 'badgeFooter':
-        return <BadgeFooter />;
-      case 'badge':
-        return <NHBadge />;
-      case 'button':
-        return <NHButton />;
-      case 'outline':
-        return <Outline />;
-      case 'default':
-        return <Default />;
-      case 'rounded':
-        return <Rounded />;
-      case 'block':
-        return <Block />;
-      case 'full':
-        return <Full />;
-      case 'custom':
-        return <Custom />;
-      case 'transparent':
-        return <Transparent />;
-      case 'iconBtn':
-        return <IconBtn />;
-      case 'disabled':
-        return <Disabled />;
-      case 'card':
-        return <NHCard />;
-      case 'basic':
-        return <BasicCard />;
-      case 'cardImage':
-        return <NHCardImage />;
-      case 'cardShowcase':
-        return <NHCardShowcase />;
-      case 'cardList':
-        return <NHCardList />;
-      case 'cardHeaderAndFooter':
-        return <NHCardHeaderAndFooter />;
-      case 'checkbox':
-        return <NHCheckbox />;
-      case 'deckswiper':
-        return <NHDeckSwiper />;
-      case 'fab':
-        return <NHFab />;
-      case 'basicFab':
-        return <BasicFab />;
-      case 'multipleFab':
-        return <MultipleFab />;
-      case 'form':
-        return <NHForm />;
-      case 'fixedLabel':
-        return <FixedLabel />;
-      case 'inlineLabel':
-        return <InlineLabel />;
-      case 'floatingLabel':
-        return <FloatingLabel />;
-      case 'placeholderLabel':
-        return <PlaceholderLabel />;
-      case 'stackedLabel':
-        return <StackedLabel />;
-      case 'textArea':
-        return <TextArea />;
-      case 'basicIcon':
-        return <BasicIcon />;
-      case 'state':
-        return <IconState />;
-      case 'specific':
-        return <SpecificIcon />;
-      case 'icon':
-        return <NHIcon />;
-      case 'inputgroup':
-        return <NHInputGroup />;
-      case 'regularInput':
-        return <RegularInput />;
-      case 'underlineInput':
-        return <UnderlineInput />;
-      case 'roundedInput':
-        return <RoundedInput />;
-      case 'iconInput':
-        return <IconInput />;
-      case 'successInput':
-        return <SuccessInput />;
-      case 'errorInput':
-        return <ErrorInput />;
-      case 'disabledInput':
-        return <DisabledInput />;
-      case 'layout':
-        return <NHLayout />;
-      case 'row':
-        return <RowNB />;
-      case 'column':
-        return <ColumnNB />;
-      case 'nested':
-        return <NestedGrid />;
-      case 'customRow':
-        return <CustomRow />;
-      case 'customCol':
-        return <CustomCol />;
-      case 'list':
-        return <NHList />;
-      case 'basicList':
-        return <NHBasicList />;
-      case 'listDivider':
-        return <NHListDivider />;
-      case 'listSeparator':
-        return <NHListSeparator />;
-      case 'listHeader':
-        return <NHListHeader />;
-      case 'listIcon':
-        return <NHListIcon />;
-      case 'listAvatar':
-        return <NHListAvatar />;
-      case 'listThumbnail':
-        return <NHListThumbnail />;
-      case 'picker':
-        return <NHPicker />;
-      case 'radio':
-        return <NHRadio />;
-      case 'searchbar':
-        return <NHSearchbar />;
-      case 'spinner':
-        return <NHSpinner />;
-      case 'tab':
-        return <NHTab />;
-      case 'basicTab':
-        return <BasicTab />;
-      case 'configTab':
-        return <ConfigTab />;
-      case 'thumbnail':
-        return <NHThumbnail />;
-      case 'typography':
-        return <NHTypography />;
-      default :
-        return <Home />;
-    }
-  }
+  // _renderScene(props) { // eslint-disable-line class-methods-use-this
+  //   switch (props.scene.route.key) {
+  //     case 'splashscreen':
+  //       return <SplashPage />;
+  //     case 'home':
+  //       return <Home />;
+  //     case 'header':
+  //       return <Header />;
+  //     case 'header1':
+  //       return <Header1 />;
+  //     case 'header2':
+  //       return <Header2 />;
+  //     case 'header3':
+  //       return <Header3 />;
+  //     case 'header4':
+  //       return <Header4 />;
+  //     case 'header5':
+  //       return <Header5 />;
+  //     case 'header6':
+  //       return <Header6 />;
+  //     case 'header7':
+  //       return <Header7 />;
+  //     case 'header8':
+  //       return <Header8 />;
+  //     case 'anatomy':
+  //       return <Anatomy />;
+  //     case 'footer':
+  //       return <Footer />;
+  //     case 'basicFooter':
+  //       return <BasicFooter />;
+  //     case 'iconFooter':
+  //       return <IconFooter />;
+  //     case 'iconText':
+  //       return <IconText />;
+  //     case 'badgeFooter':
+  //       return <BadgeFooter />;
+  //     case 'badge':
+  //       return <NHBadge />;
+  //     case 'button':
+  //       return <NHButton />;
+  //     case 'outline':
+  //       return <Outline />;
+  //     case 'default':
+  //       return <Default />;
+  //     case 'rounded':
+  //       return <Rounded />;
+  //     case 'block':
+  //       return <Block />;
+  //     case 'full':
+  //       return <Full />;
+  //     case 'custom':
+  //       return <Custom />;
+  //     case 'transparent':
+  //       return <Transparent />;
+  //     case 'iconBtn':
+  //       return <IconBtn />;
+  //     case 'disabled':
+  //       return <Disabled />;
+  //     case 'card':
+  //       return <NHCard />;
+  //     case 'basic':
+  //       return <BasicCard />;
+  //     case 'cardImage':
+  //       return <NHCardImage />;
+  //     case 'cardShowcase':
+  //       return <NHCardShowcase />;
+  //     case 'cardList':
+  //       return <NHCardList />;
+  //     case 'cardHeaderAndFooter':
+  //       return <NHCardHeaderAndFooter />;
+  //     case 'checkbox':
+  //       return <NHCheckbox />;
+  //     case 'deckswiper':
+  //       return <NHDeckSwiper />;
+  //     case 'fab':
+  //       return <NHFab />;
+  //     case 'basicFab':
+  //       return <BasicFab />;
+  //     case 'multipleFab':
+  //       return <MultipleFab />;
+  //     case 'form':
+  //       return <NHForm />;
+  //     case 'fixedLabel':
+  //       return <FixedLabel />;
+  //     case 'inlineLabel':
+  //       return <InlineLabel />;
+  //     case 'floatingLabel':
+  //       return <FloatingLabel />;
+  //     case 'placeholderLabel':
+  //       return <PlaceholderLabel />;
+  //     case 'stackedLabel':
+  //       return <StackedLabel />;
+  //     case 'textArea':
+  //       return <TextArea />;
+  //     case 'basicIcon':
+  //       return <BasicIcon />;
+  //     case 'state':
+  //       return <IconState />;
+  //     case 'specific':
+  //       return <SpecificIcon />;
+  //     case 'icon':
+  //       return <NHIcon />;
+  //     case 'inputgroup':
+  //       return <NHInputGroup />;
+  //     case 'regularInput':
+  //       return <RegularInput />;
+  //     case 'underlineInput':
+  //       return <UnderlineInput />;
+  //     case 'roundedInput':
+  //       return <RoundedInput />;
+  //     case 'iconInput':
+  //       return <IconInput />;
+  //     case 'successInput':
+  //       return <SuccessInput />;
+  //     case 'errorInput':
+  //       return <ErrorInput />;
+  //     case 'disabledInput':
+  //       return <DisabledInput />;
+  //     case 'layout':
+  //       return <NHLayout />;
+  //     case 'row':
+  //       return <RowNB />;
+  //     case 'column':
+  //       return <ColumnNB />;
+  //     case 'nested':
+  //       return <NestedGrid />;
+  //     case 'customRow':
+  //       return <CustomRow />;
+  //     case 'customCol':
+  //       return <CustomCol />;
+  //     case 'list':
+  //       return <NHList />;
+  //     case 'basicList':
+  //       return <NHBasicList />;
+  //     case 'listDivider':
+  //       return <NHListDivider />;
+  //     case 'listSeparator':
+  //       return <NHListSeparator />;
+  //     case 'listHeader':
+  //       return <NHListHeader />;
+  //     case 'listIcon':
+  //       return <NHListIcon />;
+  //     case 'listAvatar':
+  //       return <NHListAvatar />;
+  //     case 'listThumbnail':
+  //       return <NHListThumbnail />;
+  //     case 'picker':
+  //       return <NHPicker />;
+  //     case 'radio':
+  //       return <NHRadio />;
+  //     case 'searchbar':
+  //       return <NHSearchbar />;
+  //     case 'spinner':
+  //       return <NHSpinner />;
+  //     case 'tab':
+  //       return <NHTab />;
+  //     case 'basicTab':
+  //       return <BasicTab />;
+  //     case 'configTab':
+  //       return <ConfigTab />;
+  //     case 'thumbnail':
+  //       return <NHThumbnail />;
+  //     case 'typography':
+  //       return <NHTypography />;
+  //     default :
+  //       return <Home />;
+  //   }
+  // }
 
   render() {
     return (
@@ -333,11 +336,92 @@ class AppNavigator extends Component {
             backgroundColor={statusBarColor.statusBarColor}
             barStyle="default"
           />
-          <NavigationCardStack
-            navigationState={this.props.navigation}
-            renderOverlay={this._renderOverlay}
-            renderScene={this._renderScene}
-          />
+          {// <NavigationCardStack
+          //   navigationState={this.props.navigation}
+          //   renderOverlay={this._renderOverlay}
+          //   renderScene={this._renderScene}
+          // />
+          }
+          <RouterWithRedux>
+            <Scene key="root">
+              <Scene key="home" component={Home} hideNavBar initial={true} />
+              <Scene key="header" component={Header} />
+              <Scene key="header1" component={Header1} />
+              <Scene key="header2" component={Header2} />
+              <Scene key="header3" component={Header3} />
+              <Scene key="header4" component={Header4} />
+              <Scene key="header5" component={Header5} />
+              <Scene key="header6" component={Header6} />
+              <Scene key="header7" component={Header7} />
+              <Scene key="anatomy" component={Anatomy} />
+              <Scene key="footer" component={Footer} />
+              <Scene key="basicFooter" component={BasicFooter} />
+              <Scene key="iconFooter" component={IconFooter} />
+              <Scene key="iconText" component={IconText} />
+              <Scene key="badgeFooter" component={BadgeFooter} />
+              <Scene key="badge" component={NHBadge} />
+              <Scene key="button" component={NHButton} />
+              <Scene key="outline" component={Outline} />
+              <Scene key="default" component={Default} />
+              <Scene key="rounded" component={Rounded} />
+              <Scene key="block" component={Block} />
+              <Scene key="full" component={Full} />
+              <Scene key="custom" component={Custom} />
+              <Scene key="transparent" component={Transparent} />
+              <Scene key="iconBtn" component={IconBtn} />
+              <Scene key="card" component={NHCard} />
+              <Scene key="cardImage" component={NHCardImage} />
+              <Scene key="cardShowcase" component={NHCardShowcase} />
+              <Scene key="cardList" component={NHCardList} />
+              <Scene key="cardHeaderAndFooter" component={NHCardHeaderAndFooter} />
+              <Scene key="checkbox" component={NHCheckbox} />
+              <Scene key="deckswiper" component={NHDeckSwiper} />
+              <Scene key="fab" component={NHFab} />
+              <Scene key="basicFab" component={BasicFab} />
+              <Scene key="form" component={NHForm} />
+              <Scene key="fixedLabel" component={FixedLabel} />
+              <Scene key="inlineLabel" component={InlineLabel} />
+              <Scene key="floatingLabel" component={FloatingLabel} />
+              <Scene key="placeholderLabel" component={PlaceholderLabel} />
+              <Scene key="stackedLabel" component={StackedLabel} />
+              <Scene key="textArea" component={TextArea} />
+              <Scene key="basicIcon" component={BasicIcon} />
+              <Scene key="state" component={IconState} />
+              <Scene key="specific" component={SpecificIcon} />
+              <Scene key="icon" component={NHIcon} />
+              <Scene key="inputgroup" component={NHInputGroup} />
+              <Scene key="regularInput" component={RegularInput} />
+              <Scene key="underlineInput" component={UnderlineInput} />
+              <Scene key="roundedInput" component={RoundedInput} />
+              <Scene key="iconInput" component={IconInput} />
+              <Scene key="successInput" component={SuccessInput} />
+              <Scene key="errorInput" component={ErrorInput} />
+              <Scene key="disabledInput" component={DisabledInput} />
+              <Scene key="layout" component={NHLayout} />
+              <Scene key="row" component={RowNB} />
+              <Scene key="column" component={ColumnNB} />
+              <Scene key="nested" component={NestedGrid} />
+              <Scene key="customRow" component={CustomRow} />
+              <Scene key="customCol" component={CustomCol} />
+              <Scene key="list" component={NHList} />
+              <Scene key="basicList" component={NHBasicList} />
+              <Scene key="listDivider" component={NHListDivider} />
+              <Scene key="listSeparator" component={NHListSeparator} />
+              <Scene key="listHeader" component={NHListHeader} />
+              <Scene key="listIcon" component={NHListIcon} />
+              <Scene key="listAvatar" component={NHListAvatar} />
+              <Scene key="listThumbnail" component={NHListThumbnail} />
+              <Scene key="picker" component={NHPicker} />
+              <Scene key="radio" component={NHRadio} />
+              <Scene key="searchbar" component={NHSearchbar} />
+              <Scene key="spinner" component={NHSpinner} />
+              <Scene key="tab" component={NHTab} />
+              <Scene key="basicTab" component={BasicTab} />
+              <Scene key="configTab" component={ConfigTab} />
+              <Scene key="thumbnail" component={NHThumbnail} />
+              <Scene key="typography" component={NHTypography} />
+            </Scene>
+          </RouterWithRedux>
         </Drawer>
       </StyleProvider>
     );
