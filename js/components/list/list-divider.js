@@ -3,24 +3,25 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Left, Right, Body } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 import styles from './styles';
 
 const {
-  replaceAt,
+  popRoute,
 } = actions;
 
 class NHListDivider extends Component {
 
   static propTypes = {
-    replaceAt: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('listDivider', { key: route }, this.props.navigation.key);
+  popRoute() {
+    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -28,7 +29,7 @@ class NHListDivider extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.replaceAt('list')}>
+            <Button transparent onPress={() => Actions.pop()}>
               <Icon name="arrow-back" />
             </Button>
           </Left>
@@ -54,7 +55,7 @@ class NHListDivider extends Component {
           <ListItem>
             <Text>Andy Hertzfeld</Text>
           </ListItem>
-          <ListItem>
+          <ListItem last>
             <Text>Angana Ghosh</Text>
           </ListItem>
 
@@ -67,7 +68,7 @@ class NHListDivider extends Component {
           <ListItem>
             <Text>Brian Swetland</Text>
           </ListItem>
-          <ListItem>
+          <ListItem last>
             <Text>Brittany Kelso</Text>
           </ListItem>
 
@@ -80,7 +81,7 @@ class NHListDivider extends Component {
           <ListItem>
             <Text>Cendre Urbino</Text>
           </ListItem>
-          <ListItem>
+          <ListItem last>
             <Text>Claire Barclay</Text>
           </ListItem>
         </Content>
@@ -91,12 +92,13 @@ class NHListDivider extends Component {
 
 function bindAction(dispatch) {
   return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    popRoute: key => dispatch(popRoute(key)),
   };
 }
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
 export default connect(mapStateToProps, bindAction)(NHListDivider);

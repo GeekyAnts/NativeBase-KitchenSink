@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Platform } from 'react-native';
-import { Container, Header, Title, Content, Button, Icon, Text,Right,Body,Left,Picker } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Text,Right,Body,Left,Picker, ListItem } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -47,19 +47,31 @@ class NHPicker extends Component {
           <Right />
         </Header>
 
-        <Content padder>
-          <Text>Select your Payment Mode</Text>
-          <Picker
-            iosHeader="Select one"
-            mode="dropdown"
-            selectedValue={this.state.selected1}
-            onValueChange={this.onValueChange.bind(this)}>
-            <Item label="Wallet" value="key0" />
-            <Item label="ATM Card" value="key1" />
-            <Item label="Debit Card" value="key2" />
-            <Item label="Credit Card" value="key3" />
-            <Item label="Net Banking" value="key4" />
-          </Picker>
+        <Content>
+          <ListItem icon>
+            <Left>
+              <Button light>
+                <Icon name="card" />
+              </Button>
+            </Left>
+            <Body>
+              <Text>Pay Mode</Text>
+            </Body>
+            <Right>
+              <Picker
+                iosHeader="Select one"
+                mode="dropdown"
+                style={{ width:(Platform.OS === 'ios') ? undefined : 120 }}
+                selectedValue={this.state.selected1}
+                onValueChange={this.onValueChange.bind(this)}>
+                <Item label="Wallet" value="key0" />
+                <Item label="ATM Card" value="key1" />
+                <Item label="Debit Card" value="key2" />
+                <Item label="Credit Card" value="key3" />
+                <Item label="Net Banking" value="key4" />
+              </Picker>
+            </Right>
+          </ListItem>
         </Content>
       </Container>
     );
@@ -74,6 +86,7 @@ function bindAction(dispatch) {
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
 export default connect(mapStateToProps, bindAction)(NHPicker);

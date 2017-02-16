@@ -2,7 +2,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, IconNB, List, ListItem, Text, Thumbnail,Left,Right,Body } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Thumbnail, Left, Right, Body } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 import styles from './styles';
 
@@ -14,63 +15,61 @@ const saurabh = require('../../../img/contacts/saurabh.png');
 const varun = require('../../../img/contacts/varun.png');
 
 
-let data = [
+const datas = [
   {
     img: pratik,
     text: 'Kumar Pratik',
     note: 'Its time to build a difference . .',
+    time: '3:43 pm',
   },
   {
     img: sanket,
     text: 'Kumar Sanket',
     note: 'One needs courage to be happy and smiling all time . . ',
+    time: '1:12 pm',
   },
   {
     img: megha,
     text: 'Megha',
     note: 'Live a life style that matchs your vision',
+    time: '10:03 am',
   },
   {
     img: atul,
     text: 'Atul Ranjan',
     note: 'Failure is temporary, giving up makes it permanent',
+    time: '5:47 am',
   },
   {
     img: saurabh,
     text: 'Saurabh Sahu',
     note: 'The biggest risk is a missed opportunity !!',
+    time: '11:11 pm',
   },
   {
     img: varun,
     text: 'Varun Sahu',
     note: 'Wish I had a Time machine . .',
-  }
-]
+    time: '8:54 pm',
+  },
+];
 
 const {
-  replaceAt,
+  popRoute,
 } = actions;
 
 class NHListAvatar extends Component {
 
 
-    constructor(props) {
-      super(props);
-      const ds = new List.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-      this.state = {
-        dataSource: ds.cloneWithRows(data),
-      };
-    }
-
   static propTypes = {
-    replaceAt: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('listAvatar', { key: route }, this.props.navigation.key);
+  popRoute() {
+    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -78,26 +77,33 @@ class NHListAvatar extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-          <Button transparent onPress={() => this.replaceAt('list')}>
-            <IconNB name="ios-arrow-back" />
-          </Button>
+            <Button transparent onPress={() => Actions.pop()}>
+              <Icon name="arrow-back" />
+            </Button>
           </Left>
           <Body>
-          <Title>List Avatar</Title>
+            <Title>List Avatar</Title>
           </Body>
           <Right />
         </Header>
 
         <Content>
-        <List  dataSource={this.state.dataSource} renderRow={(data) =>
-          <ListItem>
-            <Thumbnail source={data.img} />
-            <Body>
-            <Text>{data.text}</Text>
-            <Text note>{data.note}</Text>
-            </Body>
-          </ListItem>
-        } />
+          <List
+            dataArray={datas} renderRow={data =>
+              <ListItem avatar>
+                <Left>
+                  <Thumbnail source={data.img} />
+                </Left>
+                <Body>
+                  <Text>{data.text}</Text>
+                  <Text numberOfLines={1} note>{data.note}</Text>
+                </Body>
+                <Right>
+                  <Text note>{data.time}</Text>
+                </Right>
+              </ListItem>
+        }
+          />
         </Content>
       </Container>
     );
@@ -106,12 +112,13 @@ class NHListAvatar extends Component {
 
 function bindAction(dispatch) {
   return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    popRoute: key => dispatch(popRoute(key)),
   };
 }
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
 export default connect(mapStateToProps, bindAction)(NHListAvatar);

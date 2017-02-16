@@ -1,14 +1,14 @@
 
 const React = require('react-native');
 
-const { StyleSheet } = React;
+const { StyleSheet, Platform } = React;
 
 export default {
   container: {
     flex: 1,
     width: null,
     height: null,
-    backgroundColor: '#FBFAFA',
+    backgroundColor: '#FFF',
   },
   iconContainer: {
     flexDirection: 'row',
@@ -16,9 +16,19 @@ export default {
     justifyContent: 'space-around',
     paddingLeft: 15,
   },
+  iconText: {
+    fontSize: 12,
+  },
   icon: {
     width: 45,
     height: 45,
     justifyContent: 'center',
+  },
+  col: {
+    alignItems: 'center',
+    paddingHorizontal: 3,
+  },
+  row: {
+    paddingBottom: 20,
   },
 };

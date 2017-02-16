@@ -1,17 +1,28 @@
 
 import React, { Component } from 'react';
-
-import { View } from 'react-native';
 import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, IconNB, Left,Right,Body } from 'native-base';
+import { actions } from 'react-native-navigation-redux-helpers';
+import { Container, Header, Title, Content, Button, Icon, Text, Left, Body, Right, Grid, Col, Row } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
-class NHForm extends Component {  // eslint-disable-line
+const {
+  replaceAt,
+} = actions;
+
+class NHIcon extends Component {
 
   static propTypes = {
     openDrawer: React.PropTypes.func,
+    replaceAt: React.PropTypes.func,
+    navigation: React.PropTypes.shape({
+      key: React.PropTypes.string,
+    }),
+  }
+
+  replaceAt(route) {
+    this.props.replaceAt('icon', { key: route }, this.props.navigation.key);
   }
 
   render() {
@@ -20,102 +31,364 @@ class NHForm extends Component {  // eslint-disable-line
         <Header>
           <Left>
             <Button transparent onPress={this.props.openDrawer}>
-              <IconNB name="ios-menu" />
+              <Icon name="menu" />
             </Button>
           </Left>
           <Body>
             <Title>Icons</Title>
           </Body>
           <Right />
+
         </Header>
 
         <Content padder>
-          <View style={styles.iconContainer} >
-            <IconNB name="logo-apple" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-pizza" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-person-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-beer" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-bicycle" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-navigate-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-cloud-circle" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-pie-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-bookmarks-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-pulse" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-camera-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-mic-off" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-film" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-flame" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-paper-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-paper-plane" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-speedometer-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-cart-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-flask-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-cloudy-night" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-partly-sunny" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-paw-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-rose" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-pint-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-shuffle" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-game-controller-a" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-glasses-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-microphone" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-keypad" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-color-filter-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-eye-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-mic-off" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-alarm-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-medkit" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-ionic-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-star-half" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-refresh" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-train" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-musical-notes" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-wine" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-nutrition" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-thunderstorm-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-grid-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-settings" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-chatbubbles" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-chatboxes" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-cog-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-baseball-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-bulb-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-calculator" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-rainy" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-videocam-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-play-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-disc-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-body" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-lock" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-skip-backward-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-key" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-flag-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-skip-forward" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-barcode-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="logo-tux" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-copy-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-stopwatch" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-medical-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-archive" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-bookmark" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-clipboard" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-happy" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-share" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-bluetooth" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-search" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-wifi" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-hand-outline" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-trash" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-images" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="ios-attach" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="logo-facebook" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="logo-googleplus" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="logo-twitter" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="logo-github" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="logo-whatsapp" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="logo-wordpress" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-            <IconNB name="logo-youtube" style={{ width: 45, height: 45, justifyContent: 'center' }} />
-          </View>
+          <Grid>
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon name="logo-apple" style={{ color: '#999' }} />
+                <Text numberOfLines={1} style={styles.iconText}>logo-apple</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="pizza" style={{ color: '#ffc125' }} />
+                <Text numberOfLines={1} style={styles.iconText}>pizza</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="person" style={{ color: '#387ef5' }} />
+                <Text numberOfLines={1} style={styles.iconText}>person</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="beer" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>beer</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="bicycle" style={{ color: '#663399' }} />
+                <Text numberOfLines={1} style={styles.iconText}>bicycle</Text>
+              </Col>
+            </Row>
+
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon name="navigate" style={{ color: '#32db64' }} />
+                <Text numberOfLines={1} style={styles.iconText}>navigate</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="cloud-circle" style={{ color: '#27a' }} />
+                <Text numberOfLines={1} style={styles.iconText}>cloud-circle</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="pie" style={{ color: '#fac125' }} />
+                <Text numberOfLines={1} style={styles.iconText}>pie</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="bookmarks" style={{ color: 'blue' }} />
+                <Text numberOfLines={1} style={styles.iconText}>bookmarks</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="pulse" style={{ color: 'green' }} />
+                <Text numberOfLines={1} style={styles.iconText}>pulse</Text>
+              </Col>
+            </Row>
+
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon active name="camera" style={{ color: '#aaa' }} />
+                <Text numberOfLines={1} style={styles.iconText}>camera</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="mic-off" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>mic-off</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="film" style={{ color: 'brown' }} />
+                <Text numberOfLines={1} style={styles.iconText}>film</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="flame" style={{ color: 'orange' }} />
+                <Text numberOfLines={1} style={styles.iconText}>flame</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="paper" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>paper</Text>
+              </Col>
+            </Row>
+
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon name="paper-plane" style={{ color: '#387ef5' }} />
+                <Text numberOfLines={1} style={styles.iconText}>paper-plane</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="cart" style={{ color: 'red' }} />
+                <Text numberOfLines={1} style={styles.iconText}>cart</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="flask" style={{ color: 'blue' }} />
+                <Text numberOfLines={1} style={styles.iconText}>flask</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="paw" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>paw</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="rose" style={{ color: 'pink' }} />
+                <Text numberOfLines={1} style={styles.iconText}>rose</Text>
+              </Col>
+            </Row>
+
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon name="pint" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>pint</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="shuffle" style={{ color: 'green' }} />
+                <Text numberOfLines={1} style={styles.iconText}>shuffle</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="keypad" style={{ color: '#387ef5' }} />
+                <Text numberOfLines={1} style={styles.iconText}>keypad</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="eye" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>eye</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="glasses" style={{ color: '#aaa' }} />
+                <Text numberOfLines={1} style={styles.iconText}>glasses</Text>
+              </Col>
+            </Row>
+
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon name="microphone" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>microphone</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="color-filter" style={{ color: 'purple' }} />
+                <Text numberOfLines={1} style={styles.iconText}>color-filter</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="alarm" style={{ color: 'green' }} />
+                <Text numberOfLines={1} style={styles.iconText}>alarm</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="medkit" style={{ color: 'red' }} />
+                <Text numberOfLines={1} style={styles.iconText}>medkit</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="ionic" style={{ color: 'blue' }} />
+                <Text numberOfLines={1} style={styles.iconText}>ionic</Text>
+              </Col>
+            </Row>
+
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon name="refresh" style={{ color: 'blue' }} />
+                <Text numberOfLines={1} style={styles.iconText}>refresh</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="star-half" style={{ color: 'gold' }} />
+                <Text numberOfLines={1} style={styles.iconText}>star-half</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="train" style={{ color: '#E14343' }} />
+                <Text numberOfLines={1} style={styles.iconText}>train</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="wine" style={{ color: 'brown' }} />
+                <Text numberOfLines={1} style={styles.iconText}>wine</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="partly-sunny" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>partly-sunny</Text>
+              </Col>
+            </Row>
+
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon active name="nutrition" style={{ color: 'red' }} />
+                <Text numberOfLines={1} style={styles.iconText}>nutrition</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="grid" style={{ color: 'blue' }} />
+                <Text numberOfLines={1} style={styles.iconText}>grid</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="settings" style={{ color: '#555' }} />
+                <Text numberOfLines={1} style={styles.iconText}>settings</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="chatbubbles" style={{ color: '#27a' }} />
+                <Text numberOfLines={1} style={styles.iconText}>chatbubbles</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="speedometer" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>speedometer</Text>
+              </Col>
+            </Row>
+
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon active name="chatboxes" style={{ color: 'green' }} />
+                <Text numberOfLines={1} style={styles.iconText}>chatboxes</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="cog" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>cog</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="baseball" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>baseball</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="bulb" style={{ color: 'gold' }} />
+                <Text numberOfLines={1} style={styles.iconText}>bulb</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="calculator" style={{ color: '#889' }} />
+                <Text numberOfLines={1} style={styles.iconText}>calculator</Text>
+              </Col>
+            </Row>
+
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon name="rainy" style={{ color: 'blue' }} />
+                <Text numberOfLines={1} style={styles.iconText}>rainy</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="videocam" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>videocam</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="play" style={{ color: '#f53d3d' }} />
+                <Text numberOfLines={1} style={styles.iconText}>play</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="disc" style={{ color: '#c76' }} />
+                <Text numberOfLines={1} style={styles.iconText}>disc</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="body" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>body</Text>
+              </Col>
+            </Row>
+
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon name="lock" style={{ color: 'blue' }} />
+                <Text numberOfLines={1} style={styles.iconText}>lock</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="key" style={{ color: 'gold' }} />
+                <Text numberOfLines={1} style={styles.iconText}>key</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="flag" style={{ color: 'green' }} />
+                <Text numberOfLines={1} style={styles.iconText}>flag</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="skip-forward" style={{ color: '#999' }} />
+                <Text numberOfLines={1} style={styles.iconText}>skip-forward</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="logo-github" style={{ color: 'brown' }} />
+                <Text numberOfLines={1} style={styles.iconText}>logo-github</Text>
+              </Col>
+            </Row>
+
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon name="barcode" style={{ color: '#387ef5' }} />
+                <Text numberOfLines={1} style={styles.iconText}>barcode</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="logo-tux" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>logo-tux</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="copy" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>copy</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="stopwatch" style={{ color: '#1df' }} />
+                <Text numberOfLines={1} style={styles.iconText}>stopwatch</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="medical" style={{ color: 'red' }} />
+                <Text numberOfLines={1} style={styles.iconText}>medical</Text>
+              </Col>
+            </Row>
+
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon name="archive" style={{ color: 'brown' }} />
+                <Text numberOfLines={1} style={styles.iconText}>archive</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="bookmark" style={{ color: 'green' }} />
+                <Text numberOfLines={1} style={styles.iconText}>bookmark</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="clipboard" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>clipboard</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="happy" style={{ color: '#ffc125' }} />
+                <Text numberOfLines={1} style={styles.iconText}>happy</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="share" style={{ color: '#387ef5' }} />
+                <Text numberOfLines={1} style={styles.iconText}>share</Text>
+              </Col>
+            </Row>
+
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon name="bluetooth" style={{ color: '#387ef5' }} />
+                <Text numberOfLines={1} style={styles.iconText}>bluetooth</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="search" style={{ color: '#777' }} />
+                <Text numberOfLines={1} style={styles.iconText}>search</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="wifi" style={{ color: 'blue' }} />
+                <Text numberOfLines={1} style={styles.iconText}>wifi</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon active name="hand" style={{ color: '#EBAB7F' }} />
+                <Text numberOfLines={1} style={styles.iconText}>hand</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="trash" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>trash</Text>
+              </Col>
+            </Row>
+
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon name="images" style={{ color: 'red' }} />
+                <Text numberOfLines={1} style={styles.iconText}>images</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="attach" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>attach</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="logo-facebook" style={{ color: '#46639E' }} />
+                <Text numberOfLines={1} style={styles.iconText}>logo-facebook</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="logo-googleplus" style={{ color: '#DC4A38' }} />
+                <Text numberOfLines={1} style={styles.iconText}>logo-googleplus</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="logo-twitter" style={{ color: '#1DA1F2' }} />
+                <Text numberOfLines={1} style={styles.iconText}>logo-twitter</Text>
+              </Col>
+            </Row>
+
+          </Grid>
         </Content>
       </Container>
     );
@@ -125,11 +398,13 @@ class NHForm extends Component {  // eslint-disable-line
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
+    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
   };
 }
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(NHForm);
+export default connect(mapStateToProps, bindAction)(NHIcon);

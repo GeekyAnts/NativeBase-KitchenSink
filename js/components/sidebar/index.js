@@ -1,9 +1,12 @@
 
 import React, { Component } from 'react';
-import { Image, View } from 'react-native';
+import { Image, Platform } from 'react-native';
 import { connect } from 'react-redux';
-import { Content, Text, List, ListItem, IconNB } from 'native-base';
+import { Content, Text, List, ListItem, Icon, Container, Left, Right, Badge, Button, View, StyleProvider, getTheme, variables } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
+import material from '../../../native-base-theme/variables/material';
+import { changePlatform, changeMaterial, closeDrawer } from '../../actions/drawer';
 import navigateTo from '../../actions/sideBarNav';
 import styles from './style';
 
@@ -11,125 +14,134 @@ const drawerCover = require('../../../img/drawer-cover.png');
 
 const drawerImage = require('../../../img/logo-kitchen-sink.png');
 
-const data = [
+const datas = [
   {
     name: 'Anatomy',
     route: 'anatomy',
-    icon: 'ios-phone-portrait-outline',
-    bg: '#0209D8',
+    icon: 'phone-portrait',
+    bg: '#C5F442',
+  },
+  {
+    name: 'Header',
+    route: 'header',
+    icon: 'phone-portrait',
+    bg: '#477EEA',
+    types: '8',
+  },
+  {
+    name: 'Footer',
+    route: 'footer',
+    icon: 'phone-portrait',
+    bg: '#DA4437',
+    types: '4',
   },
   {
     name: 'Badge',
     route: 'badge',
-    icon: 'ios-notifications-outline',
+    icon: 'notifications',
     bg: '#4DCAE0',
   },
   {
     name: 'Button',
     route: 'button',
-    icon: 'md-radio-button-off',
-    bg: '#5cb85c',
+    icon: 'radio-button-off',
+    bg: '#1EBC7C',
+    types: '9',
   },
   {
     name: 'Card',
     route: 'card',
-    icon: 'ios-keypad',
-    bg: '#877CA6',
+    icon: 'keypad',
+    bg: '#B89EF5',
+    types: '5',
   },
   {
     name: 'Check Box',
     route: 'checkbox',
-    icon: 'ios-checkmark-circle-outline',
+    icon: 'checkmark-circle',
     bg: '#EB6B23',
   },
   {
     name: 'Deck Swiper',
     route: 'deckswiper',
-    icon: 'ios-swap',
+    icon: 'swap',
     bg: '#3591FA',
   },
   {
     name: 'Fab',
     route: 'fab',
-    icon: 'ios-help-buoy',
-    bg: '#5067FF',
+    icon: 'help-buoy',
+    bg: '#EF6092',
+    types: '2',
   },
   {
-    name: 'Form',
+    name: 'Form & Inputs',
     route: 'form',
-    icon: 'ios-call',
-    bg: '#F5BF35',
+    icon: 'call',
+    bg: '#EFB406',
+    types: '13',
   },
   {
     name: 'Icon',
     route: 'icon',
-    icon: 'ios-information-circle-outline',
-    bg: '#B63A48',
-  },
-  {
-    name: 'InputGroup',
-    route: 'inputgroup',
-    icon: 'ios-document-outline',
-    bg: '#00C497',
+    icon: 'information-circle',
+    bg: '#EF6092',
   },
   {
     name: 'Layout',
     route: 'layout',
-    icon: 'ios-grid-outline',
-    bg: '#5C4196',
+    icon: 'grid',
+    bg: '#9F897C',
+    types: '5',
   },
   {
     name: 'List',
     route: 'list',
-    icon: 'ios-lock',
-    bg: '#00AFC1',
+    icon: 'lock',
+    bg: '#5DCEE2',
+    types: '7',
   },
   {
     name: 'Picker',
     route: 'picker',
-    icon: 'ios-arrow-dropdown',
+    icon: 'arrow-dropdown',
     bg: '#F50C75',
   },
   {
     name: 'Radio',
     route: 'radio',
-    icon: 'ios-radio-button-on',
+    icon: 'radio-button-on',
     bg: '#6FEA90',
   },
   {
     name: 'SearchBar',
     route: 'searchbar',
-    icon: 'ios-search',
+    icon: 'search',
     bg: '#29783B',
   },
   {
     name: 'Spinner',
     route: 'spinner',
-    icon: 'ios-navigate-outline',
+    icon: 'navigate',
     bg: '#BE6F50',
   },
   {
-    name: 'Tab',
-    route: 'tab',
-    icon: 'ios-home',
-    bg: '#AB6AED',
-  },
-  {
     name: 'Tabs',
-    route: 'tabs',
-    icon: 'ios-albums',
-    bg: '#726AEA',
+    route: 'tab',
+    icon: 'home',
+    bg: '#AB6AED',
+    types: '2',
   },
   {
     name: 'Thumbnail',
     route: 'thumbnail',
-    icon: 'ios-image-outline',
+    icon: 'image',
     bg: '#cc0000',
   },
   {
     name: 'Typography',
     route: 'typography',
-    icon: 'md-paper',
+    icon: 'paper',
     bg: '#48525D',
   },
 
@@ -138,15 +150,16 @@ class SideBar extends Component {
 
   static propTypes = {
     navigateTo: React.PropTypes.func,
+    themeState: React.PropTypes.string,
+    changePlatform: React.PropTypes.func,
+    changeMaterial: React.PropTypes.func,
   }
 
   constructor(props) {
     super(props);
-    const ds = new List.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     this.state = {
       shadowOffsetWidth: 1,
       shadowRadius: 4,
-      dataSource: ds.cloneWithRows(data),
     };
   }
 
@@ -156,29 +169,53 @@ class SideBar extends Component {
 
   render() {
     return (
-      <Content
-        style={{ flex: 1, backgroundColor: '#fff' }}
-      >
-        <Image source={drawerCover} style={styles.drawerCover}>
-          <Image
-            square
-            style={styles.drawerImage}
-            source={drawerImage}
+      <Container>
+        <Content
+          bounces={false}
+          style={{ flex: 1, backgroundColor: '#fff', top: -1 }}
+        >
+          <Image source={drawerCover} style={styles.drawerCover}>
+            <Image
+              square
+              style={styles.drawerImage}
+              source={drawerImage}
+            />
+          </Image>
+          {(Platform.OS === 'ios') &&
+            <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+              <StyleProvider style={getTheme(variables)}>
+                <Button block rounded light onPress={this.props.changePlatform}>
+                  <Text>Platform</Text>
+                </Button>
+              </StyleProvider>
+              <StyleProvider style={getTheme(material)}>
+                <Button block rounded onPress={this.props.changeMaterial}>
+                  <Text>Material</Text>
+                </Button>
+              </StyleProvider>
+            </View>
+         }
+          <List
+            dataArray={datas} renderRow={data =>
+              <ListItem button noBorder onPress={() => { Actions[data.route](); this.props.closeDrawer() }} >
+                <Left>
+                  <Icon active name={data.icon} style={{ color: '#777', fontSize: 26, width: 30 }} />
+                  <Text style={styles.text}>{data.name}</Text>
+                </Left>
+                {(data.types) &&
+                <Right style={{ flex: 1 }}>
+                  <Badge
+                    style={{ borderRadius: 3, height: 25, width: 72, backgroundColor: data.bg }}
+                  >
+                    <Text style={styles.badgeText}>{`${data.types} Types`}</Text>
+                  </Badge>
+                </Right>
+                }
+              </ListItem>}
           />
-        </Image>
-        <List
-          dataSource={this.state.dataSource} renderRow={data =>
-            <ListItem button iconLeft onPress={() => this.navigateTo(data.route)} >
-              <View style={styles.listItemContainer}>
-                <View style={[styles.iconContainer, { backgroundColor: data.bg, alignItems: 'center', alignSelf: 'center' }]}>
-                  <IconNB name={data.icon} style={styles.sidebarIcon} />
-                </View>
-                <Text style={styles.text}>{data.name}</Text>
-              </View>
-            </ListItem>}
-        />
 
-      </Content>
+        </Content>
+      </Container>
     );
   }
 }
@@ -186,11 +223,15 @@ class SideBar extends Component {
 function bindAction(dispatch) {
   return {
     navigateTo: (route, homeRoute) => dispatch(navigateTo(route, homeRoute)),
+    closeDrawer: () => dispatch(closeDrawer()),
+    changePlatform: () => dispatch(changePlatform()),
+    changeMaterial: () => dispatch(changeMaterial()),
   };
 }
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
 export default connect(mapStateToProps, bindAction)(SideBar);

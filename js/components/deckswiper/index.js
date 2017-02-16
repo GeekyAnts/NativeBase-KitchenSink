@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Image, View } from 'react-native';
-import { Container, Header, Title, Button, IconNB, DeckSwiper, Card, CardItem, Thumbnail, Text, Left, Right, Body, Content } from 'native-base';
+import { Container, Header, Title, Button, IconNB, DeckSwiper, Card, CardItem, Icon, Thumbnail, Text, Left, Right, Body, Content } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -47,7 +47,7 @@ class NHDeckSwiper extends Component {  // eslint-disable-line
         <Header>
           <Left>
             <Button transparent onPress={this.props.openDrawer}>
-              <IconNB name="ios-menu" />
+              <Icon name="menu" />
             </Button>
           </Left>
           <Body>
@@ -94,6 +94,7 @@ function bindAction(dispatch) {
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
 export default connect(mapStateToProps, bindAction)(NHDeckSwiper);

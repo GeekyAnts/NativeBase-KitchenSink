@@ -1,26 +1,38 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { View } from 'react-native';
-import { Container, Header, Title, Text, Fab, Button, IconNB, Left, Right, Body } from 'native-base';
+import { actions } from 'react-native-navigation-redux-helpers';
+import { Container, Header, Title, Button, Left, Right, Body, Icon, List, ListItem, Content, Text } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
-import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
+import { openDrawer, closeDrawer } from '../../actions/drawer';
 
+const {
+  pushRoute,
+} = actions;
+const datas = [
+  {
+    route: 'basicFab',
+    text: 'Basic FAB',
+  },
+  {
+    route: 'multipleFab',
+    text: 'Multiple FABs',
+  },
+];
 class NHFab extends Component {
 
   static propTypes = {
     openDrawer: React.PropTypes.func,
+    pushRoute: React.PropTypes.func,
+    navigation: React.PropTypes.shape({
+      key: React.PropTypes.string,
+    }),
   }
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false,
-      active1: false,
-      active2: false,
-      active3: false,
-    };
+  pushRoute(route) {
+    this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
   }
 
 
@@ -31,96 +43,27 @@ class NHFab extends Component {
         <Header>
           <Left>
             <Button transparent onPress={this.props.openDrawer}>
-              <IconNB name="ios-menu" />
+              <Icon name="menu" />
             </Button>
           </Left>
           <Body>
-            <Title>Fab</Title>
+            <Title>FAB</Title>
           </Body>
           <Right />
-
         </Header>
 
-        <View style={{ flex: 1 }}>
-
-          <Fab
-            active={this.state.active}
-            direction="up"
-            containerStyle={{ }}
-            style={{ backgroundColor: '#5067FF' }}
-            position="bottomRight"
-            onPress={() => this.setState({ active: !this.state.active })}
-          >
-            <IconNB name="md-share" />
-            <Button style={{ backgroundColor: '#34A34F' }}>
-              <IconNB name="logo-whatsapp" />
-            </Button>
-            <Button style={{ backgroundColor: '#3B5998' }}>
-              <IconNB name="logo-facebook" />
-            </Button>
-            <Button disabled style={{ backgroundColor: '#DD5144' }}>
-              <IconNB name="ios-mail" />
-            </Button>
-          </Fab>
-          <Fab
-            active={this.state.active1}
-            direction="left"
-            containerStyle={{ }}
-            style={{ backgroundColor: '#5067FF' }}
-            position="topRight"
-            onPress={() => this.setState({ active1: !this.state.active1 })}
-          >
-            <IconNB name="md-share" />
-            <Button style={{ backgroundColor: '#34A34F' }}>
-              <IconNB name="logo-whatsapp" />
-            </Button>
-            <Button style={{ backgroundColor: '#3B5998' }}>
-              <IconNB name="logo-facebook" />
-            </Button>
-            <Button disabled style={{ backgroundColor: '#DD5144' }}>
-              <IconNB name="ios-mail" />
-            </Button>
-          </Fab>
-          <Fab
-            active={this.state.active2}
-            direction="down"
-            containerStyle={{ }}
-            style={{ backgroundColor: '#5067FF' }}
-            position="topLeft"
-            onPress={() => this.setState({ active2: !this.state.active2 })}
-          >
-            <IconNB name="md-share" />
-            <Button style={{ backgroundColor: '#34A34F' }}>
-              <IconNB name="logo-whatsapp" />
-            </Button>
-            <Button style={{ backgroundColor: '#3B5998' }}>
-              <IconNB name="logo-facebook" />
-            </Button>
-            <Button disabled style={{ backgroundColor: '#DD5144' }}>
-              <IconNB name="ios-mail" />
-            </Button>
-          </Fab>
-          <Fab
-            active={this.state.active3}
-            direction="right"
-            containerStyle={{ }}
-            style={{ backgroundColor: '#5067FF' }}
-            position="bottomLeft"
-            onPress={() => this.setState({ active3: !this.state.active3 })}
-          >
-            <IconNB name="md-share" />
-            <Button style={{ backgroundColor: '#34A34F' }}>
-              <IconNB name="logo-whatsapp" />
-            </Button>
-            <Button style={{ backgroundColor: '#3B5998' }}>
-              <IconNB name="logo-facebook" />
-            </Button>
-            <Button disabled style={{ backgroundColor: '#DD5144' }}>
-              <IconNB name="ios-mail" />
-            </Button>
-          </Fab>
-
-        </View>
+        <Content>
+          <List
+            dataArray={datas} renderRow={data =>
+              <ListItem button onPress={() => { Actions[data.route](); this.props.closeDrawer() }} >
+                <Text>{data.text}</Text>
+                <Right>
+                  <Icon name="arrow-forward" style={{ color: '#999' }} />
+                </Right>
+              </ListItem>
+          }
+          />
+        </Content>
 
 
       </Container>
@@ -131,11 +74,14 @@ class NHFab extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
+    closeDrawer: () => dispatch(closeDrawer()),
+    pushRoute: (route, key) => dispatch(pushRoute(route, key)),
   };
 }
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
 export default connect(mapStateToProps, bindAction)(NHFab);

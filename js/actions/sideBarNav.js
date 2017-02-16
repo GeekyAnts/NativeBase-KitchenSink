@@ -20,7 +20,7 @@ export default function navigateTo(route, homeRoute) {
     } else if (currentRouteKey !== homeRoute && route === homeRoute) {
       dispatch(popRoute(navigation.key));
     } else if (currentRouteKey === homeRoute && route !== homeRoute) {
-      dispatch(pushRoute({ key: route, index: 1 }, navigation.key));
+      dispatch(pushRoute({ key: route }, navigation.key));
     }
   };
 }

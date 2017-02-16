@@ -1,17 +1,35 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { View } from 'react-native';
-import { Container, Header, Title, Content, Text, H3, Button, Icon, Tab, Footer, FooterTab, Left, Right, Body, Badge, IconNB } from 'native-base';
+import { actions } from 'react-native-navigation-redux-helpers';
+import { Container, Header, Title, Content, Text, Button, Icon, Left, Right, Body, List, ListItem } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
-import { openDrawer } from '../../actions/drawer';
+import { openDrawer, closeDrawer } from '../../actions/drawer';
 import myTheme from '../../themes/base-theme';
 import styles from './styles';
 
+const {
+  pushRoute,
+} = actions;
+const datas = [
+  {
+    route: 'basicTab',
+    text: 'Basic Tabs',
+  },
+  {
+    route: 'configTab',
+    text: 'Advanced Tabs',
+  },
+];
 class NHTab extends Component {
 
   static propTypes = {
     openDrawer: React.PropTypes.func,
+    pushRoute: React.PropTypes.func,
+    navigation: React.PropTypes.shape({
+      key: React.PropTypes.string,
+    }),
   }
 
   constructor(props) {
@@ -21,6 +39,9 @@ class NHTab extends Component {
       tab2: false,
       tab3: true,
     };
+  }
+  pushRoute(route) {
+    this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
   }
 
   toggleTab1() {
@@ -59,28 +80,23 @@ class NHTab extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Tab</Title>
+            <Title>Tabs</Title>
           </Body>
           <Right />
 
         </Header>
-        <Tab>
-          <Button active={this.state.tab1} onPress={() => this.toggleTab1()} >
-            <Text>TabOne</Text>
-          </Button>
-          <Button active={this.state.tab2} onPress={() => this.toggleTab2()} >
-            <Text>TabTwo</Text>
-          </Button>
-          <Button active={this.state.tab3} onPress={() => this.toggleTab3()} >
-            <Text>TabThree</Text>
-          </Button>
-        </Tab>
 
-        <Content padder>
-          <H3>This is content section</H3>
-          <Text style={{ marginTop: 10 }}>
-            Selected tab is: <Text style={{ color: '#007aff', fontWeight: '700' }}>{this.state.tab1 ? 'TabOne' : this.state.tab2 ? 'TabTwo' : 'TabThree'}</Text>
-          </Text>
+        <Content>
+          <List
+            dataArray={datas} renderRow={data =>
+              <ListItem button onPress={() => { Actions[data.route](); this.props.closeDrawer() }} >
+                <Text>{data.text}</Text>
+                <Right>
+                  <Icon name="arrow-forward" style={{ color: '#999' }} />
+                </Right>
+              </ListItem>
+          }
+          />
 
         </Content>
 
@@ -93,11 +109,14 @@ class NHTab extends Component {
 function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
+    closeDrawer: () => dispatch(closeDrawer()),
+    pushRoute: (route, key) => dispatch(pushRoute(route, key)),
   };
 }
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
 export default connect(mapStateToProps, bindAction)(NHTab);

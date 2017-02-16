@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Button, Icon, InputGroup, Input, Content,Text } from 'native-base';
+import { Container, Header, Button, Icon, Item, Input, Content,Text } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -16,18 +16,18 @@ class NHSearchbar extends Component { // eslint-disable-line
     return (
       <Container style={styles.container}>
         <Header searchBar rounded>
-          <InputGroup>
-            <Icon name="search" />
+          <Item>
+            <Icon active name="search" />
             <Input placeholder="Search" />
-            <Icon name="people" />
-          </InputGroup>
+            <Icon active name="people" />
+          </Item>
           <Button transparent>
             <Text>Search</Text>
           </Button>
         </Header>
 
         <Content padder>
-          <Button block rounded onPress={this.props.openDrawer}><Text>Back</Text></Button>
+          <Button block onPress={this.props.openDrawer}><Text>Back</Text></Button>
         </Content>
       </Container>
     );
@@ -42,6 +42,7 @@ function bindAction(dispatch) {
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
 export default connect(mapStateToProps, bindAction)(NHSearchbar);

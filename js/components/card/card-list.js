@@ -3,24 +3,25 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon, IconNB, Card, CardItem, Text, Left, Right, Body } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 import styles from './styles';
 
 const {
-  replaceAt,
+  popRoute,
 } = actions;
 
 class NHCardList extends Component {
 
   static propTypes = {
-    replaceAt: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('cardList', { key: route }, this.props.navigation.key);
+  popRoute() {
+    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -28,8 +29,8 @@ class NHCardList extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.replaceAt('card')}>
-              <IconNB name="ios-arrow-back" />
+            <Button transparent onPress={() => Actions.pop()}>
+              <Icon name="arrow-back" />
             </Button>
           </Left>
           <Body>
@@ -40,29 +41,52 @@ class NHCardList extends Component {
 
         <Content padder>
           <Card style={styles.mb}>
+            <CardItem header bordered>
+              <Text>
+                Social Applications
+              </Text>
+            </CardItem>
             <CardItem>
-              <IconNB name="logo-googleplus" style={{ color: '#DD5044' }} />
+              <Icon active name="logo-googleplus" style={{ color: '#DD5044' }} />
               <Text>Google Plus</Text>
+              <Right>
+                <Icon name="arrow-forward" />
+              </Right>
             </CardItem>
             <CardItem>
-              <IconNB name="logo-facebook" style={{ color: '#3B579D' }} />
-              <Text>Facebook</Text>
+              <Icon active name="logo-facebook" style={{ color: '#3B579D' }} />
+              <Text>facebook</Text>
+              <Right>
+                <Icon name="arrow-forward" />
+              </Right>
             </CardItem>
             <CardItem>
-              <IconNB name="logo-twitter" style={{ color: '#55ACEE' }} />
+              <Icon active name="logo-twitter" style={{ color: '#55ACEE' }} />
               <Text>Twitter</Text>
+              <Right>
+                <Icon name="arrow-forward" />
+              </Right>
             </CardItem>
             <CardItem>
-              <IconNB name="logo-reddit" style={{ color: '#FF4500' }} />
+              <Icon active name="logo-reddit" style={{ color: '#FF4500' }} />
               <Text>Reddit</Text>
+              <Right>
+                <Icon name="arrow-forward" />
+              </Right>
             </CardItem>
             <CardItem>
-              <IconNB name="logo-linkedin" style={{ color: '#007BB6' }} />
+              <Icon active name="logo-linkedin" style={{ color: '#007BB6' }} />
               <Text>LinkedIn</Text>
+              <Right>
+                <Icon name="arrow-forward" />
+              </Right>
             </CardItem>
             <CardItem>
-              <IconNB name="logo-youtube" style={{ color: '#D62727' }} />
+              <Icon active name="logo-youtube" style={{ color: '#D62727' }} />
               <Text>YouTube</Text>
+              <Right>
+                <Icon name="arrow-forward" />
+              </Right>
             </CardItem>
           </Card>
         </Content>
@@ -73,12 +97,13 @@ class NHCardList extends Component {
 
 function bindAction(dispatch) {
   return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    popRoute: key => dispatch(popRoute(key)),
   };
 }
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
 export default connect(mapStateToProps, bindAction)(NHCardList);

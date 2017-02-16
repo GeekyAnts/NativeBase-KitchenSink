@@ -2,7 +2,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Thumbnail,Left,Body,Right } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Thumbnail, Left, Body, Right } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 import styles from './styles';
 
@@ -12,7 +13,7 @@ const himanshu = require('../../../img/contacts/himanshu.png');
 const shweta = require('../../../img/contacts/shweta.png');
 const shruti = require('../../../img/contacts/shruti.png');
 
-let data = [
+const datas = [
   {
     img: sankhadeep,
     text: 'Sankhadeep',
@@ -37,31 +38,24 @@ let data = [
     img: shruti,
     text: 'Shruti',
     note: 'The biggest risk is a missed opportunity !!',
-  }
-]
+  },
+];
 
 const {
-  replaceAt,
+  popRoute,
 } = actions;
 
 class NHListThumbnail extends Component {
 
-  constructor(props) {
-    super(props);
-    const ds = new List.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-    this.state = {
-      dataSource: ds.cloneWithRows(data),
-    };
-  }
   static propTypes = {
-    replaceAt: React.PropTypes.func,
+    popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
   }
 
-  replaceAt(route) {
-    this.props.replaceAt('listThumbnail', { key: route }, this.props.navigation.key);
+  popRoute() {
+    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -69,27 +63,36 @@ class NHListThumbnail extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-          <Button transparent onPress={() => this.replaceAt('list')}>
-            <Icon name="arrow-back" />
-          </Button>
+            <Button transparent onPress={() => Actions.pop()}>
+              <Icon name="arrow-back" />
+            </Button>
           </Left>
 
           <Body>
-          <Title>List Thumbnail</Title>
+            <Title>List Thumbnail</Title>
           </Body>
           <Right />
         </Header>
 
         <Content>
-          <List  dataSource={this.state.dataSource} renderRow={(data) =>
-            <ListItem>
-              <Thumbnail square size={80} source={data.img} />
-              <Body>
-              <Text>{data.text}</Text>
-              <Text note>{data.note}</Text>
-              </Body>
-            </ListItem>
-          } />
+          <List
+            dataArray={datas} renderRow={data =>
+              <ListItem thumbnail>
+                <Left>
+                  <Thumbnail square size={55} source={data.img} />
+                </Left>
+                <Body>
+                  <Text>{data.text}</Text>
+                  <Text numberOfLines={1} note>{data.note}</Text>
+                </Body>
+                <Right>
+                  <Button transparent>
+                    <Text>View</Text>
+                  </Button>
+                </Right>
+              </ListItem>
+          }
+          />
         </Content>
       </Container>
     );
@@ -98,12 +101,13 @@ class NHListThumbnail extends Component {
 
 function bindAction(dispatch) {
   return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+    popRoute: key => dispatch(popRoute(key)),
   };
 }
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
+  themeState: state.drawer.themeState,
 });
 
 export default connect(mapStateToProps, bindAction)(NHListThumbnail);

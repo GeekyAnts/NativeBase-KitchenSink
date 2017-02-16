@@ -1,0 +1,167 @@
+
+# fastlane_version "2.3.1"
+
+ENV["DELIVER_ITMSTRANSPORTER_ADDITIONAL_UPLOAD_PARAMETERS"]="-t DAV"
+
+################################################################################################
+# iOS
+
+platform :ios do
+  before_all do
+    ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+    ENV["USER_NAME"] = sh "git config --global user.name"
+    ENV["VERSION"] = sh "/usr/libexec/PlistBuddy -c 'Print:CFBundleShortVersionString' ../ios/NativebaseKitchenSink/Info.plist"
+  end
+
+
+  desc "Download and Import required Certificates to the App"
+  lane :certificate do
+    match(type: "appstore")
+    ENV["SLACK_MESSAGE"]="Successful Download and Import of Certificates, Distribution Provisioning Profiles for iOS"
+  end
+
+
+  desc "Submit a new Beta Build to Apple TestFlight"
+  lane :testflight do
+    increment_build_number({
+      xcodeproj: "./ios/NativebaseKitchenSink.xcodeproj",
+      build_number: latest_testflight_build_number + 1
+    })
+    gym(project: "ios/NativebaseKitchenSink.xcodeproj", scheme: "NativebaseKitchenSink")
+    pilot(ipa: "./NativebaseKitchenSink.ipa")
+    ENV["SLACK_MESSAGE"]="Successfully Deployed New Update on TestFlight - Build Version: #{latest_testflight_build_number}"
+  end
+
+
+  desc "Deploy a new version to the App Store"
+  lane :release do
+    deliver(
+      force: true,
+      build_number: latest_testflight_build_number.to_s,
+      submit_for_review: true,
+      automatic_release: true
+    )
+    ENV["SLACK_MESSAGE"]="Submitted NativeBase KitchenSink on App Store - Build Version: #{latest_testflight_build_number}"
+  end
+
+
+  after_all do |lane|
+    slack(
+      message: "#{ENV['SLACK_MESSAGE']}",
+      attachment_properties: {
+        fields: [
+        {
+          title: "User Name",
+          value: "#{ENV['USER_NAME']}",
+          short: true
+        },
+        {
+          title: "Product",
+          value: "NativeBase KitchenSink #{ENV['VERSION']}",
+          short: true
+        },
+        {
+          title: "Result",
+          value: "Success",
+          short: true
+        }]
+      },
+      default_payloads: [:lane, :git_branch]
+    )
+  end
+
+  error do |lane, exception|
+    slack(
+      message: exception.message,
+      attachment_properties: {
+        fields: [
+        {
+          title: "User Name",
+          value: "#{ENV['USER_NAME']}",
+          short: true
+        },
+        {
+          title: "Product",
+          value: "NativeBase KitchenSink #{ENV['VERSION']}",
+          short: true
+        }]
+      },
+      default_payloads: [:lane, :git_branch],
+      success: false
+    )
+  end
+end
+
+
+################################################################################################
+# Android
+
+
+platform :android do
+
+  before_all do
+    ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+    ENV["USER_NAME"] = sh "git config --global user.name"
+  end
+
+
+  desc "Deploy a new version to the Google Play Store"
+  lane :alpha do
+    sh "./generate-apk.sh"
+    supply(
+      json_key: "./key.json",
+      package_name: "io.nativebase.market.geekyants.taxiapp",
+      apk: "./android/app/build/outputs/apk/app-release.apk"
+    )
+
+    ENV["SLACK_MESSAGE"]="Successfully generated and uploaded APK on Play Store"
+  end
+
+
+  after_all do |lane|
+    slack(
+      message: "#{ENV['SLACK_MESSAGE']}",
+      attachment_properties: {
+        fields: [
+        {
+          title: "User Name",
+          value: "#{ENV['USER_NAME']}",
+          short: true
+        },
+        {
+          title: "Product",
+          value: "Strap Taxi App",
+          short: true
+        },
+        {
+          title: "Result",
+          value: "Success",
+          short: true
+        }]
+      },
+      default_payloads: [:lane, :git_branch]
+    )
+  end
+
+  error do |lane, exception|
+    slack(
+      message: exception.message,
+      attachment_properties: {
+        fields: [
+        {
+          title: "User Name",
+          value: "#{ENV['USER_NAME']}",
+          short: true
+        },
+        {
+          title: "Product",
+          value: "Strap Taxi App",
+          short: true
+        }]
+      },
+      default_payloads: [:lane, :git_branch],
+      success: false
+    )
+  end
+end
+
