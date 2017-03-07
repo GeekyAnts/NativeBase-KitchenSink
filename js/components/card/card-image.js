@@ -59,22 +59,16 @@ class NHCardImage extends Component {
               <Image style={{ resizeMode: 'cover', width: null, height: 200, flex: 1 }} source={cardImage} />
             </CardItem>
 
-            <CardItem style={{ paddingVertical: 0 }}>
-              <Left>
-                <Button iconLeft transparent>
+            <CardItem style={{ paddingVertical: 0, justifyContent: 'space-around' }}>
+                <Button iconLeft transparent style={{ padding: null }}>
                   <Icon active name="thumbs-up" />
                   <Text>12 Likes</Text>
                 </Button>
-              </Left>
-              <Body>
                 <Button iconLeft transparent>
                   <Icon active name="chatbubbles" />
                   <Text>4 Comments</Text>
                 </Button>
-              </Body>
-              <Right>
                 <Text>11h ago</Text>
-              </Right>
             </CardItem>
           </Card>
         </Content>

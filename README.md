@@ -57,6 +57,11 @@ $ react-native run-ios
 ```sh
 $ react-native run-android
 ```
+###5. Exponent
+
+* Get a quick look of the NativeBase components using <a href="https://getexponent.com/">Exponent</a>
+
+*  Link https://exp.host/@geekyants/nativebase-kitchenSink
 
 ## Quick Links to NativeBase
 
