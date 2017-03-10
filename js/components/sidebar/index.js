@@ -120,6 +120,12 @@ const datas = [
     bg: '#29783B',
   },
   {
+    name: 'Segment',
+    route: 'segment',
+    icon: 'menu',
+    bg: '#AB6AED',
+  },
+  {
     name: 'Spinner',
     route: 'spinner',
     icon: 'navigate',
@@ -137,6 +143,12 @@ const datas = [
     route: 'thumbnail',
     icon: 'image',
     bg: '#cc0000',
+  },
+  {
+    name: 'Toast',
+    route: 'toast',
+    icon: 'albums',
+    bg: '#C5F442',
   },
   {
     name: 'Typography',
@@ -181,20 +193,6 @@ class SideBar extends Component {
               source={drawerImage}
             />
           </Image>
-          {(Platform.OS === 'ios') &&
-            <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-              <StyleProvider style={getTheme(variables)}>
-                <Button block rounded light onPress={this.props.changePlatform}>
-                  <Text>Platform</Text>
-                </Button>
-              </StyleProvider>
-              <StyleProvider style={getTheme(material)}>
-                <Button block rounded onPress={this.props.changeMaterial}>
-                  <Text>Material</Text>
-                </Button>
-              </StyleProvider>
-            </View>
-         }
           <List
             dataArray={datas} renderRow={data =>
               <ListItem button noBorder onPress={() => { Actions[data.route](); this.props.closeDrawer() }} >

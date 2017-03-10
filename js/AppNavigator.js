@@ -2,10 +2,11 @@
 import React, { Component } from 'react';
 import { BackAndroid, StatusBar, NavigationExperimental, Platform } from 'react-native';
 import { connect } from 'react-redux';
-import { StyleProvider, getTheme, variables, Drawer } from 'native-base';
+import { StyleProvider, variables, Drawer } from 'native-base';
 import { actions } from 'react-native-navigation-redux-helpers';
 import { Router, Scene } from 'react-native-router-flux';
 
+import getTheme from '../native-base-theme/components';
 import material from '../native-base-theme/variables/material';
 import { closeDrawer } from './actions/drawer';
 
@@ -91,6 +92,10 @@ import NHThumbnail from './components/thumbnail/';
 import NHTypography from './components/typography/';
 import SplashPage from './components/splashscreen/';
 import SideBar from './components/sidebar';
+import Segment from './components/segment';
+import BasicSegment from './components/segment/SegmentHeader';
+import AdvSegment from './components/segment/segmentTab';
+import Toast from './components/toast';
 import statusBarColor from './themes/variables';
 
 const {
@@ -247,6 +252,10 @@ class AppNavigator extends Component {
               <Scene key="configTab" component={ConfigTab} />
               <Scene key="thumbnail" component={NHThumbnail} />
               <Scene key="typography" component={NHTypography} />
+              <Scene key="segment" component={Segment} />
+              <Scene key="basicSeg" component={BasicSegment} />
+              <Scene key="advSeg" component={AdvSegment} />
+              <Scene key="toast" component={Toast} />
             </Scene>
           </RouterWithRedux>
         </Drawer>

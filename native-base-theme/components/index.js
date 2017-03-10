@@ -20,10 +20,14 @@ import itemTheme from './Item';
 import labelTheme from './Label';
 import textAreaTheme from './Textarea';
 import textTheme from './Text';
+import toastTheme from './Toast';
 import tabTheme from './Tab';
 import tabBarTheme from './TabBar';
+import tabContainerTheme from './TabContainer';
 import viewTheme from './View';
+import tabHeadingTheme from './TabHeading';
 import iconTheme from './Icon';
+import segmentTheme from './Segment';
 import spinnerTheme from './Spinner';
 import cardItemTheme from './CardItem';
 import listItemTheme from './ListItem';
@@ -99,6 +103,10 @@ export default (variables = variable) => {
 
     'NativeBase.CardItem1': {
       ...cardItemTheme(variables),
+    },
+
+    'NativeBase.Toast': {
+      ...toastTheme(variables),
     },
 
     'NativeBase.H1': {
@@ -193,6 +201,10 @@ export default (variables = variable) => {
      ...tabTheme(variables),
     },
 
+    'NativeBase.Segment': {
+     ...segmentTheme(variables),
+    },
+
     'NativeBase.STabs': {
       flex: 1,
     },
@@ -203,11 +215,37 @@ export default (variables = variable) => {
     'NativeBase.ViewNB': {
       ...viewTheme(variables),
     },
+    'NativeBase.TabHeading': {
+      ...tabHeadingTheme(variables),
+    },
+    'NativeBase.TabContainer': {
+      ...tabContainerTheme(variables),
+    },
     'NativeBase.Switch': {
       marginVertical: -5,
     },
     'NativeBase.Separator': {
       ...separatorTheme(variables),
+    },
+    'NativeBase.Tabs': {
+    },
+    'NativeBase.Thumbnail': {
+      '.square': {
+        borderRadius: 0,
+      },
+      '.small': {
+        width: 36,
+        height: 36,
+        borderRadius: 18,
+      },
+      '.large': {
+        width: 80,
+        height: 80,
+        borderRadius: 40,
+      },
+      width: 56,
+      height: 56,
+      borderRadius: 28,
     },
 
   };
