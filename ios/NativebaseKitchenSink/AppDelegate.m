@@ -8,10 +8,10 @@
  */
 
 #import "AppDelegate.h"
-#import "CodePush.h"
+#import <CodePush/CodePush.h>
 
-#import "RCTBundleURLProvider.h"
-#import "RCTRootView.h"
+#import <React/RCTBundleURLProvider.h>
+#import <React/RCTRootView.h>
 
 @implementation AppDelegate
 
