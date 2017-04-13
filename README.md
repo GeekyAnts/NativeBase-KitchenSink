@@ -17,7 +17,7 @@ The applications stack of components is built using native UI components, so the
 ## Get Started
 
 
-####1. Installation
+#### 1. Installation
 
 On the command prompt run the following commands
 
@@ -31,7 +31,7 @@ $ npm install
 $ react-native link
 ```
 
-####3. Simulate for iOS
+#### 2. Simulate for iOS
 
 **Method One**
 
@@ -48,7 +48,7 @@ $ react-native link
 $ react-native run-ios
 ```
 
-###4. Simulate for Android
+#### 3. Simulate for Android
 
 *	Make sure you have an **Android emulator** installed and running.
 
@@ -57,7 +57,7 @@ $ react-native run-ios
 ```sh
 $ react-native run-android
 ```
-###5. Exponent
+#### 4. Exponent
 
 * Get a quick look of the NativeBase components using <a href="https://getexponent.com/">Exponent</a>
 
