@@ -1,30 +1,14 @@
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Button, Icon, Left, Right, Body } from 'native-base';
 import { Grid, Col } from 'react-native-easy-grid';
 import { Actions } from 'react-native-router-flux';
 
 import { openDrawer } from '../../actions/drawer';
 
-const {
-  popRoute,
-} = actions;
+
 
 class CustomCol extends Component {  // eslint-disable-line
-
-  static propTypes = {
-    popRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
-
-  popRoute() {
-    this.props.popRoute(this.props.navigation.key);
-  }
-
   render() {
     return (
       <Container>
@@ -51,13 +35,10 @@ class CustomCol extends Component {  // eslint-disable-line
 }
 
 function bindAction(dispatch) {
-  return {
-    popRoute: key => dispatch(popRoute(key)),
-  };
+  return {};
 }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

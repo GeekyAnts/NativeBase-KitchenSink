@@ -1,31 +1,16 @@
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Header, Title, Button, Icon, Tabs, Tab, Right, Left, Body } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
-import { actions } from 'react-native-navigation-redux-helpers';
 import myTheme from '../../themes/base-theme';
 
 import TabOne from './tabOne';
 import TabTwo from './tabTwo';
 import TabThree from './tabThree';
 
-const {
-  popRoute,
-} = actions;
 
 class BasicTab extends Component {  // eslint-disable-line
-
-  static propTypes = {
-    popRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
-  popRoute() {
-    this.props.popRoute(this.props.navigation.key);
-  }
 
   render() {
     return (
@@ -59,13 +44,10 @@ class BasicTab extends Component {  // eslint-disable-line
 }
 
 function bindAction(dispatch) {
-  return {
-    popRoute: key => dispatch(popRoute(key)),
-  };
+  return { };
 }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

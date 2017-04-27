@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { Image, Platform } from 'react-native';
 import { connect } from 'react-redux';
@@ -220,7 +219,6 @@ class SideBar extends Component {
 
 function bindAction(dispatch) {
   return {
-    navigateTo: (route, homeRoute) => dispatch(navigateTo(route, homeRoute)),
     closeDrawer: () => dispatch(closeDrawer()),
     changePlatform: () => dispatch(changePlatform()),
     changeMaterial: () => dispatch(changeMaterial()),
@@ -228,7 +226,6 @@ function bindAction(dispatch) {
 }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

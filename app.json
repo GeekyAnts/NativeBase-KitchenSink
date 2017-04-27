@@ -1,9 +1,11 @@
 {
   "expo": {
-    "sdkVersion": "14.0.0",
+    "sdkVersion": "16.0.0",
     "icon": "http://nativebase.io/assets/img/front-page-icon.png",
+     "slug": "NativeBase-KitckenSink",
     "loading": {
       "hideExponentText": false,
+      "icon": "./img/loading.png",
       "backgroundImage": "./img/splashscreen.png"
     },
     "orientation": "portrait",

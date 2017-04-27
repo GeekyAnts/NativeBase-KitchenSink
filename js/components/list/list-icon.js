@@ -1,8 +1,6 @@
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Platform } from 'react-native';
-import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon, ListItem, Text, Badge, Left, Right, Body, Switch, Radio, Picker, Separator } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
@@ -10,18 +8,9 @@ import styles from './styles';
 
 const Item = Picker.Item;
 
-const {
-  popRoute,
-} = actions;
 
 class NHListIcon extends Component {
 
-  static propTypes = {
-    popRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
   constructor(props) {
     super(props);
     this.state = {
@@ -36,10 +25,6 @@ class NHListIcon extends Component {
     this.setState({
       selected1: value,
     });
-  }
-
-  popRoute() {
-    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -226,13 +211,10 @@ class NHListIcon extends Component {
 }
 
 function bindAction(dispatch) {
-  return {
-    popRoute: key => dispatch(popRoute(key)),
-  };
+  return {};
 }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 
