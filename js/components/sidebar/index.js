@@ -6,7 +6,6 @@ import { Actions } from 'react-native-router-flux';
 
 import material from '../../../native-base-theme/variables/material';
 import { changePlatform, changeMaterial, closeDrawer } from '../../actions/drawer';
-import navigateTo from '../../actions/sideBarNav';
 import styles from './style';
 
 const drawerCover = require('../../../img/drawer-cover.png');
@@ -160,7 +159,6 @@ const datas = [
 class SideBar extends Component {
 
   static propTypes = {
-    navigateTo: React.PropTypes.func,
     themeState: React.PropTypes.string,
     changePlatform: React.PropTypes.func,
     changeMaterial: React.PropTypes.func,
@@ -174,10 +172,7 @@ class SideBar extends Component {
     };
   }
 
-  navigateTo(route) {
-    this.props.navigateTo(route, 'home');
-  }
-
+ 
   render() {
     return (
       <Container>
