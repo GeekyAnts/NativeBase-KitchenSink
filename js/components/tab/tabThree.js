@@ -1,6 +1,4 @@
-
 import React, { Component } from 'react';
-
 import { Container, Content, Card, CardItem, Text, Body } from 'native-base';
 
 import styles from './styles';

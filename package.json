@@ -1,14 +1,17 @@
 {
-  "name": "NativebaseKitchenSink",
-  "version": "2.0.0",
+  "name": "KitchenSink",
+  "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-native-scripts": "0.0.19",
-    "jest-expo": "^0.2.1",
-    "react-test-renderer": "~15.4.0"
+    "jest-expo": "^0.4.0",
+    "react-native-scripts": "0.0.29",
+    "react-test-renderer": "16.0.0-alpha.6",
+    "remote-redux-devtools": "^0.5.7",
+    "remote-redux-devtools-on-debugger": "^0.7.0"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
+    "postinstall": "remotedev-debugger",
     "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
@@ -23,16 +26,15 @@
     "lodash": "^4.13.1",
     "moment": "^2.13.0",
     "@expo/vector-icons": "^4.0.0",
-    "expo": "14.0.2",
-    "native-base": "^2.0.12",
-    "react": "~15.4.0",
-    "react-native": "0.41.2",
-    "react-native-code-push": "1.17.0-beta",
-    "react-native-modalbox": "^1.3.4",
-    "react-native-navigation-redux-helpers": "^0.5.0",
-    "react-native-router-flux": "^3.37.0",
+    "expo": "^16.0.0",
+    "native-base": "2.1.3",
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.43.4",
+    "react-native-router-flux": "3.38.0",
     "react-native-scrollable-tab-view": "^0.6.0",
     "react-redux": "^4.4.5",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "redux-persist": "^4.4.2",
+    "redux-thunk": "^2.2.0"
   }
 }

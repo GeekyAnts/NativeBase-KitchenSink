@@ -1,28 +1,12 @@
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View } from 'react-native';
-import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Text, Body, Left, Right, Grid, Row, Col, Icon } from 'native-base';
 
 import styles from './styles';
 
-const {
-  replaceAt,
-} = actions;
 
 class State extends Component {
-
-  static propTypes = {
-    replaceAt: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
-
-  replaceAt(route) {
-    this.props.replaceAt('state', { key: route }, this.props.navigation.key);
-  }
 
   render() {
     return (
@@ -394,13 +378,10 @@ class State extends Component {
 }
 
 function bindAction(dispatch) {
-  return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
-  };
+  return { };
 }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

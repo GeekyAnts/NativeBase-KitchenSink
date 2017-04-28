@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Button, Icon, Spinner,Left,Right,Body } from 'native-base';

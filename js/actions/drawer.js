@@ -1,4 +1,3 @@
-
 import type { Action } from './types';
 
 export const OPEN_DRAWER = 'OPEN_DRAWER';

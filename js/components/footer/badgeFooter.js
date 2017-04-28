@@ -1,24 +1,12 @@
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Footer, FooterTab, Text, Body, Left, Right, Icon } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
 import styles from './styles';
 
-const {
-  popRoute,
-} = actions;
-
 class BadgeFooter extends Component {
 
-  static propTypes = {
-    popRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
   constructor(props) {
     super(props);
     this.state = {
@@ -65,10 +53,6 @@ class BadgeFooter extends Component {
     });
   }
 
-  popRoute() {
-    this.props.popRoute(this.props.navigation.key);
-  }
-
   render() {
     return (
       <Container style={styles.container}>
@@ -111,13 +95,10 @@ class BadgeFooter extends Component {
 }
 
 function bindAction(dispatch) {
-  return {
-    popRoute: key => dispatch(popRoute(key)),
-  };
+  return { };
 }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

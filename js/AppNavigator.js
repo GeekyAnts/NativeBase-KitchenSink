@@ -1,9 +1,7 @@
-
 import React, { Component } from 'react';
-import { BackAndroid, StatusBar, NavigationExperimental, Platform } from 'react-native';
+import { BackAndroid, StatusBar, Platform } from 'react-native';
 import { connect } from 'react-redux';
 import { StyleProvider, variables, Drawer } from 'native-base';
-import { actions } from 'react-native-navigation-redux-helpers';
 import { Router, Scene } from 'react-native-router-flux';
 
 import getTheme from '../native-base-theme/components';
@@ -90,7 +88,6 @@ import BasicTab from './components/tab/basicTab';
 import ConfigTab from './components/tab/configTab';
 import NHThumbnail from './components/thumbnail/';
 import NHTypography from './components/typography/';
-import SplashPage from './components/splashscreen/';
 import SideBar from './components/sidebar';
 import Segment from './components/segment';
 import BasicSegment from './components/segment/SegmentHeader';
@@ -98,40 +95,16 @@ import AdvSegment from './components/segment/segmentTab';
 import Toast from './components/toast';
 import statusBarColor from './themes/variables';
 
-const {
-  popRoute,
-} = actions;
 
 const RouterWithRedux = connect()(Router);
 
-const {
-  CardStack: NavigationCardStack,
-} = NavigationExperimental;
 
 class AppNavigator extends Component {
 
   static propTypes = {
     drawerState: React.PropTypes.string,
-    popRoute: React.PropTypes.func,
     closeDrawer: React.PropTypes.func,
     themeState: React.PropTypes.string,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-      routes: React.PropTypes.array,
-    }),
-  }
-
-  componentDidMount() {
-    BackAndroid.addEventListener('hardwareBackPress', () => {
-      const routes = this.props.navigation.routes;
-
-      if (routes[routes.length - 1].key === 'home') {
-        return false;
-      }
-
-      this.props.popRoute(this.props.navigation.key);
-      return true;
-    });
   }
 
   componentDidUpdate() {
@@ -144,9 +117,9 @@ class AppNavigator extends Component {
     }
   }
 
-  popRoute() {
-    this.props.popRoute();
-  }
+  // popRoute() {
+  //   this.props.popRoute();
+  // }
 
   openDrawer() {
     this._drawer._root.open();
@@ -266,13 +239,11 @@ class AppNavigator extends Component {
 
 const bindAction = dispatch => ({
   closeDrawer: () => dispatch(closeDrawer()),
-  popRoute: key => dispatch(popRoute(key)),
 });
 
 const mapStateToProps = state => ({
   drawerState: state.drawer.drawerState,
   themeState: state.drawer.themeState,
-  navigation: state.cardNavigation,
 });
 
 export default connect(mapStateToProps, bindAction)(AppNavigator);

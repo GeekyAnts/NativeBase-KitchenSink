@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Platform } from 'react-native';
@@ -85,7 +84,6 @@ function bindAction(dispatch) {
 }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

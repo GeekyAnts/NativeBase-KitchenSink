@@ -1,7 +1,5 @@
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
 import { View, Platform } from 'react-native';
 import { Container, Header, Title, Fab, Button, IconNB, Left, Right, Body, Icon } from 'native-base';
 import { Actions } from 'react-native-router-flux';
@@ -9,17 +7,8 @@ import { Actions } from 'react-native-router-flux';
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
-const {
-  popRoute,
-} = actions;
-class BasicFab extends Component {
 
-  static propTypes = {
-    popRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
+class BasicFab extends Component {
 
   constructor(props) {
     super(props);
@@ -27,10 +16,6 @@ class BasicFab extends Component {
       active: false,
     };
   }
-  popRoute() {
-    this.props.popRoute(this.props.navigation.key);
-  }
-
 
   render() {
     return (
@@ -79,13 +64,10 @@ class BasicFab extends Component {
 }
 
 function bindAction(dispatch) {
-  return {
-    popRoute: key => dispatch(popRoute(key)),
-  };
+  return {};
 }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

@@ -1,8 +1,6 @@
-
 import React, { Component } from 'react';
 import { Image, View } from 'react-native';
 import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Thumbnail, Left, Body, Right, IconNB } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
@@ -11,22 +9,8 @@ import styles from './styles';
 const logo = require('../../../img/logo.png');
 const cardImage = require('../../../img/drawer-cover.png');
 
-const {
-  popRoute,
-} = actions;
 
 class NHCardImage extends Component {
-
-  static propTypes = {
-    popRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
-
-  popRoute() {
-    this.props.popRoute(this.props.navigation.key);
-  }
 
   render() {
     return (
@@ -84,13 +68,10 @@ class NHCardImage extends Component {
 }
 
 function bindAction(dispatch) {
-  return {
-    popRoute: key => dispatch(popRoute(key)),
-  };
+  return {};
 }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 
