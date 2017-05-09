@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Image, View, StatusBar } from 'react-native';
 import { connect } from 'react-redux';
-import { Container, Button, H3, Text } from 'native-base';
+import { Container, Button, H3, Text, Header, Title, Body, Left, Right, Icon } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -14,6 +14,7 @@ class Home extends Component { // eslint-disable-line
   static propTypes = {
     openDrawer: React.PropTypes.func,
   }
+
 
   render() {
     return (
@@ -31,7 +32,7 @@ class Home extends Component { // eslint-disable-line
           <View style={{ marginBottom: 80 }}>
             <Button
               style={{ backgroundColor: '#6FAF98', alignSelf: 'center' }}
-              onPress={this.props.openDrawer}
+              onPress={() => this.props.navigation.navigate('DrawerOpen')}
             >
               <Text>Lets Go!</Text>
             </Button>
@@ -54,4 +55,4 @@ const mapStateToProps = state => ({
   routes: state.drawer.routes,
 });
 
-export default connect(mapStateToProps, bindActions)(Home);
+export default Home;

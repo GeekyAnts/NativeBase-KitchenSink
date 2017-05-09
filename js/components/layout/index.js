@@ -12,23 +12,23 @@ const {
 } = actions;
 const datas = [
   {
-    route: 'row',
+    route: 'RowNB',
     text: 'Row Grid',
   },
   {
-    route: 'column',
+    route: 'ColumnNB',
     text: 'Column Grid',
   },
   {
-    route: 'nested',
+    route: 'NestedGrid',
     text: 'Nested Layout',
   },
   {
-    route: 'customRow',
+    route: 'CustomRow',
     text: 'Custom Row Size Grid',
   },
   {
-    route: 'customCol',
+    route: 'CustomCol',
     text: 'Custom Column Size Grid',
   },
 ];
@@ -51,7 +51,7 @@ class NHLayout extends Component {  // eslint-disable-line
       <Container style={{backgroundColor: '#FBFAFA'}}>
         <Header>
           <Left>
-            <Button transparent onPress={this.props.openDrawer}>
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -65,7 +65,7 @@ class NHLayout extends Component {  // eslint-disable-line
         <Content>
           <List
             dataArray={datas} renderRow={data =>
-              <ListItem button onPress={() => { Actions[data.route](); this.props.closeDrawer() }} >
+              <ListItem button onPress={() => this.props.navigation.navigate(data.route)} >
                 <Text>{data.text}</Text>
                 <Right>
                   <Icon name="arrow-forward" style={{ color: '#999' }} />
@@ -92,4 +92,4 @@ const mapStateToProps = state => ({
   themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(NHLayout);
+export default NHLayout;

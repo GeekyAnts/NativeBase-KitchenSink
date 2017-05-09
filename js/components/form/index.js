@@ -13,51 +13,51 @@ const {
 } = actions;
 const datas = [
   {
-    route: 'fixedLabel',
+    route: 'FixedLabel',
     text: 'Fixed Label',
   },
   {
-    route: 'inlineLabel',
+    route: 'InlineLabel',
     text: 'Inline Label',
   },
   {
-    route: 'floatingLabel',
+    route: 'FloatingLabel',
     text: 'Floating Label',
   },
   {
-    route: 'placeholderLabel',
+    route: 'PlaceholderLabel',
     text: 'Placeholder Label',
   },
   {
-    route: 'stackedLabel',
+    route: 'StackedLabel',
     text: 'Stacked Label',
   },
   {
-    route: 'regularInput',
+    route: 'RegularInput',
     text: 'Regular Textbox',
   },
   {
-    route: 'underlineInput',
+    route: 'UnderlineInput',
     text: 'Underlined Textbox',
   },
   {
-    route: 'roundedInput',
+    route: 'RoundedInput',
     text: 'Rounded Textbox',
   },
   {
-    route: 'iconInput',
+    route: 'IconInput',
     text: 'Icon Textbox',
   },
   {
-    route: 'successInput',
+    route: 'SuccessInput',
     text: 'Success Input Textbox',
   },
   {
-    route: 'errorInput',
+    route: 'ErrorInput',
     text: 'Error Input Textbox',
   },
   {
-    route: 'disabledInput',
+    route: 'DisabledInput',
     text: 'Disabled Textbox',
   },
 ];
@@ -80,7 +80,7 @@ class NHForm extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={this.props.openDrawer}>
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -94,7 +94,7 @@ class NHForm extends Component {
         <Content>
           <List
             dataArray={datas} renderRow={data =>
-              <ListItem button onPress={() => { Actions[data.route](); this.props.closeDrawer() }} >
+              <ListItem button onPress={() => this.props.navigation.navigate(data.route)} >
                 <Text>{data.text}</Text>
                 <Right>
                   <Icon name="arrow-forward" style={{ color: '#999' }} />
@@ -121,4 +121,4 @@ const mapStateToProps = state => ({
   themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(NHForm);
+export default NHForm;

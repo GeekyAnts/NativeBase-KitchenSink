@@ -15,39 +15,39 @@ const {
   } = actions;
 const datas = [
   {
-    route: 'default',
+    route: 'Default',
     text: 'Default Button',
   },
   {
-    route: 'outline',
+    route: 'Outline',
     text: 'Outline Button',
   },
   {
-    route: 'rounded',
+    route: 'Rounded',
     text: 'Rounded Button',
   },
   {
-    route: 'block',
+    route: 'Block',
     text: 'Block Button',
   },
   {
-    route: 'full',
+    route: 'Full',
     text: 'Full Button',
   },
   {
-    route: 'custom',
+    route: 'Custom',
     text: 'Custom Size Button',
   },
   {
-    route: 'transparent',
+    route: 'Transparent',
     text: 'Transparent Button',
   },
   {
-    route: 'iconBtn',
+    route: 'IconBtn',
     text: 'Icon Button',
   },
   {
-    route: 'disabled',
+    route: 'Disabled',
     text: 'Disabled Button',
   },
 ];
@@ -75,7 +75,7 @@ class NHButton extends Component {  // eslint-disable-line
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={this.props.openDrawer}>
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -89,7 +89,7 @@ class NHButton extends Component {  // eslint-disable-line
         <Content>
           <List
             dataArray={datas} renderRow={data =>
-              <ListItem button onPress={() => { Actions[data.route](); this.props.closeDrawer() }} >
+              <ListItem button onPress={() => this.props.navigation.navigate(data.route)} >
                 <Text>{data.text}</Text>
                 <Right>
                   <Icon name="arrow-forward" style={{ color: '#999' }} />
@@ -118,4 +118,4 @@ const mapStateToProps = state => ({
   themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(NHButton);
+export default NHButton;

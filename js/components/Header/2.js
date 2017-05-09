@@ -31,7 +31,7 @@ class Header2 extends Component {  // eslint-disable-line
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => Actions.pop()}>
+            <Button transparent onPress={() => this.props.navigation.goBack()}>
               <Icon name="arrow-back" />
             </Button>
           </Left>
@@ -39,7 +39,7 @@ class Header2 extends Component {  // eslint-disable-line
             <Title>Header</Title>
           </Body>
           <Right>
-            <Button transparent onPress={() => Actions.pop()}>
+            <Button transparent onPress={() => this.props.navigation.goBack()}>
               <Icon name="menu" />
             </Button>
           </Right>
@@ -68,4 +68,4 @@ const mapStateToProps = state => ({
   themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(Header2);
+export default Header2;

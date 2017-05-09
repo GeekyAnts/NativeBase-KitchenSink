@@ -27,7 +27,7 @@ class NHSearchbar extends Component { // eslint-disable-line
         </Header>
 
         <Content padder>
-          <Button block onPress={this.props.openDrawer}><Text>Back</Text></Button>
+          <Button block onPress={() => this.props.navigation.navigate('DrawerOpen')}><Text>Back</Text></Button>
         </Content>
       </Container>
     );
@@ -45,4 +45,4 @@ const mapStateToProps = state => ({
   themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(NHSearchbar);
+export default NHSearchbar;

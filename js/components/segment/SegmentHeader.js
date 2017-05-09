@@ -26,7 +26,7 @@ class SegmentNB extends Component {
       <Container style={styles.container}>
       <Header hasTabs>
               <Left>
-                  <Button transparent onPress={() => Actions.pop()}>
+                  <Button transparent onPress={() => this.props.navigation.goBack()}>
                       <Icon name="arrow-back" />
                   </Button>
               </Left>
@@ -72,4 +72,4 @@ const mapStateToProps = state => ({
   themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(SegmentNB);
+export default SegmentNB;

@@ -32,7 +32,7 @@ class BasicTab extends Component {  // eslint-disable-line
       <Container>
         <Header hasTabs>
           <Left>
-            <Button transparent onPress={() => Actions.pop()}>
+            <Button transparent onPress={() => this.props.navigation.goBack()}>
               <Icon name="arrow-back" />
             </Button>
           </Left>
@@ -69,4 +69,4 @@ const mapStateToProps = state => ({
   themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(BasicTab);
+export default BasicTab;

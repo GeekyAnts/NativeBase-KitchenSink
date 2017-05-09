@@ -13,12 +13,16 @@ class Anatomy extends Component {
     openDrawer: React.PropTypes.func,
   }
 
+  static navigationOptions = {
+    header: <Header><Left /><Body><Title>Hello</Title></Body><Right /></Header>,
+  };
+
   render() {
     return (
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={this.props.openDrawer}>
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <Icon name="ios-menu" />
             </Button>
           </Left>
@@ -61,4 +65,4 @@ const mapStateToProps = state => ({
   themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(Anatomy);
+export default Anatomy;

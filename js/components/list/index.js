@@ -13,31 +13,31 @@ const {
 } = actions;
 const datas = [
   {
-    route: 'basicList',
+    route: 'NHBasicList',
     text: 'Basic List',
   },
   {
-    route: 'listDivider',
+    route: 'NHListDivider',
     text: 'List Divider',
   },
   {
-    route: 'listHeader',
+    route: 'NHListHeader',
     text: 'List Headers',
   },
   {
-    route: 'listIcon',
+    route: 'NHListIcon',
     text: 'List Icon',
   },
   {
-    route: 'listAvatar',
+    route: 'NHListAvatar',
     text: 'List Avatar',
   },
   {
-    route: 'listThumbnail',
+    route: 'NHListThumbnail',
     text: 'List Thumbnail',
   },,
   {
-    route: 'listSeparator',
+    route: 'NHListSeparator',
     text: 'List Separator',
   },
 ];
@@ -60,7 +60,7 @@ class NHList extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={this.props.openDrawer}>
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -73,7 +73,7 @@ class NHList extends Component {
         <Content>
           <List
             dataArray={datas} renderRow={data =>
-              <ListItem button onPress={() => { Actions[data.route](); this.props.closeDrawer() }} >
+              <ListItem button onPress={() => this.props.navigation.navigate(data.route)} >
                 <Text>{data.text}</Text>
                 <Right>
                   <Icon name="arrow-forward" />
@@ -100,4 +100,4 @@ const mapStateToProps = state => ({
   themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(NHList);
+export default NHList;

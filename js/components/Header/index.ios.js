@@ -14,35 +14,35 @@ const {
   } = actions;
 const datas = [
   {
-    route: 'header1',
+    route: 'Header1',
     text: 'Only Title',
   },
   {
-    route: 'header2',
+    route: 'Header2',
     text: 'Icon Buttons',
   },
   {
-    route: 'header3',
+    route: 'Header3',
     text: 'Text Buttons',
   },
   {
-    route: 'header4',
+    route: 'Header4',
     text: 'Icon Button and Text Button',
   },
   {
-    route: 'header5',
+    route: 'Header5',
     text: 'Icon and Text Buttons',
   },
   {
-    route: 'header6',
+    route: 'Header6',
     text: 'Multiple Icon Buttons',
   },
   {
-    route: 'header7',
+    route: 'Header7',
     text: 'Title and Subtitle',
   },
   {
-    route: 'header8',
+    route: 'Header8',
     text: 'Custom backgroundColor',
   },
 ];
@@ -67,7 +67,7 @@ class HeaderNB extends Component {  // eslint-disable-line
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={this.props.openDrawer}>
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -83,7 +83,7 @@ class HeaderNB extends Component {  // eslint-disable-line
             dataArray={datas} renderRow={data =>
               <ListItem
                 button
-                onPress={() => { Actions[data.route](); this.props.closeDrawer(); }}
+                onPress={() => this.props.navigation.navigate(data.route)}
               >
                 <Text>{data.text}</Text>
                 <Right>
@@ -112,4 +112,4 @@ const mapStateToProps = state => ({
   themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(HeaderNB);
+export default HeaderNB;

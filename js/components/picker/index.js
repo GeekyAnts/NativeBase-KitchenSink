@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Platform } from 'react-native';
-import { Container, Header, Title, Content, Button, Icon, Text,Right,Body,Left,Picker, ListItem } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Text,Right,Body,Left,Picker, ListItem, Form, Item as FormItem } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -37,7 +37,7 @@ class NHPicker extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-          <Button transparent onPress={this.props.openDrawer}>
+          <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
           <Icon name="menu" />
           </Button>
           </Left>
@@ -48,16 +48,7 @@ class NHPicker extends Component {
         </Header>
 
         <Content>
-          <ListItem icon>
-            <Left>
-              <Button light>
-                <Icon name="card" />
-              </Button>
-            </Left>
-            <Body>
-              <Text>Pay Mode</Text>
-            </Body>
-            <Right>
+          <Form>
               <Picker
                 iosHeader="Select one"
                 mode="dropdown"
@@ -70,8 +61,7 @@ class NHPicker extends Component {
                 <Item label="Credit Card" value="key3" />
                 <Item label="Net Banking" value="key4" />
               </Picker>
-            </Right>
-          </ListItem>
+              </Form>
         </Content>
       </Container>
     );
@@ -89,4 +79,4 @@ const mapStateToProps = state => ({
   themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(NHPicker);
+export default NHPicker;

@@ -13,23 +13,23 @@ const {
 } = actions;
 const datas = [
   {
-    route: 'basic',
+    route: 'BasicCard',
     text: 'Basic Card',
   },
   {
-    route: 'cardList',
+    route: 'NHCardList',
     text: 'Card List',
   },
   {
-    route: 'cardImage',
+    route: 'NHCardImage',
     text: 'Card Image',
   },
   {
-    route: 'cardShowcase',
+    route: 'NHCardShowcase',
     text: 'Card Showcase',
   },
   {
-    route: 'cardHeaderAndFooter',
+    route: 'NHCardHeaderAndFooter',
     text: 'Card Header & Footer',
   },
 ];
@@ -52,7 +52,7 @@ class NHCard extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={this.props.openDrawer}>
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -66,7 +66,7 @@ class NHCard extends Component {
         <Content>
           <List
             dataArray={datas} renderRow={data =>
-              <ListItem button onPress={() => { Actions[data.route](); this.props.closeDrawer() }} >
+              <ListItem button onPress={() => this.props.navigation.navigate(data.route)} >
                 <Text>{data.text}</Text>
                 <Right>
                   <Icon name="arrow-forward" style={{ color: '#999' }} />
@@ -93,4 +93,4 @@ const mapStateToProps = state => ({
   themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(NHCard);
+export default NHCard;

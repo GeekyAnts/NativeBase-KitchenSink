@@ -31,7 +31,7 @@ class Header7 extends Component {  // eslint-disable-line
       <Container style={styles.container}>
         <Header hasSubtitle>
           <Left>
-            <Button transparent onPress={() => Actions.pop()}>
+            <Button transparent onPress={() => this.props.navigation.goBack()}>
               <Icon name="arrow-back" />
             </Button>
           </Left>
@@ -65,4 +65,4 @@ const mapStateToProps = state => ({
   themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(Header7);
+export default Header7;

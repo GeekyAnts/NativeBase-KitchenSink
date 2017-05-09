@@ -31,7 +31,7 @@ class Header8 extends Component {  // eslint-disable-line
       <Container style={styles.container}>
         <Header style={{ backgroundColor: '#dc4239' }} androidStatusBarColor="#dc2015" iosBarStyle="light-content">
           <Left>
-            <Button transparent onPress={() => Actions.pop()}>
+            <Button transparent onPress={() => this.props.navigation.goBack()}>
               <Icon name="arrow-back" style={{ color: '#FFF' }} />
             </Button>
           </Left>
@@ -64,4 +64,4 @@ const mapStateToProps = state => ({
   themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(Header8);
+export default Header8;

@@ -17,142 +17,142 @@ const drawerImage = require('../../../img/logo-kitchen-sink.png');
 const datas = [
   {
     name: 'Anatomy',
-    route: 'anatomy',
+    route: 'Anatomy',
     icon: 'phone-portrait',
     bg: '#C5F442',
   },
   {
     name: 'Header',
-    route: 'header',
+    route: 'Header',
     icon: 'phone-portrait',
     bg: '#477EEA',
     types: '8',
   },
   {
     name: 'Footer',
-    route: 'footer',
+    route: 'Footer',
     icon: 'phone-portrait',
     bg: '#DA4437',
     types: '4',
   },
   {
     name: 'Badge',
-    route: 'badge',
+    route: 'NHBadge',
     icon: 'notifications',
     bg: '#4DCAE0',
   },
   {
     name: 'Button',
-    route: 'button',
+    route: 'NHButton',
     icon: 'radio-button-off',
     bg: '#1EBC7C',
     types: '9',
   },
   {
     name: 'Card',
-    route: 'card',
+    route: 'NHCard',
     icon: 'keypad',
     bg: '#B89EF5',
     types: '5',
   },
   {
     name: 'Check Box',
-    route: 'checkbox',
+    route: 'NHCheckbox',
     icon: 'checkmark-circle',
     bg: '#EB6B23',
   },
   {
     name: 'Deck Swiper',
-    route: 'deckswiper',
+    route: 'NHDeckSwiper',
     icon: 'swap',
     bg: '#3591FA',
   },
   {
     name: 'Fab',
-    route: 'fab',
+    route: 'NHFab',
     icon: 'help-buoy',
     bg: '#EF6092',
     types: '2',
   },
   {
     name: 'Form & Inputs',
-    route: 'form',
+    route: 'NHForm',
     icon: 'call',
     bg: '#EFB406',
     types: '13',
   },
   {
     name: 'Icon',
-    route: 'icon',
+    route: 'NHIcon',
     icon: 'information-circle',
     bg: '#EF6092',
   },
   {
     name: 'Layout',
-    route: 'layout',
+    route: 'NHLayout',
     icon: 'grid',
     bg: '#9F897C',
     types: '5',
   },
   {
     name: 'List',
-    route: 'list',
+    route: 'NHList',
     icon: 'lock',
     bg: '#5DCEE2',
     types: '7',
   },
   {
     name: 'Picker',
-    route: 'picker',
+    route: 'NHPicker',
     icon: 'arrow-dropdown',
     bg: '#F50C75',
   },
   {
     name: 'Radio',
-    route: 'radio',
+    route: 'NHRadio',
     icon: 'radio-button-on',
     bg: '#6FEA90',
   },
   {
     name: 'SearchBar',
-    route: 'searchbar',
+    route: 'NHSearchbar',
     icon: 'search',
     bg: '#29783B',
   },
   {
     name: 'Segment',
-    route: 'segment',
+    route: 'Segment',
     icon: 'menu',
     bg: '#AB6AED',
   },
   {
     name: 'Spinner',
-    route: 'spinner',
+    route: 'NHSpinner',
     icon: 'navigate',
     bg: '#BE6F50',
   },
   {
     name: 'Tabs',
-    route: 'tab',
+    route: 'NHTab',
     icon: 'home',
     bg: '#AB6AED',
     types: '2',
   },
   {
     name: 'Thumbnail',
-    route: 'thumbnail',
+    route: 'NHThumbnail',
     icon: 'image',
     bg: '#cc0000',
   },
   {
     name: 'Toast',
-    route: 'toast',
+    route: 'Toast',
     icon: 'albums',
     bg: '#C5F442',
   },
   {
     name: 'Typography',
-    route: 'typography',
+    route: 'NHTypography',
     icon: 'paper',
     bg: '#48525D',
   },
@@ -195,7 +195,7 @@ class SideBar extends Component {
           </Image>
           <List
             dataArray={datas} renderRow={data =>
-              <ListItem button noBorder onPress={() => { Actions[data.route](); this.props.closeDrawer() }} >
+              <ListItem button noBorder onPress={() => this.props.navigation.navigate(data.route)} >
                 <Left>
                   <Icon active name={data.icon} style={{ color: '#777', fontSize: 26, width: 30 }} />
                   <Text style={styles.text}>{data.name}</Text>
@@ -228,8 +228,7 @@ function bindAction(dispatch) {
 }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(SideBar);
+export default SideBar;

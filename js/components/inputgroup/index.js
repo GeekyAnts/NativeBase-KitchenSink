@@ -12,31 +12,31 @@ const {
 } = actions;
 const datas = [
   {
-    route: 'regularInput',
+    route: 'RegularInput',
     text: 'Regular Textbox',
   },
   {
-    route: 'underlineInput',
+    route: 'UnderlineInput',
     text: 'Underlined Textbox',
   },
   {
-    route: 'roundedInput',
+    route: 'RoundedInput',
     text: 'Rounded Textbox',
   },
   {
-    route: 'iconInput',
+    route: 'IconInput',
     text: 'Icon Textbox',
   },
   {
-    route: 'successInput',
+    route: 'SuccessInput',
     text: 'Success Input Textbox',
   },
   {
-    route: 'errorInput',
+    route: 'ErrorInput',
     text: 'Error Input Textbox',
   },
   {
-    route: 'disabledInput',
+    route: 'DisabledInput',
     text: 'Disabled Textbox',
   },
 ];
@@ -59,7 +59,7 @@ class NHInputGroup extends Component {  // eslint-disable-line
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={this.props.openDrawer}>
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <IconNB name="ios-menu" />
             </Button>
           </Left>
@@ -72,7 +72,7 @@ class NHInputGroup extends Component {  // eslint-disable-line
         <Content>
         <List
           dataArray={datas} renderRow={data =>
-            <ListItem button onPress={() => this.pushRoute(data.route)}>
+            <ListItem button onPress={() => this.props.navigation.navigate(data.route)}>
               <Text>{data.text}</Text>
               <Right>
                 <Icon name="arrow-forward" style={{ color: '#999' }} />
@@ -98,4 +98,4 @@ const mapStateToProps = state => ({
   themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(NHInputGroup);
+export default NHInputGroup;

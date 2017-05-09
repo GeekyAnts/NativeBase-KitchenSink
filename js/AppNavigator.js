@@ -8,6 +8,7 @@ import { Router, Scene } from 'react-native-router-flux';
 
 import getTheme from '../native-base-theme/components';
 import material from '../native-base-theme/variables/material';
+import platform from '../native-base-theme/variables/platform';
 import { closeDrawer } from './actions/drawer';
 
 import Home from './components/home/';
@@ -160,7 +161,7 @@ class AppNavigator extends Component {
 
   render() {
     return (
-      <StyleProvider style={getTheme((this.props.themeState === 'material') ? material : undefined)}>
+      <StyleProvider style={getTheme((this.props.themeState === 'material') ? material : platform)}>
         <Drawer
           ref={(ref) => { this._drawer = ref; }}
           content={<SideBar navigator={this._navigator} />}

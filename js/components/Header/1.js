@@ -40,7 +40,7 @@ class Header1 extends Component {  // eslint-disable-line
         </Header>
 
         <Content padder>
-          <Button onPress={() => Actions.pop()}>
+          <Button onPress={() => this.props.navigation.goBack()}>
             <Text>Back</Text>
           </Button>
         </Content>
@@ -57,8 +57,7 @@ function bindAction(dispatch) {
 }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 
-export default connect(mapStateToProps, bindAction)(Header1);
+export default Header1;
