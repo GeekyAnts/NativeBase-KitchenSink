@@ -33,7 +33,7 @@ export default class Setup extends Component {
 
     return (
       <Provider store={this.state.store}>
-      <App />
+        <App />
       </Provider>
     );
   }
