@@ -1,25 +1,27 @@
 
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Platform, View } from 'react-native';
-import { actions } from 'react-native-navigation-redux-helpers';
+import { connect } from 'react-redux';
 import { Container, Header, Title, Fab, Button, IconNB, Left, Right, Body, Icon } from 'native-base';
-import { Actions } from 'react-native-router-flux';
 
-import { openDrawer } from '../../actions/drawer';
+// import { actions } from 'react-native-navigation-redux-helpers';
+// import { Actions } from 'react-native-router-flux';
+// import { openDrawer } from '../../actions/drawer';
+
 import styles from './styles';
 
-const {
-  popRoute,
-} = actions;
+// const {
+//   popRoute,
+// } = actions;
+
 class MultipleFab extends Component {
 
-  static propTypes = {
-    popRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
+  // static propTypes = {
+  //   popRoute: React.PropTypes.func,
+  //   navigation: React.PropTypes.shape({
+  //     key: React.PropTypes.string,
+  //   }),
+  // }
 
   constructor(props) {
     super(props);
@@ -30,9 +32,10 @@ class MultipleFab extends Component {
       active3: false,
     };
   }
-  popRoute() {
-    this.props.popRoute(this.props.navigation.key);
-  }
+  
+  // popRoute() {
+  //   this.props.popRoute(this.props.navigation.key);
+  // }
 
   render() {
     return (
@@ -137,14 +140,14 @@ class MultipleFab extends Component {
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    popRoute: key => dispatch(popRoute(key)),
-  };
-}
+// function bindAction(dispatch) {
+//   return {
+//     popRoute: key => dispatch(popRoute(key)),
+//   };
+// }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
+  // navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

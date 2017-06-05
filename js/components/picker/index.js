@@ -1,19 +1,19 @@
 
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Platform } from 'react-native';
+import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Button, Icon, Text,Right,Body,Left,Picker, ListItem, Form, Item as FormItem } from 'native-base';
 
-import { openDrawer } from '../../actions/drawer';
+// import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 const Item = Picker.Item;
 
 class NHPicker extends Component {
 
-  static propTypes = {
-    openDrawer: React.PropTypes.func,
-  }
+  // static propTypes = {
+  //   openDrawer: React.PropTypes.func,
+  // }
 
   constructor(props) {
     super(props);
@@ -68,14 +68,14 @@ class NHPicker extends Component {
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    openDrawer: () => dispatch(openDrawer()),
-  };
-}
+// function bindAction(dispatch) {
+//   return {
+//     openDrawer: () => dispatch(openDrawer()),
+//   };
+// }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
+  // navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

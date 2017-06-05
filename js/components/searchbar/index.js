@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Header, Button, Icon, Item, Input, Content,Text } from 'native-base';
 
-import { openDrawer } from '../../actions/drawer';
+// import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 class NHSearchbar extends Component { // eslint-disable-line
 
-  static propTypes = {
-    openDrawer: React.PropTypes.func,
-  }
+  // static propTypes = {
+  //   openDrawer: React.PropTypes.func,
+  // }
 
   render() {
     return (
@@ -34,14 +34,14 @@ class NHSearchbar extends Component { // eslint-disable-line
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    openDrawer: () => dispatch(openDrawer()),
-  };
-}
+// function bindAction(dispatch) {
+//   return {
+//     openDrawer: () => dispatch(openDrawer()),
+//   };
+// }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
+  // navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

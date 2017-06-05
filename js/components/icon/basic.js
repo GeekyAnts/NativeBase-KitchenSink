@@ -1,28 +1,29 @@
 
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { View } from 'react-native';
-import { actions } from 'react-native-navigation-redux-helpers';
+import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Button, Icon, Body, Left, Right } from 'native-base';
+
+// import { actions } from 'react-native-navigation-redux-helpers';
 
 import styles from './styles';
 
-const {
-  replaceAt,
-} = actions;
+// const {
+//   replaceAt,
+// } = actions;
 
 class Basic extends Component {
 
-  static propTypes = {
-    replaceAt: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
+  // static propTypes = {
+  //   replaceAt: React.PropTypes.func,
+  //   navigation: React.PropTypes.shape({
+  //     key: React.PropTypes.string,
+  //   }),
+  // }
 
-  replaceAt(route) {
-    this.props.replaceAt('basicIcon', { key: route }, this.props.navigation.key);
-  }
+  // replaceAt(route) {
+  //   this.props.replaceAt('basicIcon', { key: route }, this.props.navigation.key);
+  // }
 
   render() {
     return (
@@ -125,6 +126,7 @@ class Basic extends Component {
             <Icon name="logo-whatsapp" style={{ width: 45, height: 45, justifyContent: 'center' }} />
             <Icon name="logo-wordpress" style={{ width: 45, height: 45, justifyContent: 'center' }} />
             <Icon name="logo-youtube" style={{ width: 45, height: 45, justifyContent: 'center' }} />
+            <Icon name="mail" style={{ width: 45, height: 45, justifyContent: 'center' }} />
           </View>
         </Content>
       </Container>
@@ -132,14 +134,14 @@ class Basic extends Component {
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
-  };
-}
+// function bindAction(dispatch) {
+//   return {
+//     replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+//   };
+// }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
+  // navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

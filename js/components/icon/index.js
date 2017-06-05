@@ -1,29 +1,30 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon, Text, Left, Body, Right, Grid, Col, Row } from 'native-base';
 
-import { openDrawer } from '../../actions/drawer';
+// import { actions } from 'react-native-navigation-redux-helpers';
+// import { openDrawer } from '../../actions/drawer';
+
 import styles from './styles';
 
-const {
-  replaceAt,
-} = actions;
+// const {
+//   replaceAt,
+// } = actions;
 
 class NHIcon extends Component {
 
-  static propTypes = {
-    openDrawer: React.PropTypes.func,
-    replaceAt: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
+  // static propTypes = {
+  //   openDrawer: React.PropTypes.func,
+  //   replaceAt: React.PropTypes.func,
+  //   navigation: React.PropTypes.shape({
+  //     key: React.PropTypes.string,
+  //   }),
+  // }
 
-  replaceAt(route) {
-    this.props.replaceAt('icon', { key: route }, this.props.navigation.key);
-  }
+  // replaceAt(route) {
+  //   this.props.replaceAt('icon', { key: route }, this.props.navigation.key);
+  // }
 
   render() {
     return (
@@ -385,6 +386,29 @@ class NHIcon extends Component {
               <Col style={styles.col}>
                 <Icon name="logo-twitter" style={{ color: '#1DA1F2' }} />
                 <Text numberOfLines={1} style={styles.iconText}>logo-twitter</Text>
+              </Col>
+            </Row>
+
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon name="logo-github" style={{ color: 'red' }} />
+                <Text numberOfLines={1} style={styles.iconText}>logo-github</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="logo-whatsapp" style={{ color: '#000' }} />
+                <Text numberOfLines={1} style={styles.iconText}>logo-whatsapp</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="logo-wordpress" style={{ color: '#46639E' }} />
+                <Text numberOfLines={1} style={styles.iconText}>logo-wordpress</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="logo-youtube" style={{ color: '#DC4A38' }} />
+                <Text numberOfLines={1} style={styles.iconText}>logo-youtube</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="mail" style={{ color: '#1DA1F2' }} />
+                <Text numberOfLines={1} style={styles.iconText}>mail</Text>
               </Col>
             </Row>
 

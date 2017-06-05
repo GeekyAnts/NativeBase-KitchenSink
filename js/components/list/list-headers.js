@@ -1,28 +1,29 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Left, Right, Body } from 'native-base';
-import { Actions } from 'react-native-router-flux';
+
+// import { actions } from 'react-native-navigation-redux-helpers';
+// import { Actions } from 'react-native-router-flux';
 
 import styles from './styles';
 
-const {
-  popRoute,
-} = actions;
+// const {
+//   popRoute,
+// } = actions;
 
 class NHListHeader extends Component {
 
-  static propTypes = {
-    popRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
+  // static propTypes = {
+  //   popRoute: React.PropTypes.func,
+  //   navigation: React.PropTypes.shape({
+  //     key: React.PropTypes.string,
+  //   }),
+  // }
 
-  popRoute() {
-    this.props.popRoute(this.props.navigation.key);
-  }
+  // popRoute() {
+  //   this.props.popRoute(this.props.navigation.key);
+  // }
 
   render() {
     return (
@@ -87,14 +88,14 @@ class NHListHeader extends Component {
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    popRoute: key => dispatch(popRoute(key)),
-  };
-}
+// function bindAction(dispatch) {
+//   return {
+//     popRoute: key => dispatch(popRoute(key)),
+//   };
+// }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
+  // navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

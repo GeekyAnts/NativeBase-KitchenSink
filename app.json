@@ -1,6 +1,6 @@
 {
   "expo": {
-    "sdkVersion": "14.0.0",
+    "sdkVersion": "17.0.0",
     "icon": "http://nativebase.io/assets/img/front-page-icon.png",
     "loading": {
       "hideExponentText": false,

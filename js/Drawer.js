@@ -1,19 +1,8 @@
-/**
- * @flow
- */
+/* @flow */
 
 import React from 'react';
-import {
-  Button,
-  Platform,
-  ScrollView,
-  StyleSheet,
-  Text,
-} from 'react-native';
-import {
-  DrawerNavigator,
-} from 'react-navigation';
-
+import { Button, Platform, ScrollView, StyleSheet, Text } from 'react-native';
+import { DrawerNavigator } from 'react-navigation';
 
 import Home from './components/home/';
 import Header from './components/Header/';
@@ -47,90 +36,35 @@ import Segment from './components/segment';
 import Toast from './components/toast';
 
 const DrawerExample = DrawerNavigator({
-  Home: {
-    screen: Home,
-  },
-  Anatomy: {
-    screen: Anatomy,
-  },
-  Header: {
-    screen: Header,
-  },
-  Footer: {
-    screen: Footer,
-  },
-  NHBadge: {
-    screen: NHBadge,
-  },
-  NHButton: {
-    screen: NHButton,
-  },
-  NHCard: {
-    screen: NHCard,
-  },
-  NHCheckbox: {
-    screen: NHCheckbox,
-  },
-  NHDeckSwiper: {
-    screen: NHDeckSwiper,
-  },
-  NHFab: {
-    screen: NHFab,
-  },
-  NHForm: {
-    screen: NHForm,
-  },
-  TextArea: {
-    screen: TextArea,
-  },
-  NHIcon: {
-    screen: NHIcon,
-  },
-  BasicIcon: {
-    screen: BasicIcon,
-  },
-  IconState: {
-    screen: IconState,
-  },
-  SpecificIcon: {
-    screen: SpecificIcon,
-  },
-  NHInputGroup: {
-    screen: NHInputGroup,
-  },
-  NHLayout: {
-    screen: NHLayout,
-  },
-  NHList: {
-    screen: NHList,
-  },
-  NHRadio: {
-    screen: NHRadio,
-  },
-  NHSearchbar: {
-    screen: NHSearchbar,
-  },
-  NHSpinner: {
-    screen: NHSpinner,
-  },
-  NHPicker: {
-    screen: NHPicker,
-  },
-  NHTab: {
-    screen: NHTab,
-  },
-  NHThumbnail: {
-    screen: NHThumbnail,
-  },
-  NHTypography: {
-    screen: NHTypography,
-  },
-  Segment: {
-    screen: Segment,
-  },
-  Toast: {
-    screen: Toast,
-  },
+  Home: { screen: Home },
+  Anatomy: { screen: Anatomy },
+  Header: { screen: Header },
+  Footer: { screen: Footer },
+  NHBadge: { screen: NHBadge },
+  NHButton: { screen: NHButton },
+  NHCard: { screen: NHCard },
+  NHCheckbox: { screen: NHCheckbox },
+  NHDeckSwiper: { screen: NHDeckSwiper },
+  NHFab: { screen: NHFab },
+  NHForm: { screen: NHForm },
+  TextArea: { screen: TextArea },
+  NHIcon: { screen: NHIcon },
+  BasicIcon: { screen: BasicIcon },
+  IconState: { screen: IconState },
+  SpecificIcon: { screen: SpecificIcon },
+  NHInputGroup: { screen: NHInputGroup },
+  NHLayout: { screen: NHLayout },
+  NHList: { screen: NHList },
+  NHRadio: { screen: NHRadio },
+  NHSearchbar: { screen: NHSearchbar },
+  NHSpinner: { screen: NHSpinner },
+  NHPicker: { screen: NHPicker },
+  NHTab: { screen: NHTab },
+  NHThumbnail: { screen: NHThumbnail },
+  NHTypography: { screen: NHTypography },
+  Segment: { screen: Segment },
+  Toast: { screen: Toast },
+
 }, {
   initialRouteName: 'Home',
   contentOptions: {

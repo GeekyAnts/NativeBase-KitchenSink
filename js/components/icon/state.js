@@ -2,27 +2,28 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View } from 'react-native';
-import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Text, Body, Left, Right, Grid, Row, Col, Icon } from 'native-base';
+
+// import { actions } from 'react-native-navigation-redux-helpers';
 
 import styles from './styles';
 
-const {
-  replaceAt,
-} = actions;
+// const {
+//   replaceAt,
+// } = actions;
 
 class State extends Component {
 
-  static propTypes = {
-    replaceAt: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
+  // static propTypes = {
+  //   replaceAt: React.PropTypes.func,
+  //   navigation: React.PropTypes.shape({
+  //     key: React.PropTypes.string,
+  //   }),
+  // }
 
-  replaceAt(route) {
-    this.props.replaceAt('state', { key: route }, this.props.navigation.key);
-  }
+  // replaceAt(route) {
+  //   this.props.replaceAt('state', { key: route }, this.props.navigation.key);
+  // }
 
   render() {
     return (
@@ -383,6 +384,29 @@ class State extends Component {
               <Col style={styles.col}>
                 <Icon name="logo-twitter" />
                 <Text numberOfLines={1} style={styles.iconText}>logo-twitter</Text>
+              </Col>
+            </Row>
+
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon name="logo-github" />
+                <Text numberOfLines={1} style={styles.iconText}>logo-github</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="logo-whatsapp" />
+                <Text numberOfLines={1} style={styles.iconText}>logo-whatsapp</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="logo-wordpress" />
+                <Text numberOfLines={1} style={styles.iconText}>logo-wordpress</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="logo-youtube" />
+                <Text numberOfLines={1} style={styles.iconText}>logo-youtube</Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="mail" />
+                <Text numberOfLines={1} style={styles.iconText}>mail</Text>
               </Col>
             </Row>
 

@@ -1,9 +1,10 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Thumbnail, Left, Right, Body } from 'native-base';
-import { Actions } from 'react-native-router-flux';
+
+// import { actions } from 'react-native-navigation-redux-helpers';
+// import { Actions } from 'react-native-router-flux';
 
 import styles from './styles';
 
@@ -13,7 +14,6 @@ const megha = require('../../../img/contacts/megha.png');
 const atul = require('../../../img/contacts/atul.png');
 const saurabh = require('../../../img/contacts/saurabh.png');
 const varun = require('../../../img/contacts/varun.png');
-
 
 const datas = [
   {
@@ -54,23 +54,22 @@ const datas = [
   },
 ];
 
-const {
-  popRoute,
-} = actions;
+// const {
+//   popRoute,
+// } = actions;
 
 class NHListAvatar extends Component {
 
+  // static propTypes = {
+  //   popRoute: React.PropTypes.func,
+  //   navigation: React.PropTypes.shape({
+  //     key: React.PropTypes.string,
+  //   }),
+  // }
 
-  static propTypes = {
-    popRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
-
-  popRoute() {
-    this.props.popRoute(this.props.navigation.key);
-  }
+  // popRoute() {
+  //   this.props.popRoute(this.props.navigation.key);
+  // }
 
   render() {
     return (
@@ -110,14 +109,14 @@ class NHListAvatar extends Component {
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    popRoute: key => dispatch(popRoute(key)),
-  };
-}
+// function bindAction(dispatch) {
+//   return {
+//     popRoute: key => dispatch(popRoute(key)),
+//   };
+// }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
+  // navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

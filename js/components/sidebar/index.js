@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 import { Image, Platform } from 'react-native';
 import { connect } from 'react-redux';
 import { Content, Text, List, ListItem, Icon, Container, Left, Right, Badge, Button, View, StyleProvider, getTheme, variables } from 'native-base';
-import { Actions } from 'react-native-router-flux';
+// import { Actions } from 'react-native-router-flux';
 
 import material from '../../../native-base-theme/variables/material';
-import { changePlatform, changeMaterial, closeDrawer } from '../../actions/drawer';
-import navigateTo from '../../actions/sideBarNav';
+// import { changePlatform, changeMaterial, closeDrawer } from '../../actions/drawer';
+// import navigateTo from '../../actions/sideBarNav';
 import styles from './style';
 
 const drawerCover = require('../../../img/drawer-cover.png');
@@ -79,7 +79,7 @@ const datas = [
     route: 'NHForm',
     icon: 'call',
     bg: '#EFB406',
-    types: '13',
+    types: '12',
   },
   {
     name: 'Icon',
@@ -143,6 +143,7 @@ const datas = [
     route: 'NHThumbnail',
     icon: 'image',
     bg: '#cc0000',
+    types: '2',
   },
   {
     name: 'Toast',
@@ -158,10 +159,11 @@ const datas = [
   },
 
 ];
+
 class SideBar extends Component {
 
   static propTypes = {
-    navigateTo: React.PropTypes.func,
+    // navigateTo: React.PropTypes.func,
     themeState: React.PropTypes.string,
     changePlatform: React.PropTypes.func,
     changeMaterial: React.PropTypes.func,
@@ -175,9 +177,9 @@ class SideBar extends Component {
     };
   }
 
-  navigateTo(route) {
-    this.props.navigateTo(route, 'home');
-  }
+  // navigateTo(route) {
+  //   this.props.navigateTo(route, 'home');
+  // }
 
   render() {
     return (
@@ -218,14 +220,14 @@ class SideBar extends Component {
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    navigateTo: (route, homeRoute) => dispatch(navigateTo(route, homeRoute)),
-    closeDrawer: () => dispatch(closeDrawer()),
-    changePlatform: () => dispatch(changePlatform()),
-    changeMaterial: () => dispatch(changeMaterial()),
-  };
-}
+// function bindAction(dispatch) {
+//   return {
+//     navigateTo: (route, homeRoute) => dispatch(navigateTo(route, homeRoute)),
+//     closeDrawer: () => dispatch(closeDrawer()),
+//     changePlatform: () => dispatch(changePlatform()),
+//     changeMaterial: () => dispatch(changeMaterial()),
+//   };
+// }
 
 const mapStateToProps = state => ({
   themeState: state.drawer.themeState,

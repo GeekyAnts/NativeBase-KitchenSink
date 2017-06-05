@@ -2,31 +2,30 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Button, Icon, Left, Right, Body, Text, H3 } from 'native-base';
-import { Actions } from 'react-native-router-flux';
 
-import { actions } from 'react-native-navigation-redux-helpers';
-import { openDrawer } from '../../actions/drawer';
+// import { Actions } from 'react-native-router-flux';
+// import { actions } from 'react-native-navigation-redux-helpers';
+// import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 
-const {
-    popRoute,
-  } = actions;
+// const {
+//     popRoute,
+//   } = actions;
 
 class Transparent extends Component {  // eslint-disable-line
 
+  // static propTypes = {
+  //   openDrawer: React.PropTypes.func,
+  //   popRoute: React.PropTypes.func,
+  //   navigation: React.PropTypes.shape({
+  //     key: React.PropTypes.string,
+  //   }),
+  // }
 
-  static propTypes = {
-    openDrawer: React.PropTypes.func,
-    popRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
-
-  popRoute() {
-    this.props.popRoute(this.props.navigation.key);
-  }
+  // popRoute() {
+  //   this.props.popRoute(this.props.navigation.key);
+  // }
   render() {
     return (
       <Container style={styles.container}>
@@ -40,32 +39,31 @@ class Transparent extends Component {  // eslint-disable-line
             <Title>Transparent</Title>
           </Body>
           <Right />
-
         </Header>
 
         <Content padder style={{ backgroundColor: '#fff', padding: 20 }}>
           <Button transparent light style={styles.mb15}><Text>Light</Text></Button>
+          <Button transparent info style={styles.mb15}><Text>Info</Text></Button>
           <Button transparent style={styles.mb15}><Text>Primary</Text></Button>
-          <Button transparent danger style={styles.mb15}><Text>Danger</Text></Button>
           <Button transparent success style={styles.mb15}><Text>Success</Text></Button>
-          <Button info transparent style={styles.mb15}><Text>Info</Text></Button>
-          <Button warning transparent style={styles.mb15}><Text>Warning</Text></Button>
-          <Button dark transparent style={styles.mb15}><Text>Dark</Text></Button>
+          <Button transparent warning style={styles.mb15}><Text>Warning</Text></Button>
+          <Button transparent danger style={styles.mb15}><Text>Danger</Text></Button>
+          <Button transparent dark style={styles.mb15}><Text>Dark</Text></Button>
         </Content>
       </Container>
     );
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    openDrawer: () => dispatch(openDrawer()),
-    popRoute: key => dispatch(popRoute(key)),
-  };
-}
+// function bindAction(dispatch) {
+//   return {
+//     openDrawer: () => dispatch(openDrawer()),
+//     popRoute: key => dispatch(popRoute(key)),
+//   };
+// }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
+  // navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

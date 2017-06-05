@@ -2,17 +2,18 @@
 import React, { Component } from 'react';
 import { StatusBar } from 'react-native';
 import { connect } from 'react-redux';
-import { Actions } from 'react-native-router-flux';
 import { Container, Header, Title, Content, Text, H3, Button, Icon, Footer, FooterTab, Left, Right, Body, Segment } from 'native-base';
 
-import { openDrawer } from '../../actions/drawer';
+// import { Actions } from 'react-native-router-flux';
+// import { openDrawer } from '../../actions/drawer';
+
 import styles from './styles';
 
 class SegmentNB extends Component {
 
-  static propTypes = {
-    openDrawer: React.PropTypes.func,
-  }
+  // static propTypes = {
+  //   openDrawer: React.PropTypes.func,
+  // }
 
   constructor(props) {
     super(props);
@@ -61,14 +62,14 @@ class SegmentNB extends Component {
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    openDrawer: () => dispatch(openDrawer()),
-  };
-}
+// function bindAction(dispatch) {
+//   return {
+//     openDrawer: () => dispatch(openDrawer()),
+//   };
+// }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
+  // navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

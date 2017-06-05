@@ -4,14 +4,15 @@ import { StatusBar } from 'react-native';
 import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Text, H3, Button, Icon, Footer, FooterTab, Left, Right, Body, Toast } from 'native-base';
 
-import { openDrawer } from '../../actions/drawer';
+// import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 class ToastNB extends Component {
 
-  static propTypes = {
-    openDrawer: React.PropTypes.func,
-  }
+  // static propTypes = {
+  //   openDrawer: React.PropTypes.func,
+  // }
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -52,14 +53,14 @@ class ToastNB extends Component {
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    openDrawer: () => dispatch(openDrawer()),
-  };
-}
+// function bindAction(dispatch) {
+//   return {
+//     openDrawer: () => dispatch(openDrawer()),
+//   };
+// }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
+  // navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

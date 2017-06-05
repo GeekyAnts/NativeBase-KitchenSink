@@ -1,16 +1,18 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Button, Left, Right, Body, Icon, List, ListItem, Content, Text } from 'native-base';
-import { Actions } from 'react-native-router-flux';
+
+// import { actions } from 'react-native-navigation-redux-helpers';
+// import { Actions } from 'react-native-router-flux';
+// import { openDrawer, closeDrawer } from '../../actions/drawer';
 
 import styles from './styles';
-import { openDrawer, closeDrawer } from '../../actions/drawer';
 
-const {
-  pushRoute,
-} = actions;
+// const {
+//   pushRoute,
+// } = actions;
+
 const datas = [
   {
     route: 'BasicFab',
@@ -21,20 +23,20 @@ const datas = [
     text: 'Multiple FABs',
   },
 ];
+
 class NHFab extends Component {
 
-  static propTypes = {
-    openDrawer: React.PropTypes.func,
-    pushRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
+  // static propTypes = {
+  //   openDrawer: React.PropTypes.func,
+  //   pushRoute: React.PropTypes.func,
+  //   navigation: React.PropTypes.shape({
+  //     key: React.PropTypes.string,
+  //   }),
+  // }
 
-  pushRoute(route) {
-    this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
-  }
-
+  // pushRoute(route) {
+  //   this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
+  // }
 
   render() {
     return (
@@ -64,23 +66,21 @@ class NHFab extends Component {
           }
           />
         </Content>
-
-
       </Container>
     );
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    openDrawer: () => dispatch(openDrawer()),
-    closeDrawer: () => dispatch(closeDrawer()),
-    pushRoute: (route, key) => dispatch(pushRoute(route, key)),
-  };
-}
+// function bindAction(dispatch) {
+//   return {
+//     openDrawer: () => dispatch(openDrawer()),
+//     closeDrawer: () => dispatch(closeDrawer()),
+//     pushRoute: (route, key) => dispatch(pushRoute(route, key)),
+//   };
+// }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
+  // navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

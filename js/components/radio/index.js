@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Button, Icon, List, ListItem, Radio, Text,Left,Right,Body } from 'native-base';
 
-import { openDrawer } from '../../actions/drawer';
+// import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 class NHRadio extends Component {
 
-  static propTypes = {
-    openDrawer: React.PropTypes.func,
-  }
+  // static propTypes = {
+  //   openDrawer: React.PropTypes.func,
+  // }
 
   constructor(props) {
     super(props);
@@ -87,7 +87,7 @@ class NHRadio extends Component {
               </Right>
             </ListItem>
             <ListItem selected={this.state.radio3} onPress={() => this.toggleRadio3()} >
-              <Text>Finish list Screen</Text>
+              <Text>Finish List Screen</Text>
               <Right>
                 <Radio selected={this.state.radio3} onPress={() => this.toggleRadio3()} />
               </Right>
@@ -104,14 +104,14 @@ class NHRadio extends Component {
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    openDrawer: () => dispatch(openDrawer()),
-  };
-}
+// function bindAction(dispatch) {
+//   return {
+//     openDrawer: () => dispatch(openDrawer()),
+//   };
+// }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
+  // navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

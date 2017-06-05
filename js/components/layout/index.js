@@ -1,15 +1,17 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon, Left, Right, Body, List, ListItem, Text } from 'native-base';
-import { Actions } from 'react-native-router-flux';
 
-import { openDrawer, closeDrawer } from '../../actions/drawer';
+// import { actions } from 'react-native-navigation-redux-helpers';
+// import { Actions } from 'react-native-router-flux';
+// import { openDrawer, closeDrawer } from '../../actions/drawer';
 
-const {
-  pushRoute,
-} = actions;
+
+// const {
+//   pushRoute,
+// } = actions;
+
 const datas = [
   {
     route: 'RowNB',
@@ -32,19 +34,20 @@ const datas = [
     text: 'Custom Column Size Grid',
   },
 ];
+
 class NHLayout extends Component {  // eslint-disable-line
 
-  static propTypes = {
-    openDrawer: React.PropTypes.func,
-    pushRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
+  // static propTypes = {
+  //   openDrawer: React.PropTypes.func,
+  //   pushRoute: React.PropTypes.func,
+  //   navigation: React.PropTypes.shape({
+  //     key: React.PropTypes.string,
+  //   }),
+  // }
 
-  pushRoute(route) {
-    this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
-  }
+  // pushRoute(route) {
+  //   this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
+  // }
 
   render() {
     return (
@@ -79,16 +82,16 @@ class NHLayout extends Component {  // eslint-disable-line
   }
   }
 
-function bindAction(dispatch) {
-  return {
-    openDrawer: () => dispatch(openDrawer()),
-    closeDrawer: () => dispatch(closeDrawer()),
-    pushRoute: (route, key) => dispatch(pushRoute(route, key)),
-  };
-}
+// function bindAction(dispatch) {
+//   return {
+//     openDrawer: () => dispatch(openDrawer()),
+//     closeDrawer: () => dispatch(closeDrawer()),
+//     pushRoute: (route, key) => dispatch(pushRoute(route, key)),
+//   };
+// }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
+  // navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

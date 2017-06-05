@@ -2,17 +2,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Button, Icon, Left, Right, Body, Text, List, ListItem } from 'native-base';
-import { Actions } from 'react-native-router-flux';
 
-import { actions } from 'react-native-navigation-redux-helpers';
-import { openDrawer, closeDrawer } from '../../actions/drawer';
+// import { Actions } from 'react-native-router-flux';
+// import { actions } from 'react-native-navigation-redux-helpers';
+// import { openDrawer, closeDrawer } from '../../actions/drawer';
 import styles from './styles';
 
+// const {
+//     replaceAt,
+//     pushRoute,
+//   } = actions;
 
-const {
-    replaceAt,
-    pushRoute,
-  } = actions;
 const datas = [
   {
     route: 'Default',
@@ -51,24 +51,24 @@ const datas = [
     text: 'Disabled Button',
   },
 ];
+
 class NHButton extends Component {  // eslint-disable-line
 
+  // static propTypes = {
+  //   openDrawer: React.PropTypes.func,
+  //   replaceAt: React.PropTypes.func,
+  //   pushRoute: React.PropTypes.func,
+  //   navigation: React.PropTypes.shape({
+  //     key: React.PropTypes.string,
+  //   }),
+  // }
 
-  static propTypes = {
-    openDrawer: React.PropTypes.func,
-    replaceAt: React.PropTypes.func,
-    pushRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
-
-  replaceAt(route) {
-    this.props.replaceAt('button', { key: route }, this.props.navigation.key);
-  }
-  pushRoute(route) {
-    this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
-  }
+  // replaceAt(route) {
+  //   this.props.replaceAt('button', { key: route }, this.props.navigation.key);
+  // }
+  // pushRoute(route) {
+  //   this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
+  // }
 
   render() {
     return (
@@ -95,26 +95,25 @@ class NHButton extends Component {  // eslint-disable-line
                   <Icon name="arrow-forward" style={{ color: '#999' }} />
                 </Right>
               </ListItem>
-      }
+            }
           />
-
         </Content>
       </Container>
     );
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    openDrawer: () => dispatch(openDrawer()),
-    closeDrawer: () => dispatch(closeDrawer()),
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
-    pushRoute: (route, key) => dispatch(pushRoute(route, key)),
-  };
-}
+// function bindAction(dispatch) {
+//   return {
+//     openDrawer: () => dispatch(openDrawer()),
+//     closeDrawer: () => dispatch(closeDrawer()),
+//     replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
+//     pushRoute: (route, key) => dispatch(pushRoute(route, key)),
+//   };
+// }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
+  // navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

@@ -4,18 +4,18 @@ import { StatusBar } from 'react-native';
 import { connect } from 'react-redux';
 import { Container, Header, Title, Content, Text, H3, Button, Icon, Footer, FooterTab, Left, Right, Body } from 'native-base';
 
-import { openDrawer } from '../../actions/drawer';
+// import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 class Anatomy extends Component {
 
-  static propTypes = {
-    openDrawer: React.PropTypes.func,
-  }
+  // static propTypes = {
+  //   openDrawer: React.PropTypes.func,
+  // }
 
-  static navigationOptions = {
-    header: <Header><Left /><Body><Title>Hello</Title></Body><Right /></Header>,
-  };
+  // static navigationOptions = {
+  //   header: <Header><Left /><Body><Title>Hello</Title></Body><Right /></Header>,
+  // };
 
   render() {
     return (
@@ -36,7 +36,7 @@ class Anatomy extends Component {
 
         <Content padder>
           <Text>
-            Content Goes Here
+            Content goes here
           </Text>
 
         </Content>
@@ -54,14 +54,14 @@ class Anatomy extends Component {
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    openDrawer: () => dispatch(openDrawer()),
-  };
-}
+// function bindAction(dispatch) {
+//   return {
+//     openDrawer: () => dispatch(openDrawer()),
+//   };
+// }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
+  // navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

@@ -3,7 +3,7 @@ import { Image, View, StatusBar } from 'react-native';
 import { connect } from 'react-redux';
 import { Container, Button, H3, Text, Header, Title, Body, Left, Right, Icon } from 'native-base';
 
-import { openDrawer } from '../../actions/drawer';
+// import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 const launchscreenBg = require('../../../img/launchscreen-bg.png');
@@ -11,10 +11,9 @@ const launchscreenLogo = require('../../../img/logo-kitchen-sink.png');
 
 class Home extends Component { // eslint-disable-line
 
-  static propTypes = {
-    openDrawer: React.PropTypes.func,
-  }
-
+  // static propTypes = {
+  //   openDrawer: React.PropTypes.func,
+  // }
 
   render() {
     return (
@@ -28,6 +27,7 @@ class Home extends Component { // eslint-disable-line
             <H3 style={styles.text}>App to showcase</H3>
             <View style={{ marginTop: 8 }} />
             <H3 style={styles.text}>NativeBase components</H3>
+            <View style={{ marginTop: 8 }} />
           </View>
           <View style={{ marginBottom: 80 }}>
             <Button
@@ -43,16 +43,16 @@ class Home extends Component { // eslint-disable-line
   }
 }
 
-function bindActions(dispatch) {
-  return {
-    openDrawer: () => dispatch(openDrawer()),
-  };
-}
+// function bindActions(dispatch) {
+//   return {
+//     openDrawer: () => dispatch(openDrawer()),
+//   };
+// }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
+  // navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
-  routes: state.drawer.routes,
+  // routes: state.drawer.routes,
 });
 
 export default Home;

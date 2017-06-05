@@ -1,28 +1,29 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Body, Left, Right, IconNB } from 'native-base';
-import { Actions } from 'react-native-router-flux';
+
+// import { actions } from 'react-native-navigation-redux-helpers';
+// import { Actions } from 'react-native-router-flux';
 
 import styles from './styles';
 
-const {
-  popRoute,
-} = actions;
+// const {
+//   popRoute,
+// } = actions;
 
 class NHCardHeaderAndFooter extends Component {
 
-  static propTypes = {
-    popRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
+  // static propTypes = {
+  //   popRoute: React.PropTypes.func,
+  //   navigation: React.PropTypes.shape({
+  //     key: React.PropTypes.string,
+  //   }),
+  // }
 
-  popRoute() {
-    this.props.popRoute(this.props.navigation.key);
-  }
+  // popRoute() {
+  //   this.props.popRoute(this.props.navigation.key);
+  // }
 
   render() {
     return (
@@ -47,7 +48,7 @@ class NHCardHeaderAndFooter extends Component {
             <CardItem>
               <Body>
                 <Text>
-                NativeBase is a free and open source framework that enables developers to build
+                NativeBase is a free and open source framework that enable developers to build
                 high-quality mobile apps using React Native iOS and Android apps
                 with a fusion of ES6.
               </Text>
@@ -79,14 +80,14 @@ class NHCardHeaderAndFooter extends Component {
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    popRoute: key => dispatch(popRoute(key)),
-  };
-}
+// function bindAction(dispatch) {
+//   return {
+//     popRoute: key => dispatch(popRoute(key)),
+//   };
+// }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
+  // navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 

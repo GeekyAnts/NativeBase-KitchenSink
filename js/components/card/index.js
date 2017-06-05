@@ -1,16 +1,18 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Button, Icon, Text, Left, Body, Right, List, ListItem } from 'native-base';
-import { Actions } from 'react-native-router-flux';
 
-import { openDrawer, closeDrawer } from '../../actions/drawer';
+// import { actions } from 'react-native-navigation-redux-helpers';
+// import { Actions } from 'react-native-router-flux';
+// import { openDrawer, closeDrawer } from '../../actions/drawer';
+
 import styles from './styles';
 
-const {
-  pushRoute,
-} = actions;
+// const {
+//   pushRoute,
+// } = actions;
+
 const datas = [
   {
     route: 'BasicCard',
@@ -33,19 +35,20 @@ const datas = [
     text: 'Card Header & Footer',
   },
 ];
+
 class NHCard extends Component {
 
-  static propTypes = {
-    openDrawer: React.PropTypes.func,
-    pushRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
+  // static propTypes = {
+  //   openDrawer: React.PropTypes.func,
+  //   pushRoute: React.PropTypes.func,
+  //   navigation: React.PropTypes.shape({
+  //     key: React.PropTypes.string,
+  //   }),
+  // }
 
-  pushRoute(route) {
-    this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
-  }
+  // pushRoute(route) {
+  //   this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
+  // }
 
   render() {
     return (
@@ -80,16 +83,16 @@ class NHCard extends Component {
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    openDrawer: () => dispatch(openDrawer()),
-    closeDrawer: () => dispatch(closeDrawer()),
-    pushRoute: (route, key) => dispatch(pushRoute(route, key)),
-  };
-}
+// function bindAction(dispatch) {
+//   return {
+//     openDrawer: () => dispatch(openDrawer()),
+//     closeDrawer: () => dispatch(closeDrawer()),
+//     pushRoute: (route, key) => dispatch(pushRoute(route, key)),
+//   };
+// }
 
 const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
+  // navigation: state.cardNavigation,
   themeState: state.drawer.themeState,
 });
 
