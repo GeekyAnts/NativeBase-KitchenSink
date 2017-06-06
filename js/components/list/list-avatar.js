@@ -86,7 +86,7 @@ class NHListAvatar extends Component {
             renderRow={data =>
               <ListItem avatar>
                 <Left>
-                  <Thumbnail source={data.img} />
+                  <Thumbnail small source={data.img} />
                 </Left>
                 <Body>
                   <Text>{data.text}</Text>

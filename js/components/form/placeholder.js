@@ -37,10 +37,10 @@ class Placeholder extends Component {
 
         <Content>
           <Form>
-            <Item placeholderLabel>
+            <Item>
               <Input placeholder="Username" />
             </Item>
-            <Item last placeholderLabel>
+            <Item last>
               <Input placeholder="Password" />
             </Item>
           </Form>
