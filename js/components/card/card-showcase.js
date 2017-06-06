@@ -1,36 +1,31 @@
+import React, { Component } from "react";
+import { Image, Dimensions } from "react-native";
 
-import React, { Component } from 'react';
-import { Image, Dimensions } from 'react-native';
-import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Thumbnail, Left, Right, Body, IconNB } from 'native-base';
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  Icon,
+  Card,
+  CardItem,
+  Text,
+  Thumbnail,
+  Left,
+  Right,
+  Body,
+  IconNB
+} from "native-base";
 
-// import { actions } from 'react-native-navigation-redux-helpers';
-// import { Actions } from 'react-native-router-flux';
+import styles from "./styles";
 
-import styles from './styles';
+const deviceWidth = Dimensions.get("window").width;
 
-const deviceWidth = Dimensions.get('window').width;
-
-const logo = require('../../../img/logo.png');
-const cardImage = require('../../../img/drawer-cover.png');
-
-// const {
-//   popRoute,
-// } = actions;
+const logo = require("../../../img/logo.png");
+const cardImage = require("../../../img/drawer-cover.png");
 
 class NHCardShowcase extends Component {
-
-  // static propTypes = {
-  //   popRoute: React.PropTypes.func,
-  //   navigation: React.PropTypes.shape({
-  //     key: React.PropTypes.string,
-  //   }),
-  // }
-
-  // popRoute() {
-  //   this.props.popRoute(this.props.navigation.key);
-  // }
-
   render() {
     return (
       <Container style={styles.container}>
@@ -60,18 +55,30 @@ class NHCardShowcase extends Component {
 
             <CardItem>
               <Body>
-                <Image style={{ alignSelf: 'center', height: 150, resizeMode: 'cover', width: deviceWidth / 1.18, marginVertical: 5 }} source={cardImage} />
+                <Image
+                  style={{
+                    alignSelf: "center",
+                    height: 150,
+                    resizeMode: "cover",
+                    width: deviceWidth / 1.18,
+                    marginVertical: 5
+                  }}
+                  source={cardImage}
+                />
                 <Text>
-                NativeBase is a free and source framework that enable developers
-                to build high-quality mobile apps using React Native iOS and Android apps
-                with a fusion of ES6.
-                NativeBase builds a layer on top of React Native that provides you with
-                basic set of components for mobile application development.
-              </Text>
+                  NativeBase is a free and source framework that enable
+                  developers
+                  to build high-quality mobile apps using React Native iOS and
+                  Android apps
+                  with a fusion of ES6.
+                  NativeBase builds a layer on top of React Native that provides
+                  you with
+                  basic set of components for mobile application development.
+                </Text>
 
               </Body>
             </CardItem>
-            <CardItem style={{paddingVertical: 0}}>
+            <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button transparent>
                   <Icon name="logo-github" />
@@ -85,16 +92,5 @@ class NHCardShowcase extends Component {
     );
   }
 }
-
-// function bindAction(dispatch) {
-//   return {
-//     popRoute: key => dispatch(popRoute(key)),
-//   };
-// }
-
-const mapStateToProps = state => ({
-  // navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
 
 export default NHCardShowcase;

@@ -1,13 +1,22 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
+import {
+  Container,
+  Content,
+  Card,
+  CardItem,
+  Text,
+  View,
+  Body
+} from "native-base";
 
-import { Container, Content, Card, CardItem, Text, View, Body } from 'native-base';
+import styles from "./styles";
 
-import styles from './styles';
+export default class TabOne extends Component {
+  // eslint-disable-line
 
-export default class TabOne extends Component { // eslint-disable-line
-
-  render() { // eslint-disable-line
+  render() {
+    // eslint-disable-line
     return (
       <Content padder>
         <Card>
@@ -28,7 +37,8 @@ export default class TabOne extends Component { // eslint-disable-line
           <CardItem>
             <Body>
               <Text>
-                Any native third-party libraries can be included along with NativeBase.
+                Any native third-party libraries can be included along with
+                NativeBase.
               </Text>
             </Body>
           </CardItem>

@@ -1,30 +1,23 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Text, Body, Left, Right, Input, Item } from 'native-base';
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  Icon,
+  Text,
+  Body,
+  Left,
+  Right,
+  Input,
+  Item
+} from "native-base";
 
-// import { actions } from 'react-native-navigation-redux-helpers';
-// import { Actions } from 'react-native-router-flux';
-
-import styles from './styles';
-
-// const {
-//   popRoute,
-// } = actions;
+import styles from "./styles";
 
 class Regular extends Component {
-
-  // static propTypes = {
-  //   popRoute: React.PropTypes.func,
-  //   navigation: React.PropTypes.shape({
-  //     key: React.PropTypes.string,
-  //   }),
-  // }
-
-  // popRoute() {
-  //   this.props.popRoute(this.props.navigation.key);
-  // }
-
   render() {
     return (
       <Container style={styles.container}>
@@ -49,16 +42,5 @@ class Regular extends Component {
     );
   }
 }
-
-// function bindAction(dispatch) {
-//   return {
-//     popRoute: key => dispatch(popRoute(key)),
-//   };
-// }
-
-const mapStateToProps = state => ({
-  // navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
 
 export default Regular;

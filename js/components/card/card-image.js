@@ -1,34 +1,29 @@
+import React, { Component } from "react";
+import { Image, View } from "react-native";
 
-import React, { Component } from 'react';
-import { Image, View } from 'react-native';
-import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Thumbnail, Left, Body, Right, IconNB } from 'native-base';
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  Icon,
+  Card,
+  CardItem,
+  Text,
+  Thumbnail,
+  Left,
+  Body,
+  Right,
+  IconNB
+} from "native-base";
 
-// import { actions } from 'react-native-navigation-redux-helpers';
-// import { Actions } from 'react-native-router-flux';
+import styles from "./styles";
 
-import styles from './styles';
-
-const logo = require('../../../img/logo.png');
-const cardImage = require('../../../img/drawer-cover.png');
-
-// const {
-//   popRoute,
-// } = actions;
+const logo = require("../../../img/logo.png");
+const cardImage = require("../../../img/drawer-cover.png");
 
 class NHCardImage extends Component {
-
-  // static propTypes = {
-  //   popRoute: React.PropTypes.func,
-  //   navigation: React.PropTypes.shape({
-  //     key: React.PropTypes.string,
-  //   }),
-  // }
-
-  // popRoute() {
-  //   this.props.popRoute(this.props.navigation.key);
-  // }
-
   render() {
     return (
       <Container style={styles.container}>
@@ -48,7 +43,7 @@ class NHCardImage extends Component {
           <Card style={styles.mb}>
             <CardItem>
               <Left>
-                <Thumbnail source={logo}/>
+                <Thumbnail source={logo} />
                 <Body>
                   <Text>NativeBase</Text>
                   <Text note>GeekyAnts</Text>
@@ -57,7 +52,15 @@ class NHCardImage extends Component {
             </CardItem>
 
             <CardItem cardBody>
-              <Image style={{ resizeMode: 'cover', width: null, height: 200, flex: 1 }} source={cardImage} />
+              <Image
+                style={{
+                  resizeMode: "cover",
+                  width: null,
+                  height: 200,
+                  flex: 1
+                }}
+                source={cardImage}
+              />
             </CardItem>
 
             <CardItem style={{ paddingVertical: 0 }}>
@@ -83,16 +86,5 @@ class NHCardImage extends Component {
     );
   }
 }
-
-// function bindAction(dispatch) {
-//   return {
-//     popRoute: key => dispatch(popRoute(key)),
-//   };
-// }
-
-const mapStateToProps = state => ({
-  // navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
 
 export default NHCardImage;

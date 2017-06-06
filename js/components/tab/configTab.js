@@ -1,33 +1,26 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Container, Header, Title, Button, Icon, Tabs, Tab, Text, Right, Left, Body, TabHeading } from 'native-base';
+import {
+  Container,
+  Header,
+  Title,
+  Button,
+  Icon,
+  Tabs,
+  Tab,
+  Text,
+  Right,
+  Left,
+  Body,
+  TabHeading
+} from "native-base";
 
-// import { Actions } from 'react-native-router-flux';
-// import { actions } from 'react-native-navigation-redux-helpers';
+import TabOne from "./tabOne";
+import TabTwo from "./tabTwo";
+import TabThree from "./tabThree";
 
-import myTheme from '../../themes/base-theme';
-
-import TabOne from './tabOne';
-import TabTwo from './tabTwo';
-import TabThree from './tabThree';
-
-// const {
-//   popRoute,
-// } = actions;
-
-class ConfigTab extends Component {  // eslint-disable-line
-
-  // static propTypes = {
-  //   popRoute: React.PropTypes.func,
-  //   navigation: React.PropTypes.shape({
-  //     key: React.PropTypes.string,
-  //   }),
-  // }
-
-  // popRoute() {
-  //   this.props.popRoute(this.props.navigation.key);
-  // }
+class ConfigTab extends Component {
+  // eslint-disable-line
 
   render() {
     return (
@@ -44,7 +37,11 @@ class ConfigTab extends Component {  // eslint-disable-line
           <Right />
         </Header>
         <Tabs style={{ elevation: 3 }}>
-          <Tab heading={<TabHeading><Icon name="camera" /><Text>Camera</Text></TabHeading>}>
+          <Tab
+            heading={
+              <TabHeading><Icon name="camera" /><Text>Camera</Text></TabHeading>
+            }
+          >
             <TabOne />
           </Tab>
           <Tab heading={<TabHeading><Text>No Icon</Text></TabHeading>}>
@@ -58,16 +55,5 @@ class ConfigTab extends Component {  // eslint-disable-line
     );
   }
 }
-
-// function bindAction(dispatch) {
-//   return {
-//     popRoute: key => dispatch(popRoute(key)),
-//   };
-// }
-
-const mapStateToProps = state => ({
-  // navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
 
 export default ConfigTab;

@@ -1,30 +1,23 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Body, Left, Right } from 'native-base';
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  Icon,
+  Card,
+  CardItem,
+  Text,
+  Body,
+  Left,
+  Right
+} from "native-base";
 
-// import { actions } from 'react-native-navigation-redux-helpers';
-// import { Actions } from 'react-native-router-flux';
-
-import styles from './styles';
-
-// const {
-//   popRoute,
-// } = actions;
+import styles from "./styles";
 
 class Basic extends Component {
-
-  // static propTypes = {
-  //   popRoute: React.PropTypes.func,
-  //   navigation: React.PropTypes.shape({
-  //     key: React.PropTypes.string,
-  //   }),
-  // }
-
-  // popRoute() {
-  //   this.props.popRoute(this.props.navigation.key);
-  // }
-
   render() {
     return (
       <Container style={styles.container}>
@@ -47,7 +40,7 @@ class Basic extends Component {
                 <Text>
                   This is just a basic card with some text to boot.
                 </Text>
-                
+
                 <Text>
                   Like it? Keep Scrolling...
                 </Text>
@@ -59,16 +52,5 @@ class Basic extends Component {
     );
   }
 }
-
-// function bindAction(dispatch) {
-//   return {
-//     popRoute: key => dispatch(popRoute(key)),
-//   };
-// }
-
-const mapStateToProps = state => ({
-  // navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
 
 export default Basic;

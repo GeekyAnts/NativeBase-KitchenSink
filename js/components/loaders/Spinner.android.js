@@ -1,21 +1,18 @@
-
-import React, { Component } from 'react';
-import ProgressBar from 'ProgressBarAndroid';
+import React, { Component } from "react";
+import ProgressBar from "ProgressBarAndroid";
 
 export default class SpinnerNB extends Component {
-
   prepareRootProps() {
     const type = {
-      height: 40,
+      height: 40
     };
 
     const defaultProps = {
-      style: type,
+      style: type
     };
 
     return computeProps(this.props, defaultProps);
   }
-
 
   render() {
     const getColor = () => {
@@ -31,10 +28,9 @@ export default class SpinnerNB extends Component {
     return (
       <ProgressBar
         {...this.prepareRootProps()}
-        styleAttr={this.props.size ? this.props.size : 'Large'}
+        styleAttr={this.props.size ? this.props.size : "Large"}
         color={getColor()}
       />
-        );
+    );
   }
-
 }

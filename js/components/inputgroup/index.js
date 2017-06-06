@@ -1,68 +1,66 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, IconNB, Text, List, Left, Right, Body, ListItem, Icon } from 'native-base';
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  IconNB,
+  Text,
+  List,
+  Left,
+  Right,
+  Body,
+  ListItem,
+  Icon
+} from "native-base";
 
-// import { actions } from 'react-native-navigation-redux-helpers';
-// import { openDrawer } from '../../actions/drawer';
-
-import styles from './styles';
-
-// const {
-//   pushRoute,
-// } = actions;
+import styles from "./styles";
 
 const datas = [
   {
-    route: 'RegularInput',
-    text: 'Regular Textbox',
+    route: "RegularInput",
+    text: "Regular Textbox"
   },
   {
-    route: 'UnderlineInput',
-    text: 'Underlined Textbox',
+    route: "UnderlineInput",
+    text: "Underlined Textbox"
   },
   {
-    route: 'RoundedInput',
-    text: 'Rounded Textbox',
+    route: "RoundedInput",
+    text: "Rounded Textbox"
   },
   {
-    route: 'IconInput',
-    text: 'Icon Textbox',
+    route: "IconInput",
+    text: "Icon Textbox"
   },
   {
-    route: 'SuccessInput',
-    text: 'Success Input Textbox',
+    route: "SuccessInput",
+    text: "Success Input Textbox"
   },
   {
-    route: 'ErrorInput',
-    text: 'Error Input Textbox',
+    route: "ErrorInput",
+    text: "Error Input Textbox"
   },
   {
-    route: 'DisabledInput',
-    text: 'Disabled Textbox',
-  },
+    route: "DisabledInput",
+    text: "Disabled Textbox"
+  }
 ];
 
-class NHInputGroup extends Component {  // eslint-disable-line
-
-  // static propTypes = {
-  //   openDrawer: React.PropTypes.func,
-  //   pushRoute: React.PropTypes.func,
-  //   navigation: React.PropTypes.shape({
-  //     key: React.PropTypes.string,
-  //   }),
-  // }
-
-  // pushRoute(route) {
-  //   this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
-  // }
+class NHInputGroup extends Component {
+  // eslint-disable-line
 
   render() {
     return (
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
+            <Button
+              transparent
+              onPress={() => this.props.navigation.navigate("DrawerOpen")}
+            >
               <IconNB name="ios-menu" />
             </Button>
           </Left>
@@ -73,32 +71,23 @@ class NHInputGroup extends Component {  // eslint-disable-line
         </Header>
 
         <Content>
-        <List
-          dataArray={datas} renderRow={data =>
-            <ListItem button onPress={() => this.props.navigation.navigate(data.route)}>
-              <Text>{data.text}</Text>
-              <Right>
-                <Icon name="arrow-forward" style={{ color: '#999' }} />
-              </Right>
-            </ListItem>
-          }
-        />
+          <List
+            dataArray={datas}
+            renderRow={data =>
+              <ListItem
+                button
+                onPress={() => this.props.navigation.navigate(data.route)}
+              >
+                <Text>{data.text}</Text>
+                <Right>
+                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                </Right>
+              </ListItem>}
+          />
         </Content>
       </Container>
     );
   }
 }
-
-// function bindAction(dispatch) {
-//   return {
-//     openDrawer: () => dispatch(openDrawer()),
-//     pushRoute: (route, key) => dispatch(pushRoute(route, key)),
-//   };
-// }
-
-const mapStateToProps = state => ({
-  // navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
 
 export default NHInputGroup;

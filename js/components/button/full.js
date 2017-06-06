@@ -1,40 +1,31 @@
+import React, { Component } from "react";
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  Icon,
+  Left,
+  Right,
+  Body,
+  Text,
+  H3
+} from "native-base";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Left, Right, Body, Text, H3 } from 'native-base';
+import styles from "./styles";
 
-// import { Actions } from 'react-native-router-flux';
-// import { actions } from 'react-native-navigation-redux-helpers';
-// import { openDrawer } from '../../actions/drawer';
-import styles from './styles';
-
-
-// const {
-//     popRoute,
-//   } = actions;
-
-class Full extends Component {  // eslint-disable-line
-
-  // static propTypes = {
-  //   openDrawer: React.PropTypes.func,
-  //   popRoute: React.PropTypes.func,
-  //   navigation: React.PropTypes.shape({
-  //     key: React.PropTypes.string,
-  //   }),
-  // }
-
-  // popRoute() {
-  //   this.props.popRoute(this.props.navigation.key);
-  // }
+class Full extends Component {
+  // eslint-disable-line
 
   render() {
     return (
       <Container style={styles.container}>
         <Header>
           <Left>
-          <Button transparent onPress={() => this.props.navigation.goBack()}>
-            <Icon name="arrow-back" />
-          </Button>
+            <Button transparent onPress={() => this.props.navigation.goBack()}>
+              <Icon name="arrow-back" />
+            </Button>
           </Left>
           <Body>
             <Title>Full</Title>
@@ -42,7 +33,7 @@ class Full extends Component {  // eslint-disable-line
           <Right />
         </Header>
 
-        <Content style={{ backgroundColor: '#fff' }}>
+        <Content style={{ backgroundColor: "#fff" }}>
           <Button full light style={styles.mt15}><Text>Light</Text></Button>
           <Button full info style={styles.mt15}><Text>Info</Text></Button>
           <Button full primary style={styles.mt15}><Text>Primary</Text></Button>
@@ -55,17 +46,5 @@ class Full extends Component {  // eslint-disable-line
     );
   }
 }
-
-// function bindAction(dispatch) {
-//   return {
-//     openDrawer: () => dispatch(openDrawer()),
-//     popRoute: key => dispatch(popRoute(key)),
-//   };
-// }
-
-const mapStateToProps = state => ({
-  // navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
 
 export default Full;

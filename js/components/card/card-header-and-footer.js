@@ -1,30 +1,24 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Body, Left, Right, IconNB } from 'native-base';
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  Icon,
+  Card,
+  CardItem,
+  Text,
+  Body,
+  Left,
+  Right,
+  IconNB
+} from "native-base";
 
-// import { actions } from 'react-native-navigation-redux-helpers';
-// import { Actions } from 'react-native-router-flux';
-
-import styles from './styles';
-
-// const {
-//   popRoute,
-// } = actions;
+import styles from "./styles";
 
 class NHCardHeaderAndFooter extends Component {
-
-  // static propTypes = {
-  //   popRoute: React.PropTypes.func,
-  //   navigation: React.PropTypes.shape({
-  //     key: React.PropTypes.string,
-  //   }),
-  // }
-
-  // popRoute() {
-  //   this.props.popRoute(this.props.navigation.key);
-  // }
-
   render() {
     return (
       <Container style={styles.container}>
@@ -48,26 +42,30 @@ class NHCardHeaderAndFooter extends Component {
             <CardItem>
               <Body>
                 <Text>
-                NativeBase is a free and open source framework that enable developers to build
-                high-quality mobile apps using React Native iOS and Android apps
-                with a fusion of ES6.
-              </Text>
+                  NativeBase is a free and open source framework that enable
+                  developers to build
+                  high-quality mobile apps using React Native iOS and Android
+                  apps
+                  with a fusion of ES6.
+                </Text>
               </Body>
             </CardItem>
             <CardItem>
               <Body>
                 <Text>
-                NativeBase builds a layer on top of React Native that provides you with
-                basic set of components for mobile application development.
-              </Text>
+                  NativeBase builds a layer on top of React Native that provides
+                  you with
+                  basic set of components for mobile application development.
+                </Text>
               </Body>
             </CardItem>
             <CardItem>
               <Body>
                 <Text>
-                Get on the mobile fast track with NativeBase, the fastest-growing platform
-                and tool set for iOS and Android development.
-              </Text>
+                  Get on the mobile fast track with NativeBase, the
+                  fastest-growing platform
+                  and tool set for iOS and Android development.
+                </Text>
               </Body>
             </CardItem>
             <CardItem footer>
@@ -79,16 +77,5 @@ class NHCardHeaderAndFooter extends Component {
     );
   }
 }
-
-// function bindAction(dispatch) {
-//   return {
-//     popRoute: key => dispatch(popRoute(key)),
-//   };
-// }
-
-const mapStateToProps = state => ({
-  // navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
 
 export default NHCardHeaderAndFooter;

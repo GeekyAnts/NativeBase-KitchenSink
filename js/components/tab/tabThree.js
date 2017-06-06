@@ -1,13 +1,14 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
+import { Container, Content, Card, CardItem, Text, Body } from "native-base";
 
-import { Container, Content, Card, CardItem, Text, Body } from 'native-base';
+import styles from "./styles";
 
-import styles from './styles';
+export default class TabThree extends Component {
+  // eslint-disable-line
 
-export default class TabThree extends Component { // eslint-disable-line
-
-  render() { // eslint-disable-line
+  render() {
+    // eslint-disable-line
     return (
       <Content padder style={{ marginTop: 0 }}>
         <Card style={{ flex: 0 }}>

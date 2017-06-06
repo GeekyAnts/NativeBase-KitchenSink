@@ -1,24 +1,31 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, List, ListItem, Radio, Text,Left,Right,Body } from 'native-base';
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  Icon,
+  List,
+  ListItem,
+  Radio,
+  Text,
+  Left,
+  Right,
+  Body
+} from "native-base";
 
-// import { openDrawer } from '../../actions/drawer';
-import styles from './styles';
+import styles from "./styles";
 
 class NHRadio extends Component {
-
-  // static propTypes = {
-  //   openDrawer: React.PropTypes.func,
-  // }
-
   constructor(props) {
     super(props);
     this.state = {
       radio1: false,
       radio2: false,
       radio3: false,
-      radio4: true,
+      radio4: true
     };
   }
 
@@ -27,7 +34,7 @@ class NHRadio extends Component {
       radio1: true,
       radio2: false,
       radio3: false,
-      radio4: false,
+      radio4: false
     });
   }
 
@@ -36,7 +43,7 @@ class NHRadio extends Component {
       radio1: false,
       radio2: true,
       radio3: false,
-      radio4: false,
+      radio4: false
     });
   }
 
@@ -45,7 +52,7 @@ class NHRadio extends Component {
       radio1: false,
       radio2: false,
       radio3: true,
-      radio4: false,
+      radio4: false
     });
   }
 
@@ -54,7 +61,7 @@ class NHRadio extends Component {
       radio1: false,
       radio2: false,
       radio3: false,
-      radio4: true,
+      radio4: true
     });
   }
 
@@ -63,8 +70,11 @@ class NHRadio extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
-            <Icon name="menu" />
+            <Button
+              transparent
+              onPress={() => this.props.navigation.navigate("DrawerOpen")}
+            >
+              <Icon name="menu" />
             </Button>
           </Left>
           <Body>
@@ -74,45 +84,58 @@ class NHRadio extends Component {
         </Header>
 
         <Content>
-          <ListItem selected={this.state.radio1} onPress={() => this.toggleRadio1()} >
+          <ListItem
+            selected={this.state.radio1}
+            onPress={() => this.toggleRadio1()}
+          >
             <Text>Lunch Break</Text>
             <Right>
-            <Radio selected={this.state.radio1} onPress={() => this.toggleRadio1()} />
+              <Radio
+                selected={this.state.radio1}
+                onPress={() => this.toggleRadio1()}
+              />
             </Right>
           </ListItem>
-            <ListItem selected={this.state.radio2} onPress={() => this.toggleRadio2()} >
-              <Text >Daily Stand Up</Text>
-              <Right>
-                <Radio selected={this.state.radio2} onPress={() => this.toggleRadio2()} />
-              </Right>
-            </ListItem>
-            <ListItem selected={this.state.radio3} onPress={() => this.toggleRadio3()} >
-              <Text>Finish List Screen</Text>
-              <Right>
-                <Radio selected={this.state.radio3} onPress={() => this.toggleRadio3()} />
-              </Right>
-            </ListItem>
-            <ListItem selected={this.state.radio4} onPress={() => this.toggleRadio4()} >
-              <Text>Discussion with Client</Text>
-              <Right>
-                <Radio selected={this.state.radio4} onPress={() => this.toggleRadio4()} />
-              </Right>
-            </ListItem>
+          <ListItem
+            selected={this.state.radio2}
+            onPress={() => this.toggleRadio2()}
+          >
+            <Text>Daily Stand Up</Text>
+            <Right>
+              <Radio
+                selected={this.state.radio2}
+                onPress={() => this.toggleRadio2()}
+              />
+            </Right>
+          </ListItem>
+          <ListItem
+            selected={this.state.radio3}
+            onPress={() => this.toggleRadio3()}
+          >
+            <Text>Finish List Screen</Text>
+            <Right>
+              <Radio
+                selected={this.state.radio3}
+                onPress={() => this.toggleRadio3()}
+              />
+            </Right>
+          </ListItem>
+          <ListItem
+            selected={this.state.radio4}
+            onPress={() => this.toggleRadio4()}
+          >
+            <Text>Discussion with Client</Text>
+            <Right>
+              <Radio
+                selected={this.state.radio4}
+                onPress={() => this.toggleRadio4()}
+              />
+            </Right>
+          </ListItem>
         </Content>
       </Container>
     );
   }
 }
-
-// function bindAction(dispatch) {
-//   return {
-//     openDrawer: () => dispatch(openDrawer()),
-//   };
-// }
-
-const mapStateToProps = state => ({
-  // navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
 
 export default NHRadio;

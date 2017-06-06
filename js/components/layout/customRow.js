@@ -1,30 +1,19 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Container, Header, Title, Button, Icon, Left, Right, Body } from 'native-base';
-import { Grid, Row } from 'react-native-easy-grid';
+import {
+  Container,
+  Header,
+  Title,
+  Button,
+  Icon,
+  Left,
+  Right,
+  Body
+} from "native-base";
+import { Grid, Row } from "react-native-easy-grid";
 
-// import { actions } from 'react-native-navigation-redux-helpers';
-// import { Actions } from 'react-native-router-flux';
-
-// import { openDrawer } from '../../actions/drawer';
-
-// const {
-//   popRoute,
-// } = actions;
-
-class CustomRow extends Component {  // eslint-disable-line
-
-  // static propTypes = {
-  //   popRoute: React.PropTypes.func,
-  //   navigation: React.PropTypes.shape({
-  //     key: React.PropTypes.string,
-  //   }),
-  // }
-
-  // popRoute() {
-  //   this.props.popRoute(this.props.navigation.key);
-  // }
+class CustomRow extends Component {
+  // eslint-disable-line
 
   render() {
     return (
@@ -42,24 +31,13 @@ class CustomRow extends Component {  // eslint-disable-line
         </Header>
 
         <Grid>
-          <Row size={1} style={{ backgroundColor: '#635DB7' }} />
-          <Row size={2} style={{ backgroundColor: '#00CE9F' }} />
-          <Row size={4} style={{ backgroundColor: '#DD9E2C' }} />
+          <Row size={1} style={{ backgroundColor: "#635DB7" }} />
+          <Row size={2} style={{ backgroundColor: "#00CE9F" }} />
+          <Row size={4} style={{ backgroundColor: "#DD9E2C" }} />
         </Grid>
       </Container>
     );
   }
 }
-
-// function bindAction(dispatch) {
-//   return {
-//     popRoute: key => dispatch(popRoute(key)),
-//   };
-// }
-
-const mapStateToProps = state => ({
-  // navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
 
 export default CustomRow;

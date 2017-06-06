@@ -1,16 +1,20 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Container, Header, Button, Icon, Item, Input, Content,Text } from 'native-base';
+import {
+  Container,
+  Header,
+  Button,
+  Icon,
+  Item,
+  Input,
+  Content,
+  Text
+} from "native-base";
 
-// import { openDrawer } from '../../actions/drawer';
-import styles from './styles';
+import styles from "./styles";
 
-class NHSearchbar extends Component { // eslint-disable-line
-
-  // static propTypes = {
-  //   openDrawer: React.PropTypes.func,
-  // }
+class NHSearchbar extends Component {
+  // eslint-disable-line
 
   render() {
     return (
@@ -27,22 +31,16 @@ class NHSearchbar extends Component { // eslint-disable-line
         </Header>
 
         <Content padder>
-          <Button block onPress={() => this.props.navigation.navigate('DrawerOpen')}><Text>Back</Text></Button>
+          <Button
+            block
+            onPress={() => this.props.navigation.navigate("DrawerOpen")}
+          >
+            <Text>Back</Text>
+          </Button>
         </Content>
       </Container>
     );
   }
 }
-
-// function bindAction(dispatch) {
-//   return {
-//     openDrawer: () => dispatch(openDrawer()),
-//   };
-// }
-
-const mapStateToProps = state => ({
-  // navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
 
 export default NHSearchbar;

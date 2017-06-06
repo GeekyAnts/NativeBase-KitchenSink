@@ -1,36 +1,30 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { View } from 'react-native';
-import { Container, Header, Title, Content, Button, Icon, Body, Left, Right, Grid, Col, Row, Text } from 'native-base';
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  Icon,
+  Body,
+  Left,
+  Right,
+  Grid,
+  Col,
+  Row,
+  Text
+} from "native-base";
 
-// import { actions } from 'react-native-navigation-redux-helpers';
-
-import styles from './styles';
-
-// const {
-//   replaceAt,
-// } = actions;
+import styles from "./styles";
 
 class Specific extends Component {
-
-  // static propTypes = {
-  //   replaceAt: React.PropTypes.func,
-  //   navigation: React.PropTypes.shape({
-  //     key: React.PropTypes.string,
-  //   }),
-  // }
-
-  // replaceAt(route) {
-  //   this.props.replaceAt('specific', { key: route }, this.props.navigation.key);
-  // }
-
   render() {
     return (
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.replaceAt('icon')}>
+            <Button transparent onPress={() => this.replaceAt("icon")}>
               <Icon name="arrow-back" />
             </Button>
           </Left>
@@ -44,7 +38,7 @@ class Specific extends Component {
           <Grid>
             <Row>
               <Col style={styles.col}>
-                <Icon ios="ios-person" android="md-person"/>
+                <Icon ios="ios-person" android="md-person" />
                 <Text>person</Text>
               </Col>
               <Col style={styles.col}>
@@ -70,15 +64,5 @@ class Specific extends Component {
     );
   }
 }
-
-// function bindAction(dispatch) {
-//   return {
-//     replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
-//   };
-// }
-
-const mapStateToProps = state => ({
-  // navigation: state.cardNavigation,
-});
 
 export default Specific;
