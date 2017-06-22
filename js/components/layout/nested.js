@@ -1,36 +1,26 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Button, Icon, Left, Right, Body } from 'native-base';
-import { Grid, Row, Col } from 'react-native-easy-grid';
-import { Actions } from 'react-native-router-flux';
+import {
+  Container,
+  Header,
+  Title,
+  Button,
+  Icon,
+  Left,
+  Right,
+  Body
+} from "native-base";
+import { Grid, Row, Col } from "react-native-easy-grid";
 
-import { openDrawer } from '../../actions/drawer';
-
-const {
-  popRoute,
-} = actions;
-
-class NestedGrid extends Component {  // eslint-disable-line
-
-  static propTypes = {
-    popRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
-
-  popRoute() {
-    this.props.popRoute(this.props.navigation.key);
-  }
+class NestedGrid extends Component {
+  // eslint-disable-line
 
   render() {
     return (
       <Container>
         <Header>
           <Left>
-            <Button transparent onPress={() => Actions.pop()}>
+            <Button transparent onPress={() => this.props.navigation.goBack()}>
               <Icon name="arrow-back" />
             </Button>
           </Left>
@@ -41,10 +31,10 @@ class NestedGrid extends Component {  // eslint-disable-line
         </Header>
 
         <Grid>
-          <Col style={{ backgroundColor: '#DD9E2C' }} />
+          <Col style={{ backgroundColor: "#DD9E2C" }} />
           <Col>
-            <Row style={{ backgroundColor: '#00CE9F' }} />
-            <Row style={{ backgroundColor: '#635DB7' }} />
+            <Row style={{ backgroundColor: "#00CE9F" }} />
+            <Row style={{ backgroundColor: "#635DB7" }} />
           </Col>
         </Grid>
       </Container>
@@ -52,15 +42,4 @@ class NestedGrid extends Component {  // eslint-disable-line
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    popRoute: key => dispatch(popRoute(key)),
-  };
-}
-
-const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
-
-export default connect(mapStateToProps, bindAction)(NestedGrid);
+export default NestedGrid;

@@ -1,32 +1,23 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Left, Right, Body, Text } from 'native-base';
-import { Actions } from 'react-native-router-flux';
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  Icon,
+  Left,
+  Right,
+  Body,
+  Text
+} from "native-base";
 
-import { actions } from 'react-native-navigation-redux-helpers';
-import { openDrawer } from '../../actions/drawer';
-import styles from './styles';
+import styles from "./styles";
 
+class Header1 extends Component {
+  // eslint-disable-line
 
-const {
-    popRoute,
-  } = actions;
-
-class Header1 extends Component {  // eslint-disable-line
-
-
-  static propTypes = {
-    openDrawer: React.PropTypes.func,
-    popRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
-
-  popRoute() {
-    this.props.popRoute(this.props.navigation.key);
-  }
   render() {
     return (
       <Container style={styles.container}>
@@ -40,7 +31,7 @@ class Header1 extends Component {  // eslint-disable-line
         </Header>
 
         <Content padder>
-          <Button onPress={() => Actions.pop()}>
+          <Button onPress={() => this.props.navigation.goBack()}>
             <Text>Back</Text>
           </Button>
         </Content>
@@ -49,16 +40,4 @@ class Header1 extends Component {  // eslint-disable-line
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    openDrawer: () => dispatch(openDrawer()),
-    popRoute: key => dispatch(popRoute(key)),
-  };
-}
-
-const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
-
-export default connect(mapStateToProps, bindAction)(Header1);
+export default Header1;

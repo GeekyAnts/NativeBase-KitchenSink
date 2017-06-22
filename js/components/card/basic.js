@@ -1,35 +1,29 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Body, Left, Right } from 'native-base';
-import { Actions } from 'react-native-router-flux';
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  Icon,
+  Card,
+  CardItem,
+  Text,
+  Body,
+  Left,
+  Right
+} from "native-base";
 
-import styles from './styles';
-
-const {
-  popRoute,
-} = actions;
+import styles from "./styles";
 
 class Basic extends Component {
-
-  static propTypes = {
-    popRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
-
-  popRoute() {
-    this.props.popRoute(this.props.navigation.key);
-  }
-
   render() {
     return (
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => Actions.pop()}>
+            <Button transparent onPress={() => this.props.navigation.goBack()}>
               <Icon name="arrow-back" />
             </Button>
           </Left>
@@ -44,8 +38,12 @@ class Basic extends Component {
             <CardItem>
               <Body>
                 <Text>
-                This is just a basic card with some text to boot. Like it? Keep Scrolling...
-              </Text>
+                  This is just a basic card with some text to boot.
+                </Text>
+
+                <Text>
+                  Like it? Keep Scrolling...
+                </Text>
               </Body>
             </CardItem>
           </Card>
@@ -55,15 +53,4 @@ class Basic extends Component {
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    popRoute: key => dispatch(popRoute(key)),
-  };
-}
-
-const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
-
-export default connect(mapStateToProps, bindAction)(Basic);
+export default Basic;

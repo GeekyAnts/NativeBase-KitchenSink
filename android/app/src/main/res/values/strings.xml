@@ -1,4 +1,3 @@
 <resources>
-    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">dsadsa</string>
     <string name="app_name">NativebaseKitchenSink</string>
 </resources>

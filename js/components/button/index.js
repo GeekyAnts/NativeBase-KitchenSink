@@ -1,81 +1,73 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Left, Right, Body, Text, List, ListItem } from 'native-base';
-import { Actions } from 'react-native-router-flux';
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  Icon,
+  Left,
+  Right,
+  Body,
+  Text,
+  List,
+  ListItem
+} from "native-base";
 
-import { actions } from 'react-native-navigation-redux-helpers';
-import { openDrawer, closeDrawer } from '../../actions/drawer';
-import styles from './styles';
+import styles from "./styles";
 
-
-const {
-    replaceAt,
-    pushRoute,
-  } = actions;
 const datas = [
   {
-    route: 'default',
-    text: 'Default Button',
+    route: "Default",
+    text: "Default Button"
   },
   {
-    route: 'outline',
-    text: 'Outline Button',
+    route: "Outline",
+    text: "Outline Button"
   },
   {
-    route: 'rounded',
-    text: 'Rounded Button',
+    route: "Rounded",
+    text: "Rounded Button"
   },
   {
-    route: 'block',
-    text: 'Block Button',
+    route: "Block",
+    text: "Block Button"
   },
   {
-    route: 'full',
-    text: 'Full Button',
+    route: "Full",
+    text: "Full Button"
   },
   {
-    route: 'custom',
-    text: 'Custom Size Button',
+    route: "Custom",
+    text: "Custom Size Button"
   },
   {
-    route: 'transparent',
-    text: 'Transparent Button',
+    route: "Transparent",
+    text: "Transparent Button"
   },
   {
-    route: 'iconBtn',
-    text: 'Icon Button',
+    route: "IconBtn",
+    text: "Icon Button"
   },
   {
-    route: 'disabled',
-    text: 'Disabled Button',
-  },
+    route: "Disabled",
+    text: "Disabled Button"
+  }
 ];
-class NHButton extends Component {  // eslint-disable-line
 
-
-  static propTypes = {
-    openDrawer: React.PropTypes.func,
-    replaceAt: React.PropTypes.func,
-    pushRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
-
-  replaceAt(route) {
-    this.props.replaceAt('button', { key: route }, this.props.navigation.key);
-  }
-  pushRoute(route) {
-    this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
-  }
+class NHButton extends Component {
+  // eslint-disable-line
 
   render() {
     return (
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={this.props.openDrawer}>
+            <Button
+              transparent
+              onPress={() => this.props.navigation.navigate("DrawerOpen")}
+            >
               <Icon name="menu" />
             </Button>
           </Left>
@@ -88,34 +80,22 @@ class NHButton extends Component {  // eslint-disable-line
 
         <Content>
           <List
-            dataArray={datas} renderRow={data =>
-              <ListItem button onPress={() => { Actions[data.route](); this.props.closeDrawer() }} >
+            dataArray={datas}
+            renderRow={data =>
+              <ListItem
+                button
+                onPress={() => this.props.navigation.navigate(data.route)}
+              >
                 <Text>{data.text}</Text>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: '#999' }} />
+                  <Icon name="arrow-forward" style={{ color: "#999" }} />
                 </Right>
-              </ListItem>
-      }
+              </ListItem>}
           />
-
         </Content>
       </Container>
     );
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    openDrawer: () => dispatch(openDrawer()),
-    closeDrawer: () => dispatch(closeDrawer()),
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
-    pushRoute: (route, key) => dispatch(pushRoute(route, key)),
-  };
-}
-
-const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
-
-export default connect(mapStateToProps, bindAction)(NHButton);
+export default NHButton;
