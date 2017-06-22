@@ -18,5 +18,7 @@
       "barStyle": "light-content",
       "backgroundColor": "#334393"
     }
-  }
+  },
+  "name": "NativebaseKitchenSink",
+  "displayName": "NativebaseKitchenSink"
 }
