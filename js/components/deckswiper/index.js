@@ -73,6 +73,8 @@ class NHDeckSwiper extends Component {
         <View style={{ flex: 1, padding: 12 }}>
           <DeckSwiper
             dataSource={cards}
+            looping={false}
+            renderEmpty={<View><Text>Over</Text></View>}
             renderItem={item =>
               <Card style={{ elevation: 3 }}>
                 <CardItem>

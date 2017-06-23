@@ -25,6 +25,10 @@ const datas = [
   {
     route: "ConfigTab",
     text: "Advanced Tabs"
+  },
+  {
+    route: "ScrollableTab",
+    text: "Scrollable Tabs"
   }
 ];
 

@@ -43,7 +43,6 @@ class ToastNB extends Component {
             <Title>Toast</Title>
           </Body>
           <Right />
-
         </Header>
 
         <Content padder>

@@ -61,6 +61,7 @@ import NHListAvatar from "./components/list/list-avatar";
 import NHListThumbnail from "./components/list/list-thumbnail";
 import BasicTab from "./components/tab/basicTab";
 import ConfigTab from "./components/tab/configTab";
+import ScrollableTab from "./components/tab/scrollableTab";
 import BasicSegment from "./components/segment/SegmentHeader";
 import AdvSegment from "./components/segment/segmentTab";
 
@@ -130,6 +131,7 @@ const AppNavigator = StackNavigator(
 
     BasicTab: { screen: BasicTab },
     ConfigTab: { screen: ConfigTab },
+    ScrollableTab: { screen: ScrollableTab },
 
     BasicSegment: { screen: BasicSegment },
     AdvSegment: { screen: AdvSegment }
