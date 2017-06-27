@@ -49,7 +49,7 @@ class BasicListSwipe extends Component {
 									alignItems: 'center',
 									justifyContent: 'center',
 								}}
-								onPress={() => alert('Trash')}
+								onPress={() => alert('Add')}
 							>
 								<Icon active name="add" style={{ color: '#FFF' }} />
 							</Button>
@@ -63,7 +63,7 @@ class BasicListSwipe extends Component {
 									alignItems: 'center',
 									justifyContent: 'center',
 								}}
-								onPress={() => alert('Add')}
+								onPress={() => alert('Trash')}
 							>
 								<Icon active name="trash" />
 							</Button>
