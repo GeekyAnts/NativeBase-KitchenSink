@@ -114,8 +114,8 @@ const datas = [
 	{
 		name: 'ListSwipe',
 		route: 'ListSwipe',
-		icon: 'lock',
-		bg: '#5DCEE2',
+		icon: 'swap',
+		bg: '#C5F442',
 		types: '2',
 	},
 	{

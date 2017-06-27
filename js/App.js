@@ -61,6 +61,13 @@ import NHListHeader from './components/list/list-headers';
 import NHListIcon from './components/list/list-icon';
 import NHListAvatar from './components/list/list-avatar';
 import NHListThumbnail from './components/list/list-thumbnail';
+import RegularPicker from './components/picker/regularPicker';
+import PlaceholderPicker from './components/picker/placeholderPicker';
+import PlaceholderPickerNote from './components/picker/placeholderPickernote';
+import BackButtonPicker from './components/picker/backButtonPicker';
+import HeaderPicker from './components/picker/headerPicker';
+import HeaderStylePicker from './components/picker/headerStylePicker';
+import CustomHeaderPicker from './components/picker/customHeaderPicker';
 import BasicTab from './components/tab/basicTab';
 import ConfigTab from './components/tab/configTab';
 import ScrollableTab from './components/tab/scrollableTab';
@@ -133,6 +140,14 @@ const AppNavigator = StackNavigator(
 
 		BasicListSwipe: { screen: BasicListSwipe },
 		MultiListSwipe: { screen: MultiListSwipe },
+
+		RegularPicker: { screen: RegularPicker },
+		PlaceholderPicker: { screen: PlaceholderPicker },
+		PlaceholderPickerNote: { screen: PlaceholderPickerNote },
+		BackButtonPicker: { screen: BackButtonPicker },
+		HeaderPicker: { screen: HeaderPicker },
+		HeaderStylePicker: { screen: HeaderStylePicker },
+		CustomHeaderPicker: { screen: CustomHeaderPicker },
 
 		BasicTab: { screen: BasicTab },
 		ConfigTab: { screen: ConfigTab },
