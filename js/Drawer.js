@@ -33,6 +33,7 @@ import SplashPage from "./components/splashscreen/";
 import SideBar from "./components/sidebar";
 import Segment from "./components/segment";
 import Toast from "./components/toast";
+import Actionsheet from "./components/actionsheet";
 
 const DrawerExample = DrawerNavigator(
   {
@@ -63,7 +64,8 @@ const DrawerExample = DrawerNavigator(
     NHThumbnail: { screen: NHThumbnail },
     NHTypography: { screen: NHTypography },
     Segment: { screen: Segment },
-    Toast: { screen: Toast }
+    Toast: { screen: Toast },
+    Actionsheet: { screen: Actionsheet }
   },
   {
     initialRouteName: "Home",

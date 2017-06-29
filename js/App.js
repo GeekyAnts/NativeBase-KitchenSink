@@ -3,6 +3,7 @@
 import React from "react";
 
 import { Platform } from "react-native";
+import { Root } from "native-base";
 import { StackNavigator } from "react-navigation";
 
 import Drawer from "./Drawer";
@@ -70,6 +71,8 @@ import BasicTab from "./components/tab/basicTab";
 import ConfigTab from "./components/tab/configTab";
 import ScrollableTab from "./components/tab/scrollableTab";
 import BasicSegment from "./components/segment/SegmentHeader";
+import RegularActionSheet from "./components/actionsheet/regular";
+import IconActionSheet from "./components/actionsheet/icon";
 import AdvSegment from "./components/segment/segmentTab";
 
 const AppNavigator = StackNavigator(
@@ -149,7 +152,10 @@ const AppNavigator = StackNavigator(
     ScrollableTab: { screen: ScrollableTab },
 
     BasicSegment: { screen: BasicSegment },
-    AdvSegment: { screen: AdvSegment }
+    AdvSegment: { screen: AdvSegment },
+
+    RegularActionSheet: { screen: RegularActionSheet },
+    IconActionSheet: { screen: IconActionSheet }
   },
   {
     initialRouteName: "Drawer",
@@ -157,4 +163,7 @@ const AppNavigator = StackNavigator(
   }
 );
 
-export default () => <AppNavigator />;
+export default () =>
+  <Root>
+    <AppNavigator />
+  </Root>;

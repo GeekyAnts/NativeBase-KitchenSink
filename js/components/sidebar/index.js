@@ -32,6 +32,12 @@ const datas = [
     bg: "#C5F442"
   },
   {
+    name: "Actionsheet",
+    route: "Actionsheet",
+    icon: "easel",
+    bg: "#C5F442"
+  },
+  {
     name: "Header",
     route: "Header",
     icon: "phone-portrait",
@@ -202,7 +208,9 @@ class SideBar extends Component {
                     name={data.icon}
                     style={{ color: "#777", fontSize: 26, width: 30 }}
                   />
-                  <Text style={styles.text}>{data.name}</Text>
+                  <Text style={styles.text}>
+                    {data.name}
+                  </Text>
                 </Left>
                 {data.types &&
                   <Right style={{ flex: 1 }}>
@@ -221,7 +229,6 @@ class SideBar extends Component {
                   </Right>}
               </ListItem>}
           />
-
         </Content>
       </Container>
     );
