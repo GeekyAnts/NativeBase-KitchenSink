@@ -31,7 +31,7 @@ class BasicListSwipe extends Component {
 						</Button>
 					</Left>
 					<Body style={{ flex: 3 }}>
-						<Title>Single List Swipe</Title>
+						<Title>Single SwipeRow</Title>
 					</Body>
 					<Right />
 				</Header>
@@ -41,34 +41,20 @@ class BasicListSwipe extends Component {
 						leftOpenValue={75}
 						rightOpenValue={-75}
 						left={
-							<Button
-								full
-								success
-								style={{
-									flex: 1,
-									alignItems: 'center',
-									justifyContent: 'center',
-								}}
-								onPress={() => alert('Add')}
-							>
+							<Button success onPress={() => alert('Add')}>
 								<Icon active name="add" style={{ color: '#FFF' }} />
 							</Button>
 						}
 						right={
-							<Button
-								full
-								danger
-								style={{
-									flex: 1,
-									alignItems: 'center',
-									justifyContent: 'center',
-								}}
-								onPress={() => alert('Trash')}
-							>
+							<Button danger onPress={() => alert('Trash')}>
 								<Icon active name="trash" />
 							</Button>
 						}
-						body={<View style={{ paddingLeft: 20 }}><Text>Some Body Text</Text></View>}
+						body={
+							<View style={{ paddingLeft: 20 }}>
+								<Text>Some Body Text</Text>
+							</View>
+						}
 					/>
 				</Content>
 			</Container>

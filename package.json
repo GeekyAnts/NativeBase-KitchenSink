@@ -13,7 +13,10 @@
     "test": "node node_modules/jest/bin/jest.js --watch"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|native-base-shoutem-theme|@shoutem/animation)"
+    ]
   },
   "dependencies": {
     "color": "~1.0.3",

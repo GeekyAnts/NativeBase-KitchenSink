@@ -7,7 +7,7 @@ import styles from './styles';
 const datas = [
 	{
 		route: 'BasicListSwipe',
-		text: 'Single ListSwipe',
+		text: 'Single SwipeRow',
 	},
 	{
 		route: 'MultiListSwipe',
@@ -36,7 +36,9 @@ class ListSwipe extends Component {
 						dataArray={datas}
 						renderRow={data =>
 							<ListItem button onPress={() => this.props.navigation.navigate(data.route)}>
-								<Text>{data.text}</Text>
+								<Text>
+									{data.text}
+								</Text>
 								<Right>
 									<Icon name="arrow-forward" />
 								</Right>

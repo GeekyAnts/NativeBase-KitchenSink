@@ -69,7 +69,9 @@ class MultiListSwipe extends Component {
 						dataSource={this.ds.cloneWithRows(this.state.listViewData)}
 						renderRow={data =>
 							<ListItem style={{ paddingLeft: 20 }}>
-								<Text>{data}</Text>
+								<Text>
+									{data}
+								</Text>
 							</ListItem>}
 						renderLeftHiddenRow={data =>
 							<Button
