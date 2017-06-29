@@ -98,6 +98,13 @@ const datas = [
     types: "12"
   },
   {
+    name: "ListSwipe",
+    route: "ListSwipe",
+    icon: "swap",
+    bg: "#C5F442",
+    types: "2"
+  },
+  {
     name: "Icon",
     route: "NHIcon",
     icon: "information-circle",

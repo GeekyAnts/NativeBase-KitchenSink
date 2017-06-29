@@ -16,6 +16,7 @@ import NHFab from "./components/fab/";
 import NHForm from "./components/form/";
 import TextArea from "./components/form/textArea";
 import NHIcon from "./components/icon/";
+import ListSwipe from "./components/listSwipe/";
 import BasicIcon from "./components/icon/basic";
 import IconState from "./components/icon/state";
 import SpecificIcon from "./components/icon/specific";
@@ -56,6 +57,7 @@ const DrawerExample = DrawerNavigator(
     NHInputGroup: { screen: NHInputGroup },
     NHLayout: { screen: NHLayout },
     NHList: { screen: NHList },
+    ListSwipe: { screen: ListSwipe },
     NHRadio: { screen: NHRadio },
     NHSearchbar: { screen: NHSearchbar },
     NHSpinner: { screen: NHSpinner },
