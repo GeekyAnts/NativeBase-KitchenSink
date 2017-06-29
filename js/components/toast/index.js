@@ -50,15 +50,12 @@ class ToastNB extends Component {
             onPress={() =>
               Toast.show({
                 text: "Wrong password!",
-                position: "bottom",
                 buttonText: "Okay"
               })}
           >
             <Text>Toast</Text>
           </Button>
-
         </Content>
-
       </Container>
     );
   }
