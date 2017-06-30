@@ -76,6 +76,8 @@ import BasicSegment from "./components/segment/SegmentHeader";
 import RegularActionSheet from "./components/actionsheet/regular";
 import IconActionSheet from "./components/actionsheet/icon";
 import AdvSegment from "./components/segment/segmentTab";
+import SimpleDeck from "./components/deckswiper/simple";
+import AdvancedDeck from "./components/deckswiper/advanced";
 
 const AppNavigator = StackNavigator(
 	{
@@ -110,6 +112,9 @@ const AppNavigator = StackNavigator(
 		NHCardShowcase: { screen: NHCardShowcase },
 		NHCardList: { screen: NHCardList },
 		NHCardHeaderAndFooter: { screen: NHCardHeaderAndFooter },
+
+		SimpleDeck: { screen: SimpleDeck },
+		AdvancedDeck: { screen: AdvancedDeck },
 
 		BasicFab: { screen: BasicFab },
 		MultipleFab: { screen: MultipleFab },
