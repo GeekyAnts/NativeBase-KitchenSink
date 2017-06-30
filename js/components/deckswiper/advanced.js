@@ -73,7 +73,7 @@ class AdvancedDeck extends Component {
 						dataSource={cards}
 						looping={false}
 						renderEmpty={() =>
-							<View>
+							<View style={{ alignSelf: 'center' }}>
 								<Text>Over</Text>
 							</View>}
 						renderItem={item =>
