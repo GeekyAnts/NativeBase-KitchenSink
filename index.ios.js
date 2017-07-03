@@ -1,6 +1,3 @@
-
-import { AppRegistry, StatusBar } from 'react-native';
-import setup from './js/setup';
-
-StatusBar.setBarStyle('default');
-AppRegistry.registerComponent('NativebaseKitchenSink', setup);
+import { AppRegistry } from 'react-native';
+import App from './App';
+AppRegistry.registerComponent('NativebaseKitchenSink', () => App);

@@ -1,4 +1,24 @@
 {
+  "expo": {
+    "sdkVersion": "17.0.0",
+    "icon": "http://nativebase.io/assets/img/front-page-icon.png",
+    "loading": {
+      "hideExponentText": false,
+      "backgroundImage": "./img/splashscreen.png"
+    },
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "packagerOpts": {
+      "assetExts": [
+        "ttf"
+      ]
+    },
+    "androidStatusBarColor": "#334393",
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#334393"
+    }
+  },
   "name": "NativebaseKitchenSink",
   "displayName": "NativebaseKitchenSink"
 }

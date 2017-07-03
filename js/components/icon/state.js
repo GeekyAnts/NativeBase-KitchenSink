@@ -1,35 +1,30 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { View } from 'react-native';
-import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Text, Body, Left, Right, Grid, Row, Col, Icon } from 'native-base';
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  Text,
+  Body,
+  Left,
+  Right,
+  Grid,
+  Row,
+  Col,
+  Icon
+} from "native-base";
 
-import styles from './styles';
-
-const {
-  replaceAt,
-} = actions;
+import styles from "./styles";
 
 class State extends Component {
-
-  static propTypes = {
-    replaceAt: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
-
-  replaceAt(route) {
-    this.props.replaceAt('state', { key: route }, this.props.navigation.key);
-  }
-
   render() {
     return (
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.replaceAt('icon')}>
+            <Button transparent onPress={() => this.replaceAt("icon")}>
               <Icon name="arrow-back" />
             </Button>
           </Left>
@@ -44,7 +39,9 @@ class State extends Component {
             <Row style={styles.row}>
               <Col style={styles.col}>
                 <Icon name="logo-apple" />
-                <Text numberOfLines={1} style={styles.iconText}>logo-apple</Text>
+                <Text numberOfLines={1} style={styles.iconText}>
+                  logo-apple
+                </Text>
               </Col>
               <Col style={styles.col}>
                 <Icon name="pizza" />
@@ -71,7 +68,9 @@ class State extends Component {
               </Col>
               <Col style={styles.col}>
                 <Icon name="cloud-circle" />
-                <Text numberOfLines={1} style={styles.iconText}>cloud-circle</Text>
+                <Text numberOfLines={1} style={styles.iconText}>
+                  cloud-circle
+                </Text>
               </Col>
               <Col style={styles.col}>
                 <Icon name="pie" />
@@ -113,7 +112,9 @@ class State extends Component {
             <Row style={styles.row}>
               <Col style={styles.col}>
                 <Icon name="paper-plane" />
-                <Text numberOfLines={1} style={styles.iconText}>paper-plane</Text>
+                <Text numberOfLines={1} style={styles.iconText}>
+                  paper-plane
+                </Text>
               </Col>
               <Col style={styles.col}>
                 <Icon name="cart" />
@@ -159,11 +160,15 @@ class State extends Component {
             <Row style={styles.row}>
               <Col style={styles.col}>
                 <Icon name="microphone" />
-                <Text numberOfLines={1} style={styles.iconText}>microphone</Text>
+                <Text numberOfLines={1} style={styles.iconText}>
+                  microphone
+                </Text>
               </Col>
               <Col style={styles.col}>
                 <Icon name="color-filter" />
-                <Text numberOfLines={1} style={styles.iconText}>color-filter</Text>
+                <Text numberOfLines={1} style={styles.iconText}>
+                  color-filter
+                </Text>
               </Col>
               <Col style={styles.col}>
                 <Icon name="alarm" />
@@ -198,7 +203,9 @@ class State extends Component {
               </Col>
               <Col style={styles.col}>
                 <Icon name="partly-sunny" />
-                <Text numberOfLines={1} style={styles.iconText}>partly-sunny</Text>
+                <Text numberOfLines={1} style={styles.iconText}>
+                  partly-sunny
+                </Text>
               </Col>
             </Row>
 
@@ -217,11 +224,15 @@ class State extends Component {
               </Col>
               <Col style={styles.col}>
                 <Icon name="chatbubbles" />
-                <Text numberOfLines={1} style={styles.iconText}>chatbubbles</Text>
+                <Text numberOfLines={1} style={styles.iconText}>
+                  chatbubbles
+                </Text>
               </Col>
               <Col style={styles.col}>
                 <Icon name="speedometer" />
-                <Text numberOfLines={1} style={styles.iconText}>speedometer</Text>
+                <Text numberOfLines={1} style={styles.iconText}>
+                  speedometer
+                </Text>
               </Col>
             </Row>
 
@@ -244,7 +255,9 @@ class State extends Component {
               </Col>
               <Col style={styles.col}>
                 <Icon name="calculator" />
-                <Text numberOfLines={1} style={styles.iconText}>calculator</Text>
+                <Text numberOfLines={1} style={styles.iconText}>
+                  calculator
+                </Text>
               </Col>
             </Row>
 
@@ -286,11 +299,15 @@ class State extends Component {
               </Col>
               <Col style={styles.col}>
                 <Icon name="skip-forward" />
-                <Text numberOfLines={1} style={styles.iconText}>skip-forward</Text>
+                <Text numberOfLines={1} style={styles.iconText}>
+                  skip-forward
+                </Text>
               </Col>
               <Col style={styles.col}>
                 <Icon name="logo-github" />
-                <Text numberOfLines={1} style={styles.iconText}>logo-github</Text>
+                <Text numberOfLines={1} style={styles.iconText}>
+                  logo-github
+                </Text>
               </Col>
             </Row>
 
@@ -374,15 +391,52 @@ class State extends Component {
               </Col>
               <Col style={styles.col}>
                 <Icon name="logo-facebook" />
-                <Text numberOfLines={1} style={styles.iconText}>logo-facebook</Text>
+                <Text numberOfLines={1} style={styles.iconText}>
+                  logo-facebook
+                </Text>
               </Col>
               <Col style={styles.col}>
                 <Icon name="logo-googleplus" />
-                <Text numberOfLines={1} style={styles.iconText}>logo-googleplus</Text>
+                <Text numberOfLines={1} style={styles.iconText}>
+                  logo-googleplus
+                </Text>
               </Col>
               <Col style={styles.col}>
                 <Icon name="logo-twitter" />
-                <Text numberOfLines={1} style={styles.iconText}>logo-twitter</Text>
+                <Text numberOfLines={1} style={styles.iconText}>
+                  logo-twitter
+                </Text>
+              </Col>
+            </Row>
+
+            <Row style={styles.row}>
+              <Col style={styles.col}>
+                <Icon name="logo-github" />
+                <Text numberOfLines={1} style={styles.iconText}>
+                  logo-github
+                </Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="logo-whatsapp" />
+                <Text numberOfLines={1} style={styles.iconText}>
+                  logo-whatsapp
+                </Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="logo-wordpress" />
+                <Text numberOfLines={1} style={styles.iconText}>
+                  logo-wordpress
+                </Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="logo-youtube" />
+                <Text numberOfLines={1} style={styles.iconText}>
+                  logo-youtube
+                </Text>
+              </Col>
+              <Col style={styles.col}>
+                <Icon name="mail" />
+                <Text numberOfLines={1} style={styles.iconText}>mail</Text>
               </Col>
             </Row>
 
@@ -393,15 +447,4 @@ class State extends Component {
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    replaceAt: (routeKey, route, key) => dispatch(replaceAt(routeKey, route, key)),
-  };
-}
-
-const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
-
-export default connect(mapStateToProps, bindAction)(State);
+export default State;

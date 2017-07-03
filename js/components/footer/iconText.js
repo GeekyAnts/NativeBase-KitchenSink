@@ -1,31 +1,30 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Button, Footer, FooterTab, Text, Body, Left, Right, Icon } from 'native-base';
-import { Actions } from 'react-native-router-flux';
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  Footer,
+  FooterTab,
+  Text,
+  Body,
+  Left,
+  Right,
+  Icon
+} from "native-base";
 
-import styles from './styles';
-
-const {
-  popRoute,
-} = actions;
+import styles from "./styles";
 
 class IconText extends Component {
-
-  static propTypes = {
-    popRoute: React.PropTypes.func,
-    navigation: React.PropTypes.shape({
-      key: React.PropTypes.string,
-    }),
-  }
   constructor(props) {
     super(props);
     this.state = {
       tab1: false,
       tab2: false,
       tab3: true,
-      tab4: false,
+      tab4: false
     };
   }
 
@@ -34,7 +33,7 @@ class IconText extends Component {
       tab1: true,
       tab2: false,
       tab3: false,
-      tab4: false,
+      tab4: false
     });
   }
 
@@ -43,7 +42,7 @@ class IconText extends Component {
       tab1: false,
       tab2: true,
       tab3: false,
-      tab4: false,
+      tab4: false
     });
   }
 
@@ -52,7 +51,7 @@ class IconText extends Component {
       tab1: false,
       tab2: false,
       tab3: true,
-      tab4: false,
+      tab4: false
     });
   }
 
@@ -61,12 +60,8 @@ class IconText extends Component {
       tab1: false,
       tab2: false,
       tab3: false,
-      tab4: true,
+      tab4: true
     });
-  }
-
-  popRoute() {
-    this.props.popRoute(this.props.navigation.key);
   }
 
   render() {
@@ -74,7 +69,7 @@ class IconText extends Component {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => Actions.pop()}>
+            <Button transparent onPress={() => this.props.navigation.goBack()}>
               <Icon name="arrow-back" />
             </Button>
           </Left>
@@ -85,21 +80,22 @@ class IconText extends Component {
         </Header>
 
         <Content padder />
+
         <Footer>
           <FooterTab>
-            <Button active={this.state.tab1} onPress={() => this.toggleTab1()} >
+            <Button active={this.state.tab1} onPress={() => this.toggleTab1()}>
               <Icon active={this.state.tab1} name="apps" />
               <Text>Apps</Text>
             </Button>
-            <Button active={this.state.tab2} onPress={() => this.toggleTab2()} >
+            <Button active={this.state.tab2} onPress={() => this.toggleTab2()}>
               <Icon active={this.state.tab2} name="camera" />
               <Text>Camera</Text>
             </Button>
-            <Button active={this.state.tab3} onPress={() => this.toggleTab3()} >
+            <Button active={this.state.tab3} onPress={() => this.toggleTab3()}>
               <Icon active={this.state.tab3} name="compass" />
               <Text>Compass</Text>
             </Button>
-            <Button active={this.state.tab4} onPress={() => this.toggleTab4()} >
+            <Button active={this.state.tab4} onPress={() => this.toggleTab4()}>
               <Icon active={this.state.tab4} name="contact" />
               <Text>Contact</Text>
             </Button>
@@ -110,15 +106,4 @@ class IconText extends Component {
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    popRoute: key => dispatch(popRoute(key)),
-  };
-}
-
-const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
-
-export default connect(mapStateToProps, bindAction)(IconText);
+export default IconText;

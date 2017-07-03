@@ -1,1 +1,0 @@
-NativeBase KitchenSink 2.0

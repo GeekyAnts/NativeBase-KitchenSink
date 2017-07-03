@@ -1,23 +1,31 @@
+import React, { Component } from "react";
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  Icon,
+  Badge,
+  Text,
+  Left,
+  Right,
+  Body
+} from "native-base";
+import styles from "./styles";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Container, Header, Title, Content, Button, Icon, Badge, Text, Left, Right, Body } from 'native-base';
-
-import { openDrawer } from '../../actions/drawer';
-import styles from './styles';
-
-class NHBadge extends Component { //eslint-disable-line
-
-  static propTypes = {
-    openDrawer: React.PropTypes.func,
-  }
+class NHBadge extends Component {
+  //eslint-disable-line
 
   render() {
     return (
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={this.props.openDrawer}>
+            <Button
+              transparent
+              onPress={() => this.props.navigation.navigate("DrawerOpen")}
+            >
               <Icon name="menu" />
             </Button>
           </Left>
@@ -34,15 +42,15 @@ class NHBadge extends Component { //eslint-disable-line
           <Badge info style={styles.mb}><Text>2</Text></Badge>
           <Badge warning style={styles.mb}><Text>2</Text></Badge>
           <Badge danger style={styles.mb}><Text>2</Text></Badge>
-          <Badge
-            primary
-            style={styles.mb}
-          >
-            <Icon name="star" style={{ fontSize: 15, color: '#fff', lineHeight: 20 }} />
+          <Badge primary style={styles.mb}>
+            <Icon
+              name="star"
+              style={{ fontSize: 15, color: "#fff", lineHeight: 20 }}
+            />
           </Badge>
           <Badge
-            style={{ backgroundColor: 'black' }}
-            textStyle={{ color: 'white' }}
+            style={{ backgroundColor: "black" }}
+            textStyle={{ color: "white" }}
           >
             <Text>1866</Text>
           </Badge>
@@ -52,15 +60,4 @@ class NHBadge extends Component { //eslint-disable-line
   }
 }
 
-function bindAction(dispatch) {
-  return {
-    openDrawer: () => dispatch(openDrawer()),
-  };
-}
-
-const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
-  themeState: state.drawer.themeState,
-});
-
-export default connect(mapStateToProps, bindAction)(NHBadge);
+export default NHBadge;
