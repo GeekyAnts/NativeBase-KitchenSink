@@ -2,109 +2,72 @@ import React, { Component } from "react";
 import { Image, View } from "react-native";
 
 import {
-  Container,
-  Header,
-  Title,
-  Button,
-  IconNB,
-  DeckSwiper,
-  Card,
-  CardItem,
-  Icon,
-  Thumbnail,
-  Text,
-  Left,
-  Right,
-  Body,
-  Content
+	Container,
+	Header,
+	Title,
+	Button,
+	IconNB,
+	DeckSwiper,
+	Card,
+	CardItem,
+	Icon,
+	Thumbnail,
+	Text,
+	Left,
+	Right,
+	Body,
+	Content,
+	List,
+	ListItem,
 } from "native-base";
 
 import styles from "./styles";
 
-const cardOne = require("../../../img/swiper-1.png");
-const cardTwo = require("../../../img/swiper-2.png");
-const cardThree = require("../../../img/swiper-3.png");
-const cardFour = require("../../../img/swiper-4.png");
-
-const cards = [
-  {
-    text: "Card One",
-    name: "One",
-    image: cardOne
-  },
-  {
-    text: "Card Two",
-    name: "Two",
-    image: cardTwo
-  },
-  {
-    text: "Card Three",
-    name: "Three",
-    image: cardThree
-  },
-  {
-    text: "Card Four",
-    name: "Four",
-    image: cardFour
-  }
+const datas = [
+	{
+		route: "SimpleDeck",
+		text: "Simple DeckSwiper",
+	},
+	{
+		route: "AdvancedDeck",
+		text: "Advanced DeckSwiper",
+	},
 ];
-
 class NHDeckSwiper extends Component {
-  // eslint-disable-line
+	// eslint-disable-line
 
-  render() {
-    return (
-      <Container style={styles.container}>
-        <Header>
-          <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
-            >
-              <Icon name="menu" />
-            </Button>
-          </Left>
-          <Body>
-            <Title>Deck Swiper</Title>
-          </Body>
-          <Right />
-        </Header>
+	render() {
+		return (
+			<Container style={styles.container}>
+				<Header>
+					<Left>
+						<Button transparent onPress={() => this.props.navigation.navigate("DrawerOpen")}>
+							<Icon name="menu" />
+						</Button>
+					</Left>
+					<Body>
+						<Title>Deck Swiper</Title>
+					</Body>
+					<Right />
+				</Header>
 
-        <View style={{ flex: 1, padding: 12 }}>
-          <DeckSwiper
-            dataSource={cards}
-            renderItem={item =>
-              <Card style={{ elevation: 3 }}>
-                <CardItem>
-                  <Left>
-                    <Thumbnail source={item.image} />
-                    <Body>
-                      <Text>{item.text}</Text>
-                      <Text note>NativeBase</Text>
-                    </Body>
-                  </Left>
-                </CardItem>
-                <CardItem cardBody>
-                  <Image
-                    style={{
-                      resizeMode: "cover",
-                      width: null,
-                      flex: 1,
-                      height: 300
-                    }}
-                    source={item.image}
-                  />
-                </CardItem>
-                <CardItem>
-                  <IconNB name={"ios-heart"} style={{ color: "#ED4A6A" }} />
-                  <Text>{item.name}</Text>
-                </CardItem>
-              </Card>}
-          />
-        </View>
-      </Container>
-    );
-  }
+				<Content>
+					<List
+						dataArray={datas}
+						renderRow={data =>
+							<ListItem button onPress={() => this.props.navigation.navigate(data.route)}>
+								<Text>
+									{data.text}
+								</Text>
+								<Right>
+									<Icon name="arrow-forward" style={{ color: "#999" }} />
+								</Right>
+							</ListItem>}
+					/>
+				</Content>
+			</Container>
+		);
+	}
 }
 
 export default NHDeckSwiper;

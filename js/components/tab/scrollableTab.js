@@ -8,18 +8,19 @@ import {
   Icon,
   Tabs,
   Tab,
-  Text,
   Right,
   Left,
   Body,
-  TabHeading
+  ScrollableTab
 } from "native-base";
 
 import TabOne from "./tabOne";
 import TabTwo from "./tabTwo";
 import TabThree from "./tabThree";
+import TabFour from "./tabFour";
+import TabFive from "./tabFive";
 
-class ConfigTab extends Component {
+class BasicTab extends Component {
   // eslint-disable-line
 
   render() {
@@ -31,24 +32,27 @@ class ConfigTab extends Component {
               <Icon name="arrow-back" />
             </Button>
           </Left>
-          <Body style={{ flex: 3 }}>
-            <Title> Advanced Tabs</Title>
+          <Body>
+            <Title> Scrollable Tabs</Title>
           </Body>
           <Right />
         </Header>
-        <Tabs style={{ elevation: 3 }}>
-          <Tab
-            heading={
-              <TabHeading><Icon name="camera" /><Text>Camera</Text></TabHeading>
-            }
-          >
+
+        <Tabs renderTabBar={() => <ScrollableTab />}>
+          <Tab heading="Tab1">
             <TabOne />
           </Tab>
-          <Tab heading={<TabHeading><Text>No Icon</Text></TabHeading>}>
+          <Tab heading="Tab2">
             <TabTwo />
           </Tab>
-          <Tab heading={<TabHeading><Icon name="apps" /></TabHeading>}>
+          <Tab heading="Tab3">
             <TabThree />
+          </Tab>
+          <Tab heading="Tab4">
+            <TabFour />
+          </Tab>
+          <Tab heading="Tab5">
+            <TabFive />
           </Tab>
         </Tabs>
       </Container>
@@ -56,4 +60,4 @@ class ConfigTab extends Component {
   }
 }
 
-export default ConfigTab;
+export default BasicTab;

@@ -25,7 +25,7 @@ class ColumnNB extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Column</Title>
+            <Title>Column Grid</Title>
           </Body>
           <Right />
         </Header>

@@ -16,6 +16,7 @@ import NHFab from "./components/fab/";
 import NHForm from "./components/form/";
 import TextArea from "./components/form/textArea";
 import NHIcon from "./components/icon/";
+import ListSwipe from "./components/listSwipe/";
 import BasicIcon from "./components/icon/basic";
 import IconState from "./components/icon/state";
 import SpecificIcon from "./components/icon/specific";
@@ -33,6 +34,7 @@ import SplashPage from "./components/splashscreen/";
 import SideBar from "./components/sidebar";
 import Segment from "./components/segment";
 import Toast from "./components/toast";
+import Actionsheet from "./components/actionsheet";
 
 const DrawerExample = DrawerNavigator(
   {
@@ -55,6 +57,7 @@ const DrawerExample = DrawerNavigator(
     NHInputGroup: { screen: NHInputGroup },
     NHLayout: { screen: NHLayout },
     NHList: { screen: NHList },
+    ListSwipe: { screen: ListSwipe },
     NHRadio: { screen: NHRadio },
     NHSearchbar: { screen: NHSearchbar },
     NHSpinner: { screen: NHSpinner },
@@ -63,7 +66,8 @@ const DrawerExample = DrawerNavigator(
     NHThumbnail: { screen: NHThumbnail },
     NHTypography: { screen: NHTypography },
     Segment: { screen: Segment },
-    Toast: { screen: Toast }
+    Toast: { screen: Toast },
+    Actionsheet: { screen: Actionsheet }
   },
   {
     initialRouteName: "Home",

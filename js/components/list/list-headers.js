@@ -28,7 +28,7 @@ class NHListHeader extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>List Headers</Title>
+            <Title>List Header</Title>
           </Body>
           <Right />
         </Header>

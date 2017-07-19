@@ -1,76 +1,64 @@
 import React, { Component } from "react";
+import { Platform } from "react-native";
 
 import {
   Container,
   Header,
   Title,
   Content,
-  Text,
   Button,
   Icon,
-  Left,
+  Text,
   Right,
   Body,
+  Left,
   List,
-  ListItem
+  ListItem,
+  Picker,
+  Form,
+  View,
+  H3,
+  Item as FormItem
 } from "native-base";
 
 import styles from "./styles";
 
 const datas = [
   {
-    route: "BasicTab",
-    text: "Basic Tabs"
+    route: "RegularPicker",
+    text: "Regular"
   },
   {
-    route: "ConfigTab",
-    text: "Advanced Tabs"
+    route: "PlaceholderPicker",
+    text: "Placeholder"
   },
   {
-    route: "ScrollableTab",
-    text: "Scrollable Tabs"
+    route: "PlaceholderPickerNote",
+    text: "Placeholder (without note)"
+  },
+  {
+    route: "BackButtonPicker",
+    text: "Custom Back Button"
+  },
+  {
+    route: "HeaderPicker",
+    text: "Custom Header Text"
+  },
+  {
+    route: "HeaderStylePicker",
+    text: "Custom Header Style"
+  },
+  {
+    route: "CustomHeaderPicker",
+    text: "Custom Header"
   }
 ];
 
-class NHTab extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      tab1: false,
-      tab2: false,
-      tab3: true
-    };
-  }
-
-  toggleTab1() {
-    this.setState({
-      tab1: true,
-      tab2: false,
-      tab3: false
-    });
-  }
-
-  toggleTab2() {
-    this.setState({
-      tab1: false,
-      tab2: true,
-      tab3: false
-    });
-  }
-
-  toggleTab3() {
-    this.setState({
-      tab1: false,
-      tab2: false,
-      tab3: true
-    });
-  }
-
+class NHPicker extends Component {
   render() {
     return (
       <Container style={styles.container}>
-
-        <Header noShadow>
+        <Header>
           <Left>
             <Button
               transparent
@@ -80,10 +68,9 @@ class NHTab extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Tabs</Title>
+            <Title>Picker</Title>
           </Body>
           <Right />
-
         </Header>
 
         <Content>
@@ -102,10 +89,9 @@ class NHTab extends Component {
           />
 
         </Content>
-
       </Container>
     );
   }
 }
 
-export default NHTab;
+export default NHPicker;

@@ -14,6 +14,8 @@ import {
   Left,
   Picker,
   Form,
+  View,
+  H3,
   Item as FormItem
 } from "native-base";
 
@@ -21,38 +23,30 @@ import styles from "./styles";
 
 const Item = Picker.Item;
 
-class NHPicker extends Component {
+class RegularPicker extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedItem: undefined,
-      selected1: "key1",
-      results: {
-        items: []
-      }
+      selected3: "key3"
     };
   }
 
-  onValueChange(value: string) {
+  onValueChange3(value: string) {
     this.setState({
-      selected1: value
+      selected3: value
     });
   }
-
   render() {
     return (
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
-            >
-              <Icon name="menu" />
+            <Button transparent onPress={() => this.props.navigation.goBack()}>
+              <Icon name="arrow-back" />
             </Button>
           </Left>
-          <Body>
-            <Title>Picker</Title>
+          <Body style={{ flex: 3 }}>
+            <Title>Custom back button</Title>
           </Body>
           <Right />
         </Header>
@@ -60,11 +54,11 @@ class NHPicker extends Component {
         <Content>
           <Form>
             <Picker
-              iosHeader="Select one"
               mode="dropdown"
+              headerBackButtonText="Baaack!"
               style={{ width: Platform.OS === "ios" ? undefined : 120 }}
-              selectedValue={this.state.selected1}
-              onValueChange={this.onValueChange.bind(this)}
+              selectedValue={this.state.selected3}
+              onValueChange={this.onValueChange3.bind(this)}
             >
               <Item label="Wallet" value="key0" />
               <Item label="ATM Card" value="key1" />
@@ -79,4 +73,4 @@ class NHPicker extends Component {
   }
 }
 
-export default NHPicker;
+export default RegularPicker;

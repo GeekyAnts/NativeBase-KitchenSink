@@ -26,7 +26,7 @@ const datas = [
   },
   {
     route: "NestedGrid",
-    text: "Nested Layout"
+    text: "Nested Grid"
   },
   {
     route: "CustomRow",

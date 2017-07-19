@@ -6,37 +6,16 @@ import styles from './styles';
 
 const datas = [
 	{
-		route: 'NHBasicList',
-		text: 'Basic List',
+		route: 'BasicListSwipe',
+		text: 'Single SwipeRow',
 	},
 	{
-		route: 'NHListDivider',
-		text: 'List Divider',
-	},
-	{
-		route: 'NHListHeader',
-		text: 'List Header',
-	},
-	{
-		route: 'NHListIcon',
-		text: 'List Icon',
-	},
-	{
-		route: 'NHListAvatar',
-		text: 'List Avatar',
-	},
-	{
-		route: 'NHListThumbnail',
-		text: 'List Thumbnail',
-	},
-	,
-	{
-		route: 'NHListSeparator',
-		text: 'List Separator',
+		route: 'MultiListSwipe',
+		text: 'Multiple List Swipe',
 	},
 ];
 
-class NHList extends Component {
+class ListSwipe extends Component {
 	render() {
 		return (
 			<Container style={styles.container}>
@@ -47,12 +26,12 @@ class NHList extends Component {
 						</Button>
 					</Left>
 					<Body>
-						<Title>List</Title>
+						<Title>List Swipe</Title>
 					</Body>
 					<Right />
 				</Header>
 
-				<Content>
+				<Content scrollEnabled={false} contentContainerStyle={{ flex: 1 }}>
 					<List
 						dataArray={datas}
 						renderRow={data =>
@@ -71,4 +50,4 @@ class NHList extends Component {
 	}
 }
 
-export default NHList;
+export default ListSwipe;
