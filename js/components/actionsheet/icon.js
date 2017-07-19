@@ -37,7 +37,7 @@ export default class ActionSheetNB extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>ActionSheet</Title>
+            <Title>Icon ActionSheet</Title>
           </Body>
           <Right />
         </Header>
