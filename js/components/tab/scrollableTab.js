@@ -33,7 +33,7 @@ class BasicTab extends Component {
             </Button>
           </Left>
           <Body>
-            <Title> Basic Tabs</Title>
+            <Title> Scrollable Tabs</Title>
           </Body>
           <Right />
         </Header>

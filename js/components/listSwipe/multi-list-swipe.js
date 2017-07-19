@@ -59,7 +59,7 @@ class MultiListSwipe extends Component {
 						</Button>
 					</Left>
 					<Body style={{ flex: 3 }}>
-						<Title>Multi List Swipe</Title>
+						<Title>Multiple List Swipe</Title>
 					</Body>
 					<Right />
 				</Header>

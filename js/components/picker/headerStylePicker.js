@@ -46,7 +46,7 @@ class RegularPicker extends Component {
             </Button>
           </Left>
           <Body style={{ flex: 3 }}>
-            <Title>Cutom Header Style</Title>
+            <Title>Custom Header Style</Title>
           </Body>
           <Right />
         </Header>

@@ -82,6 +82,7 @@ const datas = [
 		route: "NHDeckSwiper",
 		icon: "swap",
 		bg: "#3591FA",
+		types: "2",
 	},
 	{
 		name: "Fab",
@@ -146,7 +147,8 @@ const datas = [
 		name: "Segment",
 		route: "Segment",
 		icon: "menu",
-		bg: "#AB6AED",
+		bg: "#0A2C6B",
+		types: "2",
 	},
 	{
 		name: "Spinner",
@@ -159,7 +161,7 @@ const datas = [
 		route: "NHTab",
 		icon: "home",
 		bg: "#AB6AED",
-		types: "2",
+		types: "3",
 	},
 	{
 		name: "Thumbnail",

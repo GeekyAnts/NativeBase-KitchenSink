@@ -78,7 +78,7 @@ class NHRadio extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Radios</Title>
+            <Title>Radio</Title>
           </Body>
           <Right />
         </Header>
