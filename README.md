@@ -68,7 +68,7 @@ $ react-native run-android
 
 * Get a quick look of the NativeBase components using <a href="https://getexponent.com/">Exponent</a>
 
-*  Link https://exp.host/@geekyants/nativebase-kitchenSink
+*  Link https://exp.host/@geekyants/nativebasekitchensink
 
 ## Quick Links to NativeBase
 
