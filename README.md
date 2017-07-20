@@ -78,4 +78,4 @@ $ react-native run-android
 *	[NativeBase Blog](https://medium.com/nativebase-io-blog)
 
 
-For apps with more advanced designs using NativeBase, please visit **[StrapMobile](https://strapmobile.com/)**.
+For apps with more advanced designs using NativeBase, please visit **[NativeBase Market](https://market.nativebase.io)**.
