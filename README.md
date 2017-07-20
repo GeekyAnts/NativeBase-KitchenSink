@@ -17,7 +17,6 @@ Below you'll find information about performing common tasks. The most recent ver
   * [Publishing to Expo's React Native Community](#publishing-to-expos-react-native-community)
   * [Building an Expo "standalone" app](#building-an-expo-standalone-app)
   * [Ejecting from Create React Native App](#ejecting-from-create-react-native-app)
-    * [Build Dependencies (Xcode & Android Studio)](#build-dependencies-xcode-android-studio)
     * [Should I Use ExpoKit?](#should-i-use-expokit)
 * [Tips and Tricks](#tips-and-tricks)
 
