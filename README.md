@@ -5,7 +5,7 @@ An example app with all the UI components of NativeBase
 
 iOS | Android
  :--:| :-----:
- ![ios-demo](./screenshots/iOS.gif) | ![android-demo](./screenshots/Android.gif)
+ ![ios-demo](https://github.com/GeekyAnts/NativeBase-KitchenSink/raw/master/screenshots/iOS.gif) | ![android-demo](https://github.com/GeekyAnts/NativeBase-KitchenSink/raw/master/screenshots/Android.gif)
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
