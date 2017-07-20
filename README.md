@@ -1,3 +1,12 @@
+# NativeBase KitchenSink v2.2.1
+An example app with all the UI components of NativeBase
+
+## Demo
+
+iOS | Android
+ :--:| :-----:
+ ![ios-demo](./screenshots/iOS.gif) | ![android-demo](./screenshots/Android.gif)
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
