@@ -19,22 +19,12 @@ export default class TabOne extends Component {
 					</CardItem>
 					<CardItem>
 						<Body>
-							<Text>Platform specific codebase for components</Text>
+							<Text>Platform specific codebase for components.</Text>
 						</Body>
 					</CardItem>
 					<CardItem>
 						<Body>
-							<Text>Any native third-party libraries can be included along with NativeBase.</Text>
-						</Body>
-					</CardItem>
-					<CardItem>
-						<Body>
-							<Text>Single file to theme your app and NativeBase components.</Text>
-						</Body>
-					</CardItem>
-					<CardItem>
-						<Body>
-							<Text>Gives an ease to include different font types in your app.</Text>
+							<Text>Any native third-party libraries can be included.</Text>
 						</Body>
 					</CardItem>
 				</Card>

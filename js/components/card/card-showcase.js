@@ -67,15 +67,11 @@ class NHCardShowcase extends Component {
                 />
                 <Text>
                   NativeBase is a free and source framework that enable
-                  developers
-                  to build high-quality mobile apps using React Native iOS and
-                  Android apps
-                  with a fusion of ES6.
-                  NativeBase builds a layer on top of React Native that provides
-                  you with
-                  basic set of components for mobile application development.
+                  developers to build high-quality mobile apps using React
+                  Native with a fusion of ES6. NativeBase builds a layer on
+                  top of React Native that provides you with basic set of
+                  components for mobile application development.
                 </Text>
-
               </Body>
             </CardItem>
             <CardItem style={{ paddingVertical: 0 }}>

@@ -15,10 +15,8 @@ export default class TabFour extends Component {
           <CardItem>
             <Body>
               <Text>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Consequuntur sunt itaque adipisci quisquam pariatur qui,
-                reiciendis architecto quod sint incidunt labore nisi totam illum
-                numquam non magnam praesentium, maxime quaerat!
+                Customize and build beautiful apps with complex interfaces using
+                NativeBase as the building block.
               </Text>
             </Body>
           </CardItem>
@@ -27,8 +25,8 @@ export default class TabFour extends Component {
           <CardItem>
             <Body>
               <Text>
-                NativeBase gives you the potential of building applications
-                that run on iOS and Android using a single codebase.
+                NativeBase lets you experience the awesomeness of React Native
+                without the pain.
               </Text>
             </Body>
           </CardItem>

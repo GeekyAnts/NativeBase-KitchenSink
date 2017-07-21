@@ -46,7 +46,7 @@ export default class ActionSheetNB extends Component {
                   options: BUTTONS,
                   cancelButtonIndex: CANCEL_INDEX,
                   destructiveButtonIndex: DESTRUCTIVE_INDEX,
-                  title: "Testing ActionSheet"
+                  title: "Options"
                 },
                 buttonIndex => {
                   this.setState({ clicked: BUTTONS[buttonIndex] });

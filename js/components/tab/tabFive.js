@@ -15,9 +15,8 @@ export default class TabFour extends Component {
           <CardItem>
             <Body>
               <Text>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                DOESN'T SUPPORT ADVANCED TABS :(
-                numquam non magnam praesentium, maxime quaerat!
+                NativeBase's stack of components is built using native UI
+                components so there are no compromises with the UX.
               </Text>
             </Body>
           </CardItem>

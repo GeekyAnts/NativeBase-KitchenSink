@@ -43,10 +43,8 @@ class NHCardHeaderAndFooter extends Component {
               <Body>
                 <Text>
                   NativeBase is a free and open source framework that enable
-                  developers to build
-                  high-quality mobile apps using React Native iOS and Android
-                  apps
-                  with a fusion of ES6.
+                  developers to build high-quality mobile apps using React
+                  Native with a fusion of ES6.
                 </Text>
               </Body>
             </CardItem>
@@ -54,8 +52,8 @@ class NHCardHeaderAndFooter extends Component {
               <Body>
                 <Text>
                   NativeBase builds a layer on top of React Native that provides
-                  you with
-                  basic set of components for mobile application development.
+                  you with basic set of components for mobile application
+                  development.
                 </Text>
               </Body>
             </CardItem>
@@ -63,8 +61,8 @@ class NHCardHeaderAndFooter extends Component {
               <Body>
                 <Text>
                   Get on the mobile fast track with NativeBase, the
-                  fastest-growing platform
-                  and tool set for iOS and Android development.
+                  fastest-growing platform and tool set for mobile platform
+                  development.
                 </Text>
               </Body>
             </CardItem>
