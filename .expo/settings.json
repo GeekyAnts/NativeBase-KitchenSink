@@ -5,5 +5,5 @@
   "strict": false,
   "minify": false,
   "urlType": "exp",
-  "urlRandomness": "f3-mag"
+  "urlRandomness": null
 }
