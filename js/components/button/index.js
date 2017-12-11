@@ -86,7 +86,9 @@ class NHButton extends Component {
                 button
                 onPress={() => this.props.navigation.navigate(data.route)}
               >
+              <Left>
                 <Text>{data.text}</Text>
+              </Left>
                 <Right>
                   <Icon name="arrow-forward" style={{ color: "#999" }} />
                 </Right>
