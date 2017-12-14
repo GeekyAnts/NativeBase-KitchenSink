@@ -1,10 +1,11 @@
 {
   "expo": {
-    "sdkVersion": "19.0.0",
+    "sdkVersion": "23.0.0",
     "icon": "http://nativebase.io/assets/img/front-page-icon.png",
+    "slug": "nativebasekitchensink",
     "loading": {
-      "hideExponentText": false,
-      "backgroundImage": "./img/splashscreen.png"
+      "hideExponentText": true,
+      "backgroundImage": "./assets/splashscreen.png"
     },
     "orientation": "portrait",
     "primaryColor": "#cccccc",
