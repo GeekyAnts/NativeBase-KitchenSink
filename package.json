@@ -1,27 +1,41 @@
 {
-	"name": "NativebaseKitchenSink",
-	"version": "2.3.1",
-	"private": true,
-	"devDependencies": {
-		"jest": "20.0.4",
-		"react-test-renderer": "16.0.0-alpha.13"
-	},
-	"scripts": {
-		"start": "react-native start",
-		"android": "react-native run-android",
-		"ios": "react-native run-ios",
-		"test": "node node_modules/jest/bin/jest.js --watch"
-	},
-	"jest": {
-		"preset": "react-native",
-		"transformIgnorePatterns": ["node_modules/(?!react-native|native-base-shoutem-theme)"]
-	},
-	"dependencies": {
-		"color": "~1.0.3",
-		"lodash": "^4.13.1",
-		"native-base": "2.3.1",
-		"react": "16.0.0-alpha.13",
-		"react-native": "0.46.4",
-		"react-navigation": "1.0.0-beta.11"
-	}
+  "name": "NativebaseKitchenSink",
+  "version": "2.3.5",
+  "private": true,
+  "devDependencies": {
+    "babel-eslint": "7.2.3",
+    "eslint": "4.4.1",
+    "eslint-plugin-flowtype": "2.35.0",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-jsx-a11y": "6.0.2",
+    "eslint-plugin-prettier": "2.1.2",
+    "eslint-plugin-react": "7.1.0",
+    "eslint-plugin-react-native": "3.0.1",
+    "flow-bin": "0.52.0",
+    "flow-typed": "2.1.5",
+    "husky": "0.14.3",
+    "jest": "20.0.4",
+    "jest-expo": "19.0.5",
+    "prettier": "1.5.3",
+    "react-test-renderer": "16.0.0-alpha.12"
+  },
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "node node_modules/jest/bin/jest.js --watch"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "dependencies": {
+    "color": "1.0.3",
+    "lodash": "4.13.1",
+    "moment": "2.13.0",
+    "native-base": "2.3.5",
+    "react": "16.0.0",
+    "react-native": "0.50.1",
+    "react-native-vector-icons": "4.3.0",
+    "react-navigation": "1.0.0-beta.19"
+  }
 }
