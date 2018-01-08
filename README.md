@@ -10,6 +10,8 @@ An example app with all the UI components of NativeBase
 
 ## Demo
 
+https://expo.io/@geekyants/nativebasekitchensink
+
 iOS | Android
  :--:| :-----:
  ![ios-demo](https://github.com/GeekyAnts/NativeBase-KitchenSink/raw/master/screenshots/iOS.gif) | ![android-demo](https://github.com/GeekyAnts/NativeBase-KitchenSink/raw/master/screenshots/Android.gif)
