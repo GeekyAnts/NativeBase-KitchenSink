@@ -1,4 +1,5 @@
 import color from "color";
+
 import { Platform, Dimensions, PixelRatio } from "react-native";
 
 const deviceHeight = Dimensions.get("window").height;
@@ -12,7 +13,7 @@ export default {
   platformStyle,
   platform,
 
-  // Android
+  //Android
   androidRipple: true,
   androidRippleColor: "rgba(256, 256, 256, 0.3)",
   androidRippleColorDark: "rgba(0, 0, 0, 0.15)",
@@ -26,7 +27,6 @@ export default {
   // Button
   btnFontFamily: platform === "ios" ? "System" : "Roboto_medium",
   btnDisabledBg: "#b5b5b5",
-  btnDisabledClr: "#f1f1f1",
   buttonPadding: 6,
   get btnPrimaryBg() {
     return this.brandPrimary;
@@ -86,9 +86,9 @@ export default {
   CheckboxBorderWidth: platform === "ios" ? 1 : 2,
   CheckboxPaddingLeft: platform === "ios" ? 4 : 2,
   CheckboxPaddingBottom: platform === "ios" ? 0 : 5,
-  CheckboxIconSize: platform === "ios" ? 21 : 14,
+  CheckboxIconSize: platform === "ios" ? 21 : 16,
   CheckboxIconMarginTop: platform === "ios" ? undefined : 1,
-  CheckboxFontSize: platform === "ios" ? 23 / 0.9 : 18,
+  CheckboxFontSize: platform === "ios" ? 23 / 0.9 : 17,
   DefaultFontSize: 17,
   checkboxBgColor: "#039BE5",
   checkboxSize: 20,
@@ -100,7 +100,6 @@ export default {
   brandSuccess: "#5cb85c",
   brandDanger: "#d9534f",
   brandWarning: "#f0ad4e",
-  brandSidebar: "#252932",
   brandDark: "#000",
   brandLight: "#f4f4f4",
 
@@ -134,13 +133,11 @@ export default {
   toolbarBtnColor: platform === "ios" ? "#007aff" : "#fff",
   toolbarDefaultBg: platform === "ios" ? "#F8F8F8" : "#3F51B5",
   toolbarHeight: platform === "ios" ? (isIphoneX ? 88 : 64) : 56,
-  toolbarIconSize: platform === "ios" ? 20 : 22,
   toolbarSearchIconSize: platform === "ios" ? 20 : 23,
   toolbarInputColor: platform === "ios" ? "#CECDD2" : "#fff",
   searchBarHeight: platform === "ios" ? 30 : 40,
   searchBarInputHeight: platform === "ios" ? 30 : 50,
-  toolbarInverseBg: "#222",
-  toolbarTextColor: platform === "ios" ? "#000" : "#fff",
+  toolbarBtnTextColor: platform === "ios" ? "#007aff" : "#fff",
   iosStatusbar: "dark-content",
   toolbarDefaultBorder: platform === "ios" ? "#a7a6ab" : "#3F51B5",
   get statusBarColor() {
@@ -153,7 +150,6 @@ export default {
   // Icon
   iconFamily: "Ionicons",
   iconFontSize: platform === "ios" ? 30 : 28,
-  iconMargin: 7,
   iconHeaderSize: platform === "ios" ? 33 : 24,
 
   // InputGroup
@@ -161,17 +157,12 @@ export default {
   inputBorderColor: "#D9D5DC",
   inputSuccessBorderColor: "#2b8339",
   inputErrorBorderColor: "#ed2f2f",
-  inputGroupMarginBottom: 10,
   inputHeightBase: 50,
-  inputPaddingLeft: 5,
   get inputColor() {
     return this.textColor;
   },
   get inputColorPlaceholder() {
     return "#575757";
-  },
-  get inputPaddingLeftIcon() {
-    return this.inputPaddingLeft * 8;
   },
 
   // Line Height
@@ -179,11 +170,10 @@ export default {
   lineHeightH1: 32,
   lineHeightH2: 27,
   lineHeightH3: 22,
-  iconLineHeight: platform === "ios" ? 37 : 30,
   lineHeight: platform === "ios" ? 20 : 24,
 
   // List
-  listBg: "#fff",
+  listBg: "transparent",
   listBorderColor: "#c9c9c9",
   listDividerBg: "#f4f4f4",
   listBtnUnderlayColor: "#DDD",
@@ -197,16 +187,11 @@ export default {
 
   // Radio Button
   radioBtnSize: platform === "ios" ? 25 : 23,
-  radioSelectedColorAndroid: "#5067FF",
+  radioSelectedColorAndroid: "#3F51B5",
   radioBtnLineHeight: platform === "ios" ? 29 : 24,
-  radioColor: "#7e7e7e",
-  get radioSelectedColor() {
-    return color(this.radioColor).darken(0.2).hex();
+  get radioColor() {
+    return this.brandPrimary;
   },
-
-  // Spinner
-  defaultSpinnerColor: "#45D56E",
-  inverseSpinnerColor: "#1A191B",
 
   // Segment
   segmentBackgroundColor: platform === "ios" ? "#F8F8F8" : "#3F51B5",
@@ -216,18 +201,20 @@ export default {
   segmentBorderColor: platform === "ios" ? "#007aff" : "#fff",
   segmentBorderColorMain: platform === "ios" ? "#a7a6ab" : "#3F51B5",
 
+  // Spinner
+  defaultSpinnerColor: "#45D56E",
+  inverseSpinnerColor: "#1A191B",
+
   // Tab
   tabDefaultBg: platform === "ios" ? "#F8F8F8" : "#3F51B5",
   topTabBarTextColor: platform === "ios" ? "#6b6b6b" : "#b3c7f9",
   topTabBarActiveTextColor: platform === "ios" ? "#007aff" : "#fff",
-  topTabActiveBgColor: undefined,
   topTabBarBorderColor: platform === "ios" ? "#a7a6ab" : "#fff",
   topTabBarActiveBorderColor: platform === "ios" ? "#007aff" : "#fff",
 
   // Tabs
   tabBgColor: "#F8F8F8",
   tabFontSize: 15,
-  tabTextColor: "#222222",
 
   // Text
   textColor: "#000",
@@ -248,11 +235,8 @@ export default {
   borderRadiusBase: platform === "ios" ? 5 : 2,
   borderWidth: 1 / PixelRatio.getPixelSizeForLayoutSize(1),
   contentPadding: 10,
-  dropdownBg: "#000",
   dropdownLinkColor: "#414142",
   inputLineHeight: 24,
-  jumbotronBg: "#C9C9CE",
-  jumbotronPadding: 30,
   deviceWidth,
   deviceHeight,
   isIphoneX,

@@ -6,12 +6,15 @@ export default class TabFour extends Component {
     return (
       <Content padder style={{ marginTop: 0 }}>
         <Card style={{ flex: 0 }}>
+          <CardItem header>
+            <Text>Recommended by Awesome React Native</Text>
+          </CardItem>
           <CardItem>
             <Body>
               <Text>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                DOESN'T SUPPORT ADVANCED TABS :( numquam non magnam praesentium,
-                maxime quaerat!
+                NativeBase added into the list of Frameworks of Awesome React
+                Native and are also used by many other React lovers across the
+                world.
               </Text>
             </Body>
           </CardItem>
