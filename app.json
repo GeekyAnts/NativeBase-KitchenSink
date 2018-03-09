@@ -1,7 +1,7 @@
 {
   "expo": {
     "sdkVersion": "25.0.0",
-    "icon": "http://nativebase.io/assets/img/front-page-icon.png",
+    "icon": "./assets/nblogo.png",
     "slug": "nativebasekitchensink",
     "loading": {
       "hideExponentText": true,
