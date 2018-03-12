@@ -15,9 +15,9 @@
     "flow-typed": "2.1.5",
     "husky": "0.14.3",
     "jest": "20.0.4",
-    "jest-expo": "19.0.5",
+    "jest-expo": "25.0.0",
     "prettier": "1.5.3",
-    "react-test-renderer": "16.3.0-alpha.1"
+    "react-test-renderer": "16.2.0"
   },
   "scripts": {
     "start": "react-native start",
@@ -33,8 +33,8 @@
     "lodash": "4.13.1",
     "moment": "2.13.0",
     "native-base": "2.3.10",
-    "react": "16.3.0-alpha.1",
-    "react-native": "0.54.0",
+    "react": "16.2.0",
+    "react-native": "0.52.0",
     "react-native-vector-icons": "4.3.0",
     "react-navigation": "1.5.0"
   }
