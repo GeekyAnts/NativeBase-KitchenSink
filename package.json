@@ -1,6 +1,6 @@
 {
   "name": "NativebaseKitchenSink",
-  "version": "2.4.7",
+  "version": "2.5.0",
   "private": true,
   "devDependencies": {
     "babel-eslint": "7.2.3",
