@@ -1,4 +1,4 @@
-# NativeBase KitchenSink v2.4.6
+# NativeBase KitchenSink v2.5.0
 An example app with all the UI components of NativeBase
 
 > **NativeBase-KitchenSink** comes in three forms of app for you!
