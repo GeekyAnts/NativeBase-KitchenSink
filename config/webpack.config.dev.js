@@ -154,14 +154,14 @@ module.exports = {
                 "react-native-keyboard-aware-scroll-view"
               ),
               path.resolve(paths.appNodeModules, "react-native-web"),
-              path.resolve(paths.appNodeModules, "react-native-tab-view")
+              path.resolve(paths.appNodeModules, "react-native-tab-view"),
               // path.resolve(paths.appNodeModules, "react-native-root-modal"),
               // path.resolve(paths.appNodeModules, "react-native-root-siblings"),
               // path.resolve(
               //   paths.appNodeModules,
               //   "react-native-iphone-x-helper"
               // ),
-              // path.resolve(paths.appNodeModules, "static-container")
+              path.resolve(paths.appNodeModules, "static-container")
             ],
             loader: require.resolve("babel-loader"),
             options: {

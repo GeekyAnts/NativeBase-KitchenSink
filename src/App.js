@@ -135,8 +135,8 @@ const Drawer = DrawerNavigator(
     NHThumbnail: { screen: NHThumbnail },
     NHTypography: { screen: NHTypography },
     Segment: { screen: Segment },
-    Toast: { screen: Toast },
-    Actionsheet: { screen: Actionsheet }
+    Toast: { screen: Toast }
+    // Actionsheet: { screen: Actionsheet }
   },
   {
     initialRouteName: "Home",
