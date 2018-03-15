@@ -3,4 +3,4 @@ import "./font.css";
 
 Platform.OS = "ios";
 
-require("./App");
+require("./main");
