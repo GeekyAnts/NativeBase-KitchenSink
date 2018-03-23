@@ -38,7 +38,7 @@ class CustomPlaceholderPicker extends Component {
             </Button>
           </Left>
           <Body style={{ flex: 3 }}>
-            <Title>Placeholder Picker</Title>
+            <Title>Custom Placeholder Picker</Title>
           </Body>
           <Right />
         </Header>

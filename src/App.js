@@ -89,6 +89,8 @@ import NHFab from "./screens/fab/";
 import NHForm from "./screens/form/";
 import TextArea from "./screens/form/textArea";
 import NHIcon from "./screens/icon/";
+import IconList from "./screens/icon/icon-list";
+import IconFamilies from "./screens/icon/icon-families";
 import ListSwipe from "./screens/listSwipe/";
 import BasicIcon from "./screens/icon/basic";
 import IconState from "./screens/icon/state";
@@ -200,6 +202,8 @@ const AppNavigator = StackNavigator(
     ErrorInput: { screen: ErrorInput },
     DisabledInput: { screen: DisabledInput },
     TextArea: { screen: TextArea },
+    IconList: { screen: IconList },
+    IconFamilies: { screen: IconFamilies },
 
     RowNB: { screen: RowNB },
     ColumnNB: { screen: ColumnNB },
