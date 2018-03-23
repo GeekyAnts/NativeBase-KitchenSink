@@ -51,6 +51,7 @@ import CustomCol from "./screens/layout/customCol";
 import BasicListSwipe from "./screens/listSwipe/basic-list-swipe";
 import MultiListSwipe from "./screens/listSwipe/multi-list-swipe";
 import NHBasicList from "./screens/list/basic-list";
+import NHListItemSelected from "./screens/list/list-selected-item";
 import NHListDivider from "./screens/list/list-divider";
 import NHListSeparator from "./screens/list/list-separator";
 import NHListHeader from "./screens/list/list-headers";
@@ -59,6 +60,7 @@ import NHListAvatar from "./screens/list/list-avatar";
 import NHListThumbnail from "./screens/list/list-thumbnail";
 import RegularPicker from "./screens/picker/regularPicker";
 import PlaceholderPicker from "./screens/picker/placeholderPicker";
+import CustomPlaceholderPicker from "./screens/picker/customPlaceholderPicker";
 import PlaceholderPickerNote from "./screens/picker/placeholderPickernote";
 import BackButtonPicker from "./screens/picker/backButtonPicker";
 import HeaderPicker from "./screens/picker/headerPicker";
@@ -205,6 +207,7 @@ const AppNavigator = StackNavigator(
     CustomCol: { screen: CustomCol },
 
     NHBasicList: { screen: NHBasicList },
+    NHListItemSelected:{screen:NHListItemSelected},
     NHListDivider: { screen: NHListDivider },
     NHListSeparator: { screen: NHListSeparator },
     NHListHeader: { screen: NHListHeader },
@@ -217,6 +220,7 @@ const AppNavigator = StackNavigator(
 
     RegularPicker: { screen: RegularPicker },
     PlaceholderPicker: { screen: PlaceholderPicker },
+    CustomPlaceholderPicker: { screen: CustomPlaceholderPicker },
     PlaceholderPickerNote: { screen: PlaceholderPickerNote },
     BackButtonPicker: { screen: BackButtonPicker },
     HeaderPicker: { screen: HeaderPicker },
