@@ -49,6 +49,7 @@ import NestedGrid from "./screens/layout/nested";
 import CustomRow from "./screens/layout/customRow";
 import CustomCol from "./screens/layout/customCol";
 import BasicListSwipe from "./screens/listSwipe/basic-list-swipe";
+import SwipeRowCustomStyle from "./screens/listSwipe/swipe-row-style";
 import MultiListSwipe from "./screens/listSwipe/multi-list-swipe";
 import NHBasicList from "./screens/list/basic-list";
 import NHListItemSelected from "./screens/list/list-selected-item";
@@ -207,7 +208,7 @@ const AppNavigator = StackNavigator(
     CustomCol: { screen: CustomCol },
 
     NHBasicList: { screen: NHBasicList },
-    NHListItemSelected:{screen:NHListItemSelected},
+    NHListItemSelected: { screen: NHListItemSelected },
     NHListDivider: { screen: NHListDivider },
     NHListSeparator: { screen: NHListSeparator },
     NHListHeader: { screen: NHListHeader },
@@ -216,6 +217,7 @@ const AppNavigator = StackNavigator(
     NHListThumbnail: { screen: NHListThumbnail },
 
     BasicListSwipe: { screen: BasicListSwipe },
+    SwipeRowCustomStyle: { screen: SwipeRowCustomStyle },
     MultiListSwipe: { screen: MultiListSwipe },
 
     RegularPicker: { screen: RegularPicker },
