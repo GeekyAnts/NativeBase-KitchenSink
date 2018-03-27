@@ -1,5 +1,5 @@
 {
-  "name": "nativebase-kitchensink",
+  "name": "NativebaseKitchenSink",
   "version": "1.0.0",
   "private": true,
   "homepage": "http://nativebase-kitchen-sink.geekydev.com",
@@ -28,7 +28,7 @@
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
-    "native-base": "https://github.com/GeekyAnts/NativeBase#web-support",
+    "native-base": "2.4.1",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
