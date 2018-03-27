@@ -22,61 +22,25 @@ NativeBase without a doubt fits in well with mobile applications which cut downs
 The applications stack of components is built using native UI components, so there are no compromises with the user experience.
 
 
-## Get Started
+## Installation
 
-
-#### 1. Installation
-
-On the command prompt run the following commands
-
-```sh
-$ git clone git@github.com:GeekyAnts/NativeBase-KitchenSink.git
-
-$ cd NativeBase-KitchenSink/
-
-$ npm install
-
-$ react-native link
+*	**Clone and install packages**
+```
+git clone git@github.com:GeekyAnts/NativeBase-KitchenSink.git
+cd NativeBase-KitchenSink
+git checkout RNRF
+yarn
+react-native link react-native-vector-icons
 ```
 
-#### 2. Simulate for iOS
-
-**Method One**
-
-*	Open the project in Xcode from **ios/NativebaseKitchenSink.xcodeproj**.
-
-*	Hit the play button.
-
-
-**Method Two**
-
-*	Run the following command in your terminal.
-
-```sh
-$ react-native run-ios
-```
-
-#### 3. Simulate for Android
-
-*	Make sure you have an **Android emulator** installed and running.
-
-*	Run the following command in your terminal.
-
-```sh
-$ react-native run-android
-```
-#### 4. Exponent
-
-* Get a quick look of the NativeBase components using <a href="https://getexponent.com/">Exponent</a>
-
-*  Link https://exp.host/@geekyants/nativebasekitchensink
-
-## Quick Links to NativeBase
-
-*	[NativeBase Website](http://nativebase.io)
-*	[NativeBase Documentation](http://nativebase.io/documentation)
-*	[NativeBase on Twitter](https://twitter.com/NativeBaseIO)
-*	[NativeBase Blog](https://medium.com/nativebase-io-blog)
+*	**Run on iOS**
+	*	Opt #1:
+		*	Open the project in Xcode from `ios/NativeBase-KitchenSink.xcodeproj`
+		*	Click `run` button to simulate
+	*	Opt #2:
+		*	Run `react-native run-ios` in your terminal
 
 
-For apps with more advanced designs using NativeBase, please visit **[StrapMobile](https://strapmobile.com/)**.
+*	**Run on Android**
+	*	Make sure you have an `Android emulator` installed and running
+	*	Run `react-native run-android` in your terminal
