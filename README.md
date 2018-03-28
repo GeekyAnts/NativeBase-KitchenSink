@@ -80,6 +80,10 @@ alias: {
 },
 ```
 
+* **Include Icons**
+
+Copy [font.css](https://github.com/GeekyAnts/NativeBase-KitchenSink/blob/web-support/src/font.css) to App.css
+
 
 * **Run**
 
