@@ -11,7 +11,9 @@ An example app with all the UI components of NativeBase
 
 NativeBase is now available for React web lovers. Check the [demo](http://nativebase-customizer.geekydev.com/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). 
+
+Check [demo](https://nativebase.io/kitchen-sink-web-app/) here
 
 ## Installation
 
