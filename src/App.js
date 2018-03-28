@@ -49,8 +49,10 @@ import NestedGrid from "./screens/layout/nested";
 import CustomRow from "./screens/layout/customRow";
 import CustomCol from "./screens/layout/customCol";
 import BasicListSwipe from "./screens/listSwipe/basic-list-swipe";
+import SwipeRowCustomStyle from "./screens/listSwipe/swipe-row-style";
 import MultiListSwipe from "./screens/listSwipe/multi-list-swipe";
 import NHBasicList from "./screens/list/basic-list";
+import NHListItemSelected from "./screens/list/list-selected-item";
 import NHListDivider from "./screens/list/list-divider";
 import NHListSeparator from "./screens/list/list-separator";
 import NHListHeader from "./screens/list/list-headers";
@@ -59,6 +61,7 @@ import NHListAvatar from "./screens/list/list-avatar";
 import NHListThumbnail from "./screens/list/list-thumbnail";
 import RegularPicker from "./screens/picker/regularPicker";
 import PlaceholderPicker from "./screens/picker/placeholderPicker";
+import CustomPlaceholderPicker from "./screens/picker/customPlaceholderPicker";
 import PlaceholderPickerNote from "./screens/picker/placeholderPickernote";
 import BackButtonPicker from "./screens/picker/backButtonPicker";
 import HeaderPicker from "./screens/picker/headerPicker";
@@ -86,6 +89,8 @@ import NHFab from "./screens/fab/";
 import NHForm from "./screens/form/";
 import TextArea from "./screens/form/textArea";
 import NHIcon from "./screens/icon/";
+import IconList from "./screens/icon/icon-list";
+import IconFamilies from "./screens/icon/icon-families";
 import ListSwipe from "./screens/listSwipe/";
 import BasicIcon from "./screens/icon/basic";
 import IconState from "./screens/icon/state";
@@ -197,6 +202,8 @@ const AppNavigator = StackNavigator(
     ErrorInput: { screen: ErrorInput },
     DisabledInput: { screen: DisabledInput },
     TextArea: { screen: TextArea },
+    IconList: { screen: IconList },
+    IconFamilies: { screen: IconFamilies },
 
     RowNB: { screen: RowNB },
     ColumnNB: { screen: ColumnNB },
@@ -205,6 +212,7 @@ const AppNavigator = StackNavigator(
     CustomCol: { screen: CustomCol },
 
     NHBasicList: { screen: NHBasicList },
+    NHListItemSelected: { screen: NHListItemSelected },
     NHListDivider: { screen: NHListDivider },
     NHListSeparator: { screen: NHListSeparator },
     NHListHeader: { screen: NHListHeader },
@@ -213,10 +221,12 @@ const AppNavigator = StackNavigator(
     NHListThumbnail: { screen: NHListThumbnail },
 
     BasicListSwipe: { screen: BasicListSwipe },
+    SwipeRowCustomStyle: { screen: SwipeRowCustomStyle },
     MultiListSwipe: { screen: MultiListSwipe },
 
     RegularPicker: { screen: RegularPicker },
     PlaceholderPicker: { screen: PlaceholderPicker },
+    CustomPlaceholderPicker: { screen: CustomPlaceholderPicker },
     PlaceholderPickerNote: { screen: PlaceholderPickerNote },
     BackButtonPicker: { screen: BackButtonPicker },
     HeaderPicker: { screen: HeaderPicker },

@@ -21,6 +21,10 @@ const datas = [
     text: "Single SwipeRow"
   },
   {
+    route: "SwipeRowCustomStyle",
+    text: "Swipe Row Custom Style"
+  },
+  {
     route: "MultiListSwipe",
     text: "Multiple List Swipe"
   }

@@ -25,6 +25,10 @@ const datas = [
     text: "Placeholder"
   },
   {
+    route: "CustomPlaceholderPicker",
+    text: "Custom Placeholder"
+  },
+  {
     route: "PlaceholderPickerNote",
     text: "Placeholder (without note)"
   },
