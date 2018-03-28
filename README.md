@@ -33,7 +33,7 @@ OR
 yarn start
 ```
 
-* **To create new react app**
+## To create new react app**
 
 ```
 npm install -g create-react-app
@@ -82,7 +82,7 @@ alias: {
 
 * **Include Icons**
 
-Copy [font.css](https://github.com/GeekyAnts/NativeBase-KitchenSink/blob/web-support/src/font.css) to App.css
+ Copy [font.css](https://github.com/GeekyAnts/NativeBase-KitchenSink/blob/web-support/src/font.css) to App.css
 
 
 * **Run**
