@@ -1,7 +1,7 @@
 # NativeBase KitchenSink v2.5.0
 An example app with all the UI components of NativeBase
 
-> **NativeBase-KitchenSink** comes in three forms of app for you!
+> **NativeBase-KitchenSink** comes in four forms of app for you!
 >1. Pure React Native App with `react-navigation` on branch **[master](https://github.com/GeekyAnts/NativeBase-KitchenSink)**
 >2. Pure React Native App with `RNRF` on branch **[RNRF](https://github.com/GeekyAnts/NativeBase-KitchenSink/tree/RNRF)**
 >3. An Expo app with `CRNA` and `react-navigation` on branch **[CRNA](https://github.com/GeekyAnts/NativeBase-KitchenSink/tree/CRNA)**
