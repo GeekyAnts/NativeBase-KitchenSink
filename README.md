@@ -35,7 +35,7 @@ OR
 yarn start
 ```
 
-## To create new react app**
+## To create new react app
 
 ```
 npm install -g create-react-app
