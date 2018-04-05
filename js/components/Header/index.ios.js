@@ -49,6 +49,10 @@ const datas = [
   {
     route: "Header8",
     text: "Custom Background Color"
+  },
+  {
+    route: "HeaderSpan",
+    text: "Header Span"
   }
 ];
 
