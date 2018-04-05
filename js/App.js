@@ -31,6 +31,8 @@ import IconBtn from "./components/button/iconBtn";
 import Disabled from "./components/button/disabled";
 import BasicCard from "./components/card/basic";
 import NHCardImage from "./components/card/card-image";
+import NHCardItemBordered from "./components/card/card-item-bordered"
+import NHCardItemButton from "./components/card/card-item-button"
 import NHCardShowcase from "./components/card/card-showcase";
 import NHCardList from "./components/card/card-list";
 import NHCardHeaderAndFooter from "./components/card/card-header-and-footer";
@@ -108,6 +110,8 @@ const AppNavigator = StackNavigator(
 		Disabled: { screen: Disabled },
 
 		BasicCard: { screen: BasicCard },
+		NHCardItemBordered: { screen: NHCardItemBordered },
+		NHCardItemButton: { screen: NHCardItemButton },
 		NHCardImage: { screen: NHCardImage },
 		NHCardShowcase: { screen: NHCardShowcase },
 		NHCardList: { screen: NHCardList },
