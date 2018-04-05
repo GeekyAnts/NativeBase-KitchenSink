@@ -37,6 +37,10 @@ const datas = [
   {
     route: "NHCardHeaderAndFooter",
     text: "Card Header & Footer"
+  },
+  {
+    route: "NHCardItemBordered",
+    text: "Bordered Card Item"
   }
 ];
 
