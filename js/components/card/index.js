@@ -39,9 +39,13 @@ const datas = [
     text: "Card Header & Footer"
   },
   {
+    route: "NHCardItemButton",
+    text: "Card Item Button"
+  },
+  {
     route: "NHCardItemBordered",
     text: "Bordered Card Item"
-  }
+  },
 ];
 
 class NHCard extends Component {

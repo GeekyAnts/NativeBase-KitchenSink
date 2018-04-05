@@ -18,7 +18,7 @@ import {
 
 import styles from "./styles";
 
-export default class NHCardItemBordered extends Component {
+export default class NHCardItemButton extends Component {
   render() {
     return (
       <Container style={styles.container}>
@@ -29,14 +29,14 @@ export default class NHCardItemBordered extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Bordered Card Item</Title>
+            <Title>Card Item Button</Title>
           </Body>
           <Right />
         </Header>
 
         <Content padder>
           <Card style={styles.mb}>
-            <CardItem header bordered>
+            <CardItem header button>
               <Text>NativeBase</Text>
             </CardItem>
             <CardItem>
@@ -68,7 +68,7 @@ export default class NHCardItemBordered extends Component {
                 </Text>
               </Body>
             </CardItem>
-            <CardItem footer bordered>
+            <CardItem footer button>
               <Text>GeekyAnts</Text>
             </CardItem>
           </Card>
