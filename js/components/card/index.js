@@ -23,6 +23,10 @@ const datas = [
     text: "Basic Card"
   },
   {
+    route: "NHCardTransparent",
+    text: "Card Transparent"
+  },
+  {
     route: "NHCardList",
     text: "Card List"
   },
