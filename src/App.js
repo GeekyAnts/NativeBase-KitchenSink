@@ -29,6 +29,7 @@ import NHCardImage from "./screens/card/card-image";
 import NHCardShowcase from "./screens/card/card-showcase";
 import NHCardList from "./screens/card/card-list";
 import NHCardHeaderAndFooter from "./screens/card/card-header-and-footer";
+import NHCardTransparent from "./screens/card/card-transparent";
 import BasicFab from "./screens/fab/basic";
 import MultipleFab from "./screens/fab/multiple";
 import FixedLabel from "./screens/form/fixedLabel";
@@ -178,6 +179,7 @@ const AppNavigator = StackNavigator(
     NHCardShowcase: { screen: NHCardShowcase },
     NHCardList: { screen: NHCardList },
     NHCardHeaderAndFooter: { screen: NHCardHeaderAndFooter },
+    NHCardTransparent: { screen: NHCardTransparent },
 
     SimpleDeck: { screen: SimpleDeck },
     AdvancedDeck: { screen: AdvancedDeck },

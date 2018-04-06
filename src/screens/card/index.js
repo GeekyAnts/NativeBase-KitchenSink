@@ -35,6 +35,10 @@ const datas = [
   {
     route: "NHCardHeaderAndFooter",
     text: "Card Header & Footer"
+  },
+  {
+    route: "NHCardTransparent",
+    text: "Transparent Card"
   }
 ];
 
