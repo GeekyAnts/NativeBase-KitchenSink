@@ -52,6 +52,7 @@ import BasicListSwipe from "./screens/listSwipe/basic-list-swipe";
 import SwipeRowCustomStyle from "./screens/listSwipe/swipe-row-style";
 import MultiListSwipe from "./screens/listSwipe/multi-list-swipe";
 import NHBasicList from "./screens/list/basic-list";
+import NHListItemSelected from "./screens/list/listitem-selected";
 import NHListDivider from "./screens/list/list-divider";
 import NHListSeparator from "./screens/list/list-separator";
 import NHListHeader from "./screens/list/list-headers";
@@ -206,6 +207,7 @@ const AppNavigator = StackNavigator(
     CustomCol: { screen: CustomCol },
 
     NHBasicList: { screen: NHBasicList },
+    NHListItemSelected: { screen: NHListItemSelected },
     NHListDivider: { screen: NHListDivider },
     NHListSeparator: { screen: NHListSeparator },
     NHListHeader: { screen: NHListHeader },

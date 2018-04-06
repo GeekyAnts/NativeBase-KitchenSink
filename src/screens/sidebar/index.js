@@ -107,7 +107,7 @@ const datas = [
     route: "NHList",
     icon: "lock",
     bg: "#5DCEE2",
-    types: "7"
+    types: "8"
   },
   {
     name: "ListSwipe",
