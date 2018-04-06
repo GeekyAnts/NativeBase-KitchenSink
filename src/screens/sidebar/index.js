@@ -93,7 +93,8 @@ const datas = [
     name: "Icon",
     route: "NHIcon",
     icon: "information-circle",
-    bg: "#EF6092"
+    bg: "#bfe9ea",
+    types: "4"
   },
   {
     name: "Layout",

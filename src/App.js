@@ -43,6 +43,11 @@ import IconInput from "./screens/form/iconInput";
 import SuccessInput from "./screens/form/success";
 import ErrorInput from "./screens/form/error";
 import DisabledInput from "./screens/form/disabledInput";
+import Icons from "./screens/icon/icon";
+import BasicIcon from "./screens/icon/basic";
+import StateIcon from "./screens/icon/state";
+import PlatformSpecificIcon from "./screens/icon/platform-specific";
+import IconFamily from "./screens/icon/icon-family";
 import RowNB from "./screens/layout/row";
 import ColumnNB from "./screens/layout/column";
 import NestedGrid from "./screens/layout/nested";
@@ -89,9 +94,6 @@ import NHForm from "./screens/form/";
 import TextArea from "./screens/form/textArea";
 import NHIcon from "./screens/icon/";
 import ListSwipe from "./screens/listSwipe/";
-import BasicIcon from "./screens/icon/basic";
-import IconState from "./screens/icon/state";
-import SpecificIcon from "./screens/icon/specific";
 import NHLayout from "./screens/layout/";
 import NHList from "./screens/list/";
 import NHRadio from "./screens/radio/";
@@ -120,9 +122,6 @@ const Drawer = DrawerNavigator(
     NHFab: { screen: NHFab },
     NHForm: { screen: NHForm },
     NHIcon: { screen: NHIcon },
-    BasicIcon: { screen: BasicIcon },
-    IconState: { screen: IconState },
-    SpecificIcon: { screen: SpecificIcon },
     NHLayout: { screen: NHLayout },
     NHList: { screen: NHList },
     ListSwipe: { screen: ListSwipe },
@@ -199,6 +198,12 @@ const AppNavigator = StackNavigator(
     ErrorInput: { screen: ErrorInput },
     DisabledInput: { screen: DisabledInput },
     TextArea: { screen: TextArea },
+
+    Icons: { screen: Icons },
+    BasicIcon: { screen: BasicIcon },
+    StateIcon: { screen: StateIcon },
+    PlatformSpecificIcon: { screen: PlatformSpecificIcon },
+    IconFamily: { screen: IconFamily },
 
     RowNB: { screen: RowNB },
     ColumnNB: { screen: ColumnNB },

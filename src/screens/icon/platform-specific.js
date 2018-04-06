@@ -18,13 +18,13 @@ import {
 
 import styles from "./styles";
 
-class Specific extends Component {
+class PlatformSpecificIcon extends Component {
   render() {
     return (
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.replaceAt("icon")}>
+            <Button transparent onPress={() => this.props.navigation.goBack()}>
               <Icon name="arrow-back" />
             </Button>
           </Left>
@@ -43,19 +43,19 @@ class Specific extends Component {
               </Col>
               <Col style={styles.col}>
                 <Icon ios="ios-apps-outline" android="md-apps" />
-                <Text>person</Text>
+                <Text>apps</Text>
               </Col>
               <Col style={styles.col}>
-                <Icon ios="ios-menu" android="md-menu" />
-                <Text>person</Text>
+                <Icon ios="ios-alarm" android="md-alarm" />
+                <Text>alarm</Text>
               </Col>
               <Col style={styles.col}>
                 <Icon ios="ios-paper" android="md-paper" />
-                <Text>person</Text>
+                <Text>paper</Text>
               </Col>
               <Col style={styles.col}>
                 <Icon ios="ios-cart-outline" android="md-cart" />
-                <Text>person</Text>
+                <Text>cart</Text>
               </Col>
             </Row>
           </Grid>
@@ -65,4 +65,4 @@ class Specific extends Component {
   }
 }
 
-export default Specific;
+export default PlatformSpecificIcon;
