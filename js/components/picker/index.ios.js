@@ -51,6 +51,10 @@ const datas = [
   {
     route: "CustomHeaderPicker",
     text: "Custom Header"
+  },
+  {
+    route: "PickerCustomStyles",
+    text: "Picker Custom Styles"
   }
 ];
 
