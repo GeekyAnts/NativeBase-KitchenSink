@@ -33,7 +33,7 @@ const datas = [
     route: "Header",
     icon: "phone-portrait",
     bg: "#477EEA",
-    types: "8"
+    types: "10"
   },
   {
     name: "Footer",

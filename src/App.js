@@ -11,6 +11,8 @@ import Header5 from "./screens/Header/5";
 import Header6 from "./screens/Header/6";
 import Header7 from "./screens/Header/7";
 import Header8 from "./screens/Header/8";
+import HeaderSpan from "./screens/Header/header-span";
+import HeaderNoShadow from "./screens/Header/header-no-shadow";
 import BasicFooter from "./screens/footer/basicFooter";
 import IconFooter from "./screens/footer/iconFooter";
 import IconText from "./screens/footer/iconText";
@@ -160,6 +162,8 @@ const AppNavigator = StackNavigator(
     Header6: { screen: Header6 },
     Header7: { screen: Header7 },
     Header8: { screen: Header8 },
+    HeaderSpan: { screen: HeaderSpan },
+    HeaderNoShadow: { screen: HeaderNoShadow },
 
     BasicFooter: { screen: BasicFooter },
     IconFooter: { screen: IconFooter },
