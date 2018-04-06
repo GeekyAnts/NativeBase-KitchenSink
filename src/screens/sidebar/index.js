@@ -164,9 +164,10 @@ const datas = [
   },
   {
     name: "Toast",
-    route: "Toast",
+    route: "NHToast",
     icon: "albums",
-    bg: "#C5F442"
+    bg: "#C5F442",
+    types: "6"
   },
   {
     name: "Typography",

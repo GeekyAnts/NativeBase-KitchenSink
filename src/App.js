@@ -82,6 +82,12 @@ import BasicTab from "./screens/tab/basicTab";
 import ConfigTab from "./screens/tab/configTab";
 import ScrollableTab from "./screens/tab/scrollableTab";
 import BasicSegment from "./screens/segment/SegmentHeader";
+import BasicToast from "./screens/toast/basic-toast";
+import ToastDuration from "./screens/toast/toast-duration";
+import ToastPosition from "./screens/toast/toast-position";
+import ToastType from "./screens/toast/toast-type";
+import ToastText from "./screens/toast/toast-text";
+import ToastButton from "./screens/toast/toast-button";
 import RegularActionSheet from "./screens/actionsheet/regular";
 import IconActionSheet from "./screens/actionsheet/icon";
 import AdvSegment from "./screens/segment/segmentTab";
@@ -112,7 +118,7 @@ import NHThumbnail from "./screens/thumbnail/";
 import NHTypography from "./screens/typography/";
 import SideBar from "./screens/sidebar";
 import Segment from "./screens/segment";
-import Toast from "./screens/toast";
+import NHToast from "./screens/toast/";
 import Actionsheet from "./screens/actionsheet";
 
 const Drawer = DrawerNavigator(
@@ -140,7 +146,7 @@ const Drawer = DrawerNavigator(
     NHThumbnail: { screen: NHThumbnail },
     NHTypography: { screen: NHTypography },
     Segment: { screen: Segment },
-    Toast: { screen: Toast },
+    NHToast: { screen: NHToast },
     Actionsheet: { screen: Actionsheet }
   },
   {
@@ -252,6 +258,13 @@ const AppNavigator = StackNavigator(
 
     BasicSegment: { screen: BasicSegment },
     AdvSegment: { screen: AdvSegment },
+
+    BasicToast: { screen: BasicToast },
+    ToastDuration: { screen: ToastDuration },
+    ToastPosition: { screen: ToastPosition },
+    ToastType: { screen: ToastType },
+    ToastText: { screen: ToastText },
+    ToastButton: { screen: ToastButton },
 
     RegularActionSheet: { screen: RegularActionSheet },
     IconActionSheet: { screen: IconActionSheet }
