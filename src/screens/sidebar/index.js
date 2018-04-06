@@ -114,7 +114,7 @@ const datas = [
     route: "ListSwipe",
     icon: "swap",
     bg: "#C5F442",
-    types: "2"
+    types: "3"
   },
   {
     name: "Picker",
