@@ -16,16 +16,16 @@ import styles from "./styles";
 
 const Item = Picker.Item;
 
-class RegularPicker extends Component {
+class PickerWithIcon extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected3: "key3"
+      selected1: "key1"
     };
   }
-  onValueChange3(value: string) {
+  onValueChange(value: string) {
     this.setState({
-      selected3: value
+      selected1: value
     });
   }
   render() {
@@ -38,7 +38,7 @@ class RegularPicker extends Component {
             </Button>
           </Left>
           <Body style={{ flex: 3 }}>
-            <Title>Custom back button</Title>
+            <Title>Picker with Icon</Title>
           </Body>
           <Right />
         </Header>
@@ -47,11 +47,11 @@ class RegularPicker extends Component {
           <Form>
             <Picker
               mode="dropdown"
+              iosHeader="Select your SIM"
               iosIcon={<Icon name="ios-arrow-down-outline" />}
-              headerBackButtonText="Baaack!"
               style={{ width: undefined }}
-              selectedValue={this.state.selected3}
-              onValueChange={this.onValueChange3.bind(this)}
+              selectedValue={this.state.selected1}
+              onValueChange={this.onValueChange.bind(this)}
             >
               <Item label="Wallet" value="key0" />
               <Item label="ATM Card" value="key1" />
@@ -66,4 +66,4 @@ class RegularPicker extends Component {
   }
 }
 
-export default RegularPicker;
+export default PickerWithIcon;

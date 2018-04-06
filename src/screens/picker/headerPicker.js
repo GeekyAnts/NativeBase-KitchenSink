@@ -56,6 +56,7 @@ class RegularPicker extends Component {
             <Picker
               mode="dropdown"
               iosHeader="Your Header"
+              iosIcon={<Icon name="ios-arrow-down-outline" />}
               style={{ width: Platform.OS === "ios" ? undefined : 120 }}
               selectedValue={this.state.selected4}
               onValueChange={this.onValueChange4.bind(this)}

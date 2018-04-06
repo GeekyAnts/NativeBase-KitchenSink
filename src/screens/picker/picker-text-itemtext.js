@@ -16,16 +16,16 @@ import styles from "./styles";
 
 const Item = Picker.Item;
 
-class RegularPicker extends Component {
+class PickerTextItemText extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected3: "key3"
+      selected2: undefined
     };
   }
-  onValueChange3(value: string) {
+  onValueChange2(value: string) {
     this.setState({
-      selected3: value
+      selected2: value
     });
   }
   render() {
@@ -38,7 +38,7 @@ class RegularPicker extends Component {
             </Button>
           </Left>
           <Body style={{ flex: 3 }}>
-            <Title>Custom back button</Title>
+            <Title>Picker Text & Item Text</Title>
           </Body>
           <Right />
         </Header>
@@ -48,10 +48,17 @@ class RegularPicker extends Component {
             <Picker
               mode="dropdown"
               iosIcon={<Icon name="ios-arrow-down-outline" />}
-              headerBackButtonText="Baaack!"
               style={{ width: undefined }}
-              selectedValue={this.state.selected3}
-              onValueChange={this.onValueChange3.bind(this)}
+              placeholder="Select your SIM"
+              textStyle={{ color: "#5cb85c" }}
+              itemStyle={{
+                backgroundColor: "#d3d3d3",
+                marginLeft: 0,
+                paddingLeft: 10
+              }}
+              itemTextStyle={{ color: "#788ad2" }}
+              selectedValue={this.state.selected2}
+              onValueChange={this.onValueChange2.bind(this)}
             >
               <Item label="Wallet" value="key0" />
               <Item label="ATM Card" value="key1" />
@@ -66,4 +73,4 @@ class RegularPicker extends Component {
   }
 }
 
-export default RegularPicker;
+export default PickerTextItemText;

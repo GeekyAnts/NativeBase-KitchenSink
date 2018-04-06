@@ -70,9 +70,11 @@ import NHListIcon from "./screens/list/list-icon";
 import NHListAvatar from "./screens/list/list-avatar";
 import NHListThumbnail from "./screens/list/list-thumbnail";
 import RegularPicker from "./screens/picker/regularPicker";
+import PickerWithIcon from "./screens/picker/picker-with-icon";
 import PlaceholderPicker from "./screens/picker/placeholderPicker";
 import PlaceholderPickerNote from "./screens/picker/placeholderPickernote";
 import BackButtonPicker from "./screens/picker/backButtonPicker";
+import PickerTextItemText from "./screens/picker/picker-text-itemtext";
 import HeaderPicker from "./screens/picker/headerPicker";
 import HeaderStylePicker from "./screens/picker/headerStylePicker";
 import CustomHeaderPicker from "./screens/picker/customHeaderPicker";
@@ -235,9 +237,11 @@ const AppNavigator = StackNavigator(
     MultiListSwipe: { screen: MultiListSwipe },
 
     RegularPicker: { screen: RegularPicker },
+    PickerWithIcon: { screen: PickerWithIcon },
     PlaceholderPicker: { screen: PlaceholderPicker },
     PlaceholderPickerNote: { screen: PlaceholderPickerNote },
     BackButtonPicker: { screen: BackButtonPicker },
+    PickerTextItemText: { screen: PickerTextItemText },
     HeaderPicker: { screen: HeaderPicker },
     HeaderStylePicker: { screen: HeaderStylePicker },
     CustomHeaderPicker: { screen: CustomHeaderPicker },
