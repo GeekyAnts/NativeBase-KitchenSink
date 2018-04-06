@@ -69,6 +69,7 @@ import BackButtonPicker from "./components/picker/backButtonPicker";
 import HeaderPicker from "./components/picker/headerPicker";
 import HeaderStylePicker from "./components/picker/headerStylePicker";
 import CustomHeaderPicker from "./components/picker/customHeaderPicker";
+import PickerCustomStyles from "./components/picker/pickerCustomStyles";
 import BasicTab from "./components/tab/basicTab";
 import ConfigTab from "./components/tab/configTab";
 import ScrollableTab from "./components/tab/scrollableTab";
@@ -156,6 +157,7 @@ const AppNavigator = StackNavigator(
 		HeaderPicker: { screen: HeaderPicker },
 		HeaderStylePicker: { screen: HeaderStylePicker },
 		CustomHeaderPicker: { screen: CustomHeaderPicker },
+		PickerCustomStyles: { screen: PickerCustomStyles },
 
 		BasicTab: { screen: BasicTab },
 		ConfigTab: { screen: ConfigTab },
