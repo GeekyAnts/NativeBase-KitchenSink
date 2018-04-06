@@ -25,6 +25,8 @@ import Transparent from "./screens/button/transparent";
 import IconBtn from "./screens/button/iconBtn";
 import Disabled from "./screens/button/disabled";
 import BasicCard from "./screens/card/basic";
+import NHCardItemBordered from "./screens/card/carditem-bordered";
+import NHCardItemButton from "./screens/card/carditem-button";
 import NHCardImage from "./screens/card/card-image";
 import NHCardShowcase from "./screens/card/card-showcase";
 import NHCardList from "./screens/card/card-list";
@@ -175,6 +177,8 @@ const AppNavigator = StackNavigator(
     Disabled: { screen: Disabled },
 
     BasicCard: { screen: BasicCard },
+    NHCardItemBordered: { screen: NHCardItemBordered },
+    NHCardItemButton: { screen: NHCardItemButton },
     NHCardImage: { screen: NHCardImage },
     NHCardShowcase: { screen: NHCardShowcase },
     NHCardList: { screen: NHCardList },

@@ -60,7 +60,7 @@ const datas = [
     route: "NHCard",
     icon: "keypad",
     bg: "#B89EF5",
-    types: "6"
+    types: "8"
   },
   {
     name: "Check Box",
