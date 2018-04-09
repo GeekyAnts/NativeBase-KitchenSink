@@ -21,6 +21,22 @@ const datas = [
     text: "Basic Card"
   },
   {
+    route: "NHCardHeaderAndFooter",
+    text: "Card Header & Footer"
+  },
+  {
+    route: "NHCardItemBordered",
+    text: "Bordered CardItem"
+  },
+  {
+    route: "NHCardTransparent",
+    text: "Transparent Card"
+  },
+  {
+    route: "NHCardItemButton",
+    text: "Button CardItem"
+  },
+  {
     route: "NHCardList",
     text: "Card List"
   },
@@ -31,10 +47,6 @@ const datas = [
   {
     route: "NHCardShowcase",
     text: "Card Showcase"
-  },
-  {
-    route: "NHCardHeaderAndFooter",
-    text: "Card Header & Footer"
   }
 ];
 

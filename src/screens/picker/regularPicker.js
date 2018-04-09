@@ -48,7 +48,6 @@ class RegularPicker extends Component {
             <Picker
               mode="dropdown"
               iosHeader="Select your SIM"
-              iosIcon={<Icon name="ios-arrow-down-outline" />}
               style={{ width: undefined }}
               selectedValue={this.state.selected1}
               onValueChange={this.onValueChange.bind(this)}

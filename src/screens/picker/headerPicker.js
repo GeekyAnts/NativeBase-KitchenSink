@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Platform } from "react-native";
-
 import {
   Container,
   Header,
@@ -8,15 +7,11 @@ import {
   Content,
   Button,
   Icon,
-  Text,
   Right,
   Body,
   Left,
   Picker,
-  Form,
-  View,
-  H3,
-  Item as FormItem
+  Form
 } from "native-base";
 
 import styles from "./styles";
@@ -56,6 +51,7 @@ class RegularPicker extends Component {
             <Picker
               mode="dropdown"
               iosHeader="Your Header"
+              iosIcon={<Icon name="ios-arrow-down-outline" />}
               style={{ width: Platform.OS === "ios" ? undefined : 120 }}
               selectedValue={this.state.selected4}
               onValueChange={this.onValueChange4.bind(this)}

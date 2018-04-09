@@ -21,6 +21,10 @@ const datas = [
     text: "Basic List"
   },
   {
+    route: "NHListItemSelected",
+    text: "ListItem Selected"
+  },
+  {
     route: "NHListDivider",
     text: "List Divider"
   },

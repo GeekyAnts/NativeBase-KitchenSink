@@ -21,6 +21,10 @@ const datas = [
     text: "Regular"
   },
   {
+    route: "PickerWithIcon",
+    text: "Picker with Icon"
+  },
+  {
     route: "PlaceholderPicker",
     text: "Placeholder"
   },
@@ -29,8 +33,16 @@ const datas = [
     text: "Placeholder (without note)"
   },
   {
+    route: "PickerTextItemText",
+    text: "Picker text and item text style"
+  },
+  {
     route: "BackButtonPicker",
     text: "Custom Back Button"
+  },
+  {
+    route: "CustomHeaderPicker",
+    text: "Custom Header"
   },
   {
     route: "HeaderPicker",
@@ -39,10 +51,6 @@ const datas = [
   {
     route: "HeaderStylePicker",
     text: "Custom Header Style"
-  },
-  {
-    route: "CustomHeaderPicker",
-    text: "Custom Header"
   }
 ];
 

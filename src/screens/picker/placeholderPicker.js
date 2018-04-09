@@ -38,7 +38,7 @@ class RegularPicker extends Component {
             </Button>
           </Left>
           <Body style={{ flex: 3 }}>
-            <Title>Placeholder Picker</Title>
+            <Title>Picker with Placeholder and Icon</Title>
           </Body>
           <Right />
         </Header>
@@ -51,6 +51,7 @@ class RegularPicker extends Component {
               style={{ width: undefined }}
               placeholder="Select your SIM"
               placeholderStyle={{ color: "#bfc6ea" }}
+              placeholderIconColor="#007aff"
               selectedValue={this.state.selected2}
               onValueChange={this.onValueChange2.bind(this)}
             >

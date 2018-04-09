@@ -32,7 +32,7 @@
     "color": "1.0.3",
     "lodash": "4.13.1",
     "moment": "2.13.0",
-    "native-base": "2.3.10",
+    "native-base": "2.4.1",
     "react": "16.2.0",
     "react-native": "0.52.0",
     "react-native-vector-icons": "4.3.0",

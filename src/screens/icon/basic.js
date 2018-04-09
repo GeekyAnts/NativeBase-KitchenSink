@@ -15,13 +15,13 @@ import {
 
 import styles from "./styles";
 
-class Basic extends Component {
+class BasicIcon extends Component {
   render() {
     return (
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent onPress={() => this.replaceAt("icon")}>
+            <Button transparent onPress={() => this.props.navigation.goBack()}>
               <Icon name="arrow-back" />
             </Button>
           </Left>
@@ -425,4 +425,4 @@ class Basic extends Component {
   }
 }
 
-export default Basic;
+export default BasicIcon;

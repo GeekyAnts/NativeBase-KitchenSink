@@ -33,7 +33,7 @@ const datas = [
     route: "Header",
     icon: "phone-portrait",
     bg: "#477EEA",
-    types: "8"
+    types: "10"
   },
   {
     name: "Footer",
@@ -60,7 +60,7 @@ const datas = [
     route: "NHCard",
     icon: "keypad",
     bg: "#B89EF5",
-    types: "5"
+    types: "8"
   },
   {
     name: "Check Box",
@@ -93,7 +93,8 @@ const datas = [
     name: "Icon",
     route: "NHIcon",
     icon: "information-circle",
-    bg: "#EF6092"
+    bg: "#bfe9ea",
+    types: "4"
   },
   {
     name: "Layout",
@@ -107,14 +108,14 @@ const datas = [
     route: "NHList",
     icon: "lock",
     bg: "#5DCEE2",
-    types: "7"
+    types: "8"
   },
   {
     name: "ListSwipe",
     route: "ListSwipe",
     icon: "swap",
     bg: "#C5F442",
-    types: "2"
+    types: "3"
   },
   {
     name: "Picker",
@@ -163,9 +164,10 @@ const datas = [
   },
   {
     name: "Toast",
-    route: "Toast",
+    route: "NHToast",
     icon: "albums",
-    bg: "#C5F442"
+    bg: "#C5F442",
+    types: "6"
   },
   {
     name: "Typography",

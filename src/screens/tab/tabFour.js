@@ -6,15 +6,23 @@ export default class TabFour extends Component {
     return (
       <Content padder style={{ marginTop: 0 }}>
         <Card style={{ flex: 0 }}>
-          <CardItem header>
-            <Text>Recommended by Microsoft</Text>
-          </CardItem>
           <CardItem>
             <Body>
               <Text>
-                If you're looking to get started with React Native + CodePush,
-                and are looking for an awesome starter kit, you should check out
-                Native Starter Pro - Microsoft's react-native-code-push repo
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Consequuntur sunt itaque adipisci quisquam pariatur qui,
+                reiciendis architecto quod sint incidunt labore nisi totam illum
+                numquam non magnam praesentium, maxime quaerat!
+              </Text>
+            </Body>
+          </CardItem>
+        </Card>
+        <Card style={{ flex: 0 }}>
+          <CardItem>
+            <Body>
+              <Text>
+                NativeBase gives you the potential of building applications that
+                run on iOS and Android using a single codebase.
               </Text>
             </Body>
           </CardItem>
