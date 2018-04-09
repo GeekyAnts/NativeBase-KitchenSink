@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Platform } from "react-native";
-
 import {
   Container,
   Header,
@@ -8,15 +7,11 @@ import {
   Content,
   Button,
   Icon,
-  Text,
   Right,
   Body,
   Left,
   Picker,
-  Form,
-  View,
-  H3,
-  Item as FormItem
+  Form
 } from "native-base";
 
 import styles from "./styles";

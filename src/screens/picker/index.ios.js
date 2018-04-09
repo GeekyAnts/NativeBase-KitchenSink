@@ -33,12 +33,12 @@ const datas = [
     text: "Placeholder (without note)"
   },
   {
-    route: "BackButtonPicker",
-    text: "Custom Back Button"
-  },
-  {
     route: "PickerTextItemText",
     text: "Picker text and item text style"
+  },
+  {
+    route: "BackButtonPicker",
+    text: "Custom Back Button"
   },
   {
     route: "CustomHeaderPicker",
