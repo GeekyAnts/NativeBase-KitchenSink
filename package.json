@@ -1,6 +1,6 @@
 {
   "name": "NativebaseKitchenSink",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "private": true,
   "devDependencies": {
     "babel-eslint": "7.2.3",
@@ -17,7 +17,7 @@
     "jest": "20.0.4",
     "jest-expo": "25.0.0",
     "prettier": "1.5.3",
-    "react-test-renderer": "16.2.0"
+    "react-test-renderer": "16.3.1"
   },
   "scripts": {
     "start": "react-native start",
@@ -32,9 +32,9 @@
     "color": "1.0.3",
     "lodash": "4.13.1",
     "moment": "2.13.0",
-    "native-base": "2.4.1",
-    "react": "16.2.0",
-    "react-native": "0.52.0",
+    "native-base": "2.4.2",
+    "react": "16.3.1",
+    "react-native": "0.55.2",
     "react-native-vector-icons": "4.3.0",
     "react-navigation": "1.5.0"
   }
