@@ -154,7 +154,7 @@ const Drawer = DrawerNavigator(
     Actionsheet: { screen: Actionsheet }
   },
   {
-    initialRouteName: "NHRadio",
+    initialRouteName: "Home",
     contentOptions: {
       activeTintColor: "#e91e63"
     },
