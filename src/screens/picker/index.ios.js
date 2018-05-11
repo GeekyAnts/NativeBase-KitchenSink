@@ -25,6 +25,10 @@ const datas = [
     text: "Picker with Icon"
   },
   {
+    route: "PickerWithIconStyle",
+    text: "Picker with Icon style"
+  },
+  {
     route: "PlaceholderPicker",
     text: "Placeholder"
   },
