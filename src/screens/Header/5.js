@@ -28,7 +28,11 @@ class Header5 extends Component {
             <Title>Header</Title>
           </Body>
           <Right>
-            <Button transparent onPress={() => this.props.navigation.goBack()}>
+            <Button
+              hasText
+              transparent
+              onPress={() => this.props.navigation.goBack()}
+            >
               <Text>Cancel</Text>
             </Button>
           </Right>

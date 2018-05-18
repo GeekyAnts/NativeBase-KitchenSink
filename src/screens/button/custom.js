@@ -29,7 +29,7 @@ class Custom extends Component {
           <Right />
         </Header>
 
-        <Content padder>
+        <Content padder style={{ padding: 20 }}>
           <Button small style={styles.mb15}>
             <Text>Default Small</Text>
           </Button>

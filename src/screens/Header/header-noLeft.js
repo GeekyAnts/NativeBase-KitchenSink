@@ -5,6 +5,7 @@ import {
   Title,
   Content,
   Button,
+  Icon,
   Left,
   Right,
   Body,
@@ -12,11 +13,11 @@ import {
 } from "native-base";
 import styles from "./styles";
 
-class Header3 extends Component {
+class HeaderNoLeft extends Component {
   render() {
     return (
       <Container style={styles.container}>
-        <Header>
+        <Header noLeft>
           <Left>
             <Button
               hasText
@@ -41,11 +42,13 @@ class Header3 extends Component {
         </Header>
 
         <Content padder>
-          <Text>Header with Text Buttons</Text>
+          <Text>
+            Header with noLeft prop, eliminates Left component for Android
+          </Text>
         </Content>
       </Container>
     );
   }
 }
 
-export default Header3;
+export default HeaderNoLeft;

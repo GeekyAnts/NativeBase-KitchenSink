@@ -29,7 +29,7 @@ class Block extends Component {
           <Right />
         </Header>
 
-        <Content padder style={{ backgroundColor: "#FFF" }}>
+        <Content padder style={{ backgroundColor: "#FFF", padding: 20 }}>
           <Button block light style={styles.mb15}>
             <Text>Light</Text>
           </Button>

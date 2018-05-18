@@ -63,7 +63,6 @@ import SwipeRowCustomStyle from "./screens/listSwipe/swipe-row-style";
 import MultiListSwipe from "./screens/listSwipe/multi-list-swipe";
 import NHBasicList from "./screens/list/basic-list";
 import NHListItemSelected from "./screens/list/listitem-selected";
-import NHListItemNoIndent from "./screens/list/listitem-noIndent";
 import NHListDivider from "./screens/list/list-divider";
 import NHListSeparator from "./screens/list/list-separator";
 import NHListHeader from "./screens/list/list-headers";
@@ -72,7 +71,6 @@ import NHListAvatar from "./screens/list/list-avatar";
 import NHListThumbnail from "./screens/list/list-thumbnail";
 import RegularPicker from "./screens/picker/regularPicker";
 import PickerWithIcon from "./screens/picker/picker-with-icon";
-import PickerWithIconStyle from "./screens/picker/picker-with-iconstyle";
 import PlaceholderPicker from "./screens/picker/placeholderPicker";
 import PlaceholderPickerNote from "./screens/picker/placeholderPickernote";
 import BackButtonPicker from "./screens/picker/backButtonPicker";
@@ -95,8 +93,7 @@ import IconActionSheet from "./screens/actionsheet/icon";
 import AdvSegment from "./screens/segment/segmentTab";
 import SimpleDeck from "./screens/deckswiper/simple";
 import AdvancedDeck from "./screens/deckswiper/advanced";
-import NHDefaultRadio from "./screens/radio/default";
-import NHCustomRadio from "./screens/radio/custom";
+import HeaderNoLeft from "./screens/Header/header-noLeft";
 
 import Home from "./screens/home/";
 import Anatomy from "./screens/anatomy/";
@@ -176,6 +173,7 @@ const AppNavigator = StackNavigator(
     Header8: { screen: Header8 },
     HeaderSpan: { screen: HeaderSpan },
     HeaderNoShadow: { screen: HeaderNoShadow },
+    HeaderNoLeft: { screen: HeaderNoLeft },
 
     BasicFooter: { screen: BasicFooter },
     IconFooter: { screen: IconFooter },
@@ -235,7 +233,6 @@ const AppNavigator = StackNavigator(
 
     NHBasicList: { screen: NHBasicList },
     NHListItemSelected: { screen: NHListItemSelected },
-    NHListItemNoIndent: { screen: NHListItemNoIndent },
     NHListDivider: { screen: NHListDivider },
     NHListSeparator: { screen: NHListSeparator },
     NHListHeader: { screen: NHListHeader },
@@ -249,7 +246,6 @@ const AppNavigator = StackNavigator(
 
     RegularPicker: { screen: RegularPicker },
     PickerWithIcon: { screen: PickerWithIcon },
-    PickerWithIconStyle: { screen: PickerWithIconStyle },
     PlaceholderPicker: { screen: PlaceholderPicker },
     PlaceholderPickerNote: { screen: PlaceholderPickerNote },
     BackButtonPicker: { screen: BackButtonPicker },
@@ -257,9 +253,6 @@ const AppNavigator = StackNavigator(
     HeaderPicker: { screen: HeaderPicker },
     HeaderStylePicker: { screen: HeaderStylePicker },
     CustomHeaderPicker: { screen: CustomHeaderPicker },
-
-    NHDefaultRadio: { screen: NHDefaultRadio },
-    NHCustomRadio: { screen: NHCustomRadio },
 
     BasicTab: { screen: BasicTab },
     ConfigTab: { screen: ConfigTab },

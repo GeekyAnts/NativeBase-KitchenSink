@@ -29,7 +29,7 @@ class Default extends Component {
           <Right />
         </Header>
 
-        <Content padder style={{ backgroundColor: "#fff" }}>
+        <Content padder style={{ backgroundColor: "#fff", padding: 20 }}>
           <Button light style={styles.mb15}>
             <Text>Light</Text>
           </Button>

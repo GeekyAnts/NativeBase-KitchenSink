@@ -21,24 +21,16 @@ const datas = [
     text: "Basic List"
   },
   {
+    route: "NHListItemSelected",
+    text: "ListItem Selected"
+  },
+  {
     route: "NHListDivider",
     text: "List Divider"
   },
   {
     route: "NHListHeader",
     text: "List Header"
-  },
-  {
-    route: "NHListItemSelected",
-    text: "ListItem Selected"
-  },
-  {
-    route: "NHListItemNoIndent",
-    text: "ListItem NoIndent"
-  },
-  {
-    route: "NHListSeparator",
-    text: "List Separator"
   },
   {
     route: "NHListIcon",
@@ -51,6 +43,10 @@ const datas = [
   {
     route: "NHListThumbnail",
     text: "List Thumbnail"
+  },
+  {
+    route: "NHListSeparator",
+    text: "List Separator"
   }
 ];
 
