@@ -46,7 +46,7 @@ class AccordionDefault extends Component {
           <Right />
         </Header>
         <Content padder style={{ backgroundColor: "white" }}>
-          <Accordion dataArray={dataArray} animation={true} expanded={true} />
+          <Accordion dataArray={dataArray} animation={false} />
         </Content>
       </Container>
     );
