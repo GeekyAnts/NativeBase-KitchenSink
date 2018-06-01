@@ -23,6 +23,10 @@ const datas = [
   {
     route: "AdvSegment",
     text: "Segments outside Header "
+  },
+  {
+    route: "SegmentHeaderIcon",
+    text: "Segments with Icons "
   }
 ];
 

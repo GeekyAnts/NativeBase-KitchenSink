@@ -23,7 +23,7 @@ class SegmentNB extends Component {
   render() {
     return (
       <Container>
-        <Header hasTabs>
+        <Header hasSegment>
           <Left>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
               <Icon name="arrow-back" />

@@ -23,24 +23,31 @@ const datas = [
     bg: "#C5F442"
   },
   {
-    name: "Actionsheet",
-    route: "Actionsheet",
-    icon: "easel",
-    bg: "#C5F442"
-  },
-  {
     name: "Header",
     route: "Header",
-    icon: "phone-portrait",
+    icon: "arrow-up",
     bg: "#477EEA",
     types: "10"
   },
   {
     name: "Footer",
     route: "Footer",
-    icon: "phone-portrait",
+    icon: "arrow-down",
     bg: "#DA4437",
     types: "4"
+  },
+  {
+    name: "Accordion",
+    route: "NHAccordion",
+    icon: "repeat",
+    bg: "#C5F442",
+    types: "5"
+  },
+  {
+    name: "Actionsheet",
+    route: "Actionsheet",
+    icon: "easel",
+    bg: "#C5F442"
   },
   {
     name: "Badge",
@@ -66,6 +73,12 @@ const datas = [
     name: "Check Box",
     route: "NHCheckbox",
     icon: "checkmark-circle",
+    bg: "#EB6B23"
+  },
+  {
+    name: "Date Picker",
+    route: "NHDatePicker",
+    icon: "calendar",
     bg: "#EB6B23"
   },
   {
@@ -113,7 +126,7 @@ const datas = [
   {
     name: "ListSwipe",
     route: "ListSwipe",
-    icon: "swap",
+    icon: "code-working",
     bg: "#C5F442",
     types: "3"
   },
@@ -140,7 +153,7 @@ const datas = [
     route: "Segment",
     icon: "menu",
     bg: "#0A2C6B",
-    types: "2"
+    types: "3"
   },
   {
     name: "Spinner",

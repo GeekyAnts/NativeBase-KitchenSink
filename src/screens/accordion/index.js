@@ -5,75 +5,55 @@ import {
   Title,
   Content,
   Button,
-  Icon,
-  Text,
   Left,
   Right,
   Body,
+  Icon,
   List,
-  ListItem
+  ListItem,
+  Text
 } from "native-base";
-import styles from "./styles";
 
 const datas = [
   {
-    route: "NHBasicList",
-    text: "Basic List"
+    route: "AccordionDefault",
+    text: "Default Accordion"
   },
   {
-    route: "NHListItemSelected",
-    text: "ListItem Selected"
+    route: "AccordionIcon",
+    text: "Icon and Expanded Icon"
   },
   {
-    route: "NHListDivider",
-    text: "List Divider"
+    route: "AccordionIconStyle",
+    text: "Icon and Expanded Icon style"
   },
   {
-    route: "NHListHeader",
-    text: "List Header"
+    route: "AccordionHeaderContentStyle",
+    text: "Header and Content style"
   },
   {
-    route: "NHListIcon",
-    text: "List Icon"
-  },
-  {
-    route: "NHListAvatar",
-    text: "List Avatar"
-  },
-  {
-    route: "NHListThumbnail",
-    text: "List Thumbnail"
-  },
-  {
-    route: "NHListSeparator",
-    text: "List Separator"
-  },
-  {
-    route: "NHListItemNoIndent",
-    text: "List NoIndent"
+    route: "AccordionCustomHeaderContent",
+    text: "Custom Header and Content"
   }
 ];
 
-class NHList extends Component {
+class NHAccordion extends Component {
   render() {
     return (
-      <Container style={styles.container}>
+      <Container>
         <Header>
           <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
-            >
+            <Button transparent>
               <Icon name="menu" />
             </Button>
           </Left>
           <Body>
-            <Title>List</Title>
+            <Title>Accordion</Title>
           </Body>
           <Right />
         </Header>
 
-        <Content>
+        <Content padder style={{ backgroundColor: "white" }}>
           <List
             dataArray={datas}
             renderRow={data =>
@@ -87,7 +67,7 @@ class NHList extends Component {
                   </Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" />
+                  <Icon name="arrow-forward" style={{ color: "#999" }} />
                 </Right>
               </ListItem>}
           />
@@ -97,4 +77,4 @@ class NHList extends Component {
   }
 }
 
-export default NHList;
+export default NHAccordion;
