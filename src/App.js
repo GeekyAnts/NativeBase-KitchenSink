@@ -121,6 +121,19 @@ import Segment from "./screens/segment";
 import NHToast from "./screens/toast/";
 import Actionsheet from "./screens/actionsheet";
 
+const SwipeListNavigator = StackNavigator({
+  ListSwipe: { screen: ListSwipe },
+  BasicListSwipe: { screen: BasicListSwipe },
+  SwipeRowCustomStyle: { screen: SwipeRowCustomStyle },
+  MultiListSwipe: { screen: MultiListSwipe },
+},
+  {
+    headerMode: "none",
+    cardStyle: {
+      opacity: 1
+    }
+  });
+
 const Drawer = DrawerNavigator(
   {
     Home: { screen: Home },
@@ -137,7 +150,7 @@ const Drawer = DrawerNavigator(
     NHIcon: { screen: NHIcon },
     NHLayout: { screen: NHLayout },
     NHList: { screen: NHList },
-    ListSwipe: { screen: ListSwipe },
+    ListSwipe: { screen: SwipeListNavigator },
     NHRadio: { screen: NHRadio },
     NHSearchbar: { screen: NHSearchbar },
     NHSpinner: { screen: NHSpinner },
