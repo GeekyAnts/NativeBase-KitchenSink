@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { FlatList } from "react-native";
 import {
   Container,
   Header,
@@ -13,6 +14,18 @@ import {
   Text
 } from "native-base";
 
+const icons = [{ family: "Ionicons", type: "Ionicons", name: "home", color: "#663399", },
+{ family: "Entypo", type: "Entypo", name: "home", color: "#ffc125" },
+{ family: "Feather", type: "Feather", name: "home", color: "#387ef5" },
+{ family: "FontAwesome", type: "FontAwesome", name: "home", color: "#000" },
+{ family: "Foundation", type: "Foundation", name: "home", color: "orange" },
+{ family: "Material Icons", type: "MaterialIcons", name: "home", color: "#32db64" },
+{ family: "Material Community Icons", type: "MaterialCommunityIcons", name: "home", color: "#27a" },
+{ family: "Octicons", type: "Octicons", name: "home", color: "#fac125" },
+{ family: "Zocial", type: "Zocial", name: "dropbox", color: "blue" },
+{ family: "Simple Line Icons", type: "SimpleLineIcons", name: "home", color: "green" },
+{ family: "Evil Icons", type: "EvilIcons", name: "trophy", color: "brown" },
+]
 class IconFamily extends Component {
   render() {
     return (
@@ -29,58 +42,15 @@ class IconFamily extends Component {
           <Right />
         </Header>
         <Content>
-          <ListItem>
-            <Text style={{ width: 220 }}>Ionicons</Text>
-            <Icon type="Ionicons" name="home" style={{ color: "#999" }} />
-          </ListItem>
-          <ListItem>
-            <Text style={{ width: 220 }}>Entypo</Text>
-            <Icon type="Entypo" name="home" style={{ color: "#999" }} />
-          </ListItem>
-          <ListItem>
-            <Text style={{ width: 220 }}>Feather</Text>
-            <Icon type="Feather" name="home" style={{ color: "#999" }} />
-          </ListItem>
-          <ListItem>
-            <Text style={{ width: 220 }}>FontAwesome</Text>
-            <Icon type="FontAwesome" name="home" style={{ color: "#999" }} />
-          </ListItem>
-          <ListItem>
-            <Text style={{ width: 220 }}>Foundation</Text>
-            <Icon type="Foundation" name="home" style={{ color: "#999" }} />
-          </ListItem>
-          <ListItem>
-            <Text style={{ width: 220 }}>Material Icons</Text>
-            <Icon type="MaterialIcons" name="home" style={{ color: "#999" }} />
-          </ListItem>
-          <ListItem>
-            <Text style={{ width: 220 }}>Material Community Icons</Text>
-            <Icon
-              type="MaterialCommunityIcons"
-              name="home"
-              style={{ color: "#999" }}
-            />
-          </ListItem>
-          <ListItem>
-            <Text style={{ width: 220 }}>Octicons</Text>
-            <Icon type="Octicons" name="home" style={{ color: "#999" }} />
-          </ListItem>
-          <ListItem>
-            <Text style={{ width: 220 }}>Zocial</Text>
-            <Icon type="Zocial" name="dropbox" style={{ color: "#999" }} />
-          </ListItem>
-          <ListItem>
-            <Text style={{ width: 220 }}>Simple Line Icons</Text>
-            <Icon
-              type="SimpleLineIcons"
-              name="home"
-              style={{ color: "#999" }}
-            />
-          </ListItem>
-          <ListItem>
-            <Text style={{ width: 220 }}>Evil Icons</Text>
-            <Icon type="EvilIcons" name="trophy" style={{ color: "#999" }} />
-          </ListItem>
+          <FlatList
+            data={icons}
+            keyExtractor={(item) => item.type}
+            initialNumToRender={11}
+            renderItem={({ item }) => (<ListItem>
+              <Text style={{ width: 220 }}>{item.family}</Text>
+              <Icon type={item.type} name={item.name} style={{ color: item.color }} />
+            </ListItem>)}
+          />
         </Content>
       </Container>
     );
