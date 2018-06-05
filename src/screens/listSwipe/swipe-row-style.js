@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Platform } from "react-native";
 import {
   Container,
   Header,
@@ -25,7 +26,7 @@ class SwipeRowCustomStyle extends Component {
               <Icon name="arrow-back" />
             </Button>
           </Left>
-          <Body style={{ flex: 3 }}>
+          <Body style={{ flex: Platform.OS === 'ios' ? 3 : 1 }}>
             <Title>Swipe Row Custom Style</Title>
           </Body>
           <Right />
