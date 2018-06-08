@@ -151,10 +151,14 @@ export default {
   iosStatusbar: "dark-content",
   toolbarDefaultBorder: platform === "ios" ? "#a7a6ab" : "#3F51B5",
   get statusBarColor() {
-    return color(this.toolbarDefaultBg).darken(0.2).hex();
+    return color(this.toolbarDefaultBg)
+      .darken(0.2)
+      .hex();
   },
   get darkenHeader() {
-    return color(this.tabBgColor).darken(0.03).hex();
+    return color(this.tabBgColor)
+      .darken(0.03)
+      .hex();
   },
 
   // Icon
