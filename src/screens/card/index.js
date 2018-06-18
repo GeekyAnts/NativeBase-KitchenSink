@@ -47,6 +47,10 @@ const datas = [
   {
     route: "NHCardShowcase",
     text: "Card Showcase"
+  },
+  {
+    route: "NHCardCustomBorderRadius",
+    text: "Card Custom BorderRadius"
   }
 ];
 

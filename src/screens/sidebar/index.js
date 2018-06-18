@@ -27,7 +27,7 @@ const datas = [
     route: "Header",
     icon: "arrow-up",
     bg: "#477EEA",
-    types: "10"
+    types: "11"
   },
   {
     name: "Footer",

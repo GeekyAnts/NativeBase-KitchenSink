@@ -61,6 +61,10 @@ const datas = [
   {
     route: "HeaderNoLeft",
     text: "Header noLeft"
+  },
+  {
+    route: "HeaderTransparent",
+    text: "Header Transparent"
   }
 ];
 

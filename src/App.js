@@ -13,6 +13,7 @@ import Header7 from "./screens/Header/7";
 import Header8 from "./screens/Header/8";
 import HeaderSpan from "./screens/Header/header-span";
 import HeaderNoShadow from "./screens/Header/header-no-shadow";
+import HeaderTransparent from "./screens/Header/header-transparent";
 import BasicFooter from "./screens/footer/basicFooter";
 import IconFooter from "./screens/footer/iconFooter";
 import IconText from "./screens/footer/iconText";
@@ -34,6 +35,7 @@ import NHCardShowcase from "./screens/card/card-showcase";
 import NHCardList from "./screens/card/card-list";
 import NHCardHeaderAndFooter from "./screens/card/card-header-and-footer";
 import NHCardTransparent from "./screens/card/card-transparent";
+import NHCardCustomBorderRadius from "./screens/card/card-custom-border-radius";
 import BasicFab from "./screens/fab/basic";
 import MultipleFab from "./screens/fab/multiple";
 import FixedLabel from "./screens/form/fixedLabel";
@@ -188,6 +190,7 @@ const AppNavigator = StackNavigator(
     HeaderSpan: { screen: HeaderSpan },
     HeaderNoShadow: { screen: HeaderNoShadow },
     HeaderNoLeft: { screen: HeaderNoLeft },
+    HeaderTransparent: { screen: HeaderTransparent },
 
     BasicFooter: { screen: BasicFooter },
     IconFooter: { screen: IconFooter },
@@ -212,6 +215,7 @@ const AppNavigator = StackNavigator(
     NHCardList: { screen: NHCardList },
     NHCardHeaderAndFooter: { screen: NHCardHeaderAndFooter },
     NHCardTransparent: { screen: NHCardTransparent },
+    NHCardCustomBorderRadius: { screen: NHCardCustomBorderRadius },
 
     SimpleDeck: { screen: SimpleDeck },
     AdvancedDeck: { screen: AdvancedDeck },

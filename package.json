@@ -1,6 +1,6 @@
 {
   "name": "NativebaseKitchenSink",
-  "version": "2.5.0",
+  "version": "2.5.2",
   "private": true,
   "devDependencies": {
     "babel-eslint": "7.2.3",
@@ -32,7 +32,7 @@
     "color": "1.0.3",
     "lodash": "4.13.1",
     "moment": "2.13.0",
-    "native-base": "2.5.1",
+    "native-base": "2.5.2",
     "react": "16.3.1",
     "react-native": "0.55.4",
     "react-native-vector-icons": "4.5.0",

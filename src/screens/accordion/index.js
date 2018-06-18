@@ -43,7 +43,10 @@ class NHAccordion extends Component {
       <Container>
         <Header>
           <Left>
-            <Button transparent>
+            <Button
+              transparent
+              onPress={() => this.props.navigation.navigate("DrawerOpen")}
+            >
               <Icon name="menu" />
             </Button>
           </Left>
@@ -53,7 +56,7 @@ class NHAccordion extends Component {
           <Right />
         </Header>
 
-        <Content padder style={{ backgroundColor: "white" }}>
+        <Content style={{ backgroundColor: "white" }}>
           <List
             dataArray={datas}
             renderRow={data =>

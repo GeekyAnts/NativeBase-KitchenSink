@@ -31,7 +31,7 @@ class Disabled extends Component {
         </Header>
 
         <Content>
-          <View style={{ paddingHorizontal: 20, paddingTop: 20 }}>
+          <View style={{ paddingHorizontal: 20, padding: 10 }}>
             <Button disabled style={styles.mb15}>
               <Text>Default</Text>
             </Button>
