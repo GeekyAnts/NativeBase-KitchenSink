@@ -50,6 +50,7 @@ import IconInput from "./screens/form/iconInput";
 import SuccessInput from "./screens/form/success";
 import ErrorInput from "./screens/form/error";
 import DisabledInput from "./screens/form/disabledInput";
+import PickerInput from "./screens/form/pickerInput";
 import Icons from "./screens/icon/icon";
 import BasicIcon from "./screens/icon/basic";
 import StateIcon from "./screens/icon/state";
@@ -235,6 +236,7 @@ const AppNavigator = StackNavigator(
     SuccessInput: { screen: SuccessInput },
     ErrorInput: { screen: ErrorInput },
     DisabledInput: { screen: DisabledInput },
+    PickerInput: { screen: PickerInput },
     TextArea: { screen: TextArea },
 
     Icons: { screen: Icons },

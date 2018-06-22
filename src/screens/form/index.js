@@ -53,6 +53,10 @@ const datas = [
     text: "Icon Textbox"
   },
   {
+    route: "PickerInput",
+    text: "Textbox with Picker"
+  },
+  {
     route: "SuccessInput",
     text: "Success Input Textbox"
   },
