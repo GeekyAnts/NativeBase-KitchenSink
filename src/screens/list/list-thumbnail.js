@@ -77,7 +77,7 @@ class NHListThumbnail extends Component {
             renderRow={data =>
               <ListItem thumbnail>
                 <Left>
-                  <Thumbnail square size={55} source={data.img} />
+                  <Thumbnail square source={data.img} />
                 </Left>
                 <Body>
                   <Text>
