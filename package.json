@@ -1,6 +1,6 @@
 {
   "name": "NativebaseKitchenSink",
-  "version": "2.7.0",
+  "version": "2.7.1",
   "private": true,
   "devDependencies": {
     "babel-eslint": "7.2.3",
@@ -20,12 +20,12 @@
     "react-native-scripts": "1.11.1",
     "react-test-renderer": "16.4.1"
   },
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "react-native-scripts start",
-    "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
+    "start": "expo start",
+    "eject": "expo eject",
+    "android": "expo --android",
+    "ios": "expo --ios",
     "test": "node node_modules/jest/bin/jest.js --watch"
   },
   "jest": {
@@ -33,12 +33,12 @@
   },
   "dependencies": {
     "color": "1.0.3",
-    "expo": "28.0.0",
+    "expo": "^30.0.1",
     "lodash": "4.13.1",
     "moment": "2.13.0",
-    "native-base": "2.7.0",
-    "react": "16.4.1",
-    "react-native": "0.56.0",
+    "native-base": "2.8.0",
+    "react": "16.3.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
     "react-navigation": "1.5.0"
   }
 }
