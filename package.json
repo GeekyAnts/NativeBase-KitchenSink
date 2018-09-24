@@ -1,6 +1,6 @@
 {
   "name": "NativebaseKitchenSink",
-  "version": "2.5.0",
+  "version": "2.7.0",
   "private": true,
   "devDependencies": {
     "babel-eslint": "7.2.3",
@@ -14,11 +14,11 @@
     "flow-bin": "0.52.0",
     "flow-typed": "2.1.5",
     "husky": "0.14.3",
-    "jest": "20.0.4",
+    "jest": "23.3.0",
     "jest-expo": "28.0.0",
     "prettier": "1.5.3",
     "react-native-scripts": "1.11.1",
-    "react-test-renderer": "16.2.0"
+    "react-test-renderer": "16.4.1"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
@@ -36,9 +36,9 @@
     "expo": "28.0.0",
     "lodash": "4.13.1",
     "moment": "2.13.0",
-    "native-base": "2.5.2",
-    "react": "16.3.1",
-    "react-native": "0.55.4",
+    "native-base": "2.7.0",
+    "react": "16.4.1",
+    "react-native": "0.56.0",
     "react-navigation": "1.5.0"
   }
 }
