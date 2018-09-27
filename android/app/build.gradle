@@ -101,8 +101,8 @@ android {
         applicationId "io.market.nativebase.geekyants.nativebasekitchensink"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "2.3"
+        versionCode 2
+        versionName "2.3.0"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
