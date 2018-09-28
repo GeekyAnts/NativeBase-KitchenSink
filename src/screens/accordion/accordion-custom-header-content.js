@@ -33,7 +33,7 @@ const dataArray = [
 ];
 
 class AccordionCustomHeaderContent extends Component {
-  _renderHeader(title, expanded) {
+  _renderHeader(item, expanded) {
     return (
       <View
         style={{
@@ -45,7 +45,7 @@ class AccordionCustomHeaderContent extends Component {
         }}
       >
         <Text style={{ fontWeight: "600" }}>
-          {" "}{title}
+          {" "}{item.title}
         </Text>
         {expanded
           ? <Icon style={{ fontSize: 18 }} name="remove-circle" />
@@ -53,7 +53,7 @@ class AccordionCustomHeaderContent extends Component {
       </View>
     );
   }
-  _renderContent(content) {
+  _renderContent(item) {
     return (
       <Text
         style={{
@@ -62,7 +62,7 @@ class AccordionCustomHeaderContent extends Component {
           fontStyle: "italic"
         }}
       >
-        {content}
+        {item.content}
       </Text>
     );
   }

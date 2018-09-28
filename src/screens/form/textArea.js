@@ -9,7 +9,7 @@ import {
   Body,
   Left,
   Right,
-  IconNB
+  Icon
 } from "native-base";
 import styles from "./styles";
 
@@ -20,7 +20,7 @@ class TextArea extends Component {
         <Header>
           <Left>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <IconNB name="ios-arrow-back" />
+              <Icon name="arrow-back" />
             </Button>
           </Left>
           <Body>

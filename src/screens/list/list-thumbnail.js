@@ -21,7 +21,7 @@ const supriya = require("../../../assets/contacts/supriya.png");
 const himanshu = require("../../../assets/contacts/himanshu.png");
 const shweta = require("../../../assets/contacts/shweta.png");
 const shruti = require("../../../assets/contacts/shruti.png");
-const shivraj = require("../../../assets/contacts/shivraj.jpg");
+const shivraj = require("../../../assets/contacts/shivraj.png");
 const datas = [
   {
     img: sankhadeep,

@@ -16,7 +16,7 @@ import {
 import styles from "./styles";
 
 const logo = require("../../../assets/splashscreen.png");
-const cover = require("../../../assets/web-cover1.jpg");
+const cover = require("../../../assets/web-cover1.png");
 
 class NHThumbnail extends Component {
   render() {

@@ -11,8 +11,8 @@
     "eslint-plugin-prettier": "2.1.2",
     "eslint-plugin-react": "7.1.0",
     "eslint-plugin-react-native": "3.0.1",
-    "flow-bin": "0.52.0",
-    "flow-typed": "2.1.5",
+    "flow-bin": "0.78.0",
+    "flow-typed": "2.5.1",
     "husky": "0.14.3",
     "jest": "23.3.0",
     "prettier": "1.5.3",
@@ -25,15 +25,20 @@
     "test": "node node_modules/jest/bin/jest.js --watch"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-native|lottie-react-native|expo|react-native-maps|react-native-svg|react-native-branch|native-base-shoutem-theme|react-native-easy-grid|react-native-drawer|react-native-vector-icons|react-native-keyboard-aware-scroll-view|react-native-swiper|react-navigation|native-base|@expo|react-native-scrollable-tab-view|react-native-simple-modal|react-native-iphone-x-helper)/)"
+    ]
   },
   "dependencies": {
     "color": "1.0.3",
-    "lodash": "4.13.1",
+    "lodash": "4.17.10",
     "moment": "2.13.0",
-    "native-base": "2.7.0",
-    "react": "16.4.1",
-    "react-native": "0.56.0",
-    "react-navigation": "1.5.0"
+    "native-base": "https://github.com/GeekyAnts/NativeBase#master",
+    "prop-types": "^15.6.2",
+    "react": "16.5.0",
+    "react-native": "0.57.1",
+    "react-navigation": "1.5.0",
+    "styled-components": "^3.4.5"
   }
 }
