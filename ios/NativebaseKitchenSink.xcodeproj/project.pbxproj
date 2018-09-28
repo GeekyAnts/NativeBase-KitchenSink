@@ -574,6 +574,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4C88A506691649ECBC19345B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9CA373A78C694666B6071EE2 /* Entypo.ttf */,
+				5C7B3BE1FF46432BB866E013 /* EvilIcons.ttf */,
+				7BD6004791F549018C56BAF1 /* FontAwesome.ttf */,
+				82068ECCF475427ABA85D0FE /* Foundation.ttf */,
+				5FC541CE73A1459DB4C9F184 /* Ionicons.ttf */,
+				2216BD6049F241628CD5F1BC /* MaterialCommunityIcons.ttf */,
+				C133B30F3CB64DACAA1BB056 /* MaterialIcons.ttf */,
+				10B2568BE38741D581CA8435 /* Octicons.ttf */,
+				FF40F5BEBD6C497380E712EB /* Roboto_medium.ttf */,
+				C0675D98FEBC45A980B6AE14 /* Roboto.ttf */,
+				EC5034A1958C4F49B2B557F9 /* rubicon-icon-font.ttf */,
+				98F38D18B15347339FEF9476 /* SimpleLineIcons.ttf */,
+				3A1E32D950DB4F7F8DA098B9 /* Zocial.ttf */,
+				842504A66BDD4387AB0D87F7 /* Entypo.ttf */,
+				079454BE67104E2DBCCFAB63 /* EvilIcons.ttf */,
+				804CB00D810D49FD81F3B849 /* Feather.ttf */,
+				1F9F23125F994FC4B3989EB9 /* FontAwesome.ttf */,
+				09F2E20101C845B2B900A510 /* Foundation.ttf */,
+				A0A91026B6CB4B329229BB20 /* Ionicons.ttf */,
+				82A1837771E544158E9FCE25 /* MaterialCommunityIcons.ttf */,
+				DD139F6890A14EA6BA027D42 /* MaterialIcons.ttf */,
+				1EB2BCE889B34E15BAC2493D /* Octicons.ttf */,
+				36C034F539B74ED78B4CF2E5 /* SimpleLineIcons.ttf */,
+				0739C66EB8E24FFFB3FA5076 /* Zocial.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -607,7 +638,11 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+<<<<<<< HEAD
 				01B2EF31827A48D5ADAF3F7D /* RNVectorIcons.xcodeproj */,
+=======
+				E1478756A8D547969D6C5E23 /* RNVectorIcons.xcodeproj */,
+>>>>>>> 7e2f8aa8bf117a51a1572835794e5265282dc246
 			);
 			name = Libraries;
 			sourceTree = "<group>";
