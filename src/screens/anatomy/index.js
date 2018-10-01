@@ -36,7 +36,7 @@ class Anatomy extends Component {
         </Header>
 
         <Content padder>
-          <Text>Content goes here (beta)</Text>
+          <Text>Content goes here (beta!)</Text>
         </Content>
 
         <Footer>
