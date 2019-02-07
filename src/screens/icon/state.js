@@ -227,9 +227,9 @@ class StateIcon extends Component {
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="ionic" />
+                <Icon name="logo-ionic" />
                 <Text numberOfLines={1} style={styles.iconText}>
-                  ionic
+                  logo-ionic
                 </Text>
               </Col>
             </Row>
