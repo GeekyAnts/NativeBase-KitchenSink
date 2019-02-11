@@ -48,7 +48,7 @@ class PickerWithIcon extends Component {
             <Picker
               mode="dropdown"
               iosHeader="Select your SIM"
-              iosIcon={<Icon name="ios-arrow-down-outline" />}
+              iosIcon={<Icon name="ios-arrow-down" />}
               style={{ width: undefined }}
               selectedValue={this.state.selected1}
               onValueChange={this.onValueChange.bind(this)}
