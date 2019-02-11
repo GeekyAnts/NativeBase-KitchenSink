@@ -48,7 +48,7 @@ class PickerInput extends Component {
             <Item picker>
               <Picker
                 mode="dropdown"
-                iosIcon={<Icon name="ios-arrow-down-outline" />}
+                iosIcon={<Icon name="ios-arrow-down" />}
                 style={{ width: undefined }}
                 placeholder="Select your SIM"
                 placeholderStyle={{ color: "#bfc6ea" }}

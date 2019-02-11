@@ -58,7 +58,7 @@ class NHListIcon extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#FF9501" }}>
-                <Icon active name="plane" />
+                <Icon active name="airplane" />
               </Button>
             </Left>
             <Body>

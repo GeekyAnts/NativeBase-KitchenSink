@@ -47,7 +47,7 @@ class PickerTextItemText extends Component {
           <Form>
             <Picker
               mode="dropdown"
-              iosIcon={<Icon name="ios-arrow-down-outline" />}
+              iosIcon={<Icon name="ios-arrow-down" />}
               style={{ width: undefined }}
               placeholder="Select your SIM"
               textStyle={{ color: "#5cb85c" }}

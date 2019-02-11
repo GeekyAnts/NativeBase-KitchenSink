@@ -47,7 +47,7 @@ class RegularPicker extends Component {
           <Form>
             <Picker
               mode="dropdown"
-              iosIcon={<Icon name="ios-arrow-down-outline" />}
+              iosIcon={<Icon name="ios-arrow-down" />}
               headerBackButtonText="Baaack!"
               style={{ width: undefined }}
               selectedValue={this.state.selected3}

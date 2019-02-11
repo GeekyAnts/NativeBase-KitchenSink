@@ -1,6 +1,6 @@
 {
   "name": "NativebaseKitchenSink",
-  "version": "2.7.0",
+  "version": "2.11.0",
   "private": true,
   "devDependencies": {
     "babel-eslint": "7.2.3",
@@ -33,11 +33,12 @@
     "color": "1.0.3",
     "lodash": "4.17.10",
     "moment": "2.13.0",
-    "native-base": "https://github.com/GeekyAnts/NativeBase#master",
+    "native-base": "2.11.0",
     "prop-types": "^15.6.2",
     "react": "16.5.0",
-    "react-native": "0.57.1",
+    "react-native": "0.58.3",
     "react-navigation": "1.5.0",
+    "scheduler": "^0.12.0",
     "styled-components": "^3.4.5"
   }
 }

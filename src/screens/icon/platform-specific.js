@@ -42,7 +42,7 @@ class PlatformSpecificIcon extends Component {
                 <Text>person</Text>
               </Col>
               <Col style={styles.col}>
-                <Icon ios="ios-apps-outline" android="md-apps" />
+                <Icon ios="ios-apps" android="md-apps" />
                 <Text>apps</Text>
               </Col>
               <Col style={styles.col}>
@@ -54,7 +54,7 @@ class PlatformSpecificIcon extends Component {
                 <Text>paper</Text>
               </Col>
               <Col style={styles.col}>
-                <Icon ios="ios-cart-outline" android="md-cart" />
+                <Icon ios="ios-cart" android="md-cart" />
                 <Text>cart</Text>
               </Col>
             </Row>
