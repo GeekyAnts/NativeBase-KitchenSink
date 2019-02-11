@@ -33,7 +33,7 @@
     "color": "1.0.3",
     "lodash": "4.17.10",
     "moment": "2.13.0",
-    "native-base": "https://github.com/GeekyAnts/NativeBase#master",
+    "native-base": "2.11.0",
     "prop-types": "^15.6.2",
     "react": "16.5.0",
     "react-native": "0.58.3",
