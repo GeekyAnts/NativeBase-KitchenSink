@@ -1,4 +1,4 @@
-package io.market.nativebase.geekyants.nativebasekitchensink;
+package com.nativebasekitchensink;
 
 import com.facebook.react.ReactActivity;
 
