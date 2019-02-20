@@ -62,7 +62,7 @@ class NHList extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
+              onPress={() => this.props.navigation.openDrawer()}
             >
               <Icon name="menu" />
             </Button>

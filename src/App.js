@@ -1,6 +1,7 @@
 import React from "react";
 import { Root } from "native-base";
-import { StackNavigator, DrawerNavigator } from "react-navigation";
+// import { StackNavigator, DrawerNavigator } from "react-navigation";
+import { createDrawerNavigator, createStackNavigator, createAppContainer } from "react-navigation";
 
 import Header from "./screens/Header/";
 import Header1 from "./screens/Header/1";
@@ -137,7 +138,7 @@ import Actionsheet from "./screens/actionsheet";
 import NHAccordion from "./screens/accordion/";
 import NHDatePicker from "./screens/datepicker/";
 
-const Drawer = DrawerNavigator(
+const Drawer = createDrawerNavigator(
   {
     Home: { screen: Home },
     Anatomy: { screen: Anatomy },
@@ -176,7 +177,7 @@ const Drawer = DrawerNavigator(
   }
 );
 
-const AppNavigator = StackNavigator(
+const AppNavigator = createStackNavigator(
   {
     Drawer: { screen: Drawer },
 
@@ -309,7 +310,9 @@ const AppNavigator = StackNavigator(
   }
 );
 
+const AppContainer = createAppContainer(AppNavigator);
+
 export default () =>
   <Root>
-    <AppNavigator />
+    <AppContainer />
   </Root>;
