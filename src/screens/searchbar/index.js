@@ -29,7 +29,7 @@ class NHSearchbar extends Component {
         <Content padder>
           <Button
             block
-            onPress={() => this.props.navigation.navigate("DrawerOpen")}
+            onPress={() => this.props.navigation.openDrawer()}
           >
             <Text>Back</Text>
           </Button>
