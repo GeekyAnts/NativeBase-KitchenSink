@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "babel-eslint": "7.2.3",
+    "babel-preset-expo": "^5.0.0",
     "eslint": "4.4.1",
     "eslint-plugin-flowtype": "2.35.0",
     "eslint-plugin-import": "2.7.0",
@@ -15,30 +16,30 @@
     "flow-typed": "2.1.5",
     "husky": "0.14.3",
     "jest": "20.0.4",
-    "jest-expo": "28.0.0",
+    "jest-expo": "32.0.0",
     "prettier": "1.5.3",
     "react-native-scripts": "1.11.1",
     "react-test-renderer": "16.2.0"
   },
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "react-native-scripts start",
-    "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js --watch"
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@expo/vector-icons": "9.0.0",
     "color": "1.0.3",
-    "expo": "28.0.0",
+    "expo": "32.0.0",
     "lodash": "4.13.1",
     "moment": "2.13.0",
-    "native-base": "2.5.2",
-    "react": "16.3.1",
-    "react-native": "0.55.4",
-    "react-navigation": "1.5.0"
+    "native-base": "2.11.0",
+    "react": "16.5.0",
+    "react-native": "0.57.0",
+    "react-navigation": "3.3.0"
   }
 }

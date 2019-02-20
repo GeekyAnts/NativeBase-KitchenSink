@@ -31,7 +31,7 @@ class Home extends Component {
           <View style={{ marginBottom: 80 }}>
             <Button
               style={{ backgroundColor: "#6FAF98", alignSelf: "center" }}
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
+              onPress={() => this.props.navigation.openDrawer()}
             >
               <Text>Lets Go!</Text>
             </Button>

@@ -58,14 +58,14 @@ class NHListIcon extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#FF9501" }}>
-                <Icon active name="plane" />
+                <Icon active name="airplane" />
               </Button>
             </Left>
             <Body>
               <Text>Airplane Mode</Text>
             </Body>
             <Right>
-              <Switch value={false} onTintColor="#50B948" />
+              <Switch value={false} trackColor="#50B948" />
             </Right>
           </ListItem>
           <ListItem icon>
@@ -178,9 +178,8 @@ class NHListIcon extends Component {
             <Right>
               <Picker
                 note
-                iosHeader="Select Your Sim"
-                iosIcon={<Icon name="ios-arrow-down-outline" />}
                 mode="dropdown"
+                style={{ width: 120 }}
                 selectedValue={this.state.selected1}
                 onValueChange={this.onValueChange.bind(this)}
               >

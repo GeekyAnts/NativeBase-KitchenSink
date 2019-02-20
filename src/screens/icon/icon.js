@@ -225,9 +225,9 @@ class Icons extends Component {
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="ionic" style={{ color: "blue" }} />
+                <Icon name="mail" style={{ color: "#1DA1F2" }} />
                 <Text numberOfLines={1} style={styles.iconText}>
-                  ionic
+                  mail
                 </Text>
               </Col>
             </Row>
@@ -552,12 +552,6 @@ class Icons extends Component {
                 <Icon name="logo-youtube" style={{ color: "#DC4A38" }} />
                 <Text numberOfLines={1} style={styles.iconText}>
                   logo-youtube
-                </Text>
-              </Col>
-              <Col style={styles.col}>
-                <Icon name="mail" style={{ color: "#1DA1F2" }} />
-                <Text numberOfLines={1} style={styles.iconText}>
-                  mail
                 </Text>
               </Col>
             </Row>

@@ -148,7 +148,7 @@ class BasicIcon extends Component {
             />
             <Icon
               active
-              name="game-controller-a"
+              name="logo-game-controller-a"
               style={{ width: 45, height: 45, justifyContent: "center" }}
             />
             <Icon
@@ -188,7 +188,7 @@ class BasicIcon extends Component {
               style={{ width: 45, height: 45, justifyContent: "center" }}
             />
             <Icon
-              name="ionic"
+              name="logo-ionic"
               style={{ width: 45, height: 45, justifyContent: "center" }}
             />
             <Icon
