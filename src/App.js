@@ -1,5 +1,6 @@
 import React from "react";
 import { Root } from "native-base";
+// import { StackNavigator, DrawerNavigator } from "react-navigation";
 import { createDrawerNavigator, createStackNavigator, createAppContainer } from "react-navigation";
 
 import Header from "./screens/Header/";
@@ -13,6 +14,7 @@ import Header7 from "./screens/Header/7";
 import Header8 from "./screens/Header/8";
 import HeaderSpan from "./screens/Header/header-span";
 import HeaderNoShadow from "./screens/Header/header-no-shadow";
+import HeaderTransparent from "./screens/Header/header-transparent";
 import BasicFooter from "./screens/footer/basicFooter";
 import IconFooter from "./screens/footer/iconFooter";
 import IconText from "./screens/footer/iconText";
@@ -34,6 +36,7 @@ import NHCardShowcase from "./screens/card/card-showcase";
 import NHCardList from "./screens/card/card-list";
 import NHCardHeaderAndFooter from "./screens/card/card-header-and-footer";
 import NHCardTransparent from "./screens/card/card-transparent";
+import NHCardCustomBorderRadius from "./screens/card/card-custom-border-radius";
 import BasicFab from "./screens/fab/basic";
 import MultipleFab from "./screens/fab/multiple";
 import FixedLabel from "./screens/form/fixedLabel";
@@ -48,6 +51,7 @@ import IconInput from "./screens/form/iconInput";
 import SuccessInput from "./screens/form/success";
 import ErrorInput from "./screens/form/error";
 import DisabledInput from "./screens/form/disabledInput";
+import PickerInput from "./screens/form/pickerInput";
 import Icons from "./screens/icon/icon";
 import BasicIcon from "./screens/icon/basic";
 import StateIcon from "./screens/icon/state";
@@ -69,6 +73,7 @@ import NHListHeader from "./screens/list/list-headers";
 import NHListIcon from "./screens/list/list-icon";
 import NHListAvatar from "./screens/list/list-avatar";
 import NHListThumbnail from "./screens/list/list-thumbnail";
+import NHListItemNoIndent from "./screens/list/listitem-noIndent";
 import RegularPicker from "./screens/picker/regularPicker";
 import PickerWithIcon from "./screens/picker/picker-with-icon";
 import PlaceholderPicker from "./screens/picker/placeholderPicker";
@@ -82,6 +87,7 @@ import BasicTab from "./screens/tab/basicTab";
 import ConfigTab from "./screens/tab/configTab";
 import ScrollableTab from "./screens/tab/scrollableTab";
 import BasicSegment from "./screens/segment/SegmentHeader";
+import SegmentHeaderIcon from "./screens/segment/SegmentHeaderIcon";
 import BasicToast from "./screens/toast/basic-toast";
 import ToastDuration from "./screens/toast/toast-duration";
 import ToastPosition from "./screens/toast/toast-position";
@@ -93,6 +99,15 @@ import IconActionSheet from "./screens/actionsheet/icon";
 import AdvSegment from "./screens/segment/segmentTab";
 import SimpleDeck from "./screens/deckswiper/simple";
 import AdvancedDeck from "./screens/deckswiper/advanced";
+import HeaderNoLeft from "./screens/Header/header-noLeft";
+import NHCustomRadio from "./screens/radio/custom";
+import NHDefaultRadio from "./screens/radio/default";
+import PickerWithIconStyle from "./screens/picker/picker-with-iconstyle";
+import AccordionDefault from "./screens/accordion/accordion-default";
+import AccordionIcon from "./screens/accordion/accordion-icon";
+import AccordionIconStyle from "./screens/accordion/accordion-icon-style";
+import AccordionHeaderContentStyle from "./screens/accordion/accordion-header-content-style";
+import AccordionCustomHeaderContent from "./screens/accordion/accordion-custom-header-content";
 
 import Home from "./screens/home/";
 import Anatomy from "./screens/anatomy/";
@@ -120,6 +135,8 @@ import SideBar from "./screens/sidebar";
 import Segment from "./screens/segment";
 import NHToast from "./screens/toast/";
 import Actionsheet from "./screens/actionsheet";
+import NHAccordion from "./screens/accordion/";
+import NHDatePicker from "./screens/datepicker/";
 
 const Drawer = createDrawerNavigator(
   {
@@ -147,7 +164,9 @@ const Drawer = createDrawerNavigator(
     NHTypography: { screen: NHTypography },
     Segment: { screen: Segment },
     NHToast: { screen: NHToast },
-    Actionsheet: { screen: Actionsheet }
+    Actionsheet: { screen: Actionsheet },
+    NHAccordion: { screen: NHAccordion },
+    NHDatePicker: { screen: NHDatePicker }
   },
   {
     initialRouteName: "Home",
@@ -172,6 +191,8 @@ const AppNavigator = createStackNavigator(
     Header8: { screen: Header8 },
     HeaderSpan: { screen: HeaderSpan },
     HeaderNoShadow: { screen: HeaderNoShadow },
+    HeaderNoLeft: { screen: HeaderNoLeft },
+    HeaderTransparent: { screen: HeaderTransparent },
 
     BasicFooter: { screen: BasicFooter },
     IconFooter: { screen: IconFooter },
@@ -196,6 +217,7 @@ const AppNavigator = createStackNavigator(
     NHCardList: { screen: NHCardList },
     NHCardHeaderAndFooter: { screen: NHCardHeaderAndFooter },
     NHCardTransparent: { screen: NHCardTransparent },
+    NHCardCustomBorderRadius: { screen: NHCardCustomBorderRadius },
 
     SimpleDeck: { screen: SimpleDeck },
     AdvancedDeck: { screen: AdvancedDeck },
@@ -215,6 +237,7 @@ const AppNavigator = createStackNavigator(
     SuccessInput: { screen: SuccessInput },
     ErrorInput: { screen: ErrorInput },
     DisabledInput: { screen: DisabledInput },
+    PickerInput: { screen: PickerInput },
     TextArea: { screen: TextArea },
 
     Icons: { screen: Icons },
@@ -237,6 +260,7 @@ const AppNavigator = createStackNavigator(
     NHListIcon: { screen: NHListIcon },
     NHListAvatar: { screen: NHListAvatar },
     NHListThumbnail: { screen: NHListThumbnail },
+    NHListItemNoIndent: { screen: NHListItemNoIndent },
 
     BasicListSwipe: { screen: BasicListSwipe },
     SwipeRowCustomStyle: { screen: SwipeRowCustomStyle },
@@ -251,6 +275,10 @@ const AppNavigator = createStackNavigator(
     HeaderPicker: { screen: HeaderPicker },
     HeaderStylePicker: { screen: HeaderStylePicker },
     CustomHeaderPicker: { screen: CustomHeaderPicker },
+    PickerWithIconStyle: { screen: PickerWithIconStyle },
+
+    NHCustomRadio: { screen: NHCustomRadio },
+    NHDefaultRadio: { screen: NHDefaultRadio },
 
     BasicTab: { screen: BasicTab },
     ConfigTab: { screen: ConfigTab },
@@ -258,6 +286,7 @@ const AppNavigator = createStackNavigator(
 
     BasicSegment: { screen: BasicSegment },
     AdvSegment: { screen: AdvSegment },
+    SegmentHeaderIcon: { screen: SegmentHeaderIcon },
 
     BasicToast: { screen: BasicToast },
     ToastDuration: { screen: ToastDuration },
@@ -267,7 +296,13 @@ const AppNavigator = createStackNavigator(
     ToastButton: { screen: ToastButton },
 
     RegularActionSheet: { screen: RegularActionSheet },
-    IconActionSheet: { screen: IconActionSheet }
+    IconActionSheet: { screen: IconActionSheet },
+
+    AccordionDefault: { screen: AccordionDefault },
+    AccordionIcon: { screen: AccordionIcon },
+    AccordionIconStyle: { screen: AccordionIconStyle },
+    AccordionHeaderContentStyle: { screen: AccordionHeaderContentStyle },
+    AccordionCustomHeaderContent: { screen: AccordionCustomHeaderContent }
   },
   {
     initialRouteName: "Drawer",

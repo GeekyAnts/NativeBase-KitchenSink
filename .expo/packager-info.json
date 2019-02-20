@@ -2,8 +2,8 @@
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
-  "expoServerNgrokUrl": "https://tr-gaf.geekyants.nativebase-kitchensink.exp.direct",
-  "packagerNgrokUrl": "https://packager.tr-gaf.geekyants.nativebase-kitchensink.exp.direct",
-  "ngrokPid": 60387,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "devToolsPort": 19002
 }

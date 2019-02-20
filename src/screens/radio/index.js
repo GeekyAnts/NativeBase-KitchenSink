@@ -7,7 +7,7 @@ import {
   Button,
   Icon,
   ListItem,
-  Radio,
+  List,
   Text,
   Left,
   Right,
@@ -15,48 +15,18 @@ import {
 } from "native-base";
 import styles from "./styles";
 
+const datas = [
+  {
+    route: "NHDefaultRadio",
+    text: "Default Radio"
+  },
+  {
+    route: "NHCustomRadio",
+    text: "Custom Radio"
+  }
+];
+
 class NHRadio extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      radio1: false,
-      radio2: false,
-      radio3: false,
-      radio4: true
-    };
-  }
-  toggleRadio1() {
-    this.setState({
-      radio1: true,
-      radio2: false,
-      radio3: false,
-      radio4: false
-    });
-  }
-  toggleRadio2() {
-    this.setState({
-      radio1: false,
-      radio2: true,
-      radio3: false,
-      radio4: false
-    });
-  }
-  toggleRadio3() {
-    this.setState({
-      radio1: false,
-      radio2: false,
-      radio3: true,
-      radio4: false
-    });
-  }
-  toggleRadio4() {
-    this.setState({
-      radio1: false,
-      radio2: false,
-      radio3: false,
-      radio4: true
-    });
-  }
   render() {
     return (
       <Container style={styles.container}>
@@ -76,62 +46,23 @@ class NHRadio extends Component {
         </Header>
 
         <Content>
-          <ListItem
-            selected={this.state.radio1}
-            onPress={() => this.toggleRadio1()}
-          >
-            <Left>
-              <Text>Lunch Break</Text>
-            </Left>
-            <Right>
-              <Radio
-                selected={this.state.radio1}
-                onPress={() => this.toggleRadio1()}
-              />
-            </Right>
-          </ListItem>
-          <ListItem
-            selected={this.state.radio2}
-            onPress={() => this.toggleRadio2()}
-          >
-            <Left>
-              <Text>Daily Stand Up</Text>
-            </Left>
-            <Right>
-              <Radio
-                selected={this.state.radio2}
-                onPress={() => this.toggleRadio2()}
-              />
-            </Right>
-          </ListItem>
-          <ListItem
-            selected={this.state.radio3}
-            onPress={() => this.toggleRadio3()}
-          >
-            <Left>
-              <Text>Finish List Screen</Text>
-            </Left>
-            <Right>
-              <Radio
-                selected={this.state.radio3}
-                onPress={() => this.toggleRadio3()}
-              />
-            </Right>
-          </ListItem>
-          <ListItem
-            selected={this.state.radio4}
-            onPress={() => this.toggleRadio4()}
-          >
-            <Left>
-              <Text>Discussion with Client</Text>
-            </Left>
-            <Right>
-              <Radio
-                selected={this.state.radio4}
-                onPress={() => this.toggleRadio4()}
-              />
-            </Right>
-          </ListItem>
+          <List
+            dataArray={datas}
+            renderRow={data =>
+              <ListItem
+                button
+                onPress={() => this.props.navigation.navigate(data.route)}
+              >
+                <Left>
+                  <Text>
+                    {data.text}
+                  </Text>
+                </Left>
+                <Right>
+                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                </Right>
+              </ListItem>}
+          />
         </Content>
       </Container>
     );

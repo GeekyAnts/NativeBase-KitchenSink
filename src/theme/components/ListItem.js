@@ -1,16 +1,18 @@
+// @flow
+
 import { Platform, PixelRatio } from "react-native";
 
 import pickerTheme from "./Picker";
 import variable from "./../variables/platform";
 
-export default (variables = variable) => {
+export default (variables /*: * */ = variable) => {
   const platform = variables.platform;
   const selectedStyle = {
     "NativeBase.Text": {
-      color: variables.brandPrimary
+      color: variables.listItemSelected
     },
     "NativeBase.Icon": {
-      color: variables.brandPrimary
+      color: variables.listItemSelected
     }
   };
 
@@ -224,16 +226,16 @@ export default (variables = variable) => {
       },
       alignSelf: "center"
     },
-
     ".last": {
       marginLeft: -(variables.listItemPadding + 5),
       paddingLeft: (variables.listItemPadding + 5) * 2,
       top: 1
     },
-
     ".avatar": {
       "NativeBase.Left": {
-        flex: 0
+        flex: 0,
+        alignSelf: 'flex-start',
+        paddingTop: 14
       },
       "NativeBase.Body": {
         "NativeBase.Text": {
@@ -258,11 +260,18 @@ export default (variables = variable) => {
         borderBottomWidth: variables.borderWidth,
         borderColor: variables.listBorderColor
       },
+      ".noBorder": {
+        "NativeBase.Body": {
+          borderBottomWidth: null
+        },
+        "NativeBase.Right": {
+          borderBottomWidth: null
+        }
+      },
       borderBottomWidth: null,
       paddingVertical: null,
       paddingRight: null
     },
-
     ".thumbnail": {
       "NativeBase.Left": {
         flex: 0
@@ -295,11 +304,18 @@ export default (variables = variable) => {
         borderBottomWidth: variables.borderWidth,
         borderColor: variables.listBorderColor
       },
+      ".noBorder": {
+        "NativeBase.Body": {
+          borderBottomWidth: null
+        },
+        "NativeBase.Right": {
+          borderBottomWidth: null
+        }
+      },
       borderBottomWidth: null,
       paddingVertical: null,
       paddingRight: null
     },
-
     ".icon": {
       ".last": {
         "NativeBase.Body": {
@@ -392,6 +408,14 @@ export default (variables = variable) => {
         borderColor: variables.listBorderColor,
         paddingRight: variables.listItemPadding + 5
       },
+      ".noBorder": {
+        "NativeBase.Body": {
+          borderBottomWidth: null
+        },
+        "NativeBase.Right": {
+          borderBottomWidth: null
+        }
+      },
       borderBottomWidth: null,
       paddingVertical: null,
       paddingRight: null,
@@ -400,6 +424,11 @@ export default (variables = variable) => {
     },
     ".noBorder": {
       borderBottomWidth: null
+    },
+    ".noIndent": {
+      marginLeft: null,
+      padding: variables.listItemPadding,
+      paddingLeft: variables.listItemPadding + 6,
     },
     alignItems: "center",
     flexDirection: "row",

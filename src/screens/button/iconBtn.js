@@ -30,7 +30,7 @@ class IconBtn extends Component {
           <Right />
         </Header>
 
-        <Content padder style={{ padding: 20 }}>
+        <Content padder>
           <View
             style={{ flexDirection: "row", justifyContent: "space-between" }}
           >

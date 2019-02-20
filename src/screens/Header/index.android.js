@@ -57,6 +57,14 @@ const datas = [
   {
     route: "HeaderNoShadow",
     text: "Header without shadow"
+  },
+  {
+    route: "HeaderNoLeft",
+    text: "Header noLeft"
+  },
+  {
+    route: "HeaderTransparent",
+    text: "Header Transparent"
   }
 ];
 

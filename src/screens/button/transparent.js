@@ -29,7 +29,7 @@ class Transparent extends Component {
           <Right />
         </Header>
 
-        <Content padder style={{ backgroundColor: "#fff", padding: 20 }}>
+        <Content padder style={{ backgroundColor: "#fff" }}>
           <Button transparent light style={styles.mb15}>
             <Text>Light</Text>
           </Button>
