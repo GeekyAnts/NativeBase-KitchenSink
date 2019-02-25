@@ -45,42 +45,42 @@ class IconFamily extends Component {
             <Text style={{ width: 220 }}>FontAwesome</Text>
             <Icon type="FontAwesome" name="home" style={{ color: "#999" }} />
           </ListItem>
-          <ListItem>
+          {/* <ListItem>
             <Text style={{ width: 220 }}>Foundation</Text>
             <Icon type="Foundation" name="home" style={{ color: "#999" }} />
-          </ListItem>
-          <ListItem>
+          </ListItem> */}
+          {/* <ListItem>
             <Text style={{ width: 220 }}>Material Icons</Text>
             <Icon type="MaterialIcons" name="home" style={{ color: "#999" }} />
-          </ListItem>
-          <ListItem>
+          </ListItem> */}
+          {/* <ListItem>
             <Text style={{ width: 220 }}>Material Community Icons</Text>
             <Icon
               type="MaterialCommunityIcons"
               name="home"
               style={{ color: "#999" }}
             />
-          </ListItem>
+          </ListItem> */}
           <ListItem>
             <Text style={{ width: 220 }}>Octicons</Text>
             <Icon type="Octicons" name="home" style={{ color: "#999" }} />
           </ListItem>
-          <ListItem>
+          {/* <ListItem>
             <Text style={{ width: 220 }}>Zocial</Text>
             <Icon type="Zocial" name="dropbox" style={{ color: "#999" }} />
-          </ListItem>
-          <ListItem>
+          </ListItem> */}
+          {/* <ListItem>
             <Text style={{ width: 220 }}>Simple Line Icons</Text>
             <Icon
               type="SimpleLineIcons"
               name="home"
               style={{ color: "#999" }}
             />
-          </ListItem>
-          <ListItem>
+          </ListItem> */}
+          {/* <ListItem>
             <Text style={{ width: 220 }}>Evil Icons</Text>
             <Icon type="EvilIcons" name="trophy" style={{ color: "#999" }} />
-          </ListItem>
+          </ListItem> */}
         </Content>
       </Container>
     );
