@@ -39,47 +39,54 @@ yarn start
 
 ```
 npm install -g create-react-app
-create-react-app nativebase-web-app
-cd nativebase-web-app
-npm eject
-npm install native-base --save
-npm install create-react-app --save
-npm install react-native-web --save
+npx create-react-app nativebase-app
+cd nativebase-app
+npm i native-base react-art react-native-web --save
+npm i react-app-rewired customize-cra @babel/plugin-proposal-class-properties --dev --save
 ```
-* **Setup resolve alias in your webpack configuration**
+
+* **Replace scripts in package.json
 
 ```
-alias: {
-  "react-native/Libraries/Renderer/shims/ReactNativePropRegistry": "react-native-web/dist/modules/ReactNativePropRegistry",
-  "react-native": "react-native-web"
-},
+"scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+}
 ```
-* **Add Path resolver for NativeBase dependencies in your webpack configuration**
+* **Create file config-overrides.js at root of your project**
 
 ```
-{
-  test: /\.(js|jsx|mjs)$/,
-  include: [
-    paths.appSrc,
-    path.resolve(paths.appNodeModules, "native-base-shoutem-theme"),
-    path.resolve(paths.appNodeModules, "react-navigation"),
-    path.resolve(paths.appNodeModules, "react-native-easy-grid"),
-    path.resolve(paths.appNodeModules, "react-native-drawer"),
-    path.resolve(paths.appNodeModules, "react-native-safe-area-view"),
-    path.resolve(paths.appNodeModules, "react-native-vector-icons"),
-    path.resolve(
-      paths.appNodeModules,
-      "react-native-keyboard-aware-scroll-view"
-    ),
-    path.resolve(paths.appNodeModules, "react-native-web"),
-    path.resolve(paths.appNodeModules, "react-native-tab-view"),
-    path.resolve(paths.appNodeModules, "static-container")
-  ],
-  loader: require.resolve("babel-loader"),
-  options: {
-    cacheDirectory: true
-  }
-},
+const path = require('path');
+const {
+  override,
+  addWebpackAlias,
+  babelInclude,
+  addBabelPlugins
+} = require('customize-cra');
+
+module.exports = override(
+  addWebpackAlias({
+    "react-native/Libraries/Renderer/shims/ReactNativePropRegistry": "react-native-web/dist/modules/ReactNativePropRegistry",
+    "react-native": "react-native-web"
+  }),
+  babelInclude([
+    path.resolve('src'),
+    path.resolve('node_modules/native-base-shoutem-theme'),
+    path.resolve('node_modules/react-navigation'),
+    path.resolve('node_modules/react-native-easy-grid'),
+    path.resolve('node_modules/react-native-drawer'),
+    path.resolve('node_modules/react-native-safe-area-view'),
+    path.resolve('node_modules/react-native-vector-icons'),
+    path.resolve('node_modules/react-native-keyboard-aware-scroll-view'),
+    path.resolve('node_modules/react-native-web'),
+    path.resolve('node_modules/react-native-tab-view'),
+    path.resolve('node_modules/static-container'),
+  ]),
+  addBabelPlugins(
+    "@babel/plugin-proposal-class-properties"
+  ),
+);
 ```
 
 * **Include Icons**
