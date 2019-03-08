@@ -45,7 +45,7 @@ npm i native-base react-art react-native-web --save
 npm i react-app-rewired customize-cra @babel/plugin-proposal-class-properties --dev --save
 ```
 
-* **Replace scripts in package.json
+* **Replace scripts in package.json**
 
 ```
 "scripts": {
