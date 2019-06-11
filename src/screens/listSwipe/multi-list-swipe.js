@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ListView } from "react-native";
+import { Platform, ListView } from "react-native";
 import {
   Container,
   Header,
@@ -51,7 +51,7 @@ class MultiListSwipe extends Component {
               <Icon name="arrow-back" />
             </Button>
           </Left>
-          <Body style={{ flex: 3 }}>
+          <Body style={{ flex: Platform.OS === 'ios' ? 3 : 1 }} >
             <Title>Multiple List Swipe</Title>
           </Body>
           <Right />
