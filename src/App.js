@@ -1,7 +1,9 @@
 import React from "react";
 import { Root } from "native-base";
 // import { StackNavigator, DrawerNavigator } from "react-navigation";
-import { createDrawerNavigator, createStackNavigator, createAppContainer } from "react-navigation";
+import { createAppContainer } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
+import { createDrawerNavigator } from "react-navigation-drawer";
 
 import Header from "./screens/Header/";
 import Header1 from "./screens/Header/1";
