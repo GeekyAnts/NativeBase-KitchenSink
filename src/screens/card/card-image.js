@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Image } from "react-native";
+import React, {Component} from 'react';
+import {Image} from 'react-native';
 import {
   Container,
   Header,
@@ -13,12 +13,12 @@ import {
   Thumbnail,
   Left,
   Body,
-  Right
-} from "native-base";
-import styles from "./styles";
+  Right,
+} from 'native-base';
+import styles from './styles';
 
-const logo = require("../../../assets/logo.png");
-const cardImage = require("../../../assets/drawer-cover.png");
+const logo = require('../../../assets/logo.png');
+const cardImage = require('../../../assets/drawer-cover.png');
 
 class NHCardImage extends Component {
   render() {
@@ -51,16 +51,16 @@ class NHCardImage extends Component {
             <CardItem cardBody>
               <Image
                 style={{
-                  resizeMode: "cover",
+                  resizeMode: 'cover',
                   width: null,
                   height: 200,
-                  flex: 1
+                  flex: 1,
                 }}
                 source={cardImage}
               />
             </CardItem>
 
-            <CardItem style={{ paddingVertical: 0 }}>
+            <CardItem style={{paddingVertical: 0}}>
               <Left>
                 <Button transparent>
                   <Icon active name="thumbs-up" />

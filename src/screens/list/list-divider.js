@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -10,9 +10,9 @@ import {
   Text,
   Left,
   Right,
-  Body
-} from "native-base";
-import styles from "./styles";
+  Body,
+} from 'native-base';
+import styles from './styles';
 
 class NHListDivider extends Component {
   render() {

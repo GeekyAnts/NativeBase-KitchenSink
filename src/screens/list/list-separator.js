@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -11,9 +11,9 @@ import {
   Left,
   Right,
   Body,
-  Separator
-} from "native-base";
-import styles from "./styles";
+  Separator,
+} from 'native-base';
+import styles from './styles';
 
 class NHListSeparator extends Component {
   render() {

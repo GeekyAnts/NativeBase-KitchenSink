@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -10,9 +10,9 @@ import {
   Body,
   Left,
   Right,
-  Icon
-} from "native-base";
-import styles from "./styles";
+  Icon,
+} from 'native-base';
+import styles from './styles';
 
 class IconFooter extends Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class IconFooter extends Component {
       tab1: false,
       tab2: false,
       tab3: true,
-      tab4: false
+      tab4: false,
     };
   }
   toggleTab1() {
@@ -29,7 +29,7 @@ class IconFooter extends Component {
       tab1: true,
       tab2: false,
       tab3: false,
-      tab4: false
+      tab4: false,
     });
   }
   toggleTab2() {
@@ -37,7 +37,7 @@ class IconFooter extends Component {
       tab1: false,
       tab2: true,
       tab3: false,
-      tab4: false
+      tab4: false,
     });
   }
   toggleTab3() {
@@ -45,7 +45,7 @@ class IconFooter extends Component {
       tab1: false,
       tab2: false,
       tab3: true,
-      tab4: false
+      tab4: false,
     });
   }
   toggleTab4() {
@@ -53,7 +53,7 @@ class IconFooter extends Component {
       tab1: false,
       tab2: false,
       tab3: false,
-      tab4: true
+      tab4: true,
     });
   }
   render() {

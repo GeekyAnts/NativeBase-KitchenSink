@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -9,9 +9,9 @@ import {
   Left,
   Right,
   Body,
-  Text
-} from "native-base";
-import styles from "./styles";
+  Text,
+} from 'native-base';
+import styles from './styles';
 
 class Rounded extends Component {
   render() {
@@ -29,7 +29,7 @@ class Rounded extends Component {
           <Right />
         </Header>
 
-        <Content padder style={{ backgroundColor: "#FFF" }}>
+        <Content padder style={{backgroundColor: '#FFF'}}>
           <Button rounded light style={styles.mb15}>
             <Text>Light</Text>
           </Button>

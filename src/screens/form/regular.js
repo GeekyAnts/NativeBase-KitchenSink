@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -11,9 +11,9 @@ import {
   Right,
   Input,
   Item,
-  Form
-} from "native-base";
-import styles from "./styles";
+  Form,
+} from 'native-base';
+import styles from './styles';
 
 class Regular extends Component {
   render() {

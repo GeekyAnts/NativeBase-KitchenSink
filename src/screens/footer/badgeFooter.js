@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -12,9 +12,9 @@ import {
   Left,
   Right,
   Icon,
-  Badge
-} from "native-base";
-import styles from "./styles";
+  Badge,
+} from 'native-base';
+import styles from './styles';
 
 class BadgeFooter extends Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class BadgeFooter extends Component {
       tab1: false,
       tab2: false,
       tab3: true,
-      tab4: false
+      tab4: false,
     };
   }
   toggleTab1() {
@@ -31,7 +31,7 @@ class BadgeFooter extends Component {
       tab1: true,
       tab2: false,
       tab3: false,
-      tab4: false
+      tab4: false,
     });
   }
   toggleTab2() {
@@ -39,7 +39,7 @@ class BadgeFooter extends Component {
       tab1: false,
       tab2: true,
       tab3: false,
-      tab4: false
+      tab4: false,
     });
   }
   toggleTab3() {
@@ -47,7 +47,7 @@ class BadgeFooter extends Component {
       tab1: false,
       tab2: false,
       tab3: true,
-      tab4: false
+      tab4: false,
     });
   }
   toggleTab4() {
@@ -55,7 +55,7 @@ class BadgeFooter extends Component {
       tab1: false,
       tab2: false,
       tab3: false,
-      tab4: true
+      tab4: true,
     });
   }
   render() {
@@ -81,8 +81,7 @@ class BadgeFooter extends Component {
               active={this.state.tab1}
               onPress={() => this.toggleTab1()}
               vertical
-              badge
-            >
+              badge>
               <Badge>
                 <Text>2</Text>
               </Badge>
@@ -97,9 +96,8 @@ class BadgeFooter extends Component {
               active={this.state.tab3}
               onPress={() => this.toggleTab3()}
               vertical
-              badge
-            >
-              <Badge style={{ backgroundColor: "green" }}>
+              badge>
+              <Badge style={{backgroundColor: 'green'}}>
                 <Text>51</Text>
               </Badge>
               <Icon active={this.state.tab3} name="compass" />

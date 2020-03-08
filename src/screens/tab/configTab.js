@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -11,11 +11,11 @@ import {
   Right,
   Left,
   Body,
-  TabHeading
-} from "native-base";
-import TabOne from "./tabOne";
-import TabTwo from "./tabTwo";
-import TabThree from "./tabThree";
+  TabHeading,
+} from 'native-base';
+import TabOne from './tabOne';
+import TabTwo from './tabTwo';
+import TabThree from './tabThree';
 
 class ConfigTab extends Component {
   render() {
@@ -27,20 +27,19 @@ class ConfigTab extends Component {
               <Icon name="arrow-back" />
             </Button>
           </Left>
-          <Body style={{ flex: 3 }}>
+          <Body style={{flex: 3}}>
             <Title> Advanced Tabs</Title>
           </Body>
           <Right />
         </Header>
-        <Tabs style={{ elevation: 3 }}>
+        <Tabs style={{elevation: 3}}>
           <Tab
             heading={
               <TabHeading>
                 <Icon name="camera" />
                 <Text>Camera</Text>
               </TabHeading>
-            }
-          >
+            }>
             <TabOne />
           </Tab>
           <Tab
@@ -48,8 +47,7 @@ class ConfigTab extends Component {
               <TabHeading>
                 <Text>No Icon</Text>
               </TabHeading>
-            }
-          >
+            }>
             <TabTwo />
           </Tab>
           <Tab
@@ -57,8 +55,7 @@ class ConfigTab extends Component {
               <TabHeading>
                 <Icon name="apps" />
               </TabHeading>
-            }
-          >
+            }>
             <TabThree />
           </Tab>
         </Tabs>

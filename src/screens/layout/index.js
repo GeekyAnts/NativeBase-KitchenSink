@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -11,42 +11,41 @@ import {
   Body,
   List,
   ListItem,
-  Text
-} from "native-base";
+  Text,
+} from 'native-base';
 
 const datas = [
   {
-    route: "RowNB",
-    text: "Row Grid"
+    route: 'RowNB',
+    text: 'Row Grid',
   },
   {
-    route: "ColumnNB",
-    text: "Column Grid"
+    route: 'ColumnNB',
+    text: 'Column Grid',
   },
   {
-    route: "NestedGrid",
-    text: "Nested Grid"
+    route: 'NestedGrid',
+    text: 'Nested Grid',
   },
   {
-    route: "CustomRow",
-    text: "Custom Row Size Grid"
+    route: 'CustomRow',
+    text: 'Custom Row Size Grid',
   },
   {
-    route: "CustomCol",
-    text: "Custom Column Size Grid"
-  }
+    route: 'CustomCol',
+    text: 'Custom Column Size Grid',
+  },
 ];
 
 class NHLayout extends Component {
   render() {
     return (
-      <Container style={{ backgroundColor: "#FBFAFA" }}>
+      <Container style={{backgroundColor: '#FBFAFA'}}>
         <Header>
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}
-            >
+              onPress={() => this.props.navigation.openDrawer()}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -59,20 +58,18 @@ class NHLayout extends Component {
         <Content>
           <List
             dataArray={datas}
-            renderRow={data =>
+            renderRow={data => (
               <ListItem
                 button
-                onPress={() => this.props.navigation.navigate(data.route)}
-              >
+                onPress={() => this.props.navigation.navigate(data.route)}>
                 <Left>
-                  <Text>
-                    {data.text}
-                  </Text>
+                  <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="arrow-forward" style={{color: '#999'}} />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>

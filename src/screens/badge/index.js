@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -10,9 +10,9 @@ import {
   Text,
   Left,
   Right,
-  Body
-} from "native-base";
-import styles from "./styles";
+  Body,
+} from 'native-base';
+import styles from './styles';
 
 class NHBadge extends Component {
   render() {
@@ -22,8 +22,7 @@ class NHBadge extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}
-            >
+              onPress={() => this.props.navigation.openDrawer()}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -55,13 +54,12 @@ class NHBadge extends Component {
           <Badge primary style={styles.mb}>
             <Icon
               name="star"
-              style={{ fontSize: 15, color: "#fff", lineHeight: 20 }}
+              style={{fontSize: 15, color: '#fff', lineHeight: 20}}
             />
           </Badge>
           <Badge
-            style={{ backgroundColor: "black" }}
-            textStyle={{ color: "white" }}
-          >
+            style={{backgroundColor: 'black'}}
+            textStyle={{color: 'white'}}>
             <Text>1866</Text>
           </Badge>
         </Content>

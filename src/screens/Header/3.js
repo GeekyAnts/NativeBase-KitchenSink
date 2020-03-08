@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -8,9 +8,9 @@ import {
   Left,
   Right,
   Body,
-  Text
-} from "native-base";
-import styles from "./styles";
+  Text,
+} from 'native-base';
+import styles from './styles';
 
 class Header3 extends Component {
   render() {
@@ -21,8 +21,7 @@ class Header3 extends Component {
             <Button
               hasText
               transparent
-              onPress={() => this.props.navigation.goBack()}
-            >
+              onPress={() => this.props.navigation.goBack()}>
               <Text>Back</Text>
             </Button>
           </Left>
@@ -33,8 +32,7 @@ class Header3 extends Component {
             <Button
               hasText
               transparent
-              onPress={() => this.props.navigation.goBack()}
-            >
+              onPress={() => this.props.navigation.goBack()}>
               <Text>Cancel</Text>
             </Button>
           </Right>

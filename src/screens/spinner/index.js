@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 
 import {
   Container,
@@ -10,10 +10,10 @@ import {
   Spinner,
   Left,
   Right,
-  Body
-} from "native-base";
+  Body,
+} from 'native-base';
 
-import styles from "./styles";
+import styles from './styles';
 
 class NHSpinner extends Component {
   // eslint-disable-line
@@ -25,8 +25,7 @@ class NHSpinner extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}
-            >
+              onPress={() => this.props.navigation.openDrawer()}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -34,7 +33,6 @@ class NHSpinner extends Component {
             <Title>Spinner</Title>
           </Body>
           <Right />
-
         </Header>
 
         <Content>

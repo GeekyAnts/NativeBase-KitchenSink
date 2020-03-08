@@ -1,12 +1,12 @@
 export default {
   container: {
-    backgroundColor: "#FFF"
+    backgroundColor: '#FFF',
   },
   text: {
-    alignSelf: "center",
-    marginBottom: 7
+    alignSelf: 'center',
+    marginBottom: 7,
   },
   mb: {
-    marginBottom: 15
-  }
+    marginBottom: 15,
+  },
 };

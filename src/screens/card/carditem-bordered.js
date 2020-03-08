@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -11,9 +11,9 @@ import {
   Text,
   Body,
   Left,
-  Right
-} from "native-base";
-import styles from "./styles";
+  Right,
+} from 'native-base';
+import styles from './styles';
 
 class NHCardItemBordered extends Component {
   render() {

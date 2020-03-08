@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -12,9 +12,9 @@ import {
   Right,
   IconNB,
   Item,
-  Input
-} from "native-base";
-import styles from "./styles";
+  Input,
+} from 'native-base';
+import styles from './styles';
 
 class Error extends Component {
   render() {

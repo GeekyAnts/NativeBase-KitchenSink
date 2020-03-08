@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 
 import {
   Container,
@@ -13,10 +13,10 @@ import {
   Grid,
   Row,
   Col,
-  Icon
-} from "native-base";
+  Icon,
+} from 'native-base';
 
-import styles from "./styles";
+import styles from './styles';
 
 class StateIcon extends Component {
   render() {

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -11,12 +11,12 @@ import {
   Body,
   Left,
   Right,
-  View
-} from "native-base";
-import styles from "./styles";
+  View,
+} from 'native-base';
+import styles from './styles';
 
-const logo = require("../../../assets/splashscreen.png");
-const cover = require("../../../assets/web-cover1.png");
+const logo = require('../../../assets/splashscreen.png');
+const cover = require('../../../assets/web-cover1.png');
 
 class NHThumbnail extends Component {
   render() {
@@ -26,8 +26,7 @@ class NHThumbnail extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}
-            >
+              onPress={() => this.props.navigation.openDrawer()}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -38,7 +37,7 @@ class NHThumbnail extends Component {
         </Header>
 
         <Content padder>
-          <View style={{ flex: 1, alignItems: "center" }}>
+          <View style={{flex: 1, alignItems: 'center'}}>
             <Text style={styles.mb10}>Square Thumbnail</Text>
             <Thumbnail square small source={logo} style={styles.mb10} />
             <Thumbnail square source={logo} style={styles.mb10} />

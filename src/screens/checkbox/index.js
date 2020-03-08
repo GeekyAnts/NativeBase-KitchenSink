@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -11,9 +11,9 @@ import {
   Text,
   Left,
   Right,
-  Body
-} from "native-base";
-import styles from "./styles";
+  Body,
+} from 'native-base';
+import styles from './styles';
 
 class NHCheckbox extends Component {
   constructor(props) {
@@ -22,27 +22,27 @@ class NHCheckbox extends Component {
       checkbox1: true,
       checkbox2: true,
       checkbox3: true,
-      checkbox4: false
+      checkbox4: false,
     };
   }
   toggleSwitch1() {
     this.setState({
-      checkbox1: !this.state.checkbox1
+      checkbox1: !this.state.checkbox1,
     });
   }
   toggleSwitch2() {
     this.setState({
-      checkbox2: !this.state.checkbox2
+      checkbox2: !this.state.checkbox2,
     });
   }
   toggleSwitch3() {
     this.setState({
-      checkbox3: !this.state.checkbox3
+      checkbox3: !this.state.checkbox3,
     });
   }
   toggleSwitch4() {
     this.setState({
-      checkbox4: !this.state.checkbox4
+      checkbox4: !this.state.checkbox4,
     });
   }
   render() {
@@ -52,8 +52,7 @@ class NHCheckbox extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}
-            >
+              onPress={() => this.props.navigation.openDrawer()}>
               <Icon name="menu" />
             </Button>
           </Left>

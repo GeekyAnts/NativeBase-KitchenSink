@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -10,13 +10,13 @@ import {
   Right,
   Left,
   Body,
-  ScrollableTab
-} from "native-base";
-import TabOne from "./tabOne";
-import TabTwo from "./tabTwo";
-import TabThree from "./tabThree";
-import TabFour from "./tabFour";
-import TabFive from "./tabFive";
+  ScrollableTab,
+} from 'native-base';
+import TabOne from './tabOne';
+import TabTwo from './tabTwo';
+import TabThree from './tabThree';
+import TabFour from './tabFour';
+import TabFive from './tabFive';
 
 class BasicTab extends Component {
   render() {

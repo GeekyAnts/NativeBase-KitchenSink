@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -9,11 +9,11 @@ import {
   Tab,
   Right,
   Left,
-  Body
-} from "native-base";
-import TabOne from "./tabOne";
-import TabTwo from "./tabTwo";
-import TabThree from "./tabThree";
+  Body,
+} from 'native-base';
+import TabOne from './tabOne';
+import TabTwo from './tabTwo';
+import TabThree from './tabThree';
 
 class BasicTab extends Component {
   render() {

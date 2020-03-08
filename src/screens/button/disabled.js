@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { View } from "react-native";
+import React, {Component} from 'react';
+import {View} from 'react-native';
 import {
   Container,
   Header,
@@ -10,9 +10,9 @@ import {
   Left,
   Right,
   Body,
-  Text
-} from "native-base";
-import styles from "./styles";
+  Text,
+} from 'native-base';
+import styles from './styles';
 
 class Disabled extends Component {
   render() {
@@ -31,7 +31,7 @@ class Disabled extends Component {
         </Header>
 
         <Content>
-          <View style={{ paddingHorizontal: 20, padding: 10 }}>
+          <View style={{paddingHorizontal: 20, padding: 10}}>
             <Button disabled style={styles.mb15}>
               <Text>Default</Text>
             </Button>

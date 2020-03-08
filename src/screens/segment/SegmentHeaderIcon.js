@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -9,14 +9,14 @@ import {
   Left,
   Right,
   Body,
-  Segment
-} from "native-base";
+  Segment,
+} from 'native-base';
 
 class SegmentHeaderIcon extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      seg: 2
+      seg: 2,
     };
   }
   render() {
@@ -33,15 +33,13 @@ class SegmentHeaderIcon extends Component {
               <Button
                 first
                 active={this.state.seg === 1 ? true : false}
-                onPress={() => this.setState({ seg: 1 })}
-              >
+                onPress={() => this.setState({seg: 1})}>
                 <Icon name="arrow-back" />
               </Button>
               <Button
                 last
                 active={this.state.seg === 2 ? true : false}
-                onPress={() => this.setState({ seg: 2 })}
-              >
+                onPress={() => this.setState({seg: 2})}>
                 <Icon name="arrow-forward" />
               </Button>
             </Segment>

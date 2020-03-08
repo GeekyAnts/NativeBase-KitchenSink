@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -12,9 +12,9 @@ import {
   Text,
   Left,
   Right,
-  Body
-} from "native-base";
-import styles from "./styles";
+  Body,
+} from 'native-base';
+import styles from './styles';
 
 class NHTypography extends Component {
   render() {
@@ -24,8 +24,7 @@ class NHTypography extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}
-            >
+              onPress={() => this.props.navigation.openDrawer()}>
               <Icon name="menu" />
             </Button>
           </Left>

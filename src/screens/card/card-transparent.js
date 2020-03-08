@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 
 import {
   Container,
@@ -12,10 +12,10 @@ import {
   Text,
   Body,
   Left,
-  Right
-} from "native-base";
+  Right,
+} from 'native-base';
 
-import styles from "./styles";
+import styles from './styles';
 
 class NHCardTransparent extends Component {
   render() {

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -11,47 +11,47 @@ import {
   Body,
   Right,
   List,
-  ListItem
-} from "native-base";
-import styles from "./styles";
+  ListItem,
+} from 'native-base';
+import styles from './styles';
 
 const datas = [
   {
-    route: "BasicCard",
-    text: "Basic Card"
+    route: 'BasicCard',
+    text: 'Basic Card',
   },
   {
-    route: "NHCardHeaderAndFooter",
-    text: "Card Header & Footer"
+    route: 'NHCardHeaderAndFooter',
+    text: 'Card Header & Footer',
   },
   {
-    route: "NHCardItemBordered",
-    text: "Bordered CardItem"
+    route: 'NHCardItemBordered',
+    text: 'Bordered CardItem',
   },
   {
-    route: "NHCardTransparent",
-    text: "Transparent Card"
+    route: 'NHCardTransparent',
+    text: 'Transparent Card',
   },
   {
-    route: "NHCardItemButton",
-    text: "Button CardItem"
+    route: 'NHCardItemButton',
+    text: 'Button CardItem',
   },
   {
-    route: "NHCardList",
-    text: "Card List"
+    route: 'NHCardList',
+    text: 'Card List',
   },
   {
-    route: "NHCardImage",
-    text: "Card Image"
+    route: 'NHCardImage',
+    text: 'Card Image',
   },
   {
-    route: "NHCardShowcase",
-    text: "Card Showcase"
+    route: 'NHCardShowcase',
+    text: 'Card Showcase',
   },
   {
-    route: "NHCardCustomBorderRadius",
-    text: "Card Custom BorderRadius"
-  }
+    route: 'NHCardCustomBorderRadius',
+    text: 'Card Custom BorderRadius',
+  },
 ];
 
 class NHCard extends Component {
@@ -62,8 +62,7 @@ class NHCard extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}
-            >
+              onPress={() => this.props.navigation.openDrawer()}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -76,20 +75,18 @@ class NHCard extends Component {
         <Content>
           <List
             dataArray={datas}
-            renderRow={data =>
+            renderRow={data => (
               <ListItem
                 button
-                onPress={() => this.props.navigation.navigate(data.route)}
-              >
+                onPress={() => this.props.navigation.navigate(data.route)}>
                 <Left>
-                  <Text>
-                    {data.text}
-                  </Text>
+                  <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="arrow-forward" style={{color: '#999'}} />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>

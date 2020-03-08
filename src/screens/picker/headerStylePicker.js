@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -10,9 +10,9 @@ import {
   Body,
   Left,
   Picker,
-  Form
-} from "native-base";
-import styles from "./styles";
+  Form,
+} from 'native-base';
+import styles from './styles';
 
 const Item = Picker.Item;
 
@@ -20,12 +20,12 @@ class RegularPicker extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected5: "key2"
+      selected5: 'key2',
     };
   }
   onValueChange5(value: string) {
     this.setState({
-      selected5: value
+      selected5: value,
     });
   }
   render() {
@@ -37,7 +37,7 @@ class RegularPicker extends Component {
               <Icon name="arrow-back" />
             </Button>
           </Left>
-          <Body style={{ flex: 3 }}>
+          <Body style={{flex: 3}}>
             <Title>Custom Header Style</Title>
           </Body>
           <Right />
@@ -48,13 +48,12 @@ class RegularPicker extends Component {
             <Picker
               mode="dropdown"
               iosIcon={<Icon name="ios-arrow-down" />}
-              headerStyle={{ backgroundColor: "#b95dd3" }}
-              headerBackButtonTextStyle={{ color: "#fff" }}
-              headerTitleStyle={{ color: "#fff" }}
-              style={{ width: undefined }}
+              headerStyle={{backgroundColor: '#b95dd3'}}
+              headerBackButtonTextStyle={{color: '#fff'}}
+              headerTitleStyle={{color: '#fff'}}
+              style={{width: undefined}}
               selectedValue={this.state.selected5}
-              onValueChange={this.onValueChange5.bind(this)}
-            >
+              onValueChange={this.onValueChange5.bind(this)}>
               <Item label="Wallet" value="key0" />
               <Item label="ATM Card" value="key1" />
               <Item label="Debit Card" value="key2" />

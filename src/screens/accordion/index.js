@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -11,30 +11,30 @@ import {
   Icon,
   List,
   ListItem,
-  Text
-} from "native-base";
+  Text,
+} from 'native-base';
 
 const datas = [
   {
-    route: "AccordionDefault",
-    text: "Default Accordion"
+    route: 'AccordionDefault',
+    text: 'Default Accordion',
   },
   {
-    route: "AccordionIcon",
-    text: "Icon and Expanded Icon"
+    route: 'AccordionIcon',
+    text: 'Icon and Expanded Icon',
   },
   {
-    route: "AccordionIconStyle",
-    text: "Icon and Expanded Icon style"
+    route: 'AccordionIconStyle',
+    text: 'Icon and Expanded Icon style',
   },
   {
-    route: "AccordionHeaderContentStyle",
-    text: "Header and Content style"
+    route: 'AccordionHeaderContentStyle',
+    text: 'Header and Content style',
   },
   {
-    route: "AccordionCustomHeaderContent",
-    text: "Custom Header and Content"
-  }
+    route: 'AccordionCustomHeaderContent',
+    text: 'Custom Header and Content',
+  },
 ];
 
 class NHAccordion extends Component {
@@ -45,8 +45,7 @@ class NHAccordion extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}
-            >
+              onPress={() => this.props.navigation.openDrawer()}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -56,23 +55,21 @@ class NHAccordion extends Component {
           <Right />
         </Header>
 
-        <Content style={{ backgroundColor: "white" }}>
+        <Content style={{backgroundColor: 'white'}}>
           <List
             dataArray={datas}
-            renderRow={data =>
+            renderRow={data => (
               <ListItem
                 button
-                onPress={() => this.props.navigation.navigate(data.route)}
-              >
+                onPress={() => this.props.navigation.navigate(data.route)}>
                 <Left>
-                  <Text>
-                    {data.text}
-                  </Text>
+                  <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="arrow-forward" style={{color: '#999'}} />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>

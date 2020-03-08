@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -11,19 +11,19 @@ import {
   Text,
   Left,
   Right,
-  Body
-} from "native-base";
-import styles from "./styles";
+  Body,
+} from 'native-base';
+import styles from './styles';
 
 const datas = [
-  "Simon Mignolet",
-  "Nathaniel Clyne",
-  "Dejan Lovren",
-  "Mama Sakho",
-  "Alberto Moreno",
-  "Emre Can",
-  "Joe Allen",
-  "Phil Coutinho"
+  'Simon Mignolet',
+  'Nathaniel Clyne',
+  'Dejan Lovren',
+  'Mama Sakho',
+  'Alberto Moreno',
+  'Emre Can',
+  'Joe Allen',
+  'Phil Coutinho',
 ];
 
 class NHBasicList extends Component {
@@ -45,17 +45,16 @@ class NHBasicList extends Component {
         <Content>
           <List
             dataArray={datas}
-            renderRow={data =>
+            renderRow={data => (
               <ListItem>
                 <Left>
-                  <Text>
-                    {data}
-                  </Text>
+                  <Text>{data}</Text>
                 </Left>
                 <Right>
                   <Icon name="arrow-forward" />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -11,55 +11,55 @@ import {
   Body,
   Text,
   ListItem,
-  List
-} from "native-base";
-import styles from "./styles";
+  List,
+} from 'native-base';
+import styles from './styles';
 
 const datas = [
   {
-    route: "Header1",
-    text: "Only Title"
+    route: 'Header1',
+    text: 'Only Title',
   },
   {
-    route: "Header2",
-    text: "Icon Buttons"
+    route: 'Header2',
+    text: 'Icon Buttons',
   },
   {
-    route: "Header3",
-    text: "Text Buttons"
+    route: 'Header3',
+    text: 'Text Buttons',
   },
   {
-    route: "Header4",
-    text: "Icon Button and Text Button"
+    route: 'Header4',
+    text: 'Icon Button and Text Button',
   },
   {
-    route: "Header5",
-    text: "Icon and Text Buttons"
+    route: 'Header5',
+    text: 'Icon and Text Buttons',
   },
   {
-    route: "Header6",
-    text: "Multiple Icon Buttons"
+    route: 'Header6',
+    text: 'Multiple Icon Buttons',
   },
   {
-    route: "Header7",
-    text: "Title and Subtitle"
+    route: 'Header7',
+    text: 'Title and Subtitle',
   },
   {
-    route: "Header8",
-    text: "Custom Background Color"
+    route: 'Header8',
+    text: 'Custom Background Color',
   },
   {
-    route: "HeaderSpan",
-    text: "Header Span"
+    route: 'HeaderSpan',
+    text: 'Header Span',
   },
   {
-    route: "HeaderNoShadow",
-    text: "Header without shadow"
+    route: 'HeaderNoShadow',
+    text: 'Header without shadow',
   },
   {
-    route: "HeaderTransparent",
-    text: "Header Transparent"
-  }
+    route: 'HeaderTransparent',
+    text: 'Header Transparent',
+  },
 ];
 
 class HeaderNB extends Component {
@@ -70,8 +70,7 @@ class HeaderNB extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}
-            >
+              onPress={() => this.props.navigation.openDrawer()}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -84,20 +83,18 @@ class HeaderNB extends Component {
         <Content>
           <List
             dataArray={datas}
-            renderRow={data =>
+            renderRow={data => (
               <ListItem
                 button
-                onPress={() => this.props.navigation.navigate(data.route)}
-              >
+                onPress={() => this.props.navigation.navigate(data.route)}>
                 <Left>
-                  <Text>
-                    {data.text}
-                  </Text>
+                  <Text>{data.text}</Text>
                 </Left>
                 <Right>
                   <Icon name="arrow-forward" />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>

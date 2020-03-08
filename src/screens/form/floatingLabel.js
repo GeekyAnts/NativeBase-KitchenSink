@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -13,9 +13,9 @@ import {
   Right,
   Icon,
   Form,
-  Text
-} from "native-base";
-import styles from "./styles";
+  Text,
+} from 'native-base';
+import styles from './styles';
 
 class FloatingLabel extends Component {
   render() {
@@ -44,7 +44,7 @@ class FloatingLabel extends Component {
               <Input secureTextEntry />
             </Item>
           </Form>
-          <Button block style={{ margin: 15, marginTop: 50 }}>
+          <Button block style={{margin: 15, marginTop: 50}}>
             <Text>Sign In</Text>
           </Button>
         </Content>

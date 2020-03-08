@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -11,9 +11,9 @@ import {
   Body,
   Left,
   Picker,
-  ListItem
-} from "native-base";
-import styles from "./styles";
+  ListItem,
+} from 'native-base';
+import styles from './styles';
 
 const Item = Picker.Item;
 
@@ -22,15 +22,15 @@ class NHPicker extends Component {
     super(props);
     this.state = {
       selectedItem: undefined,
-      selected1: "key1",
+      selected1: 'key1',
       results: {
-        items: []
-      }
+        items: [],
+      },
     };
   }
   onValueChange(value: string) {
     this.setState({
-      selected1: value
+      selected1: value,
     });
   }
   render() {
@@ -40,8 +40,7 @@ class NHPicker extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}
-            >
+              onPress={() => this.props.navigation.openDrawer()}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -54,7 +53,7 @@ class NHPicker extends Component {
         <Content>
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: "#4CDA64" }}>
+              <Button style={{backgroundColor: '#4CDA64'}}>
                 <Icon name="arrow-dropdown" />
               </Button>
             </Left>
@@ -65,10 +64,9 @@ class NHPicker extends Component {
               <Picker
                 note
                 mode="dropdown"
-                style={{ width: 120 }}
+                style={{width: 120}}
                 selectedValue={this.state.selected1}
-                onValueChange={this.onValueChange.bind(this)}
-              >
+                onValueChange={this.onValueChange.bind(this)}>
                 <Item label="TATA" value="key0" />
                 <Item label="AIRTEL" value="key1" />
               </Picker>

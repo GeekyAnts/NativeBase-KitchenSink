@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -11,23 +11,23 @@ import {
   Right,
   Body,
   List,
-  ListItem
-} from "native-base";
-import styles from "./styles";
+  ListItem,
+} from 'native-base';
+import styles from './styles';
 
 const datas = [
   {
-    route: "BasicListSwipe",
-    text: "Single SwipeRow"
+    route: 'BasicListSwipe',
+    text: 'Single SwipeRow',
   },
   {
-    route: "SwipeRowCustomStyle",
-    text: "Swipe Row Custom Style"
+    route: 'SwipeRowCustomStyle',
+    text: 'Swipe Row Custom Style',
   },
   {
-    route: "MultiListSwipe",
-    text: "Multiple List Swipe"
-  }
+    route: 'MultiListSwipe',
+    text: 'Multiple List Swipe',
+  },
 ];
 
 class ListSwipe extends Component {
@@ -38,8 +38,7 @@ class ListSwipe extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}
-            >
+              onPress={() => this.props.navigation.openDrawer()}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -49,23 +48,21 @@ class ListSwipe extends Component {
           <Right />
         </Header>
 
-        <Content scrollEnabled={false} contentContainerStyle={{ flex: 1 }}>
+        <Content scrollEnabled={false} contentContainerStyle={{flex: 1}}>
           <List
             dataArray={datas}
-            renderRow={data =>
+            renderRow={data => (
               <ListItem
                 button
-                onPress={() => this.props.navigation.navigate(data.route)}
-              >
+                onPress={() => this.props.navigation.navigate(data.route)}>
                 <Left>
-                  <Text>
-                    {data.text}
-                  </Text>
+                  <Text>{data.text}</Text>
                 </Left>
                 <Right>
                   <Icon name="arrow-forward" />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>

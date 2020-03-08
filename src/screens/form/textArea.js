@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -9,9 +9,9 @@ import {
   Body,
   Left,
   Right,
-  Icon
-} from "native-base";
-import styles from "./styles";
+  Icon,
+} from 'native-base';
+import styles from './styles';
 
 class TextArea extends Component {
   render() {

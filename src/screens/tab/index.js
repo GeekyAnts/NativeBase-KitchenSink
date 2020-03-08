@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -11,23 +11,23 @@ import {
   Right,
   Body,
   List,
-  ListItem
-} from "native-base";
-import styles from "./styles";
+  ListItem,
+} from 'native-base';
+import styles from './styles';
 
 const datas = [
   {
-    route: "BasicTab",
-    text: "Basic Tabs"
+    route: 'BasicTab',
+    text: 'Basic Tabs',
   },
   {
-    route: "ConfigTab",
-    text: "Advanced Tabs"
+    route: 'ConfigTab',
+    text: 'Advanced Tabs',
   },
   {
-    route: "ScrollableTab",
-    text: "Scrollable Tabs"
-  }
+    route: 'ScrollableTab',
+    text: 'Scrollable Tabs',
+  },
 ];
 
 class NHTab extends Component {
@@ -36,28 +36,28 @@ class NHTab extends Component {
     this.state = {
       tab1: false,
       tab2: false,
-      tab3: true
+      tab3: true,
     };
   }
   toggleTab1() {
     this.setState({
       tab1: true,
       tab2: false,
-      tab3: false
+      tab3: false,
     });
   }
   toggleTab2() {
     this.setState({
       tab1: false,
       tab2: true,
-      tab3: false
+      tab3: false,
     });
   }
   toggleTab3() {
     this.setState({
       tab1: false,
       tab2: false,
-      tab3: true
+      tab3: true,
     });
   }
   render() {
@@ -67,8 +67,7 @@ class NHTab extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}
-            >
+              onPress={() => this.props.navigation.openDrawer()}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -81,20 +80,18 @@ class NHTab extends Component {
         <Content>
           <List
             dataArray={datas}
-            renderRow={data =>
+            renderRow={data => (
               <ListItem
                 button
-                onPress={() => this.props.navigation.navigate(data.route)}
-              >
+                onPress={() => this.props.navigation.navigate(data.route)}>
                 <Left>
-                  <Text>
-                    {data.text}
-                  </Text>
+                  <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="arrow-forward" style={{color: '#999'}} />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>

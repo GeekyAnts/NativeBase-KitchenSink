@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -11,27 +11,27 @@ import {
   Body,
   Right,
   List,
-  ListItem
-} from "native-base";
-import styles from "./styles";
+  ListItem,
+} from 'native-base';
+import styles from './styles';
 
 const datas = [
   {
-    route: "BasicFooter",
-    text: "Basic Footer"
+    route: 'BasicFooter',
+    text: 'Basic Footer',
   },
   {
-    route: "IconFooter",
-    text: "Icon Footer"
+    route: 'IconFooter',
+    text: 'Icon Footer',
   },
   {
-    route: "IconText",
-    text: "Icon & Text Footer"
+    route: 'IconText',
+    text: 'Icon & Text Footer',
   },
   {
-    route: "BadgeFooter",
-    text: "With Badge"
-  }
+    route: 'BadgeFooter',
+    text: 'With Badge',
+  },
 ];
 
 class NHFooter extends Component {
@@ -42,8 +42,7 @@ class NHFooter extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}
-            >
+              onPress={() => this.props.navigation.openDrawer()}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -56,20 +55,18 @@ class NHFooter extends Component {
         <Content>
           <List
             dataArray={datas}
-            renderRow={data =>
+            renderRow={data => (
               <ListItem
                 button
-                onPress={() => this.props.navigation.navigate(data.route)}
-              >
+                onPress={() => this.props.navigation.navigate(data.route)}>
                 <Left>
-                  <Text>
-                    {data.text}
-                  </Text>
+                  <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="arrow-forward" style={{color: '#999'}} />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -11,10 +11,10 @@ import {
   FooterTab,
   Left,
   Right,
-  Body
-} from "native-base";
+  Body,
+} from 'native-base';
 
-import styles from "./styles";
+import styles from './styles';
 
 class Anatomy extends Component {
   render() {
@@ -24,8 +24,7 @@ class Anatomy extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}
-            >
+              onPress={() => this.props.navigation.openDrawer()}>
               <Icon name="ios-menu" />
             </Button>
           </Left>

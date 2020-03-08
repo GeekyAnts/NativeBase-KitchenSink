@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   Container,
   Header,
@@ -7,9 +7,9 @@ import {
   Icon,
   Left,
   Right,
-  Body
-} from "native-base";
-import { Grid, Col } from "react-native-easy-grid";
+  Body,
+} from 'native-base';
+import {Grid, Col} from 'react-native-easy-grid';
 
 class ColumnNB extends Component {
   render() {
@@ -28,8 +28,8 @@ class ColumnNB extends Component {
         </Header>
 
         <Grid>
-          <Col style={{ backgroundColor: "#635DB7" }} />
-          <Col style={{ backgroundColor: "#00CE9F" }} />
+          <Col style={{backgroundColor: '#635DB7'}} />
+          <Col style={{backgroundColor: '#00CE9F'}} />
         </Grid>
       </Container>
     );
