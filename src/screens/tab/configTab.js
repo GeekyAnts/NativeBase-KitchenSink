@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -12,10 +12,10 @@ import {
   Left,
   Body,
   TabHeading,
-} from 'native-base';
-import TabOne from './tabOne';
-import TabTwo from './tabTwo';
-import TabThree from './tabThree';
+} from "native-base";
+import TabOne from "./tabOne";
+import TabTwo from "./tabTwo";
+import TabThree from "./tabThree";
 
 class ConfigTab extends Component {
   render() {

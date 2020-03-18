@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -11,8 +11,8 @@ import {
   Left,
   Picker,
   Form,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
 const Item = Picker.Item;
 
@@ -20,7 +20,7 @@ class PickerWithIconStyle extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected1: 'key1',
+      selected1: "key1",
     };
   }
   onValueChange(value: string) {
@@ -51,7 +51,7 @@ class PickerWithIconStyle extends Component {
               iosIcon={
                 <Icon
                   name="arrow-dropdown-circle"
-                  style={{color: '#007aff', fontSize: 25}}
+                  style={{color: "#007aff", fontSize: 25}}
                 />
               }
               style={{width: undefined}}

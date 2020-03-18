@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Image, View} from 'react-native';
+import React, {Component} from "react";
+import {Image, View} from "react-native";
 import {
   Container,
   Header,
@@ -15,32 +15,32 @@ import {
   Left,
   Right,
   Body,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
-const cardOne = require('../../../assets/swiper-1.png');
-const cardTwo = require('../../../assets/swiper-2.png');
-const cardThree = require('../../../assets/swiper-3.png');
-const cardFour = require('../../../assets/swiper-4.png');
+const cardOne = require("../../../assets/swiper-1.png");
+const cardTwo = require("../../../assets/swiper-2.png");
+const cardThree = require("../../../assets/swiper-3.png");
+const cardFour = require("../../../assets/swiper-4.png");
 const cards = [
   {
-    text: 'Card One',
-    name: 'One',
+    text: "Card One",
+    name: "One",
     image: cardOne,
   },
   {
-    text: 'Card Two',
-    name: 'Two',
+    text: "Card Two",
+    name: "Two",
     image: cardTwo,
   },
   {
-    text: 'Card Three',
-    name: 'Three',
+    text: "Card Three",
+    name: "Three",
     image: cardThree,
   },
   {
-    text: 'Card Four',
-    name: 'Four',
+    text: "Card Four",
+    name: "Four",
     image: cardFour,
   },
 ];
@@ -67,7 +67,7 @@ class AdvancedDeck extends Component {
             dataSource={cards}
             looping={false}
             renderEmpty={() => (
-              <View style={{alignSelf: 'center'}}>
+              <View style={{alignSelf: "center"}}>
                 <Text>Over</Text>
               </View>
             )}
@@ -85,7 +85,7 @@ class AdvancedDeck extends Component {
                 <CardItem cardBody>
                   <Image
                     style={{
-                      resizeMode: 'cover',
+                      resizeMode: "cover",
                       width: null,
                       flex: 1,
                       height: 300,
@@ -94,7 +94,7 @@ class AdvancedDeck extends Component {
                   />
                 </CardItem>
                 <CardItem>
-                  <IconNB name={'ios-heart'} style={{color: '#ED4A6A'}} />
+                  <IconNB name={"ios-heart"} style={{color: "#ED4A6A"}} />
                   <Text>{item.name}</Text>
                 </CardItem>
               </Card>
@@ -103,13 +103,13 @@ class AdvancedDeck extends Component {
         </View>
         <View
           style={{
-            flexDirection: 'row',
+            flexDirection: "row",
             flex: 1,
-            position: 'absolute',
+            position: "absolute",
             bottom: 50,
             left: 0,
             right: 0,
-            justifyContent: 'space-between',
+            justifyContent: "space-between",
             padding: 15,
           }}>
           <Button iconLeft onPress={() => this._deckSwiper._root.swipeLeft()}>

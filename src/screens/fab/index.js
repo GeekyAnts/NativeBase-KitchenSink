@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -12,17 +12,17 @@ import {
   ListItem,
   Content,
   Text,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
 const datas = [
   {
-    route: 'BasicFab',
-    text: 'Basic FAB',
+    route: "BasicFab",
+    text: "Basic FAB",
   },
   {
-    route: 'MultipleFab',
-    text: 'Multiple FABs',
+    route: "MultipleFab",
+    text: "Multiple FABs",
   },
 ];
 
@@ -55,7 +55,7 @@ class NHFab extends Component {
                   <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{color: '#999'}} />
+                  <Icon name="arrow-forward" style={{color: "#999"}} />
                 </Right>
               </ListItem>
             )}

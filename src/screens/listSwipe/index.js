@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -12,21 +12,21 @@ import {
   Body,
   List,
   ListItem,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
 const datas = [
   {
-    route: 'BasicListSwipe',
-    text: 'Single SwipeRow',
+    route: "BasicListSwipe",
+    text: "Single SwipeRow",
   },
   {
-    route: 'SwipeRowCustomStyle',
-    text: 'Swipe Row Custom Style',
+    route: "SwipeRowCustomStyle",
+    text: "Swipe Row Custom Style",
   },
   {
-    route: 'MultiListSwipe',
-    text: 'Multiple List Swipe',
+    route: "MultiListSwipe",
+    text: "Multiple List Swipe",
   },
 ];
 

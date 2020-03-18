@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -11,8 +11,8 @@ import {
   Right,
   Body,
   Toast,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
 class ToastType extends Component {
   constructor(props) {
@@ -40,8 +40,8 @@ class ToastType extends Component {
           <Button
             onPress={() =>
               Toast.show({
-                text: 'Wrong password!',
-                buttonText: 'Okay',
+                text: "Wrong password!",
+                buttonText: "Okay",
               })
             }>
             <Text>Default Toast</Text>
@@ -51,9 +51,9 @@ class ToastType extends Component {
             style={styles.mb15}
             onPress={() =>
               Toast.show({
-                text: 'Wrong password!',
-                buttonText: 'Okay',
-                type: 'success',
+                text: "Wrong password!",
+                buttonText: "Okay",
+                type: "success",
               })
             }>
             <Text>Success Toast</Text>
@@ -63,9 +63,9 @@ class ToastType extends Component {
             style={styles.mb15}
             onPress={() =>
               Toast.show({
-                text: 'Wrong password!',
-                buttonText: 'Okay',
-                type: 'warning',
+                text: "Wrong password!",
+                buttonText: "Okay",
+                type: "warning",
               })
             }>
             <Text>Warning Toast</Text>
@@ -75,9 +75,9 @@ class ToastType extends Component {
             style={styles.mb15}
             onPress={() =>
               Toast.show({
-                text: 'Wrong password!',
-                buttonText: 'Okay',
-                type: 'danger',
+                text: "Wrong password!",
+                buttonText: "Okay",
+                type: "danger",
               })
             }>
             <Text>Danger Toast</Text>

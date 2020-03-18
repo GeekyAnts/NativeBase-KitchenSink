@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -12,8 +12,8 @@ import {
   Body,
   Left,
   Right,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
 class NHCardItemButton extends Component {
   render() {
@@ -36,10 +36,10 @@ class NHCardItemButton extends Component {
             <CardItem
               header
               button
-              onPress={() => alert('This is Card Header')}>
+              onPress={() => alert("This is Card Header")}>
               <Text>NativeBase</Text>
             </CardItem>
-            <CardItem button onPress={() => alert('This is Card Body')}>
+            <CardItem button onPress={() => alert("This is Card Body")}>
               <Body>
                 <Text>Click on any carditem</Text>
               </Body>
@@ -47,7 +47,7 @@ class NHCardItemButton extends Component {
             <CardItem
               footer
               button
-              onPress={() => alert('This is Card Footer')}>
+              onPress={() => alert("This is Card Footer")}>
               <Text>GeekyAnts</Text>
             </CardItem>
           </Card>

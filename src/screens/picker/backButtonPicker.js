@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -11,8 +11,8 @@ import {
   Left,
   Picker,
   Form,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
 const Item = Picker.Item;
 
@@ -20,7 +20,7 @@ class RegularPicker extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected3: 'key3',
+      selected3: "key3",
     };
   }
   onValueChange3(value: string) {

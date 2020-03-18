@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -12,18 +12,18 @@ import {
   Left,
   Right,
   Body,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
 const datas = [
-  'Simon Mignolet',
-  'Nathaniel Clyne',
-  'Dejan Lovren',
-  'Mama Sakho',
-  'Alberto Moreno',
-  'Emre Can',
-  'Joe Allen',
-  'Phil Coutinho',
+  "Simon Mignolet",
+  "Nathaniel Clyne",
+  "Dejan Lovren",
+  "Mama Sakho",
+  "Alberto Moreno",
+  "Emre Can",
+  "Joe Allen",
+  "Phil Coutinho",
 ];
 
 class NHBasicList extends Component {

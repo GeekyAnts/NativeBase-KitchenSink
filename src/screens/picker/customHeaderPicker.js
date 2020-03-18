@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -11,8 +11,8 @@ import {
   Left,
   Picker,
   Form,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
 const Item = Picker.Item;
 
@@ -20,7 +20,7 @@ class RegularPicker extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected1: 'key1',
+      selected1: "key1",
     };
   }
   onValueChange(value: string) {
@@ -47,10 +47,10 @@ class RegularPicker extends Component {
           <Form>
             <Picker
               renderHeader={backAction => (
-                <Header style={{backgroundColor: '#f44242'}}>
+                <Header style={{backgroundColor: "#f44242"}}>
                   <Left>
                     <Button transparent onPress={backAction}>
-                      <Icon name="arrow-back" style={{color: '#fff'}} />
+                      <Icon name="arrow-back" style={{color: "#fff"}} />
                     </Button>
                   </Left>
                   <Body style={{flex: 3}}>

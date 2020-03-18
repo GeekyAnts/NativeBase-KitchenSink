@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -14,8 +14,8 @@ import {
   Icon,
   Form,
   Text,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
 class FixedLabel extends Component {
   render() {

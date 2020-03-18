@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -12,21 +12,21 @@ import {
   Right,
   List,
   ListItem,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
 const datas = [
   {
-    route: 'BasicSegment',
-    text: 'Segments inside Header',
+    route: "BasicSegment",
+    text: "Segments inside Header",
   },
   {
-    route: 'AdvSegment',
-    text: 'Segments outside Header ',
+    route: "AdvSegment",
+    text: "Segments outside Header ",
   },
   {
-    route: 'SegmentHeaderIcon',
-    text: 'Segments with Icons ',
+    route: "SegmentHeaderIcon",
+    text: "Segments with Icons ",
   },
 ];
 
@@ -59,7 +59,7 @@ class NBSegment extends Component {
                   <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{color: '#999'}} />
+                  <Icon name="arrow-forward" style={{color: "#999"}} />
                 </Right>
               </ListItem>
             )}

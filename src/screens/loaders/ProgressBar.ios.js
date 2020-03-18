@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {ProgressViewIOS} from 'react-native';
+import React, {Component} from "react";
+import {ProgressViewIOS} from "react-native";
 
 export default class ProgressBarNB extends Component {
   render() {

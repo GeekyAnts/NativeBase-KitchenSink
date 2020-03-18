@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -12,9 +12,9 @@ import {
   Left,
   Right,
   Body,
-} from 'native-base';
+} from "native-base";
 
-import styles from './styles';
+import styles from "./styles";
 
 class Anatomy extends Component {
   render() {

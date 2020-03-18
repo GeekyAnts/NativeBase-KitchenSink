@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -13,8 +13,8 @@ import {
   IconNB,
   Item,
   Input,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
 class Disabled extends Component {
   render() {

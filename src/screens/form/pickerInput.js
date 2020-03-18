@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -13,8 +13,8 @@ import {
   Label,
   Item,
   Picker,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
 class PickerInput extends Component {
   constructor(props) {
@@ -51,7 +51,7 @@ class PickerInput extends Component {
                 iosIcon={<Icon name="ios-arrow-down" />}
                 style={{width: undefined}}
                 placeholder="Select your SIM"
-                placeholderStyle={{color: '#bfc6ea'}}
+                placeholderStyle={{color: "#bfc6ea"}}
                 placeholderIconColor="#007aff"
                 selectedValue={this.state.selected2}
                 onValueChange={this.onValueChange2.bind(this)}>

@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Image, Dimensions} from 'react-native';
+import React, {Component} from "react";
+import {Image, Dimensions} from "react-native";
 import {
   Container,
   Header,
@@ -14,12 +14,12 @@ import {
   Left,
   Right,
   Body,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
-const deviceWidth = Dimensions.get('window').width;
-const logo = require('../../../assets/logo.png');
-const cardImage = require('../../../assets/drawer-cover.png');
+const deviceWidth = Dimensions.get("window").width;
+const logo = require("../../../assets/logo.png");
+const cardImage = require("../../../assets/drawer-cover.png");
 
 class NHCardShowcase extends Component {
   render() {
@@ -53,9 +53,9 @@ class NHCardShowcase extends Component {
               <Body>
                 <Image
                   style={{
-                    alignSelf: 'center',
+                    alignSelf: "center",
                     height: 150,
-                    resizeMode: 'cover',
+                    resizeMode: "cover",
                     width: deviceWidth / 1.18,
                     marginVertical: 5,
                   }}

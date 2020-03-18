@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -12,8 +12,8 @@ import {
   Left,
   Right,
   Body,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
 class NHCustomRadio extends Component {
   constructor(props) {
@@ -81,8 +81,8 @@ class NHCustomRadio extends Component {
             </Left>
             <Right>
               <Radio
-                color={'#f0ad4e'}
-                selectedColor={'#5cb85c'}
+                color={"#f0ad4e"}
+                selectedColor={"#5cb85c"}
                 selected={this.state.radio1}
                 onPress={() => this.toggleRadio1()}
               />
@@ -96,8 +96,8 @@ class NHCustomRadio extends Component {
             </Left>
             <Right>
               <Radio
-                color={'#f0ad4e'}
-                selectedColor={'#5cb85c'}
+                color={"#f0ad4e"}
+                selectedColor={"#5cb85c"}
                 selected={this.state.radio2}
                 onPress={() => this.toggleRadio2()}
               />
@@ -111,8 +111,8 @@ class NHCustomRadio extends Component {
             </Left>
             <Right>
               <Radio
-                color={'#f0ad4e'}
-                selectedColor={'#5cb85c'}
+                color={"#f0ad4e"}
+                selectedColor={"#5cb85c"}
                 selected={this.state.radio3}
                 onPress={() => this.toggleRadio3()}
               />
@@ -127,8 +127,8 @@ class NHCustomRadio extends Component {
             <Right>
               <Radio
                 selected={this.state.radio4}
-                color={'#f0ad4e'}
-                selectedColor={'#5cb85c'}
+                color={"#f0ad4e"}
+                selectedColor={"#5cb85c"}
                 onPress={() => this.toggleRadio4()}
               />
             </Right>

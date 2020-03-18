@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {ListView} from 'react-native';
+import React, {Component} from "react";
+import {ListView} from "react-native";
 import {
   Container,
   Header,
@@ -13,18 +13,18 @@ import {
   Left,
   Right,
   Body,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
 const datas = [
-  'Simon Mignolet',
-  'Nathaniel Clyne',
-  'Dejan Lovren',
-  'Mama Sakho',
-  'Alberto Moreno',
-  'Emre Can',
-  'Joe Allen',
-  'Phil Coutinho',
+  "Simon Mignolet",
+  "Nathaniel Clyne",
+  "Dejan Lovren",
+  "Mama Sakho",
+  "Alberto Moreno",
+  "Emre Can",
+  "Joe Allen",
+  "Phil Coutinho",
 ];
 
 class MultiListSwipe extends Component {
@@ -70,10 +70,10 @@ class MultiListSwipe extends Component {
                 full
                 onPress={() => alert(data)}
                 style={{
-                  backgroundColor: '#CCC',
+                  backgroundColor: "#CCC",
                   flex: 1,
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}>
                 <Icon active name="information-circle" />
               </Button>
@@ -85,8 +85,8 @@ class MultiListSwipe extends Component {
                 onPress={_ => this.deleteRow(secId, rowId, rowMap)}
                 style={{
                   flex: 1,
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}>
                 <Icon active name="trash" />
               </Button>

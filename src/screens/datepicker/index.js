@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -11,7 +11,7 @@ import {
   Body,
   DatePicker,
   Text,
-} from 'native-base';
+} from "native-base";
 
 class NHDatePicker extends Component {
   constructor(props) {
@@ -41,19 +41,19 @@ class NHDatePicker extends Component {
           <Right />
         </Header>
 
-        <Content padder style={{backgroundColor: '#fff'}}>
+        <Content padder style={{backgroundColor: "#fff"}}>
           <DatePicker
             defaultDate={new Date(2018, 4, 4)}
             minimumDate={new Date(2018, 1, 1)}
             maximumDate={new Date(2018, 12, 31)}
-            locale={'en'}
+            locale={"en"}
             timeZoneOffsetInMinutes={undefined}
             modalTransparent={false}
-            animationType={'fade'}
-            androidMode={'default'}
+            animationType={"fade"}
+            androidMode={"default"}
             placeHolderText="Select date"
-            textStyle={{color: 'green'}}
-            placeHolderTextStyle={{color: '#d3d3d3'}}
+            textStyle={{color: "green"}}
+            placeHolderTextStyle={{color: "#d3d3d3"}}
             onDateChange={this.setDate}
           />
           <Text>Date: {this.state.chosenDate.toString().substr(4, 12)}</Text>

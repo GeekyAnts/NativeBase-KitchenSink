@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -12,8 +12,8 @@ import {
   Right,
   Body,
   View,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
 class BasicListSwipe extends Component {
   render() {
@@ -36,12 +36,12 @@ class BasicListSwipe extends Component {
             leftOpenValue={75}
             rightOpenValue={-75}
             left={
-              <Button success onPress={() => alert('Add')}>
-                <Icon active name="add" style={{color: '#FFF'}} />
+              <Button success onPress={() => alert("Add")}>
+                <Icon active name="add" style={{color: "#FFF"}} />
               </Button>
             }
             right={
-              <Button danger onPress={() => alert('Trash')}>
+              <Button danger onPress={() => alert("Trash")}>
                 <Icon active name="trash" />
               </Button>
             }

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -13,8 +13,8 @@ import {
   Right,
   Icon,
   Badge,
-} from 'native-base';
-import styles from './styles';
+} from "native-base";
+import styles from "./styles";
 
 class BadgeFooter extends Component {
   constructor(props) {
@@ -97,7 +97,7 @@ class BadgeFooter extends Component {
               onPress={() => this.toggleTab3()}
               vertical
               badge>
-              <Badge style={{backgroundColor: 'green'}}>
+              <Badge style={{backgroundColor: "green"}}>
                 <Text>51</Text>
               </Badge>
               <Icon active={this.state.tab3} name="compass" />
