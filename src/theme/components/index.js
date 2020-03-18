@@ -46,202 +46,202 @@ import pickerTheme from "./Picker";
 import variable from "./../variables/platform";
 
 export default (variables /*: * */ = variable) => {
-  const theme = {
-    variables,
-    "NativeBase.Left": {
-      ...leftTheme(variables)
-    },
-    "NativeBase.Right": {
-      ...rightTheme(variables)
-    },
-    "NativeBase.Body": {
-      ...bodyTheme(variables)
-    },
+    const theme = {
+        variables,
+        "NativeBase.Left": {
+            ...leftTheme(variables)
+        },
+        "NativeBase.Right": {
+            ...rightTheme(variables)
+        },
+        "NativeBase.Body": {
+            ...bodyTheme(variables)
+        },
 
-    "NativeBase.Header": {
-      ...headerTheme(variables)
-    },
+        "NativeBase.Header": {
+            ...headerTheme(variables)
+        },
 
-    "NativeBase.Button": {
-      ...buttonTheme(variables)
-    },
+        "NativeBase.Button": {
+            ...buttonTheme(variables)
+        },
 
-    "NativeBase.Title": {
-      ...titleTheme(variables)
-    },
-    "NativeBase.Subtitle": {
-      ...subtitleTheme(variables)
-    },
+        "NativeBase.Title": {
+            ...titleTheme(variables)
+        },
+        "NativeBase.Subtitle": {
+            ...subtitleTheme(variables)
+        },
 
-    "NativeBase.InputGroup": {
-      ...inputGroupTheme(variables)
-    },
+        "NativeBase.InputGroup": {
+            ...inputGroupTheme(variables)
+        },
 
-    "NativeBase.Input": {
-      ...inputTheme(variables)
-    },
+        "NativeBase.Input": {
+            ...inputTheme(variables)
+        },
 
-    "NativeBase.Badge": {
-      ...badgeTheme(variables)
-    },
+        "NativeBase.Badge": {
+            ...badgeTheme(variables)
+        },
 
-    "NativeBase.CheckBox": {
-      ...checkBoxTheme(variables)
-    },
+        "NativeBase.CheckBox": {
+            ...checkBoxTheme(variables)
+        },
 
-    "NativeBase.Radio": {
-      ...radioTheme(variables)
-    },
+        "NativeBase.Radio": {
+            ...radioTheme(variables)
+        },
 
-    "NativeBase.Card": {
-      ...cardTheme(variables)
-    },
+        "NativeBase.Card": {
+            ...cardTheme(variables)
+        },
 
-    "NativeBase.CardItem": {
-      ...cardItemTheme(variables)
-    },
+        "NativeBase.CardItem": {
+            ...cardItemTheme(variables)
+        },
 
-    "NativeBase.Toast": {
-      ...toastTheme(variables)
-    },
+        "NativeBase.Toast": {
+            ...toastTheme(variables)
+        },
 
-    "NativeBase.H1": {
-      ...h1Theme(variables)
-    },
-    "NativeBase.H2": {
-      ...h2Theme(variables)
-    },
-    "NativeBase.H3": {
-      ...h3Theme(variables)
-    },
-    "NativeBase.Form": {
-      ...formTheme(variables)
-    },
+        "NativeBase.H1": {
+            ...h1Theme(variables)
+        },
+        "NativeBase.H2": {
+            ...h2Theme(variables)
+        },
+        "NativeBase.H3": {
+            ...h3Theme(variables)
+        },
+        "NativeBase.Form": {
+            ...formTheme(variables)
+        },
 
-    "NativeBase.Container": {
-      ...containerTheme(variables)
-    },
-    "NativeBase.Content": {
-      ...contentTheme(variables)
-    },
+        "NativeBase.Container": {
+            ...containerTheme(variables)
+        },
+        "NativeBase.Content": {
+            ...contentTheme(variables)
+        },
 
-    "NativeBase.Footer": {
-      ...footerTheme(variables)
-    },
+        "NativeBase.Footer": {
+            ...footerTheme(variables)
+        },
 
-    "NativeBase.Tabs": {
-      flex: 1
-    },
+        "NativeBase.Tabs": {
+            flex: 1
+        },
 
-    "NativeBase.FooterTab": {
-      ...footerTabTheme(variables)
-    },
+        "NativeBase.FooterTab": {
+            ...footerTabTheme(variables)
+        },
 
-    "NativeBase.ListItem": {
-      ...listItemTheme(variables)
-    },
+        "NativeBase.ListItem": {
+            ...listItemTheme(variables)
+        },
 
-    "NativeBase.ListItem1": {
-      ...listItemTheme(variables)
-    },
+        "NativeBase.ListItem1": {
+            ...listItemTheme(variables)
+        },
 
-    "NativeBase.Icon": {
-      ...iconTheme(variables)
-    },
-    "NativeBase.IconNB": {
-      ...iconTheme(variables)
-    },
-    "NativeBase.Text": {
-      ...textTheme(variables)
-    },
-    "NativeBase.Spinner": {
-      ...spinnerTheme(variables)
-    },
+        "NativeBase.Icon": {
+            ...iconTheme(variables)
+        },
+        "NativeBase.IconNB": {
+            ...iconTheme(variables)
+        },
+        "NativeBase.Text": {
+            ...textTheme(variables)
+        },
+        "NativeBase.Spinner": {
+            ...spinnerTheme(variables)
+        },
 
-    "NativeBase.Fab": {
-      ...fabTheme(variables)
-    },
+        "NativeBase.Fab": {
+            ...fabTheme(variables)
+        },
 
-    "NativeBase.Item": {
-      ...itemTheme(variables)
-    },
+        "NativeBase.Item": {
+            ...itemTheme(variables)
+        },
 
-    "NativeBase.Label": {
-      ...labelTheme(variables)
-    },
+        "NativeBase.Label": {
+            ...labelTheme(variables)
+        },
 
-    "NativeBase.Textarea": {
-      ...textAreaTheme(variables)
-    },
+        "NativeBase.Textarea": {
+            ...textAreaTheme(variables)
+        },
 
-    "NativeBase.PickerNB": {
-      ...pickerTheme(variables),
-      "NativeBase.Button": {
-        "NativeBase.Text": {}
-      }
-    },
+        "NativeBase.PickerNB": {
+            ...pickerTheme(variables),
+            "NativeBase.Button": {
+                "NativeBase.Text": {}
+            }
+        },
 
-    "NativeBase.Tab": {
-      ...tabTheme(variables)
-    },
+        "NativeBase.Tab": {
+            ...tabTheme(variables)
+        },
 
-    "NativeBase.Segment": {
-      ...segmentTheme(variables)
-    },
+        "NativeBase.Segment": {
+            ...segmentTheme(variables)
+        },
 
-    "NativeBase.TabBar": {
-      ...tabBarTheme(variables)
-    },
-    "NativeBase.ViewNB": {
-      ...viewTheme(variables)
-    },
-    "NativeBase.TabHeading": {
-      ...tabHeadingTheme(variables)
-    },
-    "NativeBase.TabContainer": {
-      ...tabContainerTheme(variables)
-    },
-    "NativeBase.Switch": {
-      ...switchTheme(variables)
-    },
-    "NativeBase.Separator": {
-      ...separatorTheme(variables)
-    },
-    "NativeBase.SwipeRow": {
-      ...swipeRowTheme(variables)
-    },
-    "NativeBase.Thumbnail": {
-      ...thumbnailTheme(variables)
-    }
-  };
-
-  const cssifyTheme = (grandparent, parent, parentKey) => {
-    _.forEach(parent, (style, styleName) => {
-      if (
-        styleName.indexOf(".") === 0 &&
-        parentKey &&
-        parentKey.indexOf(".") === 0
-      ) {
-        if (grandparent) {
-          if (!grandparent[styleName]) {
-            grandparent[styleName] = {};
-          } else {
-            grandparent[styleName][parentKey] = style;
-          }
+        "NativeBase.TabBar": {
+            ...tabBarTheme(variables)
+        },
+        "NativeBase.ViewNB": {
+            ...viewTheme(variables)
+        },
+        "NativeBase.TabHeading": {
+            ...tabHeadingTheme(variables)
+        },
+        "NativeBase.TabContainer": {
+            ...tabContainerTheme(variables)
+        },
+        "NativeBase.Switch": {
+            ...switchTheme(variables)
+        },
+        "NativeBase.Separator": {
+            ...separatorTheme(variables)
+        },
+        "NativeBase.SwipeRow": {
+            ...swipeRowTheme(variables)
+        },
+        "NativeBase.Thumbnail": {
+            ...thumbnailTheme(variables)
         }
-      }
-      if (
-        style &&
-        typeof style === "object" &&
-        styleName !== "fontVariant" &&
-        styleName !== "transform"
-      ) {
-        cssifyTheme(parent, style, styleName);
-      }
-    });
-  };
+    };
 
-  cssifyTheme(null, theme, null);
+    const cssifyTheme = (grandparent, parent, parentKey) => {
+        _.forEach(parent, (style, styleName) => {
+            if (
+                styleName.indexOf(".") === 0 &&
+                parentKey &&
+                parentKey.indexOf(".") === 0
+            ) {
+                if (grandparent) {
+                    if (!grandparent[styleName]) {
+                        grandparent[styleName] = {};
+                    } else {
+                        grandparent[styleName][parentKey] = style;
+                    }
+                }
+            }
+            if (
+                style &&
+                typeof style === "object" &&
+                styleName !== "fontVariant" &&
+                styleName !== "transform"
+            ) {
+                cssifyTheme(parent, style, styleName);
+            }
+        });
+    };
 
-  return theme;
+    cssifyTheme(null, theme, null);
+
+    return theme;
 };

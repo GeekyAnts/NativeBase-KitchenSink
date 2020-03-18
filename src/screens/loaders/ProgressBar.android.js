@@ -2,37 +2,37 @@ import React, { Component } from "react";
 import ProgressBar from "ProgressBarAndroid";
 
 export default class SpinnerNB extends Component {
-  prepareRootProps() {
-    const type = {
-      height: 40
-    };
+    prepareRootProps() {
+        const type = {
+            height: 40
+        };
 
-    const defaultProps = {
-      style: type
-    };
+        const defaultProps = {
+            style: type
+        };
 
-    return { ...defaultProps, ...this.props };
-  }
+        return { ...defaultProps, ...this.props };
+    }
 
-  render() {
-    const getColor = () => {
-      if (this.props.color) {
-        return this.props.color;
-      } else if (this.props.inverse) {
-        return this.getTheme().inverseProgressColor;
-      }
+    render() {
+        const getColor = () => {
+            if (this.props.color) {
+                return this.props.color;
+            } else if (this.props.inverse) {
+                return this.getTheme().inverseProgressColor;
+            }
 
-      return this.getTheme().defaultProgressColor;
-    };
+            return this.getTheme().defaultProgressColor;
+        };
 
-    return (
-      <ProgressBar
-        {...this.prepareRootProps()}
-        styleAttr="Horizontal"
-        indeterminate={false}
-        progress={this.props.progress ? this.props.progress / 100 : 0.5}
-        color={getColor()}
-      />
-    );
-  }
+        return (
+            <ProgressBar
+                {...this.prepareRootProps()}
+                styleAttr="Horizontal"
+                indeterminate={false}
+                progress={this.props.progress ? this.props.progress / 100 : 0.5}
+                color={getColor()}
+            />
+        );
+    }
 }

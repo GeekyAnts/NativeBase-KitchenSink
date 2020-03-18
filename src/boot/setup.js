@@ -6,11 +6,11 @@ import getTheme from "../theme/components";
 import variables from "../theme/variables/commonColor";
 
 export default class Setup extends Component {
-  render() {
-    return (
-      <StyleProvider style={getTheme(variables)}>
-        <App />
-      </StyleProvider>
-    );
-  }
+    render() {
+        return (
+            <StyleProvider style={getTheme(variables)}>
+                <App />
+            </StyleProvider>
+        );
+    }
 }
