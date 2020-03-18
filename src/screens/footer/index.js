@@ -11,27 +11,27 @@ import {
   Body,
   Right,
   List,
-  ListItem,
+  ListItem
 } from "native-base";
 import styles from "./styles";
 
 const datas = [
   {
     route: "BasicFooter",
-    text: "Basic Footer",
+    text: "Basic Footer"
   },
   {
     route: "IconFooter",
-    text: "Icon Footer",
+    text: "Icon Footer"
   },
   {
     route: "IconText",
-    text: "Icon & Text Footer",
+    text: "Icon & Text Footer"
   },
   {
     route: "BadgeFooter",
-    text: "With Badge",
-  },
+    text: "With Badge"
+  }
 ];
 
 class NHFooter extends Component {

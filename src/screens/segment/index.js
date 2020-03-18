@@ -11,23 +11,23 @@ import {
   Body,
   Right,
   List,
-  ListItem,
+  ListItem
 } from "native-base";
 import styles from "./styles";
 
 const datas = [
   {
     route: "BasicSegment",
-    text: "Segments inside Header",
+    text: "Segments inside Header"
   },
   {
     route: "AdvSegment",
-    text: "Segments outside Header ",
+    text: "Segments outside Header "
   },
   {
     route: "SegmentHeaderIcon",
-    text: "Segments with Icons ",
-  },
+    text: "Segments with Icons "
+  }
 ];
 
 class NBSegment extends Component {

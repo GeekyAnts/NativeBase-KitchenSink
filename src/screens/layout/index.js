@@ -11,30 +11,30 @@ import {
   Body,
   List,
   ListItem,
-  Text,
+  Text
 } from "native-base";
 
 const datas = [
   {
     route: "RowNB",
-    text: "Row Grid",
+    text: "Row Grid"
   },
   {
     route: "ColumnNB",
-    text: "Column Grid",
+    text: "Column Grid"
   },
   {
     route: "NestedGrid",
-    text: "Nested Grid",
+    text: "Nested Grid"
   },
   {
     route: "CustomRow",
-    text: "Custom Row Size Grid",
+    text: "Custom Row Size Grid"
   },
   {
     route: "CustomCol",
-    text: "Custom Column Size Grid",
-  },
+    text: "Custom Column Size Grid"
+  }
 ];
 
 class NHLayout extends Component {

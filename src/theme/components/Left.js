@@ -6,7 +6,7 @@ export default (variables /*: * */ = variable) => {
   const leftTheme = {
     flex: 1,
     alignSelf: "center",
-    alignItems: "flex-start",
+    alignItems: "flex-start"
   };
 
   return leftTheme;

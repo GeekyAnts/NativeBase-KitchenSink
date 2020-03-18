@@ -7,7 +7,7 @@ import {
   Icon,
   Left,
   Right,
-  Body,
+  Body
 } from "native-base";
 import { Grid, Row, Col } from "react-native-easy-grid";
 

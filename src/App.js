@@ -168,15 +168,15 @@ const Drawer = createDrawerNavigator(
     NHToast: { screen: NHToast },
     Actionsheet: { screen: Actionsheet },
     NHAccordion: { screen: NHAccordion },
-    NHDatePicker: { screen: NHDatePicker },
+    NHDatePicker: { screen: NHDatePicker }
   },
   {
     initialRouteName: "Home",
     contentOptions: {
-      activeTintColor: "#e91e63",
+      activeTintColor: "#e91e63"
     },
-    contentComponent: props => <SideBar {...props} />,
-  },
+    contentComponent: props => <SideBar {...props} />
+  }
 );
 
 const AppNavigator = createStackNavigator(
@@ -304,12 +304,12 @@ const AppNavigator = createStackNavigator(
     AccordionIcon: { screen: AccordionIcon },
     AccordionIconStyle: { screen: AccordionIconStyle },
     AccordionHeaderContentStyle: { screen: AccordionHeaderContentStyle },
-    AccordionCustomHeaderContent: { screen: AccordionCustomHeaderContent },
+    AccordionCustomHeaderContent: { screen: AccordionCustomHeaderContent }
   },
   {
     initialRouteName: "Drawer",
-    headerMode: "none",
-  },
+    headerMode: "none"
+  }
 );
 
 const AppContainer = createAppContainer(AppNavigator);

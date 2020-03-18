@@ -12,7 +12,7 @@ import {
   IconNB,
   Item,
   Input,
-  Form,
+  Form
 } from "native-base";
 import styles from "./styles";
 

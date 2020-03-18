@@ -14,7 +14,7 @@ import {
   Text,
   Left,
   Right,
-  Body,
+  Body
 } from "native-base";
 import styles from "./styles";
 
@@ -27,23 +27,23 @@ const cards = [
   {
     text: "Card One",
     name: "One",
-    image: cardOne,
+    image: cardOne
   },
   {
     text: "Card Two",
     name: "Two",
-    image: cardTwo,
+    image: cardTwo
   },
   {
     text: "Card Three",
     name: "Three",
-    image: cardThree,
+    image: cardThree
   },
   {
     text: "Card Four",
     name: "Four",
-    image: cardFour,
-  },
+    image: cardFour
+  }
 ];
 
 class SimpleDeck extends Component {
@@ -88,7 +88,7 @@ class SimpleDeck extends Component {
                       resizeMode: "cover",
                       width: null,
                       flex: 1,
-                      height: 300,
+                      height: 300
                     }}
                     source={item.image}
                   />

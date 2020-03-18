@@ -10,7 +10,7 @@ import {
   Right,
   Left,
   Body,
-  ScrollableTab,
+  ScrollableTab
 } from "native-base";
 import TabOne from "./tabOne";
 import TabTwo from "./tabTwo";

@@ -18,7 +18,7 @@ export default (variables /*: * */ = variable) => {
     shadowRadius: platformStyle === "material" ? 1.2 : undefined,
     justifyContent: "space-around",
     borderBottomWidth: Platform.OS === "ios" ? variables.borderWidth : 0,
-    borderColor: variables.topTabBarBorderColor,
+    borderColor: variables.topTabBarBorderColor
   };
 
   return tabContainerTheme;

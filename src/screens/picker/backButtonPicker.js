@@ -10,7 +10,7 @@ import {
   Body,
   Left,
   Picker,
-  Form,
+  Form
 } from "native-base";
 import styles from "./styles";
 
@@ -20,12 +20,12 @@ class RegularPicker extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected3: "key3",
+      selected3: "key3"
     };
   }
   onValueChange3(value: string) {
     this.setState({
-      selected3: value,
+      selected3: value
     });
   }
   render() {

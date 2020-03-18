@@ -10,7 +10,7 @@ import {
   Left,
   Right,
   Body,
-  Toast,
+  Toast
 } from "native-base";
 import styles from "./styles";
 
@@ -18,7 +18,7 @@ class ToastDuration extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showToast: false,
+      showToast: false
     };
   }
   render() {
@@ -42,7 +42,7 @@ class ToastDuration extends Component {
               Toast.show({
                 text: "Wrong password!",
                 buttonText: "Okay",
-                duration: 3000,
+                duration: 3000
               })
             }>
             <Text>Toast</Text>

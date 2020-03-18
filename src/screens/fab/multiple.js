@@ -10,7 +10,7 @@ import {
   Right,
   Body,
   Icon,
-  View,
+  View
 } from "native-base";
 import styles from "./styles";
 
@@ -21,7 +21,7 @@ class MultipleFab extends Component {
       active: false,
       active1: false,
       active2: false,
-      active3: false,
+      active3: false
     };
   }
   render() {

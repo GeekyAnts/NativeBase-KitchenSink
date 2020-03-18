@@ -11,7 +11,7 @@ import {
   Right,
   Left,
   Body,
-  TabHeading,
+  TabHeading
 } from "native-base";
 import TabOne from "./tabOne";
 import TabTwo from "./tabTwo";

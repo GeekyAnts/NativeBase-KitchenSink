@@ -9,7 +9,7 @@ import {
   Text,
   Left,
   Right,
-  Body,
+  Body
 } from "native-base";
 
 class HeaderTransparent extends Component {

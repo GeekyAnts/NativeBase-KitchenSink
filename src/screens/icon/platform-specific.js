@@ -13,7 +13,7 @@ import {
   Grid,
   Col,
   Row,
-  Text,
+  Text
 } from "native-base";
 
 import styles from "./styles";

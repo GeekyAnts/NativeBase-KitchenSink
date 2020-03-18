@@ -11,35 +11,35 @@ import {
   Right,
   Body,
   List,
-  ListItem,
+  ListItem
 } from "native-base";
 import styles from "./styles";
 
 const datas = [
   {
     route: "BasicToast",
-    text: "Basic Toast",
+    text: "Basic Toast"
   },
   {
     route: "ToastDuration",
-    text: "Toast with duration",
+    text: "Toast with duration"
   },
   {
     route: "ToastPosition",
-    text: "Toast position",
+    text: "Toast position"
   },
   {
     route: "ToastType",
-    text: "Toast type",
+    text: "Toast type"
   },
   {
     route: "ToastText",
-    text: "Toast text style",
+    text: "Toast text style"
   },
   {
     route: "ToastButton",
-    text: "Toast button style",
-  },
+    text: "Toast button style"
+  }
 ];
 
 class NHToast extends Component {

@@ -13,7 +13,7 @@ import {
   Right,
   Icon,
   Form,
-  Text,
+  Text
 } from "native-base";
 import styles from "./styles";
 

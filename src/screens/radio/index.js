@@ -11,19 +11,19 @@ import {
   Text,
   Left,
   Right,
-  Body,
+  Body
 } from "native-base";
 import styles from "./styles";
 
 const datas = [
   {
     route: "NHDefaultRadio",
-    text: "Default Radio",
+    text: "Default Radio"
   },
   {
     route: "NHCustomRadio",
-    text: "Custom Radio",
-  },
+    text: "Custom Radio"
+  }
 ];
 
 class NHRadio extends Component {

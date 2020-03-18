@@ -12,7 +12,7 @@ import {
   Left,
   Right,
   Icon,
-  Badge,
+  Badge
 } from "native-base";
 import styles from "./styles";
 
@@ -23,7 +23,7 @@ class BadgeFooter extends Component {
       tab1: false,
       tab2: false,
       tab3: true,
-      tab4: false,
+      tab4: false
     };
   }
   toggleTab1() {
@@ -31,7 +31,7 @@ class BadgeFooter extends Component {
       tab1: true,
       tab2: false,
       tab3: false,
-      tab4: false,
+      tab4: false
     });
   }
   toggleTab2() {
@@ -39,7 +39,7 @@ class BadgeFooter extends Component {
       tab1: false,
       tab2: true,
       tab3: false,
-      tab4: false,
+      tab4: false
     });
   }
   toggleTab3() {
@@ -47,7 +47,7 @@ class BadgeFooter extends Component {
       tab1: false,
       tab2: false,
       tab3: true,
-      tab4: false,
+      tab4: false
     });
   }
   toggleTab4() {
@@ -55,7 +55,7 @@ class BadgeFooter extends Component {
       tab1: false,
       tab2: false,
       tab3: false,
-      tab4: true,
+      tab4: true
     });
   }
   render() {

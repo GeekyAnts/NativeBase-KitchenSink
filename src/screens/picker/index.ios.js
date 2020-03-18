@@ -11,47 +11,47 @@ import {
   Body,
   Left,
   List,
-  ListItem,
+  ListItem
 } from "native-base";
 import styles from "./styles";
 
 const datas = [
   {
     route: "RegularPicker",
-    text: "Regular",
+    text: "Regular"
   },
   {
     route: "PickerWithIcon",
-    text: "Picker with Icon",
+    text: "Picker with Icon"
   },
   {
     route: "PlaceholderPicker",
-    text: "Placeholder",
+    text: "Placeholder"
   },
   {
     route: "PlaceholderPickerNote",
-    text: "Placeholder (without note)",
+    text: "Placeholder (without note)"
   },
   {
     route: "PickerTextItemText",
-    text: "Picker text and item text style",
+    text: "Picker text and item text style"
   },
   {
     route: "BackButtonPicker",
-    text: "Custom Back Button",
+    text: "Custom Back Button"
   },
   {
     route: "CustomHeaderPicker",
-    text: "Custom Header",
+    text: "Custom Header"
   },
   {
     route: "HeaderPicker",
-    text: "Custom Header Text",
+    text: "Custom Header Text"
   },
   {
     route: "HeaderStylePicker",
-    text: "Custom Header Style",
-  },
+    text: "Custom Header Style"
+  }
 ];
 
 class NHPicker extends Component {

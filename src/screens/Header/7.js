@@ -10,7 +10,7 @@ import {
   Right,
   Body,
   Text,
-  Subtitle,
+  Subtitle
 } from "native-base";
 import styles from "./styles";
 

@@ -10,7 +10,7 @@ import {
   Body,
   Left,
   Picker,
-  Form,
+  Form
 } from "native-base";
 import styles from "./styles";
 
@@ -20,12 +20,12 @@ class PickerTextItemText extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected2: undefined,
+      selected2: undefined
     };
   }
   onValueChange2(value: string) {
     this.setState({
-      selected2: value,
+      selected2: value
     });
   }
   render() {
@@ -54,7 +54,7 @@ class PickerTextItemText extends Component {
               itemStyle={{
                 backgroundColor: "#d3d3d3",
                 marginLeft: 0,
-                paddingLeft: 10,
+                paddingLeft: 10
               }}
               itemTextStyle={{ color: "#788ad2" }}
               selectedValue={this.state.selected2}

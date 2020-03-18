@@ -9,7 +9,7 @@ import {
   Left,
   Right,
   Body,
-  Text,
+  Text
 } from "native-base";
 import styles from "./styles";
 

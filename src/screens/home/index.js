@@ -20,7 +20,7 @@ class Home extends Component {
             style={{
               alignItems: "center",
               marginBottom: 50,
-              backgroundColor: "transparent",
+              backgroundColor: "transparent"
             }}>
             <H3 style={styles.text}>App to showcase</H3>
             <View style={{ marginTop: 8 }} />

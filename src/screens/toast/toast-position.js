@@ -10,7 +10,7 @@ import {
   Left,
   Right,
   Body,
-  Toast,
+  Toast
 } from "native-base";
 import styles from "./styles";
 
@@ -18,7 +18,7 @@ class ToastPosition extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showToast: false,
+      showToast: false
     };
   }
   render() {
@@ -42,7 +42,7 @@ class ToastPosition extends Component {
               Toast.show({
                 text: "Wrong password!",
                 buttonText: "Okay",
-                position: "top",
+                position: "top"
               })
             }>
             <Text>Top Toast</Text>
@@ -53,7 +53,7 @@ class ToastPosition extends Component {
               Toast.show({
                 text: "Wrong password!",
                 buttonText: "Okay",
-                position: "bottom",
+                position: "bottom"
               })
             }>
             <Text>Bottom Toast</Text>

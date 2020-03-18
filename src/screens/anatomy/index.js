@@ -11,7 +11,7 @@ import {
   FooterTab,
   Left,
   Right,
-  Body,
+  Body
 } from "native-base";
 
 import styles from "./styles";

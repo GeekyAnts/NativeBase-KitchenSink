@@ -10,7 +10,7 @@ import {
   Title,
   Content,
   ListItem,
-  Text,
+  Text
 } from "native-base";
 
 class IconFamily extends Component {
