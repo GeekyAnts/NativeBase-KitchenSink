@@ -1,5 +1,5 @@
 export default {
-    container: {
-        backgroundColor: "#FFF"
-    }
+  container: {
+    backgroundColor: "#FFF"
+  }
 };
