@@ -10,7 +10,7 @@ import {
   Spinner,
   Left,
   Right,
-  Body,
+  Body
 } from "native-base";
 
 import styles from "./styles";

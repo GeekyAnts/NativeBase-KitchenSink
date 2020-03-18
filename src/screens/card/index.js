@@ -11,47 +11,47 @@ import {
   Body,
   Right,
   List,
-  ListItem,
+  ListItem
 } from "native-base";
 import styles from "./styles";
 
 const datas = [
   {
     route: "BasicCard",
-    text: "Basic Card",
+    text: "Basic Card"
   },
   {
     route: "NHCardHeaderAndFooter",
-    text: "Card Header & Footer",
+    text: "Card Header & Footer"
   },
   {
     route: "NHCardItemBordered",
-    text: "Bordered CardItem",
+    text: "Bordered CardItem"
   },
   {
     route: "NHCardTransparent",
-    text: "Transparent Card",
+    text: "Transparent Card"
   },
   {
     route: "NHCardItemButton",
-    text: "Button CardItem",
+    text: "Button CardItem"
   },
   {
     route: "NHCardList",
-    text: "Card List",
+    text: "Card List"
   },
   {
     route: "NHCardImage",
-    text: "Card Image",
+    text: "Card Image"
   },
   {
     route: "NHCardShowcase",
-    text: "Card Showcase",
+    text: "Card Showcase"
   },
   {
     route: "NHCardCustomBorderRadius",
-    text: "Card Custom BorderRadius",
-  },
+    text: "Card Custom BorderRadius"
+  }
 ];
 
 class NHCard extends Component {

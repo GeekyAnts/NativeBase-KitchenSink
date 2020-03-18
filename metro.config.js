@@ -6,7 +6,7 @@
  */
 
 const {
-  applyConfigForLinkedDependencies,
+  applyConfigForLinkedDependencies
 } = require("@carimus/metro-symlinked-deps");
 
 module.exports = applyConfigForLinkedDependencies(
@@ -15,13 +15,13 @@ module.exports = applyConfigForLinkedDependencies(
       getTransformOptions: async () => ({
         transform: {
           experimentalImportSupport: false,
-          inlineRequires: false,
-        },
-      }),
-    },
+          inlineRequires: false
+        }
+      })
+    }
   },
   {
     projectRoot: __dirname,
-    blacklistLinkedModules: ["react-native"],
+    blacklistLinkedModules: ["react-native"]
   },
 );

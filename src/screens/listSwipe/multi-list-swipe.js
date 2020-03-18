@@ -12,7 +12,7 @@ import {
   Text,
   Left,
   Right,
-  Body,
+  Body
 } from "native-base";
 import styles from "./styles";
 
@@ -24,7 +24,7 @@ const datas = [
   "Alberto Moreno",
   "Emre Can",
   "Joe Allen",
-  "Phil Coutinho",
+  "Phil Coutinho"
 ];
 
 class MultiListSwipe extends Component {
@@ -33,7 +33,7 @@ class MultiListSwipe extends Component {
     this.ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
       basic: true,
-      listViewData: datas,
+      listViewData: datas
     };
   }
   deleteRow(secId, rowId, rowMap) {
@@ -73,7 +73,7 @@ class MultiListSwipe extends Component {
                   backgroundColor: "#CCC",
                   flex: 1,
                   alignItems: "center",
-                  justifyContent: "center",
+                  justifyContent: "center"
                 }}>
                 <Icon active name="information-circle" />
               </Button>
@@ -86,7 +86,7 @@ class MultiListSwipe extends Component {
                 style={{
                   flex: 1,
                   alignItems: "center",
-                  justifyContent: "center",
+                  justifyContent: "center"
                 }}>
                 <Icon active name="trash" />
               </Button>

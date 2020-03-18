@@ -10,7 +10,7 @@ import {
   Left,
   Right,
   Body,
-  Toast,
+  Toast
 } from "native-base";
 import styles from "./styles";
 
@@ -18,7 +18,7 @@ class ToastText extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showToast: false,
+      showToast: false
     };
   }
   render() {
@@ -42,7 +42,7 @@ class ToastText extends Component {
               Toast.show({
                 text: "Wrong password!",
                 textStyle: {color: "yellow"},
-                buttonText: "Okay",
+                buttonText: "Okay"
               })
             }>
             <Text>Toast</Text>

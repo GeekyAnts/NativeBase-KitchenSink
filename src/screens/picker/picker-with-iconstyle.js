@@ -10,7 +10,7 @@ import {
   Body,
   Left,
   Picker,
-  Form,
+  Form
 } from "native-base";
 import styles from "./styles";
 
@@ -20,12 +20,12 @@ class PickerWithIconStyle extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected1: "key1",
+      selected1: "key1"
     };
   }
   onValueChange(value: string) {
     this.setState({
-      selected1: value,
+      selected1: value
     });
   }
   render() {

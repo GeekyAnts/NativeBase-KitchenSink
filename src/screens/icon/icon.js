@@ -12,7 +12,7 @@ import {
   Right,
   Grid,
   Col,
-  Row,
+  Row
 } from "native-base";
 import styles from "./styles";
 

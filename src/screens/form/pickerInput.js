@@ -12,7 +12,7 @@ import {
   Right,
   Label,
   Item,
-  Picker,
+  Picker
 } from "native-base";
 import styles from "./styles";
 
@@ -20,12 +20,12 @@ class PickerInput extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected2: undefined,
+      selected2: undefined
     };
   }
   onValueChange2(value: string) {
     this.setState({
-      selected2: value,
+      selected2: value
     });
   }
   render() {

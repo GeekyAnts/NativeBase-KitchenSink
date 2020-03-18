@@ -13,7 +13,7 @@ import {
   Thumbnail,
   Left,
   Body,
-  Right,
+  Right
 } from "native-base";
 import styles from "./styles";
 
@@ -54,7 +54,7 @@ class NHCardImage extends Component {
                   resizeMode: "cover",
                   width: null,
                   height: 200,
-                  flex: 1,
+                  flex: 1
                 }}
                 source={cardImage}
               />

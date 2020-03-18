@@ -14,7 +14,7 @@ import {
   Text,
   Left,
   Right,
-  Body,
+  Body
 } from "native-base";
 import styles from "./styles";
 
@@ -26,23 +26,23 @@ const cards = [
   {
     text: "Card One",
     name: "One",
-    image: cardOne,
+    image: cardOne
   },
   {
     text: "Card Two",
     name: "Two",
-    image: cardTwo,
+    image: cardTwo
   },
   {
     text: "Card Three",
     name: "Three",
-    image: cardThree,
+    image: cardThree
   },
   {
     text: "Card Four",
     name: "Four",
-    image: cardFour,
-  },
+    image: cardFour
+  }
 ];
 
 class AdvancedDeck extends Component {
@@ -88,7 +88,7 @@ class AdvancedDeck extends Component {
                       resizeMode: "cover",
                       width: null,
                       flex: 1,
-                      height: 300,
+                      height: 300
                     }}
                     source={item.image}
                   />
@@ -110,7 +110,7 @@ class AdvancedDeck extends Component {
             left: 0,
             right: 0,
             justifyContent: "space-between",
-            padding: 15,
+            padding: 15
           }}>
           <Button iconLeft onPress={() => this._deckSwiper._root.swipeLeft()}>
             <Icon name="arrow-back" />

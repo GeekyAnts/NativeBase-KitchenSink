@@ -11,30 +11,30 @@ import {
   Icon,
   List,
   ListItem,
-  Text,
+  Text
 } from "native-base";
 
 const datas = [
   {
     route: "AccordionDefault",
-    text: "Default Accordion",
+    text: "Default Accordion"
   },
   {
     route: "AccordionIcon",
-    text: "Icon and Expanded Icon",
+    text: "Icon and Expanded Icon"
   },
   {
     route: "AccordionIconStyle",
-    text: "Icon and Expanded Icon style",
+    text: "Icon and Expanded Icon style"
   },
   {
     route: "AccordionHeaderContentStyle",
-    text: "Header and Content style",
+    text: "Header and Content style"
   },
   {
     route: "AccordionCustomHeaderContent",
-    text: "Custom Header and Content",
-  },
+    text: "Custom Header and Content"
+  }
 ];
 
 class NHAccordion extends Component {

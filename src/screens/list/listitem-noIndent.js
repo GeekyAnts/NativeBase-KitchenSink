@@ -11,7 +11,7 @@ import {
   Text,
   Left,
   Right,
-  Body,
+  Body
 } from "native-base";
 import styles from "./styles";
 
@@ -23,13 +23,13 @@ const datas = [
   "Alberto Moreno",
   "Emre Can",
   "Joe Allen",
-  "Phil Coutinho",
+  "Phil Coutinho"
 ];
 
 class NHListItemNoIndent extends Component {
   state = {
     datas,
-    selected: "Simon Mignolet",
+    selected: "Simon Mignolet"
   };
 
   render() {
@@ -58,7 +58,7 @@ class NHListItemNoIndent extends Component {
                   onPress={() => this.setState({selected: item})}
                   style={{
                     backgroundColor:
-                      this.state.selected === item ? "#cde1f9" : "#fff",
+                      this.state.selected === item ? "#cde1f9" : "#fff"
                   }}>
                   <Left>
                     <Text>{item}</Text>

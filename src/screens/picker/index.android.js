@@ -11,7 +11,7 @@ import {
   Body,
   Left,
   Picker,
-  ListItem,
+  ListItem
 } from "native-base";
 import styles from "./styles";
 
@@ -24,13 +24,13 @@ class NHPicker extends Component {
       selectedItem: undefined,
       selected1: "key1",
       results: {
-        items: [],
-      },
+        items: []
+      }
     };
   }
   onValueChange(value: string) {
     this.setState({
-      selected1: value,
+      selected1: value
     });
   }
   render() {

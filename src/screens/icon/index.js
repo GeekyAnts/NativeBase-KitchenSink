@@ -11,27 +11,27 @@ import {
   List,
   ListItem,
   Content,
-  Text,
+  Text
 } from "native-base";
 import styles from "./styles";
 
 const datas = [
   {
     route: "BasicIcon",
-    text: "Basic Icon",
+    text: "Basic Icon"
   },
   {
     route: "Icons",
-    text: "Icons",
+    text: "Icons"
   },
   {
     route: "PlatformSpecificIcon",
-    text: "Platform Specific Icon",
+    text: "Platform Specific Icon"
   },
   {
     route: "IconFamily",
-    text: "Icon Family",
-  },
+    text: "Icon Family"
+  }
 ];
 
 class NHIcon extends Component {

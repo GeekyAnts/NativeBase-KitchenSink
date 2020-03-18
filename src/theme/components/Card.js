@@ -11,13 +11,13 @@ export default (variables /*: * */ = variable) => {
       shadowRadius: null,
       elevation: null,
       backgroundColor: "transparent",
-      borderWidth: 0,
+      borderWidth: 0
     },
     ".noShadow": {
       shadowColor: null,
       shadowOffset: null,
       shadowOpacity: null,
-      elevation: null,
+      elevation: null
     },
     marginVertical: 5,
     marginHorizontal: 2,
@@ -30,7 +30,7 @@ export default (variables /*: * */ = variable) => {
     shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.1,
     shadowRadius: 1.5,
-    elevation: 3,
+    elevation: 3
   };
 
   return cardTheme;

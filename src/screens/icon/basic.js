@@ -10,7 +10,7 @@ import {
   Icon,
   Body,
   Left,
-  Right,
+  Right
 } from "native-base";
 
 import styles from "./styles";

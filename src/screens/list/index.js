@@ -11,47 +11,47 @@ import {
   Right,
   Body,
   List,
-  ListItem,
+  ListItem
 } from "native-base";
 import styles from "./styles";
 
 const datas = [
   {
     route: "NHBasicList",
-    text: "Basic List",
+    text: "Basic List"
   },
   {
     route: "NHListItemSelected",
-    text: "ListItem Selected",
+    text: "ListItem Selected"
   },
   {
     route: "NHListDivider",
-    text: "List Divider",
+    text: "List Divider"
   },
   {
     route: "NHListHeader",
-    text: "List Header",
+    text: "List Header"
   },
   {
     route: "NHListIcon",
-    text: "List Icon",
+    text: "List Icon"
   },
   {
     route: "NHListAvatar",
-    text: "List Avatar",
+    text: "List Avatar"
   },
   {
     route: "NHListThumbnail",
-    text: "List Thumbnail",
+    text: "List Thumbnail"
   },
   {
     route: "NHListSeparator",
-    text: "List Separator",
+    text: "List Separator"
   },
   {
     route: "NHListItemNoIndent",
-    text: "List NoIndent",
-  },
+    text: "List NoIndent"
+  }
 ];
 
 class NHList extends Component {

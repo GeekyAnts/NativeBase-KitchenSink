@@ -11,7 +11,7 @@ import {
   Left,
   Right,
   Body,
-  Separator,
+  Separator
 } from "native-base";
 import styles from "./styles";
 

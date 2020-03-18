@@ -9,7 +9,7 @@ import {
   Left,
   Right,
   Body,
-  Segment,
+  Segment
 } from "native-base";
 import styles from "./styles";
 
@@ -17,7 +17,7 @@ class SegmentNB extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      seg: 2,
+      seg: 2
     };
   }
   render() {

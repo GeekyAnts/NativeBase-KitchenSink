@@ -11,7 +11,7 @@ import {
   Body,
   Left,
   Right,
-  View,
+  View
 } from "native-base";
 import styles from "./styles";
 

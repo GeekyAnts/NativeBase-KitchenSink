@@ -11,7 +11,7 @@ import {
   Text,
   Left,
   Right,
-  Body,
+  Body
 } from "native-base";
 import styles from "./styles";
 
@@ -23,13 +23,13 @@ const datas = [
   "Alberto Moreno",
   "Emre Can",
   "Joe Allen",
-  "Phil Coutinho",
+  "Phil Coutinho"
 ];
 
 class NHListItemSelected extends Component {
   state = {
     datas,
-    selected: "Simon Mignolet",
+    selected: "Simon Mignolet"
   };
 
   render() {

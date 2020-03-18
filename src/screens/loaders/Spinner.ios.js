@@ -4,11 +4,11 @@ import { ActivityIndicatorIOS } from "react-native";
 export default class SpinnerNB extends Component {
   prepareRootProps() {
     const type = {
-      height: 80,
+      height: 80
     };
 
     const defaultProps = {
-      style: type,
+      style: type
     };
 
     return { ...defaultProps, ...this.props };

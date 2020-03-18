@@ -10,7 +10,7 @@ import {
   Right,
   Body,
   DatePicker,
-  Text,
+  Text
 } from "native-base";
 
 class NHDatePicker extends Component {

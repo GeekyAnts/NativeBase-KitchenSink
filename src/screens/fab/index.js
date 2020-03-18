@@ -11,19 +11,19 @@ import {
   List,
   ListItem,
   Content,
-  Text,
+  Text
 } from "native-base";
 import styles from "./styles";
 
 const datas = [
   {
     route: "BasicFab",
-    text: "Basic FAB",
+    text: "Basic FAB"
   },
   {
     route: "MultipleFab",
-    text: "Multiple FABs",
-  },
+    text: "Multiple FABs"
+  }
 ];
 
 class NHFab extends Component {

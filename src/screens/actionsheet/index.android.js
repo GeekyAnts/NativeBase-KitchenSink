@@ -11,18 +11,18 @@ import {
   Body,
   Left,
   List,
-  ListItem,
+  ListItem
 } from "native-base";
 
 const datas = [
   {
     route: "RegularActionSheet",
-    text: "Regular",
+    text: "Regular"
   },
   {
     route: "IconActionSheet",
-    text: "Icon ActionSheet",
-  },
+    text: "Icon ActionSheet"
+  }
 ];
 
 class NHPicker extends Component {

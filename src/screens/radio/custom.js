@@ -11,7 +11,7 @@ import {
   Text,
   Left,
   Right,
-  Body,
+  Body
 } from "native-base";
 import styles from "./styles";
 
@@ -22,7 +22,7 @@ class NHCustomRadio extends Component {
       radio1: false,
       radio2: false,
       radio3: false,
-      radio4: true,
+      radio4: true
     };
   }
   toggleRadio1() {
@@ -30,7 +30,7 @@ class NHCustomRadio extends Component {
       radio1: true,
       radio2: false,
       radio3: false,
-      radio4: false,
+      radio4: false
     });
   }
   toggleRadio2() {
@@ -38,7 +38,7 @@ class NHCustomRadio extends Component {
       radio1: false,
       radio2: true,
       radio3: false,
-      radio4: false,
+      radio4: false
     });
   }
   toggleRadio3() {
@@ -46,7 +46,7 @@ class NHCustomRadio extends Component {
       radio1: false,
       radio2: false,
       radio3: true,
-      radio4: false,
+      radio4: false
     });
   }
   toggleRadio4() {
@@ -54,7 +54,7 @@ class NHCustomRadio extends Component {
       radio1: false,
       radio2: false,
       radio3: false,
-      radio4: true,
+      radio4: true
     });
   }
   render() {

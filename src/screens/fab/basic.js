@@ -10,7 +10,7 @@ import {
   Right,
   Body,
   Icon,
-  View,
+  View
 } from "native-base";
 import styles from "./styles";
 
@@ -18,7 +18,7 @@ class BasicFab extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: false,
+      active: false
     };
   }
 

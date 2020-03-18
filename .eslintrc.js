@@ -4,5 +4,6 @@ module.exports = {
   rules: {
     "prettier/prettier": 0,
     quotes: ["error", "double"],
+    "comma-dangle": ["error", "never"],
   },
 };

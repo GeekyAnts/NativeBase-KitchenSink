@@ -16,7 +16,7 @@ import {
   Switch,
   Radio,
   Picker,
-  Separator,
+  Separator
 } from "native-base";
 import styles from "./styles";
 
@@ -29,13 +29,13 @@ class NHListIcon extends Component {
       selectedItem: undefined,
       selected1: "key1",
       results: {
-        items: [],
-      },
+        items: []
+      }
     };
   }
   onValueChange(value: string) {
     this.setState({
-      selected1: value,
+      selected1: value
     });
   }
   render() {

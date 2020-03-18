@@ -13,7 +13,7 @@ import {
   Thumbnail,
   Left,
   Right,
-  Body,
+  Body
 } from "native-base";
 import styles from "./styles";
 
@@ -57,7 +57,7 @@ class NHCardShowcase extends Component {
                     height: 150,
                     resizeMode: "cover",
                     width: deviceWidth / 1.18,
-                    marginVertical: 5,
+                    marginVertical: 5
                   }}
                   source={cardImage}
                 />

@@ -9,7 +9,7 @@ import {
   Tab,
   Right,
   Left,
-  Body,
+  Body
 } from "native-base";
 import TabOne from "./tabOne";
 import TabTwo from "./tabTwo";

@@ -11,47 +11,47 @@ import {
   Body,
   Text,
   List,
-  ListItem,
+  ListItem
 } from "native-base";
 import styles from "./styles";
 
 const datas = [
   {
     route: "Default",
-    text: "Default Button",
+    text: "Default Button"
   },
   {
     route: "Outline",
-    text: "Outline Button",
+    text: "Outline Button"
   },
   {
     route: "Rounded",
-    text: "Rounded Button",
+    text: "Rounded Button"
   },
   {
     route: "Block",
-    text: "Block Button",
+    text: "Block Button"
   },
   {
     route: "Full",
-    text: "Full Button",
+    text: "Full Button"
   },
   {
     route: "Custom",
-    text: "Custom Size Button",
+    text: "Custom Size Button"
   },
   {
     route: "Transparent",
-    text: "Transparent Button",
+    text: "Transparent Button"
   },
   {
     route: "IconBtn",
-    text: "Icon Button",
+    text: "Icon Button"
   },
   {
     route: "Disabled",
-    text: "Disabled Button",
-  },
+    text: "Disabled Button"
+  }
 ];
 
 class NHButton extends Component {
