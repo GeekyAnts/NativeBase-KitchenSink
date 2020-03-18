@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -10,25 +10,25 @@ import {
   Right,
   Body,
   Text
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 class Header8 extends Component {
   render() {
     return (
       <Container style={styles.container}>
         <Header
-          style={{ backgroundColor: "#dc4239" }}
+          style={{ backgroundColor: '#dc4239' }}
           androidStatusBarColor="#dc2015"
           iosBarStyle="light-content"
         >
           <Left>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="arrow-back" style={{ color: "#FFF" }} />
+              <Icon name="arrow-back" style={{ color: '#FFF' }} />
             </Button>
           </Left>
           <Body>
-            <Title style={{ color: "#FFF" }}>Custom Header</Title>
+            <Title style={{ color: '#FFF' }}>Custom Header</Title>
           </Body>
           <Right />
         </Header>

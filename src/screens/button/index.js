@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -12,45 +12,45 @@ import {
   Text,
   List,
   ListItem
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 const datas = [
   {
-    route: "Default",
-    text: "Default Button"
+    route: 'Default',
+    text: 'Default Button'
   },
   {
-    route: "Outline",
-    text: "Outline Button"
+    route: 'Outline',
+    text: 'Outline Button'
   },
   {
-    route: "Rounded",
-    text: "Rounded Button"
+    route: 'Rounded',
+    text: 'Rounded Button'
   },
   {
-    route: "Block",
-    text: "Block Button"
+    route: 'Block',
+    text: 'Block Button'
   },
   {
-    route: "Full",
-    text: "Full Button"
+    route: 'Full',
+    text: 'Full Button'
   },
   {
-    route: "Custom",
-    text: "Custom Size Button"
+    route: 'Custom',
+    text: 'Custom Size Button'
   },
   {
-    route: "Transparent",
-    text: "Transparent Button"
+    route: 'Transparent',
+    text: 'Transparent Button'
   },
   {
-    route: "IconBtn",
-    text: "Icon Button"
+    route: 'IconBtn',
+    text: 'Icon Button'
   },
   {
-    route: "Disabled",
-    text: "Disabled Button"
+    route: 'Disabled',
+    text: 'Disabled Button'
   }
 ];
 
@@ -76,20 +76,19 @@ class NHButton extends Component {
         <Content>
           <List
             dataArray={datas}
-            renderRow={data =>
+            renderRow={data => (
               <ListItem
                 button
                 onPress={() => this.props.navigation.navigate(data.route)}
               >
                 <Left>
-                  <Text>
-                    {data.text}
-                  </Text>
+                  <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="arrow-forward" style={{ color: '#999' }} />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>

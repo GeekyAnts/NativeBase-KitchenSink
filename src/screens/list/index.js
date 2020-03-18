@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -12,45 +12,45 @@ import {
   Body,
   List,
   ListItem
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 const datas = [
   {
-    route: "NHBasicList",
-    text: "Basic List"
+    route: 'NHBasicList',
+    text: 'Basic List'
   },
   {
-    route: "NHListItemSelected",
-    text: "ListItem Selected"
+    route: 'NHListItemSelected',
+    text: 'ListItem Selected'
   },
   {
-    route: "NHListDivider",
-    text: "List Divider"
+    route: 'NHListDivider',
+    text: 'List Divider'
   },
   {
-    route: "NHListHeader",
-    text: "List Header"
+    route: 'NHListHeader',
+    text: 'List Header'
   },
   {
-    route: "NHListIcon",
-    text: "List Icon"
+    route: 'NHListIcon',
+    text: 'List Icon'
   },
   {
-    route: "NHListAvatar",
-    text: "List Avatar"
+    route: 'NHListAvatar',
+    text: 'List Avatar'
   },
   {
-    route: "NHListThumbnail",
-    text: "List Thumbnail"
+    route: 'NHListThumbnail',
+    text: 'List Thumbnail'
   },
   {
-    route: "NHListSeparator",
-    text: "List Separator"
+    route: 'NHListSeparator',
+    text: 'List Separator'
   },
   {
-    route: "NHListItemNoIndent",
-    text: "List NoIndent"
+    route: 'NHListItemNoIndent',
+    text: 'List NoIndent'
   }
 ];
 
@@ -76,20 +76,19 @@ class NHList extends Component {
         <Content>
           <List
             dataArray={datas}
-            renderRow={data =>
+            renderRow={data => (
               <ListItem
                 button
                 onPress={() => this.props.navigation.navigate(data.route)}
               >
                 <Left>
-                  <Text>
-                    {data.text}
-                  </Text>
+                  <Text>{data.text}</Text>
                 </Left>
                 <Right>
                   <Icon name="arrow-forward" />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>

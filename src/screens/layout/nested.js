@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -8,8 +8,8 @@ import {
   Left,
   Right,
   Body
-} from "native-base";
-import { Grid, Row, Col } from "react-native-easy-grid";
+} from 'native-base';
+import { Grid, Row, Col } from 'react-native-easy-grid';
 
 class NestedGrid extends Component {
   render() {
@@ -28,10 +28,10 @@ class NestedGrid extends Component {
         </Header>
 
         <Grid>
-          <Col style={{ backgroundColor: "#DD9E2C" }} />
+          <Col style={{ backgroundColor: '#DD9E2C' }} />
           <Col>
-            <Row style={{ backgroundColor: "#00CE9F" }} />
-            <Row style={{ backgroundColor: "#635DB7" }} />
+            <Row style={{ backgroundColor: '#00CE9F' }} />
+            <Row style={{ backgroundColor: '#635DB7' }} />
           </Col>
         </Grid>
       </Container>

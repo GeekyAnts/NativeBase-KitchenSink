@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -12,21 +12,21 @@ import {
   Body,
   List,
   ListItem
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 const datas = [
   {
-    route: "BasicTab",
-    text: "Basic Tabs"
+    route: 'BasicTab',
+    text: 'Basic Tabs'
   },
   {
-    route: "ConfigTab",
-    text: "Advanced Tabs"
+    route: 'ConfigTab',
+    text: 'Advanced Tabs'
   },
   {
-    route: "ScrollableTab",
-    text: "Scrollable Tabs"
+    route: 'ScrollableTab',
+    text: 'Scrollable Tabs'
   }
 ];
 
@@ -81,20 +81,19 @@ class NHTab extends Component {
         <Content>
           <List
             dataArray={datas}
-            renderRow={data =>
+            renderRow={data => (
               <ListItem
                 button
                 onPress={() => this.props.navigation.navigate(data.route)}
               >
                 <Left>
-                  <Text>
-                    {data.text}
-                  </Text>
+                  <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="arrow-forward" style={{ color: '#999' }} />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>
