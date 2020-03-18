@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -8,8 +8,8 @@ import {
   Input,
   Content,
   Text
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 class NHSearchbar extends Component {
   render() {

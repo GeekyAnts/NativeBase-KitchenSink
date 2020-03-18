@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -12,8 +12,8 @@ import {
   Left,
   Right,
   Body
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 class NHCheckbox extends Component {
   constructor(props) {

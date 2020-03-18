@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -12,28 +12,28 @@ import {
   List,
   ListItem,
   Text
-} from "native-base";
+} from 'native-base';
 
 const datas = [
   {
-    route: "AccordionDefault",
-    text: "Default Accordion"
+    route: 'AccordionDefault',
+    text: 'Default Accordion'
   },
   {
-    route: "AccordionIcon",
-    text: "Icon and Expanded Icon"
+    route: 'AccordionIcon',
+    text: 'Icon and Expanded Icon'
   },
   {
-    route: "AccordionIconStyle",
-    text: "Icon and Expanded Icon style"
+    route: 'AccordionIconStyle',
+    text: 'Icon and Expanded Icon style'
   },
   {
-    route: "AccordionHeaderContentStyle",
-    text: "Header and Content style"
+    route: 'AccordionHeaderContentStyle',
+    text: 'Header and Content style'
   },
   {
-    route: "AccordionCustomHeaderContent",
-    text: "Custom Header and Content"
+    route: 'AccordionCustomHeaderContent',
+    text: 'Custom Header and Content'
   }
 ];
 
@@ -56,7 +56,7 @@ class NHAccordion extends Component {
           <Right />
         </Header>
 
-        <Content style={{ backgroundColor: "white" }}>
+        <Content style={{ backgroundColor: 'white' }}>
           <List
             dataArray={datas}
             renderRow={data => (
@@ -68,7 +68,7 @@ class NHAccordion extends Component {
                   <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="arrow-forward" style={{ color: '#999' }} />
                 </Right>
               </ListItem>
             )}

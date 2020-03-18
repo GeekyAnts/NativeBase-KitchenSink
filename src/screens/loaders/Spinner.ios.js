@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { ActivityIndicatorIOS } from "react-native";
+import React, { Component } from 'react';
+import { ActivityIndicatorIOS } from 'react-native';
 
 export default class SpinnerNB extends Component {
   prepareRootProps() {
@@ -29,7 +29,7 @@ export default class SpinnerNB extends Component {
       <ActivityIndicatorIOS
         {...this.prepareRootProps()}
         color={getColor()}
-        size={this.props.size ? this.props.size : "large"}
+        size={this.props.size ? this.props.size : 'large'}
       />
     );
   }

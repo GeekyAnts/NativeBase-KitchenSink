@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -11,8 +11,8 @@ import {
   Left,
   Right,
   Body
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 class NHBadge extends Component {
   render() {
@@ -57,14 +57,14 @@ class NHBadge extends Component {
               name="star"
               style={{
                 fontSize: 15,
-                color: "#fff",
+                color: '#fff',
                 lineHeight: 20
               }}
             />
           </Badge>
           <Badge
-            style={{ backgroundColor: "black" }}
-            textStyle={{ color: "white" }}
+            style={{ backgroundColor: 'black' }}
+            textStyle={{ color: 'white' }}
           >
             <Text>1866</Text>
           </Badge>

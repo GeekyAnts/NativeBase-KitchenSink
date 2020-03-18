@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -12,25 +12,25 @@ import {
   Right,
   List,
   ListItem
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 const datas = [
   {
-    route: "BasicFooter",
-    text: "Basic Footer"
+    route: 'BasicFooter',
+    text: 'Basic Footer'
   },
   {
-    route: "IconFooter",
-    text: "Icon Footer"
+    route: 'IconFooter',
+    text: 'Icon Footer'
   },
   {
-    route: "IconText",
-    text: "Icon & Text Footer"
+    route: 'IconText',
+    text: 'Icon & Text Footer'
   },
   {
-    route: "BadgeFooter",
-    text: "With Badge"
+    route: 'BadgeFooter',
+    text: 'With Badge'
   }
 ];
 
@@ -65,7 +65,7 @@ class NHFooter extends Component {
                   <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="arrow-forward" style={{ color: '#999' }} />
                 </Right>
               </ListItem>
             )}

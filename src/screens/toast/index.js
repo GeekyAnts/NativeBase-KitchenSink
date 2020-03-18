@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -12,33 +12,33 @@ import {
   Body,
   List,
   ListItem
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 const datas = [
   {
-    route: "BasicToast",
-    text: "Basic Toast"
+    route: 'BasicToast',
+    text: 'Basic Toast'
   },
   {
-    route: "ToastDuration",
-    text: "Toast with duration"
+    route: 'ToastDuration',
+    text: 'Toast with duration'
   },
   {
-    route: "ToastPosition",
-    text: "Toast position"
+    route: 'ToastPosition',
+    text: 'Toast position'
   },
   {
-    route: "ToastType",
-    text: "Toast type"
+    route: 'ToastType',
+    text: 'Toast type'
   },
   {
-    route: "ToastText",
-    text: "Toast text style"
+    route: 'ToastText',
+    text: 'Toast text style'
   },
   {
-    route: "ToastButton",
-    text: "Toast button style"
+    route: 'ToastButton',
+    text: 'Toast button style'
   }
 ];
 
@@ -73,7 +73,7 @@ class NHToast extends Component {
                   <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="arrow-forward" style={{ color: '#999' }} />
                 </Right>
               </ListItem>
             )}

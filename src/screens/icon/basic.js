@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { View } from "react-native";
+import React, { Component } from 'react';
+import { View } from 'react-native';
 
 import {
   Container,
@@ -11,9 +11,9 @@ import {
   Body,
   Left,
   Right
-} from "native-base";
+} from 'native-base';
 
-import styles from "./styles";
+import styles from './styles';
 
 class BasicIcon extends Component {
   render() {
@@ -38,7 +38,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -47,7 +47,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -55,7 +55,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -64,7 +64,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -73,7 +73,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -81,7 +81,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -90,7 +90,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -98,7 +98,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -106,7 +106,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -115,7 +115,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -123,7 +123,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -132,7 +132,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -141,7 +141,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -150,7 +150,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -158,7 +158,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -167,7 +167,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -175,7 +175,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -183,7 +183,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -191,7 +191,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -200,7 +200,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -209,7 +209,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -217,7 +217,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -226,7 +226,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -234,7 +234,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -243,7 +243,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -252,7 +252,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -260,7 +260,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -269,7 +269,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -278,7 +278,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -286,7 +286,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -294,7 +294,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -303,7 +303,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -311,7 +311,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -320,7 +320,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -328,7 +328,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -337,7 +337,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -346,7 +346,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -355,7 +355,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -364,7 +364,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -373,7 +373,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -382,7 +382,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -390,7 +390,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -398,7 +398,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -407,7 +407,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -416,7 +416,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -425,7 +425,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -433,7 +433,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -441,7 +441,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -449,7 +449,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -458,7 +458,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -467,7 +467,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -475,7 +475,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -483,7 +483,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -491,7 +491,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -500,7 +500,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -509,7 +509,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -517,7 +517,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -526,7 +526,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -534,7 +534,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -543,7 +543,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -551,7 +551,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -559,7 +559,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -567,7 +567,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -576,7 +576,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -584,7 +584,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -593,7 +593,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -602,7 +602,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -611,7 +611,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -620,7 +620,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -629,7 +629,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -638,7 +638,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -647,7 +647,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -656,7 +656,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -664,7 +664,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -673,7 +673,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -682,7 +682,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -691,7 +691,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -699,7 +699,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -707,7 +707,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -715,7 +715,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -723,7 +723,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -731,7 +731,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -739,7 +739,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -747,7 +747,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
             <Icon
@@ -755,7 +755,7 @@ class BasicIcon extends Component {
               style={{
                 width: 45,
                 height: 45,
-                justifyContent: "center"
+                justifyContent: 'center'
               }}
             />
           </View>

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -12,23 +12,23 @@ import {
   Left,
   List,
   ListItem
-} from "native-base";
+} from 'native-base';
 
 const datas = [
   {
-    route: "RegularActionSheet",
-    text: "Regular"
+    route: 'RegularActionSheet',
+    text: 'Regular'
   },
   {
-    route: "IconActionSheet",
-    text: "Icon ActionSheet"
+    route: 'IconActionSheet',
+    text: 'Icon ActionSheet'
   }
 ];
 
 class NHPicker extends Component {
   render() {
     return (
-      <Container style={{ backgroundColor: "#fff" }}>
+      <Container style={{ backgroundColor: '#fff' }}>
         <Header>
           <Left>
             <Button
@@ -56,7 +56,7 @@ class NHPicker extends Component {
                   <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="arrow-forward" style={{ color: '#999' }} />
                 </Right>
               </ListItem>
             )}

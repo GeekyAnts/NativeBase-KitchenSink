@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { View } from "react-native";
+import React, { Component } from 'react';
+import { View } from 'react-native';
 import {
   Container,
   Header,
@@ -11,8 +11,8 @@ import {
   Right,
   Body,
   Text
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 class Disabled extends Component {
   render() {

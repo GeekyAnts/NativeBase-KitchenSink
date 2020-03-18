@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -10,7 +10,7 @@ import {
   Right,
   Body,
   Segment
-} from "native-base";
+} from 'native-base';
 
 class SegmentHeaderIcon extends Component {
   constructor(props) {

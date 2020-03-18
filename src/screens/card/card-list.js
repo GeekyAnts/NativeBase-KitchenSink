@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -12,8 +12,8 @@ import {
   Left,
   Right,
   Body
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 class NHCardList extends Component {
   render() {
@@ -41,7 +41,7 @@ class NHCardList extends Component {
                 <Icon
                   active
                   name="logo-googleplus"
-                  style={{ color: "#DD5044" }}
+                  style={{ color: '#DD5044' }}
                 />
                 <Text>Google Plus</Text>
               </Left>
@@ -54,7 +54,7 @@ class NHCardList extends Component {
                 <Icon
                   active
                   name="logo-facebook"
-                  style={{ color: "#3B579D" }}
+                  style={{ color: '#3B579D' }}
                 />
                 <Text>facebook</Text>
               </Left>
@@ -64,7 +64,7 @@ class NHCardList extends Component {
             </CardItem>
             <CardItem>
               <Left>
-                <Icon active name="logo-twitter" style={{ color: "#55ACEE" }} />
+                <Icon active name="logo-twitter" style={{ color: '#55ACEE' }} />
                 <Text>Twitter</Text>
               </Left>
               <Right>
@@ -73,7 +73,7 @@ class NHCardList extends Component {
             </CardItem>
             <CardItem>
               <Left>
-                <Icon active name="logo-reddit" style={{ color: "#FF4500" }} />
+                <Icon active name="logo-reddit" style={{ color: '#FF4500' }} />
                 <Text>Reddit</Text>
               </Left>
               <Right>
@@ -85,7 +85,7 @@ class NHCardList extends Component {
                 <Icon
                   active
                   name="logo-linkedin"
-                  style={{ color: "#007BB6" }}
+                  style={{ color: '#007BB6' }}
                 />
                 <Text>LinkedIn</Text>
               </Left>
@@ -95,7 +95,7 @@ class NHCardList extends Component {
             </CardItem>
             <CardItem>
               <Left>
-                <Icon active name="logo-youtube" style={{ color: "#D62727" }} />
+                <Icon active name="logo-youtube" style={{ color: '#D62727' }} />
                 <Text>YouTube</Text>
               </Left>
               <Right>

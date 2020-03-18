@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { View } from "react-native";
+import React, { Component } from 'react';
+import { View } from 'react-native';
 import {
   Container,
   Header,
@@ -11,8 +11,8 @@ import {
   Right,
   Body,
   Text
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 class IconBtn extends Component {
   render() {
@@ -33,8 +33,8 @@ class IconBtn extends Component {
         <Content padder>
           <View
             style={{
-              flexDirection: "row",
-              justifyContent: "space-between"
+              flexDirection: 'row',
+              justifyContent: 'space-between'
             }}
           >
             <Button iconLeft light style={styles.mb15}>
@@ -52,7 +52,7 @@ class IconBtn extends Component {
               <Icon active name="arrow-up" />
             </Button>
           </View>
-          <View style={{ flexDirection: "row" }}>
+          <View style={{ flexDirection: 'row' }}>
             <Button iconLeft style={styles.mb15}>
               <Icon active name="home" />
               <Text>Home</Text>
@@ -66,7 +66,7 @@ class IconBtn extends Component {
               <Text>Work</Text>
             </Button>
           </View>
-          <View style={{ flexDirection: "row" }}>
+          <View style={{ flexDirection: 'row' }}>
             <Button iconLeft success style={styles.mb15}>
               <Icon active name="people" />
               <Text>People</Text>
@@ -81,7 +81,7 @@ class IconBtn extends Component {
               <Text>Animals</Text>
             </Button>
           </View>
-          <View style={{ flexDirection: "row" }}>
+          <View style={{ flexDirection: 'row' }}>
             <Button iconLeft danger style={styles.mb15}>
               <Icon active name="close" />
               <Text>Trash</Text>
@@ -101,7 +101,7 @@ class IconBtn extends Component {
               <Icon active name="trash" />
             </Button>
           </View>
-          <View style={{ flexDirection: "row" }}>
+          <View style={{ flexDirection: 'row' }}>
             <Button iconLeft warning style={styles.mb15}>
               <Icon active name="warning" />
               <Text>Dont</Text>
@@ -114,7 +114,7 @@ class IconBtn extends Component {
               <Icon active name="warning" />
             </Button>
           </View>
-          <View style={{ flexDirection: "row" }}>
+          <View style={{ flexDirection: 'row' }}>
             <Button iconLeft info style={styles.mb15}>
               <Icon name="alert" />
               <Text>Help</Text>
@@ -123,7 +123,7 @@ class IconBtn extends Component {
               <Icon name="alert" />
             </Button>
           </View>
-          <View style={{ flexDirection: "row" }}>
+          <View style={{ flexDirection: 'row' }}>
             <Button iconLeft dark style={styles.mb15}>
               <Icon active name="cog" />
               <Text>Settings</Text>

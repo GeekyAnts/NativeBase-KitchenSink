@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -12,45 +12,45 @@ import {
   Left,
   List,
   ListItem
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 const datas = [
   {
-    route: "RegularPicker",
-    text: "Regular"
+    route: 'RegularPicker',
+    text: 'Regular'
   },
   {
-    route: "PickerWithIcon",
-    text: "Picker with Icon"
+    route: 'PickerWithIcon',
+    text: 'Picker with Icon'
   },
   {
-    route: "PlaceholderPicker",
-    text: "Placeholder"
+    route: 'PlaceholderPicker',
+    text: 'Placeholder'
   },
   {
-    route: "PlaceholderPickerNote",
-    text: "Placeholder (without note)"
+    route: 'PlaceholderPickerNote',
+    text: 'Placeholder (without note)'
   },
   {
-    route: "PickerTextItemText",
-    text: "Picker text and item text style"
+    route: 'PickerTextItemText',
+    text: 'Picker text and item text style'
   },
   {
-    route: "BackButtonPicker",
-    text: "Custom Back Button"
+    route: 'BackButtonPicker',
+    text: 'Custom Back Button'
   },
   {
-    route: "CustomHeaderPicker",
-    text: "Custom Header"
+    route: 'CustomHeaderPicker',
+    text: 'Custom Header'
   },
   {
-    route: "HeaderPicker",
-    text: "Custom Header Text"
+    route: 'HeaderPicker',
+    text: 'Custom Header Text'
   },
   {
-    route: "HeaderStylePicker",
-    text: "Custom Header Style"
+    route: 'HeaderStylePicker',
+    text: 'Custom Header Style'
   }
 ];
 
@@ -85,7 +85,7 @@ class NHPicker extends Component {
                   <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="arrow-forward" style={{ color: '#999' }} />
                 </Right>
               </ListItem>
             )}

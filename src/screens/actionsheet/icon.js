@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -11,14 +11,14 @@ import {
   Content,
   ActionSheet,
   Text
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 var BUTTONS = [
-  { text: "Option 0", icon: "american-football", iconColor: "#2c8ef4" },
-  { text: "Option 1", icon: "analytics", iconColor: "#f42ced" },
-  { text: "Option 2", icon: "aperture", iconColor: "#ea943b" },
-  { text: "Delete", icon: "trash", iconColor: "#fa213b" },
-  { text: "Cancel", icon: "close", iconColor: "#25de5b" }
+  { text: 'Option 0', icon: 'american-football', iconColor: '#2c8ef4' },
+  { text: 'Option 1', icon: 'analytics', iconColor: '#f42ced' },
+  { text: 'Option 2', icon: 'aperture', iconColor: '#ea943b' },
+  { text: 'Delete', icon: 'trash', iconColor: '#fa213b' },
+  { text: 'Cancel', icon: 'close', iconColor: '#25de5b' }
 ];
 var DESTRUCTIVE_INDEX = 3;
 var CANCEL_INDEX = 4;
@@ -50,7 +50,7 @@ export default class ActionSheetNB extends Component {
                   options: BUTTONS,
                   cancelButtonIndex: CANCEL_INDEX,
                   destructiveButtonIndex: DESTRUCTIVE_INDEX,
-                  title: "Select an option"
+                  title: 'Select an option'
                 },
                 buttonIndex => {
                   this.setState({

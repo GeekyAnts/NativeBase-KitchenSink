@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -12,45 +12,45 @@ import {
   Right,
   List,
   ListItem
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 const datas = [
   {
-    route: "BasicCard",
-    text: "Basic Card"
+    route: 'BasicCard',
+    text: 'Basic Card'
   },
   {
-    route: "NHCardHeaderAndFooter",
-    text: "Card Header & Footer"
+    route: 'NHCardHeaderAndFooter',
+    text: 'Card Header & Footer'
   },
   {
-    route: "NHCardItemBordered",
-    text: "Bordered CardItem"
+    route: 'NHCardItemBordered',
+    text: 'Bordered CardItem'
   },
   {
-    route: "NHCardTransparent",
-    text: "Transparent Card"
+    route: 'NHCardTransparent',
+    text: 'Transparent Card'
   },
   {
-    route: "NHCardItemButton",
-    text: "Button CardItem"
+    route: 'NHCardItemButton',
+    text: 'Button CardItem'
   },
   {
-    route: "NHCardList",
-    text: "Card List"
+    route: 'NHCardList',
+    text: 'Card List'
   },
   {
-    route: "NHCardImage",
-    text: "Card Image"
+    route: 'NHCardImage',
+    text: 'Card Image'
   },
   {
-    route: "NHCardShowcase",
-    text: "Card Showcase"
+    route: 'NHCardShowcase',
+    text: 'Card Showcase'
   },
   {
-    route: "NHCardCustomBorderRadius",
-    text: "Card Custom BorderRadius"
+    route: 'NHCardCustomBorderRadius',
+    text: 'Card Custom BorderRadius'
   }
 ];
 
@@ -85,7 +85,7 @@ class NHCard extends Component {
                   <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="arrow-forward" style={{ color: '#999' }} />
                 </Right>
               </ListItem>
             )}
