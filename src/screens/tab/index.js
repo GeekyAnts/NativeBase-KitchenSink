@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -11,23 +11,23 @@ import {
   Right,
   Body,
   List,
-  ListItem
+  ListItem,
 } from "native-base";
 import styles from "./styles";
 
 const datas = [
   {
     route: "BasicTab",
-    text: "Basic Tabs"
+    text: "Basic Tabs",
   },
   {
     route: "ConfigTab",
-    text: "Advanced Tabs"
+    text: "Advanced Tabs",
   },
   {
     route: "ScrollableTab",
-    text: "Scrollable Tabs"
-  }
+    text: "Scrollable Tabs",
+  },
 ];
 
 class NHTab extends Component {
@@ -36,28 +36,28 @@ class NHTab extends Component {
     this.state = {
       tab1: false,
       tab2: false,
-      tab3: true
+      tab3: true,
     };
   }
   toggleTab1() {
     this.setState({
       tab1: true,
       tab2: false,
-      tab3: false
+      tab3: false,
     });
   }
   toggleTab2() {
     this.setState({
       tab1: false,
       tab2: true,
-      tab3: false
+      tab3: false,
     });
   }
   toggleTab3() {
     this.setState({
       tab1: false,
       tab2: false,
-      tab3: true
+      tab3: true,
     });
   }
   render() {
@@ -88,7 +88,7 @@ class NHTab extends Component {
                   <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{color: "#999"}} />
+                  <Icon name="arrow-forward" style={{ color: "#999" }} />
                 </Right>
               </ListItem>
             )}

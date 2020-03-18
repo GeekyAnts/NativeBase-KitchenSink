@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -9,7 +9,7 @@ import {
   Left,
   Right,
   Body,
-  Segment
+  Segment,
 } from "native-base";
 import styles from "./styles";
 
@@ -17,7 +17,7 @@ class SegmentNB extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      seg: 2
+      seg: 2,
     };
   }
   render() {
@@ -34,13 +34,13 @@ class SegmentNB extends Component {
               <Button
                 active={this.state.seg === 1 ? true : false}
                 first
-                onPress={() => this.setState({seg: 1})}>
+                onPress={() => this.setState({ seg: 1 })}>
                 <Text>Puppies</Text>
               </Button>
               <Button
                 last
                 active={this.state.seg === 2 ? true : false}
-                onPress={() => this.setState({seg: 2})}>
+                onPress={() => this.setState({ seg: 2 })}>
                 <Text>Cubs</Text>
               </Button>
             </Segment>

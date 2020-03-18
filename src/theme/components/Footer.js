@@ -8,18 +8,18 @@ export default (variables /*: * */ = variable) => {
 
   const iconCommon = {
     "NativeBase.Icon": {
-      color: variables.tabBarActiveTextColor
-    }
+      color: variables.tabBarActiveTextColor,
+    },
   };
   const iconNBCommon = {
     "NativeBase.IconNB": {
-      color: variables.tabBarActiveTextColor
-    }
+      color: variables.tabBarActiveTextColor,
+    },
   };
   const textCommon = {
     "NativeBase.Text": {
-      color: variables.tabBarActiveTextColor
-    }
+      color: variables.tabBarActiveTextColor,
+    },
   };
   const footerTheme = {
     "NativeBase.Left": {
@@ -34,16 +34,16 @@ export default (variables /*: * */ = variable) => {
           shadowOpacity: null,
           ...iconCommon,
           ...iconNBCommon,
-          ...textCommon
+          ...textCommon,
         },
         alignSelf: null,
         ...iconCommon,
-        ...iconNBCommon
+        ...iconNBCommon,
         // ...textCommon
       },
       flex: 1,
       alignSelf: "center",
-      alignItems: "flex-start"
+      alignItems: "flex-start",
     },
     "NativeBase.Body": {
       flex: 1,
@@ -62,17 +62,17 @@ export default (variables /*: * */ = variable) => {
           shadowOpacity: null,
           ...iconCommon,
           ...iconNBCommon,
-          ...textCommon
+          ...textCommon,
         },
         ".full": {
           height: variables.footerHeight,
           paddingBottom: variables.footerPaddingBottom,
-          flex: 1
+          flex: 1,
         },
         ...iconCommon,
-        ...iconNBCommon
+        ...iconNBCommon,
         // ...textCommon
-      }
+      },
     },
     "NativeBase.Right": {
       "NativeBase.Button": {
@@ -86,16 +86,16 @@ export default (variables /*: * */ = variable) => {
           shadowOpacity: null,
           ...iconCommon,
           ...iconNBCommon,
-          ...textCommon
+          ...textCommon,
         },
         alignSelf: null,
         ...iconCommon,
-        ...iconNBCommon
+        ...iconNBCommon,
         // ...textCommon
       },
       flex: 1,
       alignSelf: "center",
-      alignItems: "flex-end"
+      alignItems: "flex-end",
     },
     backgroundColor: variables.footerDefaultBg,
     flexDirection: "row",
@@ -112,7 +112,7 @@ export default (variables /*: * */ = variable) => {
     paddingBottom: variables.footerPaddingBottom,
     elevation: 3,
     left: 0,
-    right: 0
+    right: 0,
   };
   return footerTheme;
 };

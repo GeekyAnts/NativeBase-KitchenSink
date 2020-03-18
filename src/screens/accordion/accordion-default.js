@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -9,25 +9,25 @@ import {
   Right,
   Body,
   Icon,
-  Accordion
+  Accordion,
 } from "native-base";
 
 const dataArray = [
   {
     title: "First Element",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!"
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!",
   },
   {
     title: "Second Element",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!"
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!",
   },
   {
     title: "Third Element",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!"
-  }
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!",
+  },
 ];
 
 class AccordionDefault extends Component {
@@ -45,7 +45,7 @@ class AccordionDefault extends Component {
           </Body>
           <Right />
         </Header>
-        <Content padder style={{backgroundColor: "white"}}>
+        <Content padder style={{ backgroundColor: "white" }}>
           <Accordion dataArray={dataArray} animation={false} expanded={0} />
         </Content>
       </Container>

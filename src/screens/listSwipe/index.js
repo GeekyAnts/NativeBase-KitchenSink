@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -11,23 +11,23 @@ import {
   Right,
   Body,
   List,
-  ListItem
+  ListItem,
 } from "native-base";
 import styles from "./styles";
 
 const datas = [
   {
     route: "BasicListSwipe",
-    text: "Single SwipeRow"
+    text: "Single SwipeRow",
   },
   {
     route: "SwipeRowCustomStyle",
-    text: "Swipe Row Custom Style"
+    text: "Swipe Row Custom Style",
   },
   {
     route: "MultiListSwipe",
-    text: "Multiple List Swipe"
-  }
+    text: "Multiple List Swipe",
+  },
 ];
 
 class ListSwipe extends Component {
@@ -48,7 +48,7 @@ class ListSwipe extends Component {
           <Right />
         </Header>
 
-        <Content scrollEnabled={false} contentContainerStyle={{flex: 1}}>
+        <Content scrollEnabled={false} contentContainerStyle={{ flex: 1 }}>
           <List
             dataArray={datas}
             renderRow={data => (

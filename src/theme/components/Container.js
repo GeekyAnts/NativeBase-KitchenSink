@@ -1,6 +1,6 @@
 // @flow
 
-import {Platform, Dimensions} from "react-native";
+import { Platform, Dimensions } from "react-native";
 
 import variable from "./../variables/platform";
 
@@ -9,7 +9,7 @@ export default (variables /*: * */ = variable) => {
   const theme = {
     flex: 1,
     height: Platform.OS === "ios" ? deviceHeight : deviceHeight - 20,
-    backgroundColor: variables.containerBgColor
+    backgroundColor: variables.containerBgColor,
   };
 
   return theme;

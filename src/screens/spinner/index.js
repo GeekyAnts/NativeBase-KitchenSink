@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
 import {
   Container,
@@ -10,7 +10,7 @@ import {
   Spinner,
   Left,
   Right,
-  Body
+  Body,
 } from "native-base";
 
 import styles from "./styles";

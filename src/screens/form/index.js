@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -11,67 +11,67 @@ import {
   Body,
   Right,
   List,
-  ListItem
+  ListItem,
 } from "native-base";
 import styles from "./styles";
 
 const datas = [
   {
     route: "FixedLabel",
-    text: "Fixed Label"
+    text: "Fixed Label",
   },
   {
     route: "InlineLabel",
-    text: "Inline Label"
+    text: "Inline Label",
   },
   {
     route: "FloatingLabel",
-    text: "Floating Label"
+    text: "Floating Label",
   },
   {
     route: "PlaceholderLabel",
-    text: "Placeholder Label"
+    text: "Placeholder Label",
   },
   {
     route: "StackedLabel",
-    text: "Stacked Label"
+    text: "Stacked Label",
   },
   {
     route: "RegularInput",
-    text: "Regular Textbox"
+    text: "Regular Textbox",
   },
   {
     route: "UnderlineInput",
-    text: "Underlined Textbox"
+    text: "Underlined Textbox",
   },
   {
     route: "RoundedInput",
-    text: "Rounded Textbox"
+    text: "Rounded Textbox",
   },
   {
     route: "IconInput",
-    text: "Icon Textbox"
+    text: "Icon Textbox",
   },
   {
     route: "PickerInput",
-    text: "Textbox with Picker"
+    text: "Textbox with Picker",
   },
   {
     route: "SuccessInput",
-    text: "Success Input Textbox"
+    text: "Success Input Textbox",
   },
   {
     route: "ErrorInput",
-    text: "Error Input Textbox"
+    text: "Error Input Textbox",
   },
   {
     route: "DisabledInput",
-    text: "Disabled Textbox"
+    text: "Disabled Textbox",
   },
   {
     route: "TextArea",
-    text: "TextArea"
-  }
+    text: "TextArea",
+  },
 ];
 
 class NHForm extends Component {
@@ -103,7 +103,7 @@ class NHForm extends Component {
                   <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{color: "#999"}} />
+                  <Icon name="arrow-forward" style={{ color: "#999" }} />
                 </Right>
               </ListItem>
             )}

@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {Image} from "react-native";
+import React, { Component } from "react";
+import { Image } from "react-native";
 import {
   Container,
   Header,
@@ -13,7 +13,7 @@ import {
   Thumbnail,
   Left,
   Body,
-  Right
+  Right,
 } from "native-base";
 import styles from "./styles";
 
@@ -54,13 +54,13 @@ class NHCardImage extends Component {
                   resizeMode: "cover",
                   width: null,
                   height: 200,
-                  flex: 1
+                  flex: 1,
                 }}
                 source={cardImage}
               />
             </CardItem>
 
-            <CardItem style={{paddingVertical: 0}}>
+            <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button transparent>
                   <Icon active name="thumbs-up" />

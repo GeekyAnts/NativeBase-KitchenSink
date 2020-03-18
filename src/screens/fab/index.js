@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -11,19 +11,19 @@ import {
   List,
   ListItem,
   Content,
-  Text
+  Text,
 } from "native-base";
 import styles from "./styles";
 
 const datas = [
   {
     route: "BasicFab",
-    text: "Basic FAB"
+    text: "Basic FAB",
   },
   {
     route: "MultipleFab",
-    text: "Multiple FABs"
-  }
+    text: "Multiple FABs",
+  },
 ];
 
 class NHFab extends Component {
@@ -55,7 +55,7 @@ class NHFab extends Component {
                   <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{color: "#999"}} />
+                  <Icon name="arrow-forward" style={{ color: "#999" }} />
                 </Right>
               </ListItem>
             )}

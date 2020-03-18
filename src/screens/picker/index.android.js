@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -11,7 +11,7 @@ import {
   Body,
   Left,
   Picker,
-  ListItem
+  ListItem,
 } from "native-base";
 import styles from "./styles";
 
@@ -24,13 +24,13 @@ class NHPicker extends Component {
       selectedItem: undefined,
       selected1: "key1",
       results: {
-        items: []
-      }
+        items: [],
+      },
     };
   }
   onValueChange(value: string) {
     this.setState({
-      selected1: value
+      selected1: value,
     });
   }
   render() {
@@ -53,7 +53,7 @@ class NHPicker extends Component {
         <Content>
           <ListItem icon>
             <Left>
-              <Button style={{backgroundColor: "#4CDA64"}}>
+              <Button style={{ backgroundColor: "#4CDA64" }}>
                 <Icon name="arrow-dropdown" />
               </Button>
             </Left>
@@ -64,7 +64,7 @@ class NHPicker extends Component {
               <Picker
                 note
                 mode="dropdown"
-                style={{width: 120}}
+                style={{ width: 120 }}
                 selectedValue={this.state.selected1}
                 onValueChange={this.onValueChange.bind(this)}>
                 <Item label="TATA" value="key0" />

@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -12,7 +12,7 @@ import {
   Thumbnail,
   Left,
   Body,
-  Right
+  Right,
 } from "native-base";
 import styles from "./styles";
 
@@ -26,33 +26,33 @@ const datas = [
   {
     img: sankhadeep,
     text: "Sankhadeep",
-    note: "Its time to build a difference . ."
+    note: "Its time to build a difference . .",
   },
   {
     img: supriya,
     text: "Supriya",
-    note: "One needs courage to be happy and smiling all time . . "
+    note: "One needs courage to be happy and smiling all time . . ",
   },
   {
     img: shivraj,
     text: "Shivraj",
-    note: "Time changes everything . ."
+    note: "Time changes everything . .",
   },
   {
     img: shruti,
     text: "Shruti",
-    note: "The biggest risk is a missed opportunity !!"
+    note: "The biggest risk is a missed opportunity !!",
   },
   {
     img: himanshu,
     text: "Himanshu",
-    note: "Live a life style that matchs your vision"
+    note: "Live a life style that matchs your vision",
   },
   {
     img: shweta,
     text: "Shweta",
-    note: "Failure is temporary, giving up makes it permanent"
-  }
+    note: "Failure is temporary, giving up makes it permanent",
+  },
 ];
 
 class NHListThumbnail extends Component {

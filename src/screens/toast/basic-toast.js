@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -10,7 +10,7 @@ import {
   Left,
   Right,
   Body,
-  Toast
+  Toast,
 } from "native-base";
 import styles from "./styles";
 
@@ -18,7 +18,7 @@ class BasicToast extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showToast: false
+      showToast: false,
     };
   }
   render() {
@@ -41,7 +41,7 @@ class BasicToast extends Component {
             onPress={() =>
               Toast.show({
                 text: "Wrong password!",
-                buttonText: "Okay"
+                buttonText: "Okay",
               })
             }>
             <Text>Toast</Text>

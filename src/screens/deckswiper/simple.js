@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {Image, View} from "react-native";
+import React, { Component } from "react";
+import { Image, View } from "react-native";
 import {
   Container,
   Header,
@@ -14,7 +14,7 @@ import {
   Text,
   Left,
   Right,
-  Body
+  Body,
 } from "native-base";
 import styles from "./styles";
 
@@ -27,23 +27,23 @@ const cards = [
   {
     text: "Card One",
     name: "One",
-    image: cardOne
+    image: cardOne,
   },
   {
     text: "Card Two",
     name: "Two",
-    image: cardTwo
+    image: cardTwo,
   },
   {
     text: "Card Three",
     name: "Three",
-    image: cardThree
+    image: cardThree,
   },
   {
     text: "Card Four",
     name: "Four",
-    image: cardFour
-  }
+    image: cardFour,
+  },
 ];
 
 class SimpleDeck extends Component {
@@ -62,7 +62,7 @@ class SimpleDeck extends Component {
           <Right />
         </Header>
 
-        <View style={{flex: 1, padding: 12}}>
+        <View style={{ flex: 1, padding: 12 }}>
           <DeckSwiper
             dataSource={cards}
             looping={false}
@@ -72,7 +72,7 @@ class SimpleDeck extends Component {
               </View>
             )}
             renderItem={item => (
-              <Card style={{elevation: 3}}>
+              <Card style={{ elevation: 3 }}>
                 <CardItem>
                   <Left>
                     <Thumbnail source={item.image} />
@@ -88,13 +88,13 @@ class SimpleDeck extends Component {
                       resizeMode: "cover",
                       width: null,
                       flex: 1,
-                      height: 300
+                      height: 300,
                     }}
                     source={item.image}
                   />
                 </CardItem>
                 <CardItem>
-                  <IconNB name={"ios-heart"} style={{color: "#ED4A6A"}} />
+                  <IconNB name={"ios-heart"} style={{ color: "#ED4A6A" }} />
                   <Text>{item.name}</Text>
                 </CardItem>
               </Card>

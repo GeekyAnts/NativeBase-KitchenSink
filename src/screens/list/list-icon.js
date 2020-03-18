@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {Platform} from "react-native";
+import React, { Component } from "react";
+import { Platform } from "react-native";
 import {
   Container,
   Header,
@@ -16,7 +16,7 @@ import {
   Switch,
   Radio,
   Picker,
-  Separator
+  Separator,
 } from "native-base";
 import styles from "./styles";
 
@@ -29,13 +29,13 @@ class NHListIcon extends Component {
       selectedItem: undefined,
       selected1: "key1",
       results: {
-        items: []
-      }
+        items: [],
+      },
     };
   }
   onValueChange(value: string) {
     this.setState({
-      selected1: value
+      selected1: value,
     });
   }
   render() {
@@ -57,7 +57,7 @@ class NHListIcon extends Component {
           <Separator bordered noTopBorder />
           <ListItem icon>
             <Left>
-              <Button style={{backgroundColor: "#FF9501"}}>
+              <Button style={{ backgroundColor: "#FF9501" }}>
                 <Icon active name="airplane" />
               </Button>
             </Left>
@@ -70,7 +70,7 @@ class NHListIcon extends Component {
           </ListItem>
           <ListItem icon>
             <Left>
-              <Button style={{backgroundColor: "#007AFF"}}>
+              <Button style={{ backgroundColor: "#007AFF" }}>
                 <Icon active name="wifi" />
               </Button>
             </Left>
@@ -84,7 +84,7 @@ class NHListIcon extends Component {
           </ListItem>
           <ListItem icon>
             <Left>
-              <Button style={{backgroundColor: "#007AFF"}}>
+              <Button style={{ backgroundColor: "#007AFF" }}>
                 <Icon active name="bluetooth" />
               </Button>
             </Left>
@@ -98,7 +98,7 @@ class NHListIcon extends Component {
           </ListItem>
           <ListItem icon>
             <Left>
-              <Button style={{backgroundColor: "#4CDA64"}}>
+              <Button style={{ backgroundColor: "#4CDA64" }}>
                 <Icon active name="phone-portrait" />
               </Button>
             </Left>
@@ -111,7 +111,7 @@ class NHListIcon extends Component {
           </ListItem>
           <ListItem icon last>
             <Left>
-              <Button style={{backgroundColor: "#4CDA64"}}>
+              <Button style={{ backgroundColor: "#4CDA64" }}>
                 <Icon active name="link" />
               </Button>
             </Left>
@@ -128,7 +128,7 @@ class NHListIcon extends Component {
 
           <ListItem icon>
             <Left>
-              <Button style={{backgroundColor: "#FD3C2D"}}>
+              <Button style={{ backgroundColor: "#FD3C2D" }}>
                 <Icon active name="notifications" />
               </Button>
             </Left>
@@ -141,7 +141,7 @@ class NHListIcon extends Component {
           </ListItem>
           <ListItem icon>
             <Left>
-              <Button style={{backgroundColor: "#8F8E93"}}>
+              <Button style={{ backgroundColor: "#8F8E93" }}>
                 <Icon active name="switch" />
               </Button>
             </Left>
@@ -154,7 +154,7 @@ class NHListIcon extends Component {
           </ListItem>
           <ListItem icon last>
             <Left>
-              <Button style={{backgroundColor: "#5855D6"}}>
+              <Button style={{ backgroundColor: "#5855D6" }}>
                 <Icon active name="moon" />
               </Button>
             </Left>
@@ -168,7 +168,7 @@ class NHListIcon extends Component {
           <Separator bordered />
           <ListItem icon>
             <Left>
-              <Button style={{backgroundColor: "#4CDA64"}}>
+              <Button style={{ backgroundColor: "#4CDA64" }}>
                 <Icon name="arrow-dropdown" />
               </Button>
             </Left>
@@ -179,7 +179,7 @@ class NHListIcon extends Component {
               <Picker
                 note
                 mode="dropdown"
-                style={{width: 120}}
+                style={{ width: 120 }}
                 selectedValue={this.state.selected1}
                 onValueChange={this.onValueChange.bind(this)}>
                 <Item label="TATA" value="key0" />
@@ -189,7 +189,7 @@ class NHListIcon extends Component {
           </ListItem>
           <ListItem icon>
             <Left>
-              <Button style={{backgroundColor: "#8F8E93"}}>
+              <Button style={{ backgroundColor: "#8F8E93" }}>
                 <Icon active name="cog" />
               </Button>
             </Left>
@@ -197,14 +197,14 @@ class NHListIcon extends Component {
               <Text>Software Update</Text>
             </Body>
             <Right>
-              <Badge style={{backgroundColor: "#FD3C2D"}}>
+              <Badge style={{ backgroundColor: "#FD3C2D" }}>
                 <Text>2</Text>
               </Badge>
             </Right>
           </ListItem>
           <ListItem last icon>
             <Left>
-              <Button style={{backgroundColor: "#007AFF"}}>
+              <Button style={{ backgroundColor: "#007AFF" }}>
                 <Icon active name="hand" />
               </Button>
             </Left>

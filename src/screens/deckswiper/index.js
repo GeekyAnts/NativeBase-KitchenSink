@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -11,19 +11,19 @@ import {
   Body,
   Content,
   List,
-  ListItem
+  ListItem,
 } from "native-base";
 import styles from "./styles";
 
 const datas = [
   {
     route: "SimpleDeck",
-    text: "Simple DeckSwiper"
+    text: "Simple DeckSwiper",
   },
   {
     route: "AdvancedDeck",
-    text: "Advanced DeckSwiper"
-  }
+    text: "Advanced DeckSwiper",
+  },
 ];
 class NHDeckSwiper extends Component {
   render() {
@@ -54,7 +54,7 @@ class NHDeckSwiper extends Component {
                   <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{color: "#999"}} />
+                  <Icon name="arrow-forward" style={{ color: "#999" }} />
                 </Right>
               </ListItem>
             )}

@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -10,7 +10,7 @@ import {
   Right,
   Content,
   ActionSheet,
-  Text
+  Text,
 } from "native-base";
 var BUTTONS = ["Option 0", "Option 1", "Option 2", "Delete", "Cancel"];
 var DESTRUCTIVE_INDEX = 3;
@@ -23,7 +23,7 @@ export default class ActionSheetNB extends Component {
   }
   render() {
     return (
-      <Container style={{backgroundColor: "#fff"}}>
+      <Container style={{ backgroundColor: "#fff" }}>
         <Header>
           <Left>
             <Button
@@ -45,10 +45,10 @@ export default class ActionSheetNB extends Component {
                   options: BUTTONS,
                   cancelButtonIndex: CANCEL_INDEX,
                   destructiveButtonIndex: DESTRUCTIVE_INDEX,
-                  title: "Select an option"
+                  title: "Select an option",
                 },
                 buttonIndex => {
-                  this.setState({clicked: BUTTONS[buttonIndex]});
+                  this.setState({ clicked: BUTTONS[buttonIndex] });
                 },
               )
             }>

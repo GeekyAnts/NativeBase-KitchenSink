@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -9,13 +9,13 @@ import {
   Text,
   Left,
   Right,
-  Body
+  Body,
 } from "native-base";
 
 class HeaderTransparent extends Component {
   render() {
     return (
-      <Container style={{backgroundColor: "#87cefa"}}>
+      <Container style={{ backgroundColor: "#87cefa" }}>
         <Header transparent>
           <Left>
             <Button transparent onPress={() => this.props.navigation.goBack()}>

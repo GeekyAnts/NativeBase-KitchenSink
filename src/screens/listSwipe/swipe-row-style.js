@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -11,7 +11,7 @@ import {
   Left,
   Right,
   Body,
-  View
+  View,
 } from "native-base";
 import styles from "./styles";
 
@@ -25,7 +25,7 @@ class SwipeRowCustomStyle extends Component {
               <Icon name="arrow-back" />
             </Button>
           </Left>
-          <Body style={{flex: 3}}>
+          <Body style={{ flex: 3 }}>
             <Title>Swipe Row Custom Style</Title>
           </Body>
           <Right />
@@ -33,12 +33,12 @@ class SwipeRowCustomStyle extends Component {
 
         <Content scrollEnabled={false}>
           <SwipeRow
-            style={{backgroundColor: "#9370DB"}}
+            style={{ backgroundColor: "#9370DB" }}
             leftOpenValue={75}
             rightOpenValue={-75}
             left={
               <Button success onPress={() => alert("Add")}>
-                <Icon active name="add" style={{color: "#FFF"}} />
+                <Icon active name="add" style={{ color: "#FFF" }} />
               </Button>
             }
             right={
@@ -47,8 +47,10 @@ class SwipeRowCustomStyle extends Component {
               </Button>
             }
             body={
-              <View style={{paddingLeft: 20}}>
-                <Text style={{color: "#FFF"}}>Swipe me to left and right</Text>
+              <View style={{ paddingLeft: 20 }}>
+                <Text style={{ color: "#FFF" }}>
+                  Swipe me to left and right
+                </Text>
               </View>
             }
           />

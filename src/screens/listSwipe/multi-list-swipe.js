@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {ListView} from "react-native";
+import React, { Component } from "react";
+import { ListView } from "react-native";
 import {
   Container,
   Header,
@@ -12,7 +12,7 @@ import {
   Text,
   Left,
   Right,
-  Body
+  Body,
 } from "native-base";
 import styles from "./styles";
 
@@ -24,23 +24,23 @@ const datas = [
   "Alberto Moreno",
   "Emre Can",
   "Joe Allen",
-  "Phil Coutinho"
+  "Phil Coutinho",
 ];
 
 class MultiListSwipe extends Component {
   constructor(props) {
     super(props);
-    this.ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    this.ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     this.state = {
       basic: true,
-      listViewData: datas
+      listViewData: datas,
     };
   }
   deleteRow(secId, rowId, rowMap) {
     rowMap[`${secId}${rowId}`].props.closeRow();
     const newData = [...this.state.listViewData];
     newData.splice(rowId, 1);
-    this.setState({listViewData: newData});
+    this.setState({ listViewData: newData });
   }
   render() {
     return (
@@ -51,7 +51,7 @@ class MultiListSwipe extends Component {
               <Icon name="arrow-back" />
             </Button>
           </Left>
-          <Body style={{flex: 3}}>
+          <Body style={{ flex: 3 }}>
             <Title>Multiple List Swipe</Title>
           </Body>
           <Right />
@@ -61,7 +61,7 @@ class MultiListSwipe extends Component {
           <List
             dataSource={this.ds.cloneWithRows(this.state.listViewData)}
             renderRow={data => (
-              <ListItem style={{paddingLeft: 20}}>
+              <ListItem style={{ paddingLeft: 20 }}>
                 <Text>{data}</Text>
               </ListItem>
             )}
@@ -73,7 +73,7 @@ class MultiListSwipe extends Component {
                   backgroundColor: "#CCC",
                   flex: 1,
                   alignItems: "center",
-                  justifyContent: "center"
+                  justifyContent: "center",
                 }}>
                 <Icon active name="information-circle" />
               </Button>
@@ -86,7 +86,7 @@ class MultiListSwipe extends Component {
                 style={{
                   flex: 1,
                   alignItems: "center",
-                  justifyContent: "center"
+                  justifyContent: "center",
                 }}>
                 <Icon active name="trash" />
               </Button>

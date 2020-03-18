@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -11,27 +11,27 @@ import {
   List,
   ListItem,
   Content,
-  Text
+  Text,
 } from "native-base";
 import styles from "./styles";
 
 const datas = [
   {
     route: "BasicIcon",
-    text: "Basic Icon"
+    text: "Basic Icon",
   },
   {
     route: "Icons",
-    text: "Icons"
+    text: "Icons",
   },
   {
     route: "PlatformSpecificIcon",
-    text: "Platform Specific Icon"
+    text: "Platform Specific Icon",
   },
   {
     route: "IconFamily",
-    text: "Icon Family"
-  }
+    text: "Icon Family",
+  },
 ];
 
 class NHIcon extends Component {
@@ -63,7 +63,7 @@ class NHIcon extends Component {
                   <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{color: "#999"}} />
+                  <Icon name="arrow-forward" style={{ color: "#999" }} />
                 </Right>
               </ListItem>
             )}

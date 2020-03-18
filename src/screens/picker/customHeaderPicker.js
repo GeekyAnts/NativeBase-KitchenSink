@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -10,7 +10,7 @@ import {
   Body,
   Left,
   Picker,
-  Form
+  Form,
 } from "native-base";
 import styles from "./styles";
 
@@ -20,12 +20,12 @@ class RegularPicker extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected1: "key1"
+      selected1: "key1",
     };
   }
   onValueChange(value: string) {
     this.setState({
-      selected1: value
+      selected1: value,
     });
   }
   render() {
@@ -37,7 +37,7 @@ class RegularPicker extends Component {
               <Icon name="arrow-back" />
             </Button>
           </Left>
-          <Body style={{flex: 3}}>
+          <Body style={{ flex: 3 }}>
             <Title>Custom Header</Title>
           </Body>
           <Right />
@@ -47,13 +47,13 @@ class RegularPicker extends Component {
           <Form>
             <Picker
               renderHeader={backAction => (
-                <Header style={{backgroundColor: "#f44242"}}>
+                <Header style={{ backgroundColor: "#f44242" }}>
                   <Left>
                     <Button transparent onPress={backAction}>
-                      <Icon name="arrow-back" style={{color: "#fff"}} />
+                      <Icon name="arrow-back" style={{ color: "#fff" }} />
                     </Button>
                   </Left>
-                  <Body style={{flex: 3}}>
+                  <Body style={{ flex: 3 }}>
                     <Title>Your Header</Title>
                   </Body>
                   <Right />
@@ -61,7 +61,7 @@ class RegularPicker extends Component {
               )}
               mode="dropdown"
               iosIcon={<Icon name="ios-arrow-down" />}
-              style={{width: undefined}}
+              style={{ width: undefined }}
               selectedValue={this.state.selected1}
               onValueChange={this.onValueChange.bind(this)}>
               <Item label="Wallet" value="key0" />

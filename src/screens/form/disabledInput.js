@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -12,7 +12,7 @@ import {
   Right,
   IconNB,
   Item,
-  Input
+  Input,
 } from "native-base";
 import styles from "./styles";
 

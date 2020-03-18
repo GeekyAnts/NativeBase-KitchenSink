@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -10,7 +10,7 @@ import {
   Body,
   Left,
   Picker,
-  Form
+  Form,
 } from "native-base";
 import styles from "./styles";
 
@@ -20,12 +20,12 @@ class PickerTextItemText extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected2: undefined
+      selected2: undefined,
     };
   }
   onValueChange2(value: string) {
     this.setState({
-      selected2: value
+      selected2: value,
     });
   }
   render() {
@@ -37,7 +37,7 @@ class PickerTextItemText extends Component {
               <Icon name="arrow-back" />
             </Button>
           </Left>
-          <Body style={{flex: 3}}>
+          <Body style={{ flex: 3 }}>
             <Title>Picker Text & Item Text</Title>
           </Body>
           <Right />
@@ -48,15 +48,15 @@ class PickerTextItemText extends Component {
             <Picker
               mode="dropdown"
               iosIcon={<Icon name="ios-arrow-down" />}
-              style={{width: undefined}}
+              style={{ width: undefined }}
               placeholder="Select your SIM"
-              textStyle={{color: "#5cb85c"}}
+              textStyle={{ color: "#5cb85c" }}
               itemStyle={{
                 backgroundColor: "#d3d3d3",
                 marginLeft: 0,
-                paddingLeft: 10
+                paddingLeft: 10,
               }}
-              itemTextStyle={{color: "#788ad2"}}
+              itemTextStyle={{ color: "#788ad2" }}
               selectedValue={this.state.selected2}
               onValueChange={this.onValueChange2.bind(this)}>
               <Item label="Wallet" value="key0" />

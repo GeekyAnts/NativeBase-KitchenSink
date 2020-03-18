@@ -1,6 +1,6 @@
 // @flow
 
-import {Platform} from "react-native";
+import { Platform } from "react-native";
 
 import variable from "./../variables/platform";
 
@@ -13,15 +13,15 @@ export default (variables /*: * */ = variable) => {
         "NativeBase.Text": {
           color: variables.tabBarActiveTextColor,
           fontSize: variables.tabBarTextSize,
-          lineHeight: 16
+          lineHeight: 16,
         },
         "NativeBase.Icon": {
-          color: variables.tabBarActiveTextColor
+          color: variables.tabBarActiveTextColor,
         },
         "NativeBase.IconNB": {
-          color: variables.tabBarActiveTextColor
+          color: variables.tabBarActiveTextColor,
         },
-        backgroundColor: variables.tabActiveBgColor
+        backgroundColor: variables.tabActiveBgColor,
       },
       flexDirection: null,
       backgroundColor: "transparent",
@@ -40,7 +40,7 @@ export default (variables /*: * */ = variable) => {
           "NativeBase.Text": {
             fontSize: 11,
             fontWeight: platform === "ios" ? "600" : undefined,
-            lineHeight: 14
+            lineHeight: 14,
           },
           top: -3,
           alignSelf: "center",
@@ -48,30 +48,30 @@ export default (variables /*: * */ = variable) => {
           zIndex: 99,
           height: 18,
           padding: 1.7,
-          paddingHorizontal: 3
+          paddingHorizontal: 3,
         },
         "NativeBase.Icon": {
-          marginTop: -18
-        }
+          marginTop: -18,
+        },
       },
       "NativeBase.Icon": {
-        color: variables.tabBarTextColor
+        color: variables.tabBarTextColor,
       },
       "NativeBase.IconNB": {
-        color: variables.tabBarTextColor
+        color: variables.tabBarTextColor,
       },
       "NativeBase.Text": {
         color: variables.tabBarTextColor,
         fontSize: variables.tabBarTextSize,
-        lineHeight: 16
-      }
+        lineHeight: 16,
+      },
     },
     backgroundColor:
       Platform.OS === "android" ? variables.footerDefaultBg : undefined,
     flexDirection: "row",
     justifyContent: "space-between",
     flex: 1,
-    alignSelf: "stretch"
+    alignSelf: "stretch",
   };
 
   return footerTabTheme;

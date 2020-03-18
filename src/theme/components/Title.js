@@ -1,6 +1,6 @@
 // @flow
 
-import {Platform} from "react-native";
+import { Platform } from "react-native";
 
 import variable from "./../variables/platform";
 
@@ -13,7 +13,7 @@ export default (variables /*: * */ = variable) => {
     textAlign: "center",
     paddingLeft: Platform.OS === "ios" ? 4 : 0,
     marginLeft: Platform.OS === "ios" ? undefined : -3,
-    paddingTop: 1
+    paddingTop: 1,
   };
 
   return titleTheme;

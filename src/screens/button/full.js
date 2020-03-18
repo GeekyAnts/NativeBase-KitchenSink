@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -9,7 +9,7 @@ import {
   Left,
   Right,
   Body,
-  Text
+  Text,
 } from "native-base";
 import styles from "./styles";
 
@@ -29,7 +29,7 @@ class Full extends Component {
           <Right />
         </Header>
 
-        <Content style={{backgroundColor: "#fff"}}>
+        <Content style={{ backgroundColor: "#fff" }}>
           <Button full light style={styles.mt15}>
             <Text>Light</Text>
           </Button>

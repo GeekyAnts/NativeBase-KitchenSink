@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -12,7 +12,7 @@ import {
   Right,
   Icon,
   Form,
-  Text
+  Text,
 } from "native-base";
 import styles from "./styles";
 
@@ -41,7 +41,7 @@ class Placeholder extends Component {
               <Input placeholder="Password" secureTextEntry />
             </Item>
           </Form>
-          <Button block style={{margin: 15, marginTop: 50}}>
+          <Button block style={{ margin: 15, marginTop: 50 }}>
             <Text>Sign In</Text>
           </Button>
         </Content>

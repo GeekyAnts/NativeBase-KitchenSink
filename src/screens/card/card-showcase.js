@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {Image, Dimensions} from "react-native";
+import React, { Component } from "react";
+import { Image, Dimensions } from "react-native";
 import {
   Container,
   Header,
@@ -13,7 +13,7 @@ import {
   Thumbnail,
   Left,
   Right,
-  Body
+  Body,
 } from "native-base";
 import styles from "./styles";
 
@@ -57,7 +57,7 @@ class NHCardShowcase extends Component {
                     height: 150,
                     resizeMode: "cover",
                     width: deviceWidth / 1.18,
-                    marginVertical: 5
+                    marginVertical: 5,
                   }}
                   source={cardImage}
                 />
@@ -70,7 +70,7 @@ class NHCardShowcase extends Component {
                 </Text>
               </Body>
             </CardItem>
-            <CardItem style={{paddingVertical: 0}}>
+            <CardItem style={{ paddingVertical: 0 }}>
               <Left>
                 <Button transparent>
                   <Icon name="logo-github" />

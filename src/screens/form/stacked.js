@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -13,7 +13,7 @@ import {
   Right,
   Icon,
   Form,
-  Text
+  Text,
 } from "native-base";
 import styles from "./styles";
 
@@ -44,7 +44,7 @@ class Stacked extends Component {
               <Input secureTextEntry />
             </Item>
           </Form>
-          <Button block style={{margin: 15, marginTop: 50}}>
+          <Button block style={{ margin: 15, marginTop: 50 }}>
             <Text>Sign In</Text>
           </Button>
         </Content>

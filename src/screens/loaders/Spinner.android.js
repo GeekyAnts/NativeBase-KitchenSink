@@ -4,11 +4,11 @@ import ProgressBar from "ProgressBarAndroid";
 export default class SpinnerNB extends Component {
   prepareRootProps() {
     const type = {
-      height: 40
+      height: 40,
     };
 
     const defaultProps = {
-      style: type
+      style: type,
     };
 
     return { ...defaultProps, ...this.props };

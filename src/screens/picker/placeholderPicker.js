@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -10,7 +10,7 @@ import {
   Body,
   Left,
   Picker,
-  Form
+  Form,
 } from "native-base";
 import styles from "./styles";
 
@@ -20,12 +20,12 @@ class RegularPicker extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected2: undefined
+      selected2: undefined,
     };
   }
   onValueChange2(value: string) {
     this.setState({
-      selected2: value
+      selected2: value,
     });
   }
   render() {
@@ -37,7 +37,7 @@ class RegularPicker extends Component {
               <Icon name="arrow-back" />
             </Button>
           </Left>
-          <Body style={{flex: 3}}>
+          <Body style={{ flex: 3 }}>
             <Title>Picker with Placeholder and Icon</Title>
           </Body>
           <Right />
@@ -48,9 +48,9 @@ class RegularPicker extends Component {
             <Picker
               mode="dropdown"
               iosIcon={<Icon name="ios-arrow-down" />}
-              style={{width: undefined}}
+              style={{ width: undefined }}
               placeholder="Select your SIM"
-              placeholderStyle={{color: "#bfc6ea"}}
+              placeholderStyle={{ color: "#bfc6ea" }}
               placeholderIconColor="#007aff"
               selectedValue={this.state.selected2}
               onValueChange={this.onValueChange2.bind(this)}>

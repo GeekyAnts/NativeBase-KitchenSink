@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Container,
   Header,
@@ -11,36 +11,36 @@ import {
   Body,
   List,
   ListItem,
-  Text
+  Text,
 } from "native-base";
 
 const datas = [
   {
     route: "RowNB",
-    text: "Row Grid"
+    text: "Row Grid",
   },
   {
     route: "ColumnNB",
-    text: "Column Grid"
+    text: "Column Grid",
   },
   {
     route: "NestedGrid",
-    text: "Nested Grid"
+    text: "Nested Grid",
   },
   {
     route: "CustomRow",
-    text: "Custom Row Size Grid"
+    text: "Custom Row Size Grid",
   },
   {
     route: "CustomCol",
-    text: "Custom Column Size Grid"
-  }
+    text: "Custom Column Size Grid",
+  },
 ];
 
 class NHLayout extends Component {
   render() {
     return (
-      <Container style={{backgroundColor: "#FBFAFA"}}>
+      <Container style={{ backgroundColor: "#FBFAFA" }}>
         <Header>
           <Left>
             <Button
@@ -66,7 +66,7 @@ class NHLayout extends Component {
                   <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{color: "#999"}} />
+                  <Icon name="arrow-forward" style={{ color: "#999" }} />
                 </Right>
               </ListItem>
             )}

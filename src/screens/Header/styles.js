@@ -1,8 +1,8 @@
 export default {
   container: {
-    backgroundColor: "#FFF"
+    backgroundColor: "#FFF",
   },
   mb10: {
-    marginBottom: 10
-  }
+    marginBottom: 10,
+  },
 };
