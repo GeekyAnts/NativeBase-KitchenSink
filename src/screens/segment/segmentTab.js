@@ -42,18 +42,21 @@ class SegmentNB extends Component {
           <Button
             first
             active={this.state.seg === 1 ? true : false}
-            onPress={() => this.setState({ seg: 1 })}>
+            onPress={() => this.setState({ seg: 1 })}
+          >
             <Text>Puppies</Text>
           </Button>
           <Button
             active={this.state.seg === 2 ? true : false}
-            onPress={() => this.setState({ seg: 2 })}>
+            onPress={() => this.setState({ seg: 2 })}
+          >
             <Text>Kittens</Text>
           </Button>
           <Button
             last
             active={this.state.seg === 3 ? true : false}
-            onPress={() => this.setState({ seg: 3 })}>
+            onPress={() => this.setState({ seg: 3 })}
+          >
             <Text>Cubs</Text>
           </Button>
         </Segment>

@@ -32,7 +32,8 @@ class IconBtn extends Component {
 
         <Content padder>
           <View
-            style={{ flexDirection: "row", justifyContent: "space-between" }}>
+            style={{ flexDirection: "row", justifyContent: "space-between" }}
+          >
             <Button iconLeft light style={styles.mb15}>
               <Icon active name="arrow-back" />
               <Text>Back</Text>
@@ -56,7 +57,8 @@ class IconBtn extends Component {
             <Button
               iconLeft
               bordered
-              style={{ marginBottom: 20, marginLeft: 10 }}>
+              style={{ marginBottom: 20, marginLeft: 10 }}
+            >
               <Icon active name="briefcase" />
               <Text>Work</Text>
             </Button>
@@ -70,7 +72,8 @@ class IconBtn extends Component {
               iconLeft
               success
               bordered
-              style={{ marginBottom: 20, marginLeft: 10 }}>
+              style={{ marginBottom: 20, marginLeft: 10 }}
+            >
               <Icon active name="paw" />
               <Text>Animals</Text>
             </Button>
@@ -83,13 +86,15 @@ class IconBtn extends Component {
             <Button
               danger
               bordered
-              style={{ marginBottom: 20, marginLeft: 10 }}>
+              style={{ marginBottom: 20, marginLeft: 10 }}
+            >
               <Icon active name="trash" />
             </Button>
             <Button
               danger
               transparent
-              style={{ marginBottom: 20, marginLeft: 10 }}>
+              style={{ marginBottom: 20, marginLeft: 10 }}
+            >
               <Icon active name="trash" />
             </Button>
           </View>
@@ -101,7 +106,8 @@ class IconBtn extends Component {
             <Button
               warning
               bordered
-              style={{ marginBottom: 20, marginLeft: 10 }}>
+              style={{ marginBottom: 20, marginLeft: 10 }}
+            >
               <Icon active name="warning" />
             </Button>
           </View>
@@ -122,7 +128,8 @@ class IconBtn extends Component {
             <Button
               dark
               transparent
-              style={{ marginBottom: 20, marginLeft: 10 }}>
+              style={{ marginBottom: 20, marginLeft: 10 }}
+            >
               <Icon active name="cog" />
             </Button>
           </View>

@@ -204,7 +204,8 @@ class SideBar extends Component {
       <Container>
         <Content
           bounces={false}
-          style={{ flex: 1, backgroundColor: "#fff", top: -1 }}>
+          style={{ flex: 1, backgroundColor: "#fff", top: -1 }}
+        >
           <Image source={drawerCover} style={styles.drawerCover} />
           <Image square style={styles.drawerImage} source={drawerImage} />
 
@@ -214,7 +215,8 @@ class SideBar extends Component {
               <ListItem
                 button
                 noBorder
-                onPress={() => this.props.navigation.navigate(data.route)}>
+                onPress={() => this.props.navigation.navigate(data.route)}
+              >
                 <Left>
                   <Icon
                     active
@@ -231,7 +233,8 @@ class SideBar extends Component {
                         height: 25,
                         width: 72,
                         backgroundColor: data.bg
-                      }}>
+                      }}
+                    >
                       <Text style={styles.badgeText}>{`${
                         data.types
                       } Types`}</Text>

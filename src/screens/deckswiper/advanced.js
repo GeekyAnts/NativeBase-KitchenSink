@@ -111,7 +111,8 @@ class AdvancedDeck extends Component {
             right: 0,
             justifyContent: "space-between",
             padding: 15
-          }}>
+          }}
+        >
           <Button iconLeft onPress={() => this._deckSwiper._root.swipeLeft()}>
             <Icon name="arrow-back" />
             <Text>Swipe Left</Text>

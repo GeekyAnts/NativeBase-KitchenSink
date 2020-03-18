@@ -45,7 +45,8 @@ class NHLayout extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}>
+              onPress={() => this.props.navigation.openDrawer()}
+            >
               <Icon name="menu" />
             </Button>
           </Left>
@@ -61,7 +62,8 @@ class NHLayout extends Component {
             renderRow={data => (
               <ListItem
                 button
-                onPress={() => this.props.navigation.navigate(data.route)}>
+                onPress={() => this.props.navigation.navigate(data.route)}
+              >
                 <Left>
                   <Text>{data.text}</Text>
                 </Left>

@@ -43,7 +43,8 @@ class BasicToast extends Component {
                 text: "Wrong password!",
                 buttonText: "Okay"
               })
-            }>
+            }
+          >
             <Text>Toast</Text>
           </Button>
         </Content>

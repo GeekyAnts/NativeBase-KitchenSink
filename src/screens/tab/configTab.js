@@ -39,7 +39,8 @@ class ConfigTab extends Component {
                 <Icon name="camera" />
                 <Text>Camera</Text>
               </TabHeading>
-            }>
+            }
+          >
             <TabOne />
           </Tab>
           <Tab
@@ -47,7 +48,8 @@ class ConfigTab extends Component {
               <TabHeading>
                 <Text>No Icon</Text>
               </TabHeading>
-            }>
+            }
+          >
             <TabTwo />
           </Tab>
           <Tab
@@ -55,7 +57,8 @@ class ConfigTab extends Component {
               <TabHeading>
                 <Icon name="apps" />
               </TabHeading>
-            }>
+            }
+          >
             <TabThree />
           </Tab>
         </Tabs>

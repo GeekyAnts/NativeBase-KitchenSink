@@ -44,7 +44,8 @@ class ToastDuration extends Component {
                 buttonText: "Okay",
                 duration: 3000
               })
-            }>
+            }
+          >
             <Text>Toast</Text>
           </Button>
         </Content>

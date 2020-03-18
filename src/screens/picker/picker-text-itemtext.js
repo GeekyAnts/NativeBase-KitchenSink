@@ -58,7 +58,8 @@ class PickerTextItemText extends Component {
               }}
               itemTextStyle={{ color: "#788ad2" }}
               selectedValue={this.state.selected2}
-              onValueChange={this.onValueChange2.bind(this)}>
+              onValueChange={this.onValueChange2.bind(this)}
+            >
               <Item label="Wallet" value="key0" />
               <Item label="ATM Card" value="key1" />
               <Item label="Debit Card" value="key2" />

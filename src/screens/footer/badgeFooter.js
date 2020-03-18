@@ -81,7 +81,8 @@ class BadgeFooter extends Component {
               active={this.state.tab1}
               onPress={() => this.toggleTab1()}
               vertical
-              badge>
+              badge
+            >
               <Badge>
                 <Text>2</Text>
               </Badge>
@@ -96,7 +97,8 @@ class BadgeFooter extends Component {
               active={this.state.tab3}
               onPress={() => this.toggleTab3()}
               vertical
-              badge>
+              badge
+            >
               <Badge style={{ backgroundColor: "green" }}>
                 <Text>51</Text>
               </Badge>

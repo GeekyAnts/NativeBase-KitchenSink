@@ -59,7 +59,8 @@ class NHListItemNoIndent extends Component {
                   style={{
                     backgroundColor:
                       this.state.selected === item ? "#cde1f9" : "#fff"
-                  }}>
+                  }}
+                >
                   <Left>
                     <Text>{item}</Text>
                   </Left>

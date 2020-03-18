@@ -56,7 +56,8 @@ class PickerWithIconStyle extends Component {
               }
               style={{ width: undefined }}
               selectedValue={this.state.selected1}
-              onValueChange={this.onValueChange.bind(this)}>
+              onValueChange={this.onValueChange.bind(this)}
+            >
               <Item label="Wallet" value="key0" />
               <Item label="ATM Card" value="key1" />
               <Item label="Debit Card" value="key2" />

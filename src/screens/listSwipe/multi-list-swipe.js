@@ -74,7 +74,8 @@ class MultiListSwipe extends Component {
                   flex: 1,
                   alignItems: "center",
                   justifyContent: "center"
-                }}>
+                }}
+              >
                 <Icon active name="information-circle" />
               </Button>
             )}
@@ -87,7 +88,8 @@ class MultiListSwipe extends Component {
                   flex: 1,
                   alignItems: "center",
                   justifyContent: "center"
-                }}>
+                }}
+              >
                 <Icon active name="trash" />
               </Button>
             )}

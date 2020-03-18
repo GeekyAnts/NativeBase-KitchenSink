@@ -44,7 +44,8 @@ class BasicFab extends Component {
             containerStyle={{}}
             style={{ backgroundColor: "#5067FF" }}
             position="bottomRight"
-            onPress={() => this.setState({ active: !this.state.active })}>
+            onPress={() => this.setState({ active: !this.state.active })}
+          >
             <IconNB name="md-share" />
             <Button style={{ backgroundColor: "#34A34F" }}>
               <IconNB name="logo-whatsapp" />

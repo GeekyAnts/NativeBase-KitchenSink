@@ -46,7 +46,8 @@ class MultipleFab extends Component {
             containerStyle={{}}
             style={{ backgroundColor: "#5067FF" }}
             position="bottomRight"
-            onPress={() => this.setState({ active: !this.state.active })}>
+            onPress={() => this.setState({ active: !this.state.active })}
+          >
             <IconNB name="md-share" />
             <Button style={{ backgroundColor: "#34A34F" }}>
               <IconNB name="logo-whatsapp" />
@@ -64,7 +65,8 @@ class MultipleFab extends Component {
             containerStyle={{}}
             style={{ backgroundColor: "#5067FF" }}
             position="topRight"
-            onPress={() => this.setState({ active1: !this.state.active1 })}>
+            onPress={() => this.setState({ active1: !this.state.active1 })}
+          >
             <IconNB name="md-share" />
             <Button style={{ backgroundColor: "#34A34F" }}>
               <IconNB name="logo-whatsapp" />
@@ -82,7 +84,8 @@ class MultipleFab extends Component {
             containerStyle={{}}
             style={{ backgroundColor: "#5067FF" }}
             position="topLeft"
-            onPress={() => this.setState({ active2: !this.state.active2 })}>
+            onPress={() => this.setState({ active2: !this.state.active2 })}
+          >
             <IconNB name="md-share" />
             <Button style={{ backgroundColor: "#34A34F" }}>
               <IconNB name="logo-whatsapp" />
@@ -100,7 +103,8 @@ class MultipleFab extends Component {
             containerStyle={{}}
             style={{ backgroundColor: "#5067FF" }}
             position="bottomLeft"
-            onPress={() => this.setState({ active3: !this.state.active3 })}>
+            onPress={() => this.setState({ active3: !this.state.active3 })}
+          >
             <IconNB name="md-share" />
             <Button style={{ backgroundColor: "#34A34F" }}>
               <IconNB name="logo-whatsapp" />

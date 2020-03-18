@@ -42,7 +42,8 @@ class AccordionCustomHeaderContent extends Component {
           justifyContent: "space-between",
           alignItems: "center",
           backgroundColor: "#A9DAD6"
-        }}>
+        }}
+      >
         <Text style={{ fontWeight: "600" }}> {item.title}</Text>
         {expanded ? (
           <Icon style={{ fontSize: 18 }} name="remove-circle" />
@@ -59,7 +60,8 @@ class AccordionCustomHeaderContent extends Component {
           backgroundColor: "#e3f1f1",
           padding: 10,
           fontStyle: "italic"
-        }}>
+        }}
+      >
         {item.content}
       </Text>
     );

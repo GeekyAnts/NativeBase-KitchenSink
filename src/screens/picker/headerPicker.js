@@ -54,7 +54,8 @@ class RegularPicker extends Component {
               iosIcon={<Icon name="ios-arrow-down" />}
               style={{ width: Platform.OS === "ios" ? undefined : 120 }}
               selectedValue={this.state.selected4}
-              onValueChange={this.onValueChange4.bind(this)}>
+              onValueChange={this.onValueChange4.bind(this)}
+            >
               <Item label="Wallet" value="key0" />
               <Item label="ATM Card" value="key1" />
               <Item label="Debit Card" value="key2" />

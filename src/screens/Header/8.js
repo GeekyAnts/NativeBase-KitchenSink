@@ -20,7 +20,8 @@ class Header8 extends Component {
         <Header
           style={{ backgroundColor: "#dc4239" }}
           androidStatusBarColor="#dc2015"
-          iosBarStyle="light-content">
+          iosBarStyle="light-content"
+        >
           <Left>
             <Button transparent onPress={() => this.props.navigation.goBack()}>
               <Icon name="arrow-back" style={{ color: "#FFF" }} />

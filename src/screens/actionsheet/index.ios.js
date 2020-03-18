@@ -28,7 +28,8 @@ export default class ActionSheetNB extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}>
+              onPress={() => this.props.navigation.openDrawer()}
+            >
               <Icon name="ios-menu" />
             </Button>
           </Left>
@@ -51,7 +52,8 @@ export default class ActionSheetNB extends Component {
                   this.setState({ clicked: BUTTONS[buttonIndex] });
                 }
               )
-            }>
+            }
+          >
             <Text>Actionsheet</Text>
           </Button>
         </Content>

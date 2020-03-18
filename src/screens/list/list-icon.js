@@ -181,7 +181,8 @@ class NHListIcon extends Component {
                 mode="dropdown"
                 style={{ width: 120 }}
                 selectedValue={this.state.selected1}
-                onValueChange={this.onValueChange.bind(this)}>
+                onValueChange={this.onValueChange.bind(this)}
+              >
                 <Item label="TATA" value="key0" />
                 <Item label="AIRTEL" value="key1" />
               </Picker>

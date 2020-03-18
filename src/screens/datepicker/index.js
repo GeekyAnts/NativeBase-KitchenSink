@@ -31,7 +31,8 @@ class NHDatePicker extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}>
+              onPress={() => this.props.navigation.openDrawer()}
+            >
               <Icon name="ios-menu" />
             </Button>
           </Left>

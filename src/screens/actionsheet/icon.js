@@ -56,7 +56,8 @@ export default class ActionSheetNB extends Component {
                   this.setState({ clicked: BUTTONS[buttonIndex] });
                 }
               )
-            }>
+            }
+          >
             <Text>Actionsheet</Text>
           </Button>
         </Content>

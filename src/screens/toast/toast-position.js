@@ -44,7 +44,8 @@ class ToastPosition extends Component {
                 buttonText: "Okay",
                 position: "top"
               })
-            }>
+            }
+          >
             <Text>Top Toast</Text>
           </Button>
           <Button
@@ -55,7 +56,8 @@ class ToastPosition extends Component {
                 buttonText: "Okay",
                 position: "bottom"
               })
-            }>
+            }
+          >
             <Text>Bottom Toast</Text>
           </Button>
         </Content>

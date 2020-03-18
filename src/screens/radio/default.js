@@ -75,7 +75,8 @@ class NHDefaultRadio extends Component {
         <Content>
           <ListItem
             selected={this.state.radio1}
-            onPress={() => this.toggleRadio1()}>
+            onPress={() => this.toggleRadio1()}
+          >
             <Left>
               <Text>Lunch Break</Text>
             </Left>
@@ -88,7 +89,8 @@ class NHDefaultRadio extends Component {
           </ListItem>
           <ListItem
             selected={this.state.radio2}
-            onPress={() => this.toggleRadio2()}>
+            onPress={() => this.toggleRadio2()}
+          >
             <Left>
               <Text>Daily Stand Up</Text>
             </Left>
@@ -101,7 +103,8 @@ class NHDefaultRadio extends Component {
           </ListItem>
           <ListItem
             selected={this.state.radio3}
-            onPress={() => this.toggleRadio3()}>
+            onPress={() => this.toggleRadio3()}
+          >
             <Left>
               <Text>Finish List Screen</Text>
             </Left>
@@ -114,7 +117,8 @@ class NHDefaultRadio extends Component {
           </ListItem>
           <ListItem
             selected={this.state.radio4}
-            onPress={() => this.toggleRadio4()}>
+            onPress={() => this.toggleRadio4()}
+          >
             <Left>
               <Text>Discussion with Client</Text>
             </Left>

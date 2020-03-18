@@ -43,7 +43,8 @@ class ToastType extends Component {
                 text: "Wrong password!",
                 buttonText: "Okay"
               })
-            }>
+            }
+          >
             <Text>Default Toast</Text>
           </Button>
           <Button
@@ -55,7 +56,8 @@ class ToastType extends Component {
                 buttonText: "Okay",
                 type: "success"
               })
-            }>
+            }
+          >
             <Text>Success Toast</Text>
           </Button>
           <Button
@@ -67,7 +69,8 @@ class ToastType extends Component {
                 buttonText: "Okay",
                 type: "warning"
               })
-            }>
+            }
+          >
             <Text>Warning Toast</Text>
           </Button>
           <Button
@@ -79,7 +82,8 @@ class ToastType extends Component {
                 buttonText: "Okay",
                 type: "danger"
               })
-            }>
+            }
+          >
             <Text>Danger Toast</Text>
           </Button>
         </Content>

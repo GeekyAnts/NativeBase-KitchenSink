@@ -44,7 +44,8 @@ class ToastText extends Component {
                 textStyle: { color: "yellow" },
                 buttonText: "Okay"
               })
-            }>
+            }
+          >
             <Text>Toast</Text>
           </Button>
         </Content>

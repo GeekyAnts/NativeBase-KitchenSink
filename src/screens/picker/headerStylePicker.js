@@ -53,7 +53,8 @@ class RegularPicker extends Component {
               headerTitleStyle={{ color: "#fff" }}
               style={{ width: undefined }}
               selectedValue={this.state.selected5}
-              onValueChange={this.onValueChange5.bind(this)}>
+              onValueChange={this.onValueChange5.bind(this)}
+            >
               <Item label="Wallet" value="key0" />
               <Item label="ATM Card" value="key1" />
               <Item label="Debit Card" value="key2" />

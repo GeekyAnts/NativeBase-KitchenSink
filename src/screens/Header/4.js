@@ -30,7 +30,8 @@ class Header4 extends Component {
             <Button
               hasText
               transparent
-              onPress={() => this.props.navigation.goBack()}>
+              onPress={() => this.props.navigation.goBack()}
+            >
               <Text>Cancel</Text>
             </Button>
           </Right>

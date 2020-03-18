@@ -22,7 +22,8 @@ class NHBadge extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.openDrawer()}>
+              onPress={() => this.props.navigation.openDrawer()}
+            >
               <Icon name="menu" />
             </Button>
           </Left>
@@ -59,7 +60,8 @@ class NHBadge extends Component {
           </Badge>
           <Badge
             style={{ backgroundColor: "black" }}
-            textStyle={{ color: "white" }}>
+            textStyle={{ color: "white" }}
+          >
             <Text>1866</Text>
           </Badge>
         </Content>

@@ -55,7 +55,8 @@ class NHListItemSelected extends Component {
               return (
                 <ListItem
                   selected={this.state.selected === item}
-                  onPress={() => this.setState({ selected: item })}>
+                  onPress={() => this.setState({ selected: item })}
+                >
                   <Left>
                     <Text>{item}</Text>
                   </Left>
