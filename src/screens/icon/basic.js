@@ -148,7 +148,7 @@ class BasicIcon extends Component {
             />
             <Icon
               active
-              name="logo-game-controller-a"
+              name="game-controller"
               style={{ width: 45, height: 45, justifyContent: "center" }}
             />
             <Icon
@@ -241,7 +241,7 @@ class BasicIcon extends Component {
             />
             <Icon
               active
-              name="chatboxes"
+              name="chatbox"
               style={{ width: 45, height: 45, justifyContent: "center" }}
             />
             <Icon
