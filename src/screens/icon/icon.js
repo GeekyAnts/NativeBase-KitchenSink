@@ -12,7 +12,7 @@ import {
   Right,
   Grid,
   Col,
-  Row
+  Row,
 } from "native-base";
 import styles from "./styles";
 
@@ -81,7 +81,7 @@ class Icons extends Component {
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="pie" style={{ color: "#fac125" }} />
+                <Icon name="pie-chart" style={{ color: "#fac125" }} />
                 <Text numberOfLines={1} style={styles.iconText}>
                   pie
                 </Text>
@@ -126,7 +126,7 @@ class Icons extends Component {
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon active name="paper" style={{ color: "#000" }} />
+                <Icon active name="newspaper" style={{ color: "#000" }} />
                 <Text numberOfLines={1} style={styles.iconText}>
                   paper
                 </Text>
@@ -201,7 +201,7 @@ class Icons extends Component {
 
             <Row style={styles.row}>
               <Col style={styles.col}>
-                <Icon name="microphone" style={{ color: "#000" }} />
+                <Icon name="mic" style={{ color: "#000" }} />
                 <Text numberOfLines={1} style={styles.iconText}>
                   microphone
                 </Text>
@@ -300,7 +300,7 @@ class Icons extends Component {
 
             <Row style={styles.row}>
               <Col style={styles.col}>
-                <Icon active name="chatboxes" style={{ color: "green" }} />
+                <Icon active name="chatbox" style={{ color: "green" }} />
                 <Text numberOfLines={1} style={styles.iconText}>
                   chatboxes
                 </Text>
@@ -366,7 +366,7 @@ class Icons extends Component {
 
             <Row style={styles.row}>
               <Col style={styles.col}>
-                <Icon name="lock" style={{ color: "blue" }} />
+                <Icon name="lock-closed" style={{ color: "blue" }} />
                 <Text numberOfLines={1} style={styles.iconText}>
                   lock
                 </Text>
@@ -384,7 +384,11 @@ class Icons extends Component {
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon active name="skip-forward" style={{ color: "#999" }} />
+                <Icon
+                  active
+                  name="play-skip-forward"
+                  style={{ color: "#999" }}
+                />
                 <Text numberOfLines={1} style={styles.iconText}>
                   skip-forward
                 </Text>
@@ -483,7 +487,7 @@ class Icons extends Component {
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon active name="hand" style={{ color: "#EBAB7F" }} />
+                <Icon active name="hand-left" style={{ color: "#EBAB7F" }} />
                 <Text numberOfLines={1} style={styles.iconText}>
                   hand
                 </Text>
@@ -516,9 +520,9 @@ class Icons extends Component {
                 </Text>
               </Col>
               <Col style={styles.col}>
-                <Icon name="logo-googleplus" style={{ color: "#DC4A38" }} />
+                <Icon name="logo-google" style={{ color: "#DC4A38" }} />
                 <Text numberOfLines={1} style={styles.iconText}>
-                  logo-googleplus
+                  logo-google
                 </Text>
               </Col>
               <Col style={styles.col}>

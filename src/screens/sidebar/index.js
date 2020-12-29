@@ -9,7 +9,7 @@ import {
   Container,
   Left,
   Right,
-  Badge
+  Badge,
 } from "native-base";
 import styles from "./style";
 
@@ -20,174 +20,174 @@ const datas = [
     name: "Anatomy",
     route: "Anatomy",
     icon: "phone-portrait",
-    bg: "#C5F442"
+    bg: "#C5F442",
   },
   {
     name: "Header",
     route: "Header",
     icon: "arrow-up",
     bg: "#477EEA",
-    types: "11"
+    types: "11",
   },
   {
     name: "Footer",
     route: "Footer",
     icon: "arrow-down",
     bg: "#DA4437",
-    types: "4"
+    types: "4",
   },
   {
     name: "Accordion",
     route: "NHAccordion",
     icon: "repeat",
     bg: "#C5F442",
-    types: "5"
+    types: "5",
   },
   {
     name: "Actionsheet",
     route: "Actionsheet",
     icon: "easel",
-    bg: "#C5F442"
+    bg: "#C5F442",
   },
   {
     name: "Badge",
     route: "NHBadge",
     icon: "notifications",
-    bg: "#4DCAE0"
+    bg: "#4DCAE0",
   },
   {
     name: "Button",
     route: "NHButton",
     icon: "radio-button-off",
     bg: "#1EBC7C",
-    types: "9"
+    types: "9",
   },
   {
     name: "Card",
     route: "NHCard",
     icon: "keypad",
     bg: "#B89EF5",
-    types: "8"
+    types: "8",
   },
   {
     name: "Check Box",
     route: "NHCheckbox",
     icon: "checkmark-circle",
-    bg: "#EB6B23"
+    bg: "#EB6B23",
   },
   {
     name: "Date Picker",
     route: "NHDatePicker",
     icon: "calendar",
-    bg: "#EB6B23"
+    bg: "#EB6B23",
   },
   {
     name: "Deck Swiper",
     route: "NHDeckSwiper",
-    icon: "swap",
+    icon: "swap-horizontal",
     bg: "#3591FA",
-    types: "2"
+    types: "2",
   },
   {
     name: "Fab",
     route: "NHFab",
     icon: "help-buoy",
     bg: "#EF6092",
-    types: "2"
+    types: "2",
   },
   {
     name: "Form & Inputs",
     route: "NHForm",
     icon: "call",
     bg: "#EFB406",
-    types: "12"
+    types: "12",
   },
   {
     name: "Icon",
     route: "NHIcon",
     icon: "information-circle",
     bg: "#bfe9ea",
-    types: "4"
+    types: "4",
   },
   {
     name: "Layout",
     route: "NHLayout",
     icon: "grid",
     bg: "#9F897C",
-    types: "5"
+    types: "5",
   },
   {
     name: "List",
     route: "NHList",
-    icon: "lock",
+    icon: "list",
     bg: "#5DCEE2",
-    types: "8"
+    types: "8",
   },
   {
     name: "ListSwipe",
     route: "ListSwipe",
     icon: "code-working",
     bg: "#C5F442",
-    types: "3"
+    types: "3",
   },
   {
     name: "Picker",
     route: "NHPicker",
-    icon: "arrow-dropdown",
-    bg: "#F50C75"
+    icon: "arrow-down",
+    bg: "#F50C75",
   },
   {
     name: "Radio",
     route: "NHRadio",
     icon: "radio-button-on",
-    bg: "#6FEA90"
+    bg: "#6FEA90",
   },
   {
     name: "SearchBar",
     route: "NHSearchbar",
     icon: "search",
-    bg: "#29783B"
+    bg: "#29783B",
   },
   {
     name: "Segment",
     route: "Segment",
     icon: "menu",
     bg: "#0A2C6B",
-    types: "3"
+    types: "3",
   },
   {
     name: "Spinner",
     route: "NHSpinner",
     icon: "navigate",
-    bg: "#BE6F50"
+    bg: "#BE6F50",
   },
   {
     name: "Tabs",
     route: "NHTab",
     icon: "home",
     bg: "#AB6AED",
-    types: "3"
+    types: "3",
   },
   {
     name: "Thumbnail",
     route: "NHThumbnail",
     icon: "image",
     bg: "#cc0000",
-    types: "2"
+    types: "2",
   },
   {
     name: "Toast",
     route: "NHToast",
     icon: "albums",
     bg: "#C5F442",
-    types: "6"
+    types: "6",
   },
   {
     name: "Typography",
     route: "NHTypography",
-    icon: "paper",
-    bg: "#48525D"
-  }
+    icon: "newspaper",
+    bg: "#48525D",
+  },
 ];
 
 class SideBar extends Component {
@@ -195,7 +195,7 @@ class SideBar extends Component {
     super(props);
     this.state = {
       shadowOffsetWidth: 1,
-      shadowRadius: 4
+      shadowRadius: 4,
     };
   }
 
@@ -211,7 +211,7 @@ class SideBar extends Component {
 
           <List
             dataArray={datas}
-            renderRow={data =>
+            renderRow={(data) => (
               <ListItem
                 button
                 noBorder
@@ -223,26 +223,26 @@ class SideBar extends Component {
                     name={data.icon}
                     style={{ color: "#777", fontSize: 26, width: 30 }}
                   />
-                  <Text style={styles.text}>
-                    {data.name}
-                  </Text>
+                  <Text style={styles.text}>{data.name}</Text>
                 </Left>
-                {data.types &&
+                {data.types && (
                   <Right style={{ flex: 1 }}>
                     <Badge
                       style={{
                         borderRadius: 3,
                         height: 25,
                         width: 72,
-                        backgroundColor: data.bg
+                        backgroundColor: data.bg,
                       }}
                     >
                       <Text
                         style={styles.badgeText}
                       >{`${data.types} Types`}</Text>
                     </Badge>
-                  </Right>}
-              </ListItem>}
+                  </Right>
+                )}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>

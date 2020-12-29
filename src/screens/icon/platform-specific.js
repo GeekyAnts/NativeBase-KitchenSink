@@ -13,7 +13,7 @@ import {
   Grid,
   Col,
   Row,
-  Text
+  Text,
 } from "native-base";
 
 import styles from "./styles";
@@ -50,7 +50,7 @@ class PlatformSpecificIcon extends Component {
                 <Text>alarm</Text>
               </Col>
               <Col style={styles.col}>
-                <Icon ios="ios-paper" android="md-paper" />
+                <Icon ios="ios-newspaper" android="md-paper" />
                 <Text>paper</Text>
               </Col>
               <Col style={styles.col}>
