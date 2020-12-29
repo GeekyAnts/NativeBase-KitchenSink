@@ -10,7 +10,7 @@ import {
   Icon,
   Body,
   Left,
-  Right
+  Right,
 } from "native-base";
 
 import styles from "./styles";
@@ -66,7 +66,7 @@ class BasicIcon extends Component {
               style={{ width: 45, height: 45, justifyContent: "center" }}
             />
             <Icon
-              name="pie"
+              name="pie-chart"
               style={{ width: 45, height: 45, justifyContent: "center" }}
             />
             <Icon
@@ -98,7 +98,7 @@ class BasicIcon extends Component {
               style={{ width: 45, height: 45, justifyContent: "center" }}
             />
             <Icon
-              name="paper"
+              name="newspaper"
               style={{ width: 45, height: 45, justifyContent: "center" }}
             />
             <Icon
@@ -157,7 +157,7 @@ class BasicIcon extends Component {
             />
             <Icon
               active
-              name="microphone"
+              name="mic"
               style={{ width: 45, height: 45, justifyContent: "center" }}
             />
             <Icon
@@ -285,11 +285,11 @@ class BasicIcon extends Component {
             />
             <Icon
               active
-              name="lock"
+              name="lock-closed"
               style={{ width: 45, height: 45, justifyContent: "center" }}
             />
             <Icon
-              name="skip-backward"
+              name="play-skip-back"
               style={{ width: 45, height: 45, justifyContent: "center" }}
             />
             <Icon
@@ -303,7 +303,7 @@ class BasicIcon extends Component {
             />
             <Icon
               active
-              name="skip-forward"
+              name="play-skip-forward"
               style={{ width: 45, height: 45, justifyContent: "center" }}
             />
             <Icon
@@ -368,7 +368,7 @@ class BasicIcon extends Component {
               style={{ width: 45, height: 45, justifyContent: "center" }}
             />
             <Icon
-              name="hand"
+              name="hand-left"
               style={{ width: 45, height: 45, justifyContent: "center" }}
             />
             <Icon
@@ -391,7 +391,7 @@ class BasicIcon extends Component {
               style={{ width: 45, height: 45, justifyContent: "center" }}
             />
             <Icon
-              name="logo-googleplus"
+              name="logo-google"
               style={{ width: 45, height: 45, justifyContent: "center" }}
             />
             <Icon

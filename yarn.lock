@@ -4417,10 +4417,9 @@ native-base-shoutem-theme@0.3.1:
     lodash "^4.17.14"
     prop-types "^15.5.10"
 
-native-base@^2.15.0:
+"native-base@https://github.com/GeekyAnts/NativeBase":
   version "2.15.0"
-  resolved "https://registry.yarnpkg.com/native-base/-/native-base-2.15.0.tgz#d11f18e7a433e525c0b6a080def33b0b58ed8b6b"
-  integrity sha512-Mt1SDwBRrI4Zhi2vXpEwVPPYT7thTWSaQYL+SOE9IELgoA4gnDrDBISFHTTpfgGFVmscL/QIbq/z9nydEGBD0g==
+  resolved "https://github.com/GeekyAnts/NativeBase#cd51ed2a1aebcd773f04c392f6771ce70d8efec0"
   dependencies:
     "@codler/react-native-keyboard-aware-scroll-view" "1.0.1"
     "@react-native-community/datetimepicker" "^3.0.2"
