@@ -11,23 +11,19 @@ import {
   Right,
   Body,
   List,
-  ListItem
+  ListItem,
 } from "native-base";
 import styles from "./styles";
 
 const datas = [
   {
     route: "BasicListSwipe",
-    text: "Single SwipeRow"
+    text: "Single SwipeRow",
   },
   {
     route: "SwipeRowCustomStyle",
-    text: "Swipe Row Custom Style"
+    text: "Swipe Row Custom Style",
   },
-  {
-    route: "MultiListSwipe",
-    text: "Multiple List Swipe"
-  }
 ];
 
 class ListSwipe extends Component {
@@ -52,20 +48,19 @@ class ListSwipe extends Component {
         <Content scrollEnabled={false} contentContainerStyle={{ flex: 1 }}>
           <List
             dataArray={datas}
-            renderRow={data =>
+            renderRow={(data) => (
               <ListItem
                 button
                 onPress={() => this.props.navigation.navigate(data.route)}
               >
                 <Left>
-                  <Text>
-                    {data.text}
-                  </Text>
+                  <Text>{data.text}</Text>
                 </Left>
                 <Right>
                   <Icon name="arrow-forward" />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>
