@@ -10,7 +10,7 @@ import {
   Body,
   Left,
   Right,
-  Icon
+  Icon,
 } from "native-base";
 import styles from "./styles";
 
@@ -21,7 +21,7 @@ class IconFooter extends Component {
       tab1: false,
       tab2: false,
       tab3: true,
-      tab4: false
+      tab4: false,
     };
   }
   toggleTab1() {
@@ -29,7 +29,7 @@ class IconFooter extends Component {
       tab1: true,
       tab2: false,
       tab3: false,
-      tab4: false
+      tab4: false,
     });
   }
   toggleTab2() {
@@ -37,7 +37,7 @@ class IconFooter extends Component {
       tab1: false,
       tab2: true,
       tab3: false,
-      tab4: false
+      tab4: false,
     });
   }
   toggleTab3() {
@@ -45,7 +45,7 @@ class IconFooter extends Component {
       tab1: false,
       tab2: false,
       tab3: true,
-      tab4: false
+      tab4: false,
     });
   }
   toggleTab4() {
@@ -53,7 +53,7 @@ class IconFooter extends Component {
       tab1: false,
       tab2: false,
       tab3: false,
-      tab4: true
+      tab4: true,
     });
   }
   render() {
@@ -85,7 +85,7 @@ class IconFooter extends Component {
               <Icon active={this.state.tab3} name="compass" />
             </Button>
             <Button active={this.state.tab4} onPress={() => this.toggleTab4()}>
-              <Icon active={this.state.tab4} name="contact" />
+              <Icon active={this.state.tab4} name="menu" />
             </Button>
           </FooterTab>
         </Footer>

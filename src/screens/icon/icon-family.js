@@ -10,50 +10,56 @@ import {
   Title,
   Content,
   ListItem,
-  Text
+  Text,
+  StyleProvider,
 } from "native-base";
-
+import getTheme from "../../theme/components";
+import variables from "../../theme/variables/platform";
 class IconFamily extends Component {
   render() {
     return (
-      <Container style={{ backgroundColor: "#FFF" }}>
-        <Header>
-          <Left>
-            <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="arrow-back" />
-            </Button>
-          </Left>
-          <Body>
-            <Title>Icon Family</Title>
-          </Body>
-          <Right />
-        </Header>
-        <Content>
-          <ListItem>
-            <Text style={{ width: 220 }}>Ionicons</Text>
-            <Icon type="Ionicons" name="home" style={{ color: "#999" }} />
-          </ListItem>
-          <ListItem>
-            <Text style={{ width: 220 }}>Entypo</Text>
-            <Icon type="Entypo" name="home" style={{ color: "#999" }} />
-          </ListItem>
-          <ListItem>
-            <Text style={{ width: 220 }}>Feather</Text>
-            <Icon type="Feather" name="home" style={{ color: "#999" }} />
-          </ListItem>
-          <ListItem>
-            <Text style={{ width: 220 }}>FontAwesome</Text>
-            <Icon type="FontAwesome" name="home" style={{ color: "#999" }} />
-          </ListItem>
-          {/* <ListItem>
+      <StyleProvider style={getTheme({ ...variables, iconFamily: "Fontisto" })}>
+        <Container style={{ backgroundColor: "#FFF" }}>
+          <Header>
+            <Left>
+              <Button
+                transparent
+                onPress={() => this.props.navigation.goBack()}
+              >
+                <Icon name="arrow-back" />
+              </Button>
+            </Left>
+            <Body>
+              <Title>Icon Family</Title>
+            </Body>
+            <Right />
+          </Header>
+          <Content>
+            <ListItem>
+              <Text style={{ width: 220 }}>Ionicons</Text>
+              <Icon type="Ionicons" name="home" style={{ color: "#999" }} />
+            </ListItem>
+            <ListItem>
+              <Text style={{ width: 220 }}>Entypo</Text>
+              <Icon type="Entypo" name="home" style={{ color: "#999" }} />
+            </ListItem>
+            <ListItem>
+              <Text style={{ width: 220 }}>Feather</Text>
+              <Icon type="Feather" name="home" style={{ color: "#999" }} />
+            </ListItem>
+            <ListItem>
+              <Text style={{ width: 220 }}>FontAwesome</Text>
+              <Icon type="FontAwesome" name="home" style={{ color: "#999" }} />
+            </ListItem>
+            {/* <ListItem>
             <Text style={{ width: 220 }}>Foundation</Text>
             <Icon type="Foundation" name="home" style={{ color: "#999" }} />
           </ListItem> */}
-          {/* <ListItem>
+            {/* <ListItem>
             <Text style={{ width: 220 }}>Material Icons</Text>
             <Icon type="MaterialIcons" name="home" style={{ color: "#999" }} />
           </ListItem> */}
-          {/* <ListItem>
+            {/* <ListItem>
             <Text style={{ width: 220 }}>Material Community Icons</Text>
             <Icon
               type="MaterialCommunityIcons"
@@ -61,15 +67,16 @@ class IconFamily extends Component {
               style={{ color: "#999" }}
             />
           </ListItem> */}
-          <ListItem>
-            <Text style={{ width: 220 }}>Octicons</Text>
-            <Icon type="Octicons" name="home" style={{ color: "#999" }} />
-          </ListItem>
-          {/* <ListItem>
+            <ListItem>
+              <Text style={{ width: 220 }}>Octicons</Text>
+              <Icon type="Octicons" name="home" style={{ color: "#999" }} />
+              <Icon name="home" />
+            </ListItem>
+            {/* <ListItem>
             <Text style={{ width: 220 }}>Zocial</Text>
             <Icon type="Zocial" name="dropbox" style={{ color: "#999" }} />
           </ListItem> */}
-          {/* <ListItem>
+            {/* <ListItem>
             <Text style={{ width: 220 }}>Simple Line Icons</Text>
             <Icon
               type="SimpleLineIcons"
@@ -77,12 +84,13 @@ class IconFamily extends Component {
               style={{ color: "#999" }}
             />
           </ListItem> */}
-          {/* <ListItem>
+            {/* <ListItem>
             <Text style={{ width: 220 }}>Evil Icons</Text>
             <Icon type="EvilIcons" name="trophy" style={{ color: "#999" }} />
           </ListItem> */}
-        </Content>
-      </Container>
+          </Content>
+        </Container>
+      </StyleProvider>
     );
   }
 }

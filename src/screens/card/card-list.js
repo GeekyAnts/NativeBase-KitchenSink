@@ -11,7 +11,7 @@ import {
   Text,
   Left,
   Right,
-  Body
+  Body,
 } from "native-base";
 import styles from "./styles";
 
@@ -38,11 +38,7 @@ class NHCardList extends Component {
             </CardItem>
             <CardItem>
               <Left>
-                <Icon
-                  active
-                  name="logo-googleplus"
-                  style={{ color: "#DD5044" }}
-                />
+                <Icon active name="logo-google" style={{ color: "#DD5044" }} />
                 <Text>Google Plus</Text>
               </Left>
               <Right>
