@@ -64,7 +64,6 @@ class IconFamily extends Component {
           <ListItem>
             <Text style={{ width: 220 }}>Octicons</Text>
             <Icon type="Octicons" name="home" style={{ color: "#999" }} />
-            <Icon name="home" />
           </ListItem>
           {/* <ListItem>
             <Text style={{ width: 220 }}>Zocial</Text>
