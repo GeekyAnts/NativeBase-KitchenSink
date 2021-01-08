@@ -1,10 +1,10 @@
 {
   "expo": {
     "name": "NativeBaseKitchenSink",
-    "slug": "NativeBaseKitchenSink",
-    "version": "1.0.0",
+    "slug": "nativebasekitchensink",
+    "version": "2.15.2",
     "orientation": "portrait",
-    "icon": "./assets/logo.png",
+    "icon": "./assets/nblogo.png",
     "splash": {
       "image": "./assets/splashscreen.png",
       "resizeMode": "contain",
@@ -19,7 +19,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/logo.png",
+        "foregroundImage": "./assets/nblogo.png",
         "backgroundColor": "#FFFFFF"
       }
     },
