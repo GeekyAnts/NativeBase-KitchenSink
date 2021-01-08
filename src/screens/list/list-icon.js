@@ -16,7 +16,7 @@ import {
   Switch,
   Radio,
   Picker,
-  Separator
+  Separator,
 } from "native-base";
 import styles from "./styles";
 
@@ -29,13 +29,13 @@ class NHListIcon extends Component {
       selectedItem: undefined,
       selected1: "key1",
       results: {
-        items: []
-      }
+        items: [],
+      },
     };
   }
   onValueChange(value: string) {
     this.setState({
-      selected1: value
+      selected1: value,
     });
   }
   render() {
@@ -142,7 +142,7 @@ class NHListIcon extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#8F8E93" }}>
-                <Icon active name="switch" />
+                <Icon active name="body" />
               </Button>
             </Left>
             <Body>
@@ -169,7 +169,7 @@ class NHListIcon extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#4CDA64" }}>
-                <Icon name="arrow-dropdown" />
+                <Icon name="arrow-down" />
               </Button>
             </Left>
             <Body>
@@ -206,7 +206,7 @@ class NHListIcon extends Component {
           <ListItem last icon>
             <Left>
               <Button style={{ backgroundColor: "#007AFF" }}>
-                <Icon active name="hand" />
+                <Icon active name="hand-left" />
               </Button>
             </Left>
             <Body>

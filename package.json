@@ -17,7 +17,7 @@
     "expo-status-bar": "~1.0.3",
     "lodash": "^4.17.20",
     "moment": "^2.29.1",
-    "native-base": "https://github.com/GeekyAnts/NativeBase.git",
+    "native-base": "https://github.com/GeekyAnts/NativeBase",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",

@@ -89,7 +89,7 @@ class IconText extends Component {
               <Text>Compass</Text>
             </Button>
             <Button active={this.state.tab4} onPress={() => this.toggleTab4()}>
-              <Icon active={this.state.tab4} name="menu" />
+              <Icon active={this.state.tab4} name="person" />
               <Text>Contact</Text>
             </Button>
           </FooterTab>

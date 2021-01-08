@@ -9,7 +9,7 @@ import {
   Left,
   Right,
   Body,
-  Text
+  Text,
 } from "native-base";
 import styles from "./styles";
 
@@ -30,25 +30,25 @@ class Transparent extends Component {
         </Header>
 
         <Content padder style={{ backgroundColor: "#fff" }}>
-          <Button transparent light style={styles.mb15}>
+          <Button light transparent style={styles.mb15}>
             <Text>Light</Text>
           </Button>
-          <Button transparent info style={styles.mb15}>
+          <Button info transparent style={styles.mb15}>
             <Text>Info</Text>
           </Button>
-          <Button transparent style={styles.mb15}>
+          <Button primary transparent style={styles.mb15}>
             <Text>Primary</Text>
           </Button>
-          <Button transparent success style={styles.mb15}>
+          <Button success transparent style={styles.mb15}>
             <Text>Success</Text>
           </Button>
-          <Button transparent warning style={styles.mb15}>
+          <Button warning transparent style={styles.mb15}>
             <Text>Warning</Text>
           </Button>
-          <Button transparent danger style={styles.mb15}>
+          <Button danger transparent style={styles.mb15}>
             <Text>Danger</Text>
           </Button>
-          <Button transparent dark style={styles.mb15}>
+          <Button dark transparent style={styles.mb15}>
             <Text>Dark</Text>
           </Button>
         </Content>

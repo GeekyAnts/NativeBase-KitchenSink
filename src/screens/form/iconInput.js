@@ -11,7 +11,7 @@ import {
   Right,
   Item,
   Input,
-  Form
+  Form,
 } from "native-base";
 import styles from "./styles";
 
@@ -39,7 +39,7 @@ class IconInput extends Component {
             </Item>
             <Item>
               <Input placeholder="Icon Alignment in Textbox" />
-              <Icon active name="swap" />
+              <Icon active name="person" />
             </Item>
           </Form>
         </Content>

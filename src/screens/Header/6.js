@@ -9,7 +9,7 @@ import {
   Left,
   Right,
   Body,
-  Text
+  Text,
 } from "native-base";
 import styles from "./styles";
 
@@ -34,7 +34,7 @@ class Header6 extends Component {
               <Icon name="heart" />
             </Button>
             <Button transparent>
-              <Icon name="more" />
+              <Icon name="menu" />
             </Button>
           </Right>
         </Header>
