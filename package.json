@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "color": "1.0.3",
-    "lodash": "4.17.10",
+    "lodash": "4.17.21",
     "moment": "2.13.0",
     "native-base": "2.12.1",
     "prop-types": "^15.6.2",
