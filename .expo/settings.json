@@ -5,5 +5,8 @@
   "strict": false,
   "minify": false,
   "urlType": "exp",
-  "urlRandomness": "tr-gaf"
+  "urlRandomness": "tr-gaf",
+  "https": false,
+  "scheme": null,
+  "devClient": false
 }
