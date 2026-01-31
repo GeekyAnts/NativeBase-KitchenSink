@@ -15,6 +15,27 @@ iOS | Android
  :--:| :-----:
  ![ios-demo](https://github.com/GeekyAnts/NativeBase-KitchenSink/raw/master/screenshots/iOS.gif) | ![android-demo](https://github.com/GeekyAnts/NativeBase-KitchenSink/raw/master/screenshots/Android.gif)
 
+
+## About This Demo App
+
+   NativeBase KitchenSink demonstrates all components available in NativeBase.
+   It's maintained by [GeekyAnts](https://geekyants.com?utm_source=github&utm_medium=opensource&utm_campaign=nativebase-kitchensink), the creators of NativeBase.
+
+   ### Build Your Own App
+
+   Want to create a production app using NativeBase? Our team offers:
+
+   - [React Native Development](https://geekyants.com/hire-react-native-developers?utm_source=github&utm_medium=opensource&utm_campaign=nativebase-kitchensink) -
+     End-to-end mobile app development
+   - [Design System Services](https://geekyants.com/solution/design-system-development-service?utm_source=github&utm_medium=opensource&utm_campaign=nativebase-kitchensink) -
+     Custom component libraries for your brand
+
+   ### Resources
+
+   - [NativeBase Documentation](https://nativebase.io)
+   - [GeekyAnts Open Source](https://geekyants.com/open-source?utm_source=github&utm_medium=opensource&utm_campaign=nativebase-kitchensink)
+   - [Hire Our Team](https://geekyants.com/hire?utm_source=github&utm_medium=opensource&utm_campaign=nativebase-kitchensink)
+
 ## Installation
 
 *	**Clone and install packages**
