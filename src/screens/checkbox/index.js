@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -12,8 +12,8 @@ import {
   Left,
   Right,
   Body
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 class NHCheckbox extends Component {
   constructor(props) {
@@ -83,6 +83,7 @@ class NHCheckbox extends Component {
               <Text>Daily Stand Up</Text>
             </Body>
           </ListItem>
+          <ListItem />
           <ListItem button onPress={() => this.toggleSwitch3()}>
             <CheckBox
               color="green"

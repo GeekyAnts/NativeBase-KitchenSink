@@ -1,16 +1,16 @@
-const React = require("react-native");
+const React = require('react-native');
 
 const { StyleSheet } = React;
 
 export default {
   container: {
-    backgroundColor: "#FFF"
+    backgroundColor: '#FFF'
   },
   buttonContainer: {
-    flexDirection: "row",
-    flexWrap: "wrap",
+    flexDirection: 'row',
+    flexWrap: 'wrap',
     flex: 1,
-    justifyContent: "center",
+    justifyContent: 'center',
     marginTop: 10
   },
   mb15: {
@@ -23,17 +23,17 @@ export default {
     marginBottom: 20
   },
   iconButton: {
-    color: "#007aff"
+    color: '#007aff'
   },
   margin: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    borderColor: "#FFF"
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor: '#FFF'
   },
   mf: {
     flexGrow: 1,
-    alignSelf: "center",
-    alignItems: "center"
+    alignSelf: 'center',
+    alignItems: 'center'
   }
 };

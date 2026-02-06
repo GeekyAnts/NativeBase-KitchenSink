@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -12,8 +12,8 @@ import {
   Right,
   Body,
   View
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 class SwipeRowCustomStyle extends Component {
   render() {
@@ -33,22 +33,22 @@ class SwipeRowCustomStyle extends Component {
 
         <Content scrollEnabled={false}>
           <SwipeRow
-            style={{ backgroundColor: "#9370DB" }}
+            style={{ backgroundColor: '#9370DB' }}
             leftOpenValue={75}
             rightOpenValue={-75}
             left={
-              <Button success onPress={() => alert("Add")}>
-                <Icon active name="add" style={{ color: "#FFF" }} />
+              <Button success onPress={() => alert('Add')}>
+                <Icon active name="add" style={{ color: '#FFF' }} />
               </Button>
             }
             right={
-              <Button danger onPress={() => alert("Trash")}>
+              <Button danger onPress={() => alert('Trash')}>
                 <Icon active name="trash" />
               </Button>
             }
             body={
               <View style={{ paddingLeft: 20 }}>
-                <Text style={{ color: "#FFF" }}>
+                <Text style={{ color: '#FFF' }}>
                   Swipe me to left and right
                 </Text>
               </View>

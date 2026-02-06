@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -12,23 +12,23 @@ import {
   Accordion,
   Text,
   View
-} from "native-base";
+} from 'native-base';
 
 const dataArray = [
   {
-    title: "First Element",
+    title: 'First Element',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!"
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!'
   },
   {
-    title: "Second Element",
+    title: 'Second Element',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!"
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!'
   },
   {
-    title: "Third Element",
+    title: 'Third Element',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!"
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!'
   }
 ];
 
@@ -37,19 +37,19 @@ class AccordionCustomHeaderContent extends Component {
     return (
       <View
         style={{
-          flexDirection: "row",
+          flexDirection: 'row',
           padding: 10,
-          justifyContent: "space-between",
-          alignItems: "center",
-          backgroundColor: "#A9DAD6"
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          backgroundColor: '#A9DAD6'
         }}
       >
-        <Text style={{ fontWeight: "600" }}>
-          {" "}{item.title}
-        </Text>
-        {expanded
-          ? <Icon style={{ fontSize: 18 }} name="remove-circle" />
-          : <Icon style={{ fontSize: 18 }} name="add-circle" />}
+        <Text style={{ fontWeight: '600' }}> {item.title}</Text>
+        {expanded ? (
+          <Icon style={{ fontSize: 18 }} name="remove-circle" />
+        ) : (
+          <Icon style={{ fontSize: 18 }} name="add-circle" />
+        )}
       </View>
     );
   }
@@ -57,9 +57,9 @@ class AccordionCustomHeaderContent extends Component {
     return (
       <Text
         style={{
-          backgroundColor: "#e3f1f1",
+          backgroundColor: '#e3f1f1',
           padding: 10,
-          fontStyle: "italic"
+          fontStyle: 'italic'
         }}
       >
         {item.content}
@@ -80,7 +80,7 @@ class AccordionCustomHeaderContent extends Component {
           </Body>
           <Right />
         </Header>
-        <Content padder style={{ backgroundColor: "white" }}>
+        <Content padder style={{ backgroundColor: 'white' }}>
           <Accordion
             dataArray={dataArray}
             animation={true}

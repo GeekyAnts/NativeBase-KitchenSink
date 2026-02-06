@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import ProgressBar from "ProgressBarAndroid";
+import React, { Component } from 'react';
+import ProgressBar from 'ProgressBarAndroid';
 
 export default class SpinnerNB extends Component {
   prepareRootProps() {
@@ -11,7 +11,7 @@ export default class SpinnerNB extends Component {
       style: type
     };
 
-    return computeProps(this.props, defaultProps);
+    return { ...defaultProps, ...this.props };
   }
 
   render() {

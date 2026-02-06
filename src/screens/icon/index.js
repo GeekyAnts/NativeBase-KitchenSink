@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -12,25 +12,25 @@ import {
   ListItem,
   Content,
   Text
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 const datas = [
   {
-    route: "BasicIcon",
-    text: "Basic Icon"
+    route: 'BasicIcon',
+    text: 'Basic Icon'
   },
   {
-    route: "Icons",
-    text: "Icons"
+    route: 'Icons',
+    text: 'Icons'
   },
   {
-    route: "PlatformSpecificIcon",
-    text: "Platform Specific Icon"
+    route: 'PlatformSpecificIcon',
+    text: 'Platform Specific Icon'
   },
   {
-    route: "IconFamily",
-    text: "Icon Family"
+    route: 'IconFamily',
+    text: 'Icon Family'
   }
 ];
 
@@ -56,20 +56,19 @@ class NHIcon extends Component {
         <Content>
           <List
             dataArray={datas}
-            renderRow={data =>
+            renderRow={data => (
               <ListItem
                 button
                 onPress={() => this.props.navigation.navigate(data.route)}
               >
                 <Left>
-                  <Text>
-                    {data.text}
-                  </Text>
+                  <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="arrow-forward" style={{ color: '#999' }} />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>

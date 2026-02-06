@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -11,9 +11,9 @@ import {
   Content,
   ActionSheet,
   Text
-} from "native-base";
-import styles from "./styles";
-var BUTTONS = ["Option 0", "Option 1", "Option 2", "Delete", "Cancel"];
+} from 'native-base';
+import styles from './styles';
+var BUTTONS = ['Option 0', 'Option 1', 'Option 2', 'Delete', 'Cancel'];
 var DESTRUCTIVE_INDEX = 3;
 var CANCEL_INDEX = 4;
 
@@ -44,12 +44,15 @@ export default class ActionSheetNB extends Component {
                   options: BUTTONS,
                   cancelButtonIndex: CANCEL_INDEX,
                   destructiveButtonIndex: DESTRUCTIVE_INDEX,
-                  title: "Select an option"
+                  title: 'Select an option'
                 },
                 buttonIndex => {
-                  this.setState({ clicked: BUTTONS[buttonIndex] });
+                  this.setState({
+                    clicked: BUTTONS[buttonIndex]
+                  });
                 }
-              )}
+              )
+            }
           >
             <Text>Actionsheet</Text>
           </Button>

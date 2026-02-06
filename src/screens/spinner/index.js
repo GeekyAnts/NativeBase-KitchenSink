@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 import {
   Container,
@@ -11,9 +11,9 @@ import {
   Left,
   Right,
   Body
-} from "native-base";
+} from 'native-base';
 
-import styles from "./styles";
+import styles from './styles';
 
 class NHSpinner extends Component {
   // eslint-disable-line
@@ -34,7 +34,6 @@ class NHSpinner extends Component {
             <Title>Spinner</Title>
           </Body>
           <Right />
-
         </Header>
 
         <Content>

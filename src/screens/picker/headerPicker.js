@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Platform } from "react-native";
+import React, { Component } from 'react';
+import { Platform } from 'react-native';
 import {
   Container,
   Header,
@@ -12,9 +12,9 @@ import {
   Left,
   Picker,
   Form
-} from "native-base";
+} from 'native-base';
 
-import styles from "./styles";
+import styles from './styles';
 
 const Item = Picker.Item;
 
@@ -22,7 +22,7 @@ class RegularPicker extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected4: "key4"
+      selected4: 'key4'
     };
   }
 
@@ -52,7 +52,9 @@ class RegularPicker extends Component {
               mode="dropdown"
               iosHeader="Your Header"
               iosIcon={<Icon name="ios-arrow-down" />}
-              style={{ width: Platform.OS === "ios" ? undefined : 120 }}
+              style={{
+                width: Platform.OS === 'ios' ? undefined : 120
+              }}
               selectedValue={this.state.selected4}
               onValueChange={this.onValueChange4.bind(this)}
             >

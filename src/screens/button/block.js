@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -10,8 +10,8 @@ import {
   Right,
   Body,
   Text
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 class Block extends Component {
   render() {
@@ -29,7 +29,7 @@ class Block extends Component {
           <Right />
         </Header>
 
-        <Content padder style={{ backgroundColor: "#FFF" }}>
+        <Content padder style={{ backgroundColor: '#FFF' }}>
           <Button block light style={styles.mb15}>
             <Text>Light</Text>
           </Button>

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -12,17 +12,17 @@ import {
   ListItem,
   Content,
   Text
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 const datas = [
   {
-    route: "BasicFab",
-    text: "Basic FAB"
+    route: 'BasicFab',
+    text: 'Basic FAB'
   },
   {
-    route: "MultipleFab",
-    text: "Multiple FABs"
+    route: 'MultipleFab',
+    text: 'Multiple FABs'
   }
 ];
 
@@ -48,20 +48,19 @@ class NHFab extends Component {
         <Content>
           <List
             dataArray={datas}
-            renderRow={data =>
+            renderRow={data => (
               <ListItem
                 button
                 onPress={() => this.props.navigation.navigate(data.route)}
               >
                 <Left>
-                  <Text>
-                    {data.text}
-                  </Text>
+                  <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="arrow-forward" style={{ color: '#999' }} />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>

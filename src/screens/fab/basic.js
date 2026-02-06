@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Container,
   Header,
@@ -11,8 +11,8 @@ import {
   Body,
   Icon,
   View
-} from "native-base";
-import styles from "./styles";
+} from 'native-base';
+import styles from './styles';
 
 class BasicFab extends Component {
   constructor(props) {
@@ -42,18 +42,18 @@ class BasicFab extends Component {
             active={this.state.active}
             direction="up"
             containerStyle={{}}
-            style={{ backgroundColor: "#5067FF" }}
+            style={{ backgroundColor: '#5067FF' }}
             position="bottomRight"
             onPress={() => this.setState({ active: !this.state.active })}
           >
             <IconNB name="md-share" />
-            <Button style={{ backgroundColor: "#34A34F" }}>
+            <Button style={{ backgroundColor: '#34A34F' }}>
               <IconNB name="logo-whatsapp" />
             </Button>
-            <Button style={{ backgroundColor: "#3B5998" }}>
+            <Button style={{ backgroundColor: '#3B5998' }}>
               <IconNB name="logo-facebook" />
             </Button>
-            <Button disabled style={{ backgroundColor: "#DD5144" }}>
+            <Button disabled style={{ backgroundColor: '#DD5144' }}>
               <IconNB name="ios-mail" />
             </Button>
           </Fab>
