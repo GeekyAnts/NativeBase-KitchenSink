@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 
 import {
   Container,
@@ -13,10 +13,10 @@ import {
   Grid,
   Col,
   Row,
-  Text
-} from "native-base";
+  Text,
+} from 'native-base';
 
-import styles from "./styles";
+import styles from './styles';
 
 class PlatformSpecificIcon extends Component {
   render() {
